@@ -558,7 +558,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1083293176093427', {}, {autoConfig: true, autoAdvancedMatching: true});
-fbq('track', 'PageView');
+// PageView fired with eventID in CAPI snippet below
 // Capture fbclid + gclid from URL and store in cookies
 (function(){
   var params = new URLSearchParams(window.location.search);
@@ -586,6 +586,54 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
+<!-- CAPI Server-Side Tracking -->
+<script>
+(function() {
+  var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
+
+  function generateEventId() {
+    return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function getFbcFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get("fbclid");
+    if (fbclid) return "fb.1." + Date.now() + "." + fbclid;
+    return null;
+  }
+
+  // Send event to CAPI Worker only (pixel fires separately)
+  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
+    customData = customData || {};
+    userData = userData || {};
+    var payload = {
+      event_name: eventName,
+      event_time: Math.floor(Date.now() / 1000),
+      event_source_url: window.location.href,
+      event_id: eventId,
+      user_data: { fbp: getCookie("_fbp"), fbc: getCookie("_fbc") || getFbcFromUrl() },
+      custom_data: customData
+    };
+    if (userData.em) payload.user_data.em = userData.em;
+    if (userData.fn) payload.user_data.fn = userData.fn;
+    if (userData.ln) payload.user_data.ln = userData.ln;
+    if (userData.ph) payload.user_data.ph = userData.ph;
+    var url = CAPI_WORKER_URL + "/event";
+    var body = JSON.stringify(payload);
+    if (navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
+    else fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
+  };
+
+  // PageView with dedup event_id
+  var pvId = generateEventId();
+  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
+  sendCAPIEvent("PageView", pvId);
+})();
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
