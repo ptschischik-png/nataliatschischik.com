@@ -760,5 +760,6 @@ const dots=document.querySelectorAll('.chapter-dot');
 const chapterObserver=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){dots.forEach(dot=>dot.classList.remove('active'));const activeDot=document.querySelector('.chapter-dot[data-chapter="'+entry.target.id+'"]');if(activeDot)activeDot.classList.add('active');}});},{threshold:0.2,rootMargin:'-20% 0px -60% 0px'});
 chapters.forEach(chapter=>chapterObserver.observe(chapter));
 </script>
+<script src="../js/tracking.js" defer></script>
 <script>
 (function(){if(typeof zaraz==='undefined')return;if(window.location.pathname.indexOf('/reportagen/')!==-1)zaraz.track('ViewContent');var scrollTracked={};window.addEventListener('scroll',function(){var pct=Math.round(100*window.scrollY/(document.bo

@@ -1,10 +1,19 @@
 // ═══ UNIVERSAL MICRO-CONVERSION TRACKING ═══
-// Fires events to Meta Pixel, GA4, and Zaraz based on user behavior
+// Fires events to Meta Pixel, GA4, Zaraz, and CAPI based on user behavior
 (function() {
   var page = window.location.pathname;
-  function _fbq() { return window.fbq; }
-  function _gtag() { return window.gtag; }
-  function _zaraz() { return window.zaraz; }
+
+  // Helper: send to CAPI if available (function defined in <head>)
+  function capi(eventName, customData, userData) {
+    if (typeof window.sendCAPIEvent === 'undefined') return;
+    var eventId = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 10);
+    // Fire pixel with same eventID for dedup
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('trackSingle', '1083293176093427', eventName, customData || {}, { eventID: eventId });
+    }
+    window.sendCAPIEvent(eventName, eventId, customData, userData);
+    return eventId; // return so caller can skip separate fbq call
+  }
 
   // ── 1. PAGE-SPECIFIC VIEWCONTENT ──
   // Tell Meta which type of content was viewed (helps build audiences)
@@ -26,14 +35,17 @@
   }
 
   if (pageData.content_name) {
-    if (typeof window.fbq !== 'undefined') window.fbq('track', 'ViewContent', pageData);
+    // Send ViewContent to Pixel + CAPI with dedup
+    var vcSent = capi('ViewContent', pageData);
+    // If CAPI wasn't available, fire pixel directly
+    if (!vcSent && typeof window.fbq !== 'undefined') window.fbq('track', 'ViewContent', pageData);
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'view_item', {
       item_name: pageData.content_name,
       item_category: pageData.content_category
     });
   }
 
-  // ── 2. SCROLL DEPTH (25/50/75/100%) ──
+  // ── 2. SCROLL DEPTH (25/50/75%) ──
   var scrollTracked = {};
   window.addEventListener('scroll', function() {
     var total = document.body.scrollHeight - window.innerHeight;
@@ -84,7 +96,9 @@
   document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]').forEach(function(el) {
     el.addEventListener('click', function() {
       var type = el.href.indexOf('tel:') === 0 ? 'Telefon' : el.href.indexOf('mailto:') === 0 ? 'Email' : 'WhatsApp';
-      if (typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', {content_name: type});
+      // Send Contact to Pixel + CAPI with dedup
+      var sent = capi('Contact', {content_name: type});
+      if (!sent && typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', {content_name: type});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'contact_click', {method: type, page_path: page});
       if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
     });
