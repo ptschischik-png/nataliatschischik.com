@@ -1440,11 +1440,11 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
         <div class="contact-info">
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 4 12 13 2 4"/></svg>
-            <a href="/cdn-cgi/l/email-protection#f49a958095989d95b49a958095989d958087979c9d87979c9d9fda979b99" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'Email'});if(typeof gtag!=='undefined')gtag('event','contact_email',{event_category:'Contact'});if(typeof zaraz!=='undefined')zaraz.track('Contact');"><span class="__cf_email__" data-cfemail="a5cbc4d1c4c9ccc4e5cbc4d1c4c9ccc4d1d6c6cdccd6c6cdccce8bc6cac8">[email&#160;protected]</span></a>
+            <a href="/cdn-cgi/l/email-protection#f49a958095989d95b49a958095989d958087979c9d87979c9d9fda979b99"><span class="__cf_email__" data-cfemail="a5cbc4d1c4c9ccc4e5cbc4d1c4c9ccc4d1d6c6cdccd6c6cdccce8bc6cac8">[email&#160;protected]</span></a>
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            <a href="tel:+4917634948598" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'Telefon'});if(typeof gtag!=='undefined')gtag('event','contact_phone',{event_category:'Contact'});if(typeof zaraz!=='undefined')zaraz.track('Contact');">+49 (0) 176 34 948 598</a>
+            <a href="tel:+4917634948598">+49 (0) 176 34 948 598</a>
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1452,7 +1452,7 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
           </div>
           <div class="contact-info-item">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-            <a href="https://wa.me/4917634948598?text=Hallo%20Natalia%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eure%20Hochzeitsfotografie." target="_blank" rel="noopener noreferrer" onclick="if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'WhatsApp'});if(typeof gtag!=='undefined')gtag('event','contact_whatsapp',{event_category:'Contact'});if(typeof zaraz!=='undefined')zaraz.track('Contact');">WhatsApp schreiben</a>
+            <a href="https://wa.me/4917634948598?text=Hallo%20Natalia%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eure%20Hochzeitsfotografie." target="_blank" rel="noopener noreferrer">WhatsApp schreiben</a>
           </div>
         </div>
       </div>
@@ -1739,44 +1739,7 @@ function showStatus(msg, color) {
 }
 </script>
 
-<script>
-// Track scroll depth & engagement for Meta Pixel + GA4
-(function() {
-  var scrollTracked = {};
-  window.addEventListener('scroll', function() {
-    var pct = Math.round(100 * window.scrollY / (document.body.scrollHeight - window.innerHeight));
-    [25, 50, 75, 100].forEach(function(t) {
-      if (pct >= t && !scrollTracked[t]) {
-        scrollTracked[t] = true;
-        if (typeof gtag !== 'undefined') gtag('event', 'scroll_depth', {event_category: 'Engagement', event_label: t + '%'});
-        if (typeof zaraz !== 'undefined') zaraz.track('Scroll Depth ' + t);
-      }
-    });
-  });
-  // Track time on page
-  setTimeout(function() {
-    if (typeof gtag !== 'undefined') gtag('event', 'engaged_visit', {event_category: 'Engagement', event_label: '30s'});
-    if (typeof fbq !== 'undefined') fbq('trackCustom', 'EngagedVisit', {duration: '30s'});
-    if (typeof zaraz !== 'undefined') zaraz.track('EngagedVisit');
-  }, 30000);
-  // Track CTA button clicks
-  document.querySelectorAll('.btn-primary, .nav-cta, .mobile-cta').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', {content_name: 'CTA Click'});
-      if (typeof gtag !== 'undefined') gtag('event', 'cta_click', {event_category: 'Conversion', event_label: el.textContent.trim()});
-      if (typeof zaraz !== 'undefined') zaraz.track('Contact');
-    });
-  });
-  // Track portfolio link clicks
-  document.querySelectorAll('.portfolio-item a, a[href*="portfolio"], a[href*="reportagen"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if (typeof fbq !== 'undefined') fbq('track', 'ViewContent', {content_name: 'Portfolio', content_type: 'product'});
-      if (typeof gtag !== 'undefined') gtag('event', 'view_portfolio', {event_category: 'Engagement'});
-      if (typeof zaraz !== 'undefined') zaraz.track('ViewContent');
-    });
-  });
-})();
-</script>
+<!-- Tracking handled by js/tracking.js -->
 
 <script>
 // City rotation in H1: Kassel → others → back to Kassel

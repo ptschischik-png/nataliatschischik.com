@@ -1443,16 +1443,4 @@ chapters.forEach(chapter => chapterObserver.observe(chapter));
 </script>
 <script src="../js/tracking.js" defer></script>
 
-<!-- Zaraz Event Tracking -->
-<script>
-(function() {
-  if (typeof zaraz === 'undefined') return;
-  if (window.location.pathname.indexOf('/reportagen/') !== -1) zaraz.track('ViewContent');
-  var scrollTracked = {};
-  window.addEventListener('scroll', function() {
-    var pct = Math.round(100 * window.scrollY / (document.body.scrollHeight - window.innerHeight));
-    [25, 50, 75].forEach(function(t) {
-      if (pct >= t && !scrollTracked[t]) { scrollTracked[t] = true; zaraz.track('Scroll Depth ' + t); }
-    });
-  });
-  document.querySelectorAll('a[
+<!-- Inline tracking removed — handled by js/tracking.js -->
