@@ -60,48 +60,62 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
 <link rel="dns-prefetch" href="https://lh3.googleusercontent.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"></noscript>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "cream": "#F5F0E8",
-          "cream-light": "#FAF8F4",
-          "cream-dark": "#EDE7DB",
-          "white-card": "#FDFCFA",
-          "brown-900": "#2C1810",
-          "brown-800": "#3D2518",
-          "brown-700": "#4A3228",
-          "brown-600": "#5E443A",
-          "brown-500": "#7A6258",
-          "brown-400": "#9E8A80",
-          "brown-300": "#C4B5AB",
-          "brown-200": "#DDD3CA",
-          "brown-100": "#EDE7E0",
-          "olive": "#5A2628",
-          "olive-dark": "#481E20",
-          "olive-light": "#835C5D",
-          "dark-bg": "#1E1B18",
-          "dark-card": "#2A2622",
-        },
-        fontFamily: {
-          "headline": ["Cormorant Garamond", "Georgia", "serif"],
-          "body": ["DM Sans", "Helvetica Neue", "sans-serif"],
-          "label": ["DM Sans", "Helvetica Neue", "sans-serif"]
-        },
-        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-      },
-    },
-  }
-</script>
+<!-- Tailwind utilities inlined for performance -->
+<style>
+/* ═══ TAILWIND UTILITY REPLACEMENTS ═══ */
+.grid{display:grid}.flex{display:flex}.inline-block{display:inline-block}.block{display:block}.hidden{display:none}.relative{position:relative}.absolute{position:absolute}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}
+.col-span-12{grid-column:span 12/span 12}
+.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-12{gap:3rem}
+.items-center{align-items:center}.items-end{align-items:flex-end}.items-start{align-items:flex-start}
+.flex-col{flex-direction:column}
+.order-1{order:1}.order-2{order:2}
+.justify-center{justify-content:center}
+.space-y-4>:not([hidden])~:not([hidden]){margin-top:1rem}
+.w-full{width:100%}.w-12{width:3rem}.w-24{width:6rem}.w-64{width:16rem}
+.h-px{height:1px}.h-\[1px\]{height:1px}
+.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.max-w-screen-2xl{max-width:1536px}
+.mx-auto{margin-left:auto;margin-right:auto}
+.mb-2{margin-bottom:.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-32{margin-bottom:8rem}.mb-48{margin-bottom:12rem}
+.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}
+.-mx-8{margin-left:-2rem;margin-right:-2rem}.-bottom-12{bottom:-3rem}.-left-12{left:-3rem}
+.px-8{padding-left:2rem;padding-right:2rem}.px-12{padding-left:3rem;padding-right:3rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-32{padding-top:8rem;padding-bottom:8rem}
+.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-6xl{font-size:3.75rem;line-height:1}
+.font-normal{font-weight:400}.font-light{font-weight:300}.font-bold{font-weight:700}
+.italic{font-style:italic}
+.uppercase{text-transform:uppercase}
+.leading-tight{line-height:1.25}.leading-relaxed{line-height:1.625}
+.tracking-widest{letter-spacing:.1em}.tracking-\[0\.3em\]{letter-spacing:.3em}
+.text-center{text-align:center}.text-right{text-align:right}
+.underline-offset-8{text-underline-offset:8px}
+.text-brown-400{color:#9E8A80}.text-brown-500{color:#7A6258}.text-brown-600{color:#5E443A}.text-brown-900{color:#2C1810}
+.text-\[\#5A2628\]{color:#5A2628}
+.bg-\[\#F5F0E8\]{background-color:#F5F0E8}.bg-\[\#FAF8F4\]{background-color:#FAF8F4}.bg-\[\#1E1B18\]{background-color:#1E1B18}.bg-brown-300{background-color:#C4B5AB}
+.border{border-width:1px}.border-t{border-top-width:1px}.border-8{border-width:8px}
+.border-brown-900{border-color:#2C1810}.border-\[\#F5F0E8\]{border-color:#F5F0E8}.border-\[rgba\(0\,0\,0\,0\.04\)\]{border-color:rgba(0,0,0,0.04)}
+.grayscale{filter:grayscale(100%)}
+.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:150ms}
+.duration-500{transition-duration:500ms}
+.hover\:underline:hover{text-decoration-line:underline}
+.hover\:bg-\[\#2C1810\]:hover{background-color:#2C1810}
+.hover\:text-\[\#FDFCFA\]:hover{color:#FDFCFA}
+@media(min-width:768px){
+  .md\:col-span-1{grid-column:span 1/span 1}.md\:col-span-4{grid-column:span 4/span 4}.md\:col-span-5{grid-column:span 5/span 5}.md\:col-span-7{grid-column:span 7/span 7}.md\:col-span-8{grid-column:span 8/span 8}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:order-1{order:1}.md\:order-2{order:2}
+  .md\:text-5xl{font-size:3rem;line-height:1}.md\:text-8xl{font-size:6rem;line-height:1}
+}
+@media(min-width:1024px){.lg\:block{display:block}}
+</style>
 <style>
 /* ═══ RESET ═══ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -995,7 +1009,7 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
         Hochzeitsfotograf Natalia Tschischik<br>
         Harleshäuser Str. 38, 34246 Vellmar<br>
         <a href="tel:+4917634948598" style="color:inherit;">+49 176 34948598</a><br>
-        <a href="/cdn-cgi/l/email-protection#234d4257424f4a42634d4257424f4a425750404b4a50404b4a480d404c4e" style="color:inherit;"><span class="__cf_email__" data-cfemail="27494653464b4e4667494653464b4e465354444f4e54444f4e4c0944484a">[email&#160;protected]</span></a><br>
+        <a href="mailto:info@nataliatschischik.com" style="color:inherit;">info@nataliatschischik.com</a><br>
         <a href="https://maps.app.goo.gl/ak2VVrbKNQpdYCc16?g_st=ic" target="_blank" rel="noopener" style="color:rgba(196,181,171,0.5);text-decoration:underline;text-underline-offset:3px;">Auf Google Maps ansehen</a>
       </address>
     </div>
@@ -1012,7 +1026,7 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
       <div class="footer-col">
         <h4>Kontakt</h4>
         <a href="tel:+4917634948598">+49 176 34 948 598</a>
-        <a href="/cdn-cgi/l/email-protection#721c1306131e1b13321c1306131e1b130601111a1b01111a1b195c111d1f"><span class="__cf_email__" data-cfemail="a3cdc2d7c2cfcac2e3cdc2d7c2cfcac2d7d0c0cbcad0c0cbcac88dc0ccce">[email&#160;protected]</span></a>
+        <a href="mailto:info@nataliatschischik.com"><span>info@nataliatschischik.com</span></a>
         <a href="https://wa.me/4917634948598" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         <h4>Social</h4>
         <a href="https://www.instagram.com/hochzeitsfotografin.natalia/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -1031,7 +1045,7 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Scroll-aware nav
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
