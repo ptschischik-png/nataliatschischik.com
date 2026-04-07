@@ -11,7 +11,16 @@
     if (typeof window.fbq !== 'undefined') {
       window.fbq('trackSingle', '1083293176093427', eventName, customData || {}, { eventID: eventId });
     }
-    window.sendCAPIEvent(eventName, eventId, customData, userData);
+    // Enrich customData with UTM params + referrer for better attribution
+    var params = new URLSearchParams(window.location.search);
+    var enriched = Object.assign({}, customData || {});
+    if (params.get('utm_source'))   enriched.utm_source   = params.get('utm_source');
+    if (params.get('utm_medium'))   enriched.utm_medium   = params.get('utm_medium');
+    if (params.get('utm_campaign')) enriched.utm_campaign = params.get('utm_campaign');
+    if (params.get('utm_content'))  enriched.utm_content  = params.get('utm_content');
+    if (document.referrer)          enriched.referrer     = document.referrer;
+
+    window.sendCAPIEvent(eventName, eventId, enriched, userData);
     return eventId; // return so caller can skip separate fbq call
   }
 
@@ -101,6 +110,20 @@
       if (!sent && typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', {content_name: type});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'contact_click', {method: type, page_path: page});
       if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
+
+      // WhatsApp click = Lead (lower value than form submit, but strong intent signal)
+      if (type === 'WhatsApp') {
+        var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 300, currency: 'EUR'};
+        var leadSent = capi('Lead', leadData);
+        if (!leadSent && typeof window.fbq !== 'undefined') window.fbq('track', 'Lead', leadData);
+        if (typeof window.gtag !== 'undefined') window.gtag('event', 'generate_lead', {
+          event_category: 'Contact',
+          event_label: 'WhatsApp',
+          value: 300,
+          currency: 'EUR'
+        });
+        if (typeof window.zaraz !== 'undefined') window.zaraz.track('Lead');
+      }
     });
   });
 
@@ -121,7 +144,7 @@
       });
     }, {threshold: 0.5});
 
-    document.querySelectorAll('.gallery img, .chapter-grid img, .reportage-img').forEach(function(img) {
+    document.querySelectorAll('.photo-frame img, .img-cover, section img').forEach(function(img) {
       observer.observe(img);
     });
   }

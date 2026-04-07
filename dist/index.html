@@ -986,7 +986,7 @@ p { max-width: 60ch; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--brown-300);
+  color: var(--cream);
   margin-bottom: 0.75rem;
 }
 .footer-col a {
@@ -1697,9 +1697,9 @@ async function handleFormSubmit(e) {
         // Re-init with user data for Advanced Matching
         fbq('init', '1083293176093427', userData);
         // Single Lead event with eventID for deduplication with CAPI
-        fbq('track', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 1.00, currency: 'EUR'}, {eventID: eventID});
+        fbq('track', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {eventID: eventID});
         // CAPI: Lead event with same eventID for deduplication
-        if (typeof sendCAPIEvent !== 'undefined') sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 1.00, currency: 'EUR'}, {em: email, fn: userData.fn, ln: userData.ln, ph: userData.ph});
+        if (typeof sendCAPIEvent !== 'undefined') sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {em: email, fn: userData.fn, ln: userData.ln, ph: userData.ph});
       }
       if (typeof zaraz !== 'undefined') zaraz.track('Lead');
       // GA4 Lead event (importable as Google Ads conversion)
