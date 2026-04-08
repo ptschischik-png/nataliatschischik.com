@@ -1137,6 +1137,24 @@ p { max-width: 60ch; }
 @media (min-width: 901px) {
   .scroll-cta { padding: 0.75rem 2rem; }
 }
+
+/* ═══ SCROLL CTA ═══ */
+  /* ... dein bestehender Code ... */
+
+/* ═══ LCP FIX: Hero sofort sichtbar ═══ */
+.hero, .hero-content, .hero-image {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ═══ BELOW-FOLD: Rendering verzögern ═══ */
+.portfolio, .testimonials, .about, .process,
+.faq, .contact, .seo-footer-text, .footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 </style>
 <link rel="sitemap" type="application/xml" href="sitemap.xml">
 <meta property="og:url" content="https://nataliatschischik.com/">
