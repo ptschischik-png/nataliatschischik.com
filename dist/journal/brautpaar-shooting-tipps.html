@@ -445,7 +445,8 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
     var user_data = {
       fbp: getCookie("_fbp") || fbp,
       fbc: getCookie("_fbc") || getFbcFromUrl(),
-      external_id: getCookie("_ext_id") || externalId
+      external_id: getCookie("_ext_id") || externalId,
+      country: "de"
       // client_ip_address + client_user_agent werden vom Worker
       // aus den Request-Headers extrahiert
     };
