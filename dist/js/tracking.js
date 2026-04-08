@@ -1,9 +1,12 @@
-// ═══ UNIVERSAL MICRO-CONVERSION TRACKING ═══
-// Fires events to Meta Pixel, GA4, Zaraz, and CAPI based on user behavior
+// ═══ UNIVERSAL MICRO-CONVERSION TRACKING v2 ═══
+// Änderungen gegenüber v1:
+// - ScrollDepth, EngagedVisit, HighlyEngaged jetzt auch über CAPI
+// - capi() Funktion nutzt einheitlich window.sendCAPIEvent
+// - Saubere Dedup für alle Events die über beide Kanäle gehen
 (function() {
   var page = window.location.pathname;
 
-  // Helper: send to CAPI if available (function defined in <head>)
+  // Helper: send to CAPI + Pixel mit Deduplication
   function capi(eventName, customData, userData) {
     if (typeof window.sendCAPIEvent === 'undefined') return;
     var eventId = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 10);
@@ -11,7 +14,7 @@
     if (typeof window.fbq !== 'undefined') {
       window.fbq('trackSingle', '1083293176093427', eventName, customData || {}, { eventID: eventId });
     }
-    // Enrich customData with UTM params + referrer for better attribution
+    // Enrich customData with UTM params + referrer
     var params = new URLSearchParams(window.location.search);
     var enriched = Object.assign({}, customData || {});
     if (params.get('utm_source'))   enriched.utm_source   = params.get('utm_source');
@@ -21,11 +24,24 @@
     if (document.referrer)          enriched.referrer     = document.referrer;
 
     window.sendCAPIEvent(eventName, eventId, enriched, userData);
-    return eventId; // return so caller can skip separate fbq call
+    return eventId;
+  }
+
+  // Helper: Fire Custom Event über Pixel + CAPI (für Engagement-Events)
+  function capiCustom(eventName, customData) {
+    if (typeof window.sendCAPIEvent === 'undefined') {
+      // Fallback: nur Pixel
+      if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', eventName, customData);
+      return;
+    }
+    var eventId = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 10);
+    if (typeof window.fbq !== 'undefined') {
+      window.fbq('trackCustom', eventName, customData || {}, { eventID: eventId });
+    }
+    window.sendCAPIEvent(eventName, eventId, customData);
   }
 
   // ── 1. PAGE-SPECIFIC VIEWCONTENT ──
-  // Tell Meta which type of content was viewed (helps build audiences)
   var pageData = {};
   if (page.indexOf('/preise') !== -1) {
     pageData = {content_name: 'Preise', content_category: 'Pricing', content_type: 'service'};
@@ -44,9 +60,7 @@
   }
 
   if (pageData.content_name) {
-    // Send ViewContent to Pixel + CAPI with dedup
     var vcSent = capi('ViewContent', pageData);
-    // If CAPI wasn't available, fire pixel directly
     if (!vcSent && typeof window.fbq !== 'undefined') window.fbq('track', 'ViewContent', pageData);
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'view_item', {
       item_name: pageData.content_name,
@@ -54,7 +68,7 @@
     });
   }
 
-  // ── 2. SCROLL DEPTH (25/50/75%) ──
+  // ── 2. SCROLL DEPTH (25/50/75%) — jetzt über CAPI ──
   var scrollTracked = {};
   window.addEventListener('scroll', function() {
     var total = document.body.scrollHeight - window.innerHeight;
@@ -63,22 +77,22 @@
     [25, 50, 75].forEach(function(t) {
       if (pct >= t && !scrollTracked[t]) {
         scrollTracked[t] = true;
-        if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'ScrollDepth', {depth: t, page: page});
+        capiCustom('ScrollDepth', {depth: t, page: page});
         if (typeof window.gtag !== 'undefined') window.gtag('event', 'scroll', {percent_scrolled: t});
         if (typeof window.zaraz !== 'undefined') window.zaraz.track('Scroll Depth ' + t);
       }
     });
   });
 
-  // ── 3. TIME ON PAGE (30s = engaged, 60s = highly engaged) ──
+  // ── 3. TIME ON PAGE — jetzt über CAPI ──
   setTimeout(function() {
-    if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'EngagedVisit', {duration: '30s', page: page});
+    capiCustom('EngagedVisit', {duration: '30s', page: page});
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'engaged_visit', {engagement_time: 30, page_path: page});
     if (typeof window.zaraz !== 'undefined') window.zaraz.track('EngagedVisit');
   }, 30000);
 
   setTimeout(function() {
-    if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'HighlyEngaged', {duration: '60s', page: page});
+    capiCustom('HighlyEngaged', {duration: '60s', page: page});
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'highly_engaged', {engagement_time: 60, page_path: page});
   }, 60000);
 
@@ -86,7 +100,7 @@
   document.querySelectorAll('.faq-question, [aria-expanded]').forEach(function(el) {
     el.addEventListener('click', function() {
       var question = el.textContent.trim().substring(0, 80);
-      if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'FAQClick', {question: question});
+      capiCustom('FAQClick', {question: question});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'faq_click', {event_label: question});
     });
   });
@@ -95,7 +109,7 @@
   document.querySelectorAll('a[href*="contact"], a[href*="kontakt"], .btn-primary, .nav-cta, .mobile-cta, a[href*="#contact"]').forEach(function(el) {
     el.addEventListener('click', function() {
       var label = el.textContent.trim().substring(0, 50);
-      if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'CTAClick', {content_name: label, content_category: 'CTA', page: page});
+      capiCustom('CTAClick', {content_name: label, content_category: 'CTA', page: page});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'cta_click', {event_label: label, page_path: page});
       if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
     });
@@ -105,13 +119,11 @@
   document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]').forEach(function(el) {
     el.addEventListener('click', function() {
       var type = el.href.indexOf('tel:') === 0 ? 'Telefon' : el.href.indexOf('mailto:') === 0 ? 'Email' : 'WhatsApp';
-      // Send Contact to Pixel + CAPI with dedup
       var sent = capi('Contact', {content_name: type});
       if (!sent && typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', {content_name: type});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'contact_click', {method: type, page_path: page});
       if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
 
-      // WhatsApp click = Lead (lower value than form submit, but strong intent signal)
       if (type === 'WhatsApp') {
         var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 300, currency: 'EUR'};
         var leadSent = capi('Lead', leadData);
@@ -127,16 +139,15 @@
     });
   });
 
-  // ── 7. GALLERY IMAGE VIEWS (Reportage pages) ──
+  // ── 7. GALLERY IMAGE VIEWS ──
   if (page.indexOf('/reportagen/') !== -1) {
     var imgViewed = 0;
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           imgViewed++;
-          // Track at milestones: 5, 10, 20 images
           if (imgViewed === 5 || imgViewed === 10 || imgViewed === 20) {
-            if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'GalleryDepth', {images_viewed: imgViewed, page: page});
+            capiCustom('GalleryDepth', {images_viewed: imgViewed, page: page});
             if (typeof window.gtag !== 'undefined') window.gtag('event', 'gallery_depth', {value: imgViewed, page_path: page});
           }
           observer.unobserve(entry.target);
@@ -149,13 +160,13 @@
     });
   }
 
-  // ── 8. PREISE PAGE: Package interest ──
+  // ── 8. PREISE: Package interest ──
   if (page.indexOf('/preise') !== -1) {
     document.querySelectorAll('.price-card, .paket, [class*="price"], [class*="paket"]').forEach(function(card) {
       card.addEventListener('click', function() {
         var pkg = card.querySelector('h3, h2, .price-title');
         var name = pkg ? pkg.textContent.trim() : 'Paket';
-        if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'PackageInterest', {package_name: name});
+        capiCustom('PackageInterest', {package_name: name});
         if (typeof window.gtag !== 'undefined') window.gtag('event', 'select_item', {item_name: name});
       });
     });
@@ -167,7 +178,7 @@
       el.addEventListener('click', function() {
         var name = el.closest('.pf-card, .portfolio-item');
         var label = name ? name.querySelector('h3, .pf-title') : null;
-        if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', 'ReportageClick', {
+        capiCustom('ReportageClick', {
           content_name: label ? label.textContent.trim() : 'Reportage',
           content_type: 'service',
           content_category: 'Reportage'
