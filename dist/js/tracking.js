@@ -172,10 +172,12 @@
     });
   }
 
-  // ── 9. PORTFOLIO: Reportage link clicks ──
+ // ── 9. PORTFOLIO: Reportage link clicks (mit Navigation-Delay für CAPI) ──
   if (page.indexOf('/portfolio') !== -1) {
     document.querySelectorAll('a[href*="reportagen"]').forEach(function(el) {
-      el.addEventListener('click', function() {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var href = el.getAttribute('href');
         var name = el.closest('.pf-card, .portfolio-item');
         var label = name ? name.querySelector('h3, .pf-title') : null;
         capiCustom('ReportageClick', {
@@ -185,8 +187,9 @@
         });
         if (typeof window.gtag !== 'undefined') window.gtag('event', 'select_content', {
           content_type: 'reportage',
-          item_id: el.getAttribute('href')
+          item_id: href
         });
+        setTimeout(function() { window.location.href = href; }, 150);
       });
     });
   }
