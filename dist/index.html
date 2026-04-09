@@ -6,24 +6,6 @@
 
 
 <meta charset="utf-8">
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted',
-    'ad_personalization': 'granted',
-    'analytics_storage': 'granted'
-  });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WTB03GDRG"></script>
-<script>
-  gtag('js', new Date());
-  gtag('config', 'G-4WTB03GDRG', {
-    'allow_enhanced_conversions': true
-  });
-</script>
 <meta name="google-site-verification" content="VdwJ2n6jCGWsFH_AE7-wwXYc8crrWTDp-kNba3mWOP4" />
 <meta name="facebook-domain-verification" content="5e2jspggv55xycs247egl8diamhup4" />
 <meta name="apple-domain-verification" content="A4Lq3sdot5vt-8ubmaLnH3czieipD2VbFth9KijInbI" />
@@ -1055,6 +1037,35 @@ p { max-width: 60ch; }
   font-size: 0.85rem;
 }
 
+/* ═══ STICKY WHATSAPP (mobile only) ═══ */
+/*
+.wa-sticky {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 90;
+  width: 52px;
+  height: 52px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s var(--ease-out), opacity 0.3s;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+.wa-sticky.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.wa-sticky:hover { transform: scale(1.08); }
+.wa-sticky svg { width: 26px; height: 26px; fill: #fff; }
+@media (min-width: 901px) { .wa-sticky { display: none; } }
+*/
 
 
 /* ═══ SCROLL CTA ═══ */
@@ -1134,141 +1145,6 @@ p { max-width: 60ch; }
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@natalia_photography">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1083293176093427', {}, {autoConfig: false, autoAdvancedMatching: true});
-// PageView fired with eventID in CAPI snippet below
-// Capture fbclid + gclid from URL and store in cookies
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  var fbclid = params.get('fbclid');
-  if (fbclid) {
-    var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
-    document.cookie = '_fbc=' + fbc + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Google Ads Click ID - persist for conversion attribution
-  var gclid = params.get('gclid');
-  if (gclid) {
-    document.cookie = '_gclid=' + gclid + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Store landing page + UTM params for lead attribution
-  if (params.get('utm_source') || gclid || fbclid) {
-    var attribution = JSON.stringify({
-      source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
-      medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
-      campaign: params.get('utm_campaign') || '',
-      landing: window.location.pathname,
-      ts: Date.now()
-    });
-    document.cookie = '_attribution=' + encodeURIComponent(attribution) + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-})();
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel Code -->
-<!-- CAPI Server-Side Tracking v2 — fbp-Garantie + external_id -->
-<script>
-(function() {
-  var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
-
-  // ── Hilfsfunktionen ──
-  function generateEventId() {
-    return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
-  }
-  function getCookie(name) {
-    var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-    return match ? decodeURIComponent(match[2]) : null;
-  }
-  function setCookie(name, value, days) {
-    var maxAge = days * 86400;
-    document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
-  }
-  function getFbcFromUrl() {
-    var params = new URLSearchParams(window.location.search);
-    var fbclid = params.get("fbclid");
-    if (fbclid) return "fb.1." + Date.now() + "." + fbclid;
-    return null;
-  }
-
-  // ── 1. _fbp SELBST GENERIEREN wenn nicht vorhanden ──
-  // Das Meta Pixel SDK setzt _fbp, aber lädt async → oft noch nicht
-  // da wenn PageView feuert. Wir generieren es vorher selbst.
-  // Format: fb.1.<creation_time>.<random_number>
-  function ensureFbp() {
-    var existing = getCookie("_fbp");
-    if (existing) return existing;
-    var fbp = "fb.1." + Date.now() + "." + (Math.floor(Math.random() * 2147483647) + 1);
-    setCookie("_fbp", fbp, 90);
-    return fbp;
-  }
-
-  // ── 2. external_id — stabiler Pseudonym-Identifier ──
-  // Hilft Meta bei der Zuordnung auch ohne Login-Daten.
-  // Bleibt 180 Tage im Cookie, wird SHA256-gehasht im Worker.
-  function ensureExternalId() {
-    var existing = getCookie("_ext_id");
-    if (existing) return existing;
-    var id = "nt_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 12);
-    setCookie("_ext_id", id, 180);
-    return id;
-  }
-
-  // Sofort generieren (vor allem anderen)
-  var fbp = ensureFbp();
-  var externalId = ensureExternalId();
-
-  // ── 3. sendCAPIEvent — angereichert mit allen Match-Keys ──
-  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
-    customData = customData || {};
-    userData = userData || {};
-
-    var user_data = {
-      fbp: getCookie("_fbp") || fbp,
-      fbc: getCookie("_fbc") || getFbcFromUrl(),
-      external_id: getCookie("_ext_id") || externalId,
-      country: "de"
-      // client_ip_address + client_user_agent werden vom Worker
-      // aus den Request-Headers extrahiert
-    };
-
-    if (userData.em) user_data.em = userData.em;
-    if (userData.fn) user_data.fn = userData.fn;
-    if (userData.ln) user_data.ln = userData.ln;
-    if (userData.ph) user_data.ph = userData.ph;
-
-    var payload = {
-      event_name: eventName,
-      event_time: Math.floor(Date.now() / 1000),
-      event_source_url: window.location.href,
-      event_id: eventId,
-      user_data: user_data,
-      custom_data: customData
-    };
-
-    var url = CAPI_WORKER_URL + "/event";
-    var body = JSON.stringify(payload);
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
-    } else {
-      fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
-    }
-  };
-
-  // ── 4. PageView mit garantiertem fbp ──
-  var pvId = generateEventId();
-  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
-  sendCAPIEvent("PageView", pvId);
-})();
-</script>
 
 </head>
 
@@ -1686,14 +1562,14 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
         <a href="https://maps.app.goo.gl/ak2VVrbKNQpdYCc16?g_st=ic" target="_blank" rel="noopener" style="color:rgba(196,181,171,0.5);text-decoration:underline;text-underline-offset:3px;">Auf Google Maps ansehen</a>
       </address>
     </div>
-        <div class="footer-links">
+    <div class="footer-links">
       <div class="footer-col">
         <h4>Navigation</h4>
         <a href="portfolio">Portfolio</a>
         <a href="ueber-mich">Über mich</a>
         <a href="preise">Preise</a>
         <a href="faq">FAQ</a>
-        <a href="journal">Journal</a>
+    <a href="journal">Journal</a>
         <a href="#contact">Kontakt</a>
       </div>
       <div class="footer-col">
@@ -1713,6 +1589,10 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></
   </div>
 </footer>
 
+<!-- ═══ STICKY WHATSAPP (Mobile) ═══ -->
+<a href="https://wa.me/4917634948598?text=Hallo%20Natalia%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eure%20Hochzeitsfotografie." target="_blank" rel="noopener noreferrer" class="wa-sticky" id="waSticky" aria-label="WhatsApp schreiben">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+</a>
 
 <!-- ═══ SCROLL CTA ═══ -->
 <div class="scroll-cta" id="scrollCta">
@@ -1727,9 +1607,14 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 
-  // Scroll CTA: show at 50% scroll, hide if dismissed or near contact
+  // Sticky WhatsApp: show after scrolling 400px, hide near contact section
+  var wa = document.getElementById('waSticky');
   var contactEl = document.getElementById('contact');
   var contactTop = contactEl ? contactEl.getBoundingClientRect().top : 9999;
+  var showWa = window.scrollY > 400 && contactTop > 200;
+  if (wa) wa.classList.toggle('visible', showWa);
+
+  // Scroll CTA: show at 50% scroll, hide if dismissed or near contact
   if (!window.__ctaDismissed) {
     var total = document.body.scrollHeight - window.innerHeight;
     var pct = total > 0 ? window.scrollY / total : 0;
@@ -1975,6 +1860,133 @@ if (window.location.hash) {
     }, 300);
   });
 }
+</script>
+
+<!-- ═══ TRACKING (nach DOM-Aufbau für schnelleren First Paint) ═══ -->
+<!-- Google tag (gtag.js) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WTB03GDRG"></script>
+<script>
+  gtag('js', new Date());
+  gtag('config', 'G-4WTB03GDRG', {
+    'allow_enhanced_conversions': true
+  });
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1083293176093427', {}, {autoConfig: false, autoAdvancedMatching: true});
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var fbclid = params.get('fbclid');
+  if (fbclid) {
+    var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+    document.cookie = '_fbc=' + fbc + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+  var gclid = params.get('gclid');
+  if (gclid) {
+    document.cookie = '_gclid=' + gclid + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+  if (params.get('utm_source') || gclid || fbclid) {
+    var attribution = JSON.stringify({
+      source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
+      medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
+      campaign: params.get('utm_campaign') || '',
+      landing: window.location.pathname,
+      ts: Date.now()
+    });
+    document.cookie = '_attribution=' + encodeURIComponent(attribution) + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></noscript>
+<!-- CAPI Server-Side Tracking v2 -->
+<script>
+(function() {
+  var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
+  function generateEventId() {
+    return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function setCookie(name, value, days) {
+    var maxAge = days * 86400;
+    document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
+  }
+  function getFbcFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get("fbclid");
+    if (fbclid) return "fb.1." + Date.now() + "." + fbclid;
+    return null;
+  }
+  function ensureFbp() {
+    var existing = getCookie("_fbp");
+    if (existing) return existing;
+    var fbp = "fb.1." + Date.now() + "." + (Math.floor(Math.random() * 2147483647) + 1);
+    setCookie("_fbp", fbp, 90);
+    return fbp;
+  }
+  function ensureExternalId() {
+    var existing = getCookie("_ext_id");
+    if (existing) return existing;
+    var id = "nt_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 12);
+    setCookie("_ext_id", id, 180);
+    return id;
+  }
+  var fbp = ensureFbp();
+  var externalId = ensureExternalId();
+  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
+    customData = customData || {};
+    userData = userData || {};
+    var user_data = {
+      fbp: getCookie("_fbp") || fbp,
+      fbc: getCookie("_fbc") || getFbcFromUrl(),
+      external_id: getCookie("_ext_id") || externalId,
+      country: "de"
+    };
+    if (userData.em) user_data.em = userData.em;
+    if (userData.fn) user_data.fn = userData.fn;
+    if (userData.ln) user_data.ln = userData.ln;
+    if (userData.ph) user_data.ph = userData.ph;
+    var payload = {
+      event_name: eventName,
+      event_time: Math.floor(Date.now() / 1000),
+      event_source_url: window.location.href,
+      event_id: eventId,
+      user_data: user_data,
+      custom_data: customData
+    };
+    var url = CAPI_WORKER_URL + "/event";
+    var body = JSON.stringify(payload);
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
+    } else {
+      fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
+    }
+  };
+  var pvId = generateEventId();
+  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
+  sendCAPIEvent("PageView", pvId);
+})();
 </script>
 
 <script src="js/tracking.js" defer></script>
