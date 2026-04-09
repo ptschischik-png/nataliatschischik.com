@@ -1056,7 +1056,6 @@ p { max-width: 60ch; }
 }
 
 /* ═══ STICKY WHATSAPP (mobile only) ═══ */
-/*
 .wa-sticky {
   position: fixed;
   bottom: 1.25rem;
@@ -1082,7 +1081,7 @@ p { max-width: 60ch; }
 }
 .wa-sticky:hover { transform: scale(1.08); }
 .wa-sticky svg { width: 26px; height: 26px; fill: #fff; }
-*/
+
 
 /* ═══ SCROLL CTA ═══ */
 .scroll-cta {
@@ -1740,7 +1739,6 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 
-/*
   // Sticky WhatsApp: show after scrolling 400px, hide near contact section
   var wa = document.getElementById('waSticky');
   var contactEl = document.getElementById('contact');
@@ -1756,7 +1754,6 @@ window.addEventListener('scroll', () => {
     if (cta) cta.classList.toggle('visible', pct > 0.5 && contactTop > 300);
   }
 }, { passive: true });
-*/
 
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
