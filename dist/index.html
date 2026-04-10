@@ -173,7 +173,7 @@
 </script>
 
 <!-- Fonts -->
-<link rel="preload" as="image" type="image/webp" href="img/ext/gd-15zAiT52byizm3F-800w.webp" imagesrcset="img/ext/gd-15zAiT52byizm3F-400w.webp 400w, img/ext/gd-15zAiT52byizm3F-800w.webp 800w, img/ext/gd-15zAiT52byizm3F.webp 896w" imagesizes="(max-width: 768px) 100vw, 40vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="img/ext/gd-15zAiT52byizm3F-800w.webp" imagesrcset="/img/ext/gd-15zAiT52byizm3F-400w.webp 400w, /img/ext/gd-15zAiT52byizm3F-800w.webp 800w, /img/ext/gd-15zAiT52byizm3F.webp 896w" imagesizes="(max-width: 768px) 100vw, 40vw" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/dm-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -1152,6 +1152,141 @@ p { max-width: 60ch; }
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@natalia_photography">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1083293176093427', {}, {autoConfig: false, autoAdvancedMatching: true});
+// PageView fired with eventID in CAPI snippet below
+// Capture fbclid + gclid from URL and store in cookies
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var fbclid = params.get('fbclid');
+  if (fbclid) {
+    var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+    document.cookie = '_fbc=' + fbc + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+  // Google Ads Click ID - persist for conversion attribution
+  var gclid = params.get('gclid');
+  if (gclid) {
+    document.cookie = '_gclid=' + gclid + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+  // Store landing page + UTM params for lead attribution
+  if (params.get('utm_source') || gclid || fbclid) {
+    var attribution = JSON.stringify({
+      source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
+      medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
+      campaign: params.get('utm_campaign') || '',
+      landing: window.location.pathname,
+      ts: Date.now()
+    });
+    document.cookie = '_attribution=' + encodeURIComponent(attribution) + ';max-age=7776000;path=/;SameSite=Lax';
+  }
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- CAPI Server-Side Tracking v2 — fbp-Garantie + external_id -->
+<script>
+(function() {
+  var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
+
+  // ── Hilfsfunktionen ──
+  function generateEventId() {
+    return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
+  }
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+  function setCookie(name, value, days) {
+    var maxAge = days * 86400;
+    document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
+  }
+  function getFbcFromUrl() {
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get("fbclid");
+    if (fbclid) return "fb.1." + Date.now() + "." + fbclid;
+    return null;
+  }
+
+  // ── 1. _fbp SELBST GENERIEREN wenn nicht vorhanden ──
+  // Das Meta Pixel SDK setzt _fbp, aber lädt async → oft noch nicht
+  // da wenn PageView feuert. Wir generieren es vorher selbst.
+  // Format: fb.1.<creation_time>.<random_number>
+  function ensureFbp() {
+    var existing = getCookie("_fbp");
+    if (existing) return existing;
+    var fbp = "fb.1." + Date.now() + "." + (Math.floor(Math.random() * 2147483647) + 1);
+    setCookie("_fbp", fbp, 90);
+    return fbp;
+  }
+
+  // ── 2. external_id — stabiler Pseudonym-Identifier ──
+  // Hilft Meta bei der Zuordnung auch ohne Login-Daten.
+  // Bleibt 180 Tage im Cookie, wird SHA256-gehasht im Worker.
+  function ensureExternalId() {
+    var existing = getCookie("_ext_id");
+    if (existing) return existing;
+    var id = "nt_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 12);
+    setCookie("_ext_id", id, 180);
+    return id;
+  }
+
+  // Sofort generieren (vor allem anderen)
+  var fbp = ensureFbp();
+  var externalId = ensureExternalId();
+
+  // ── 3. sendCAPIEvent — angereichert mit allen Match-Keys ──
+  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
+    customData = customData || {};
+    userData = userData || {};
+
+    var user_data = {
+      fbp: getCookie("_fbp") || fbp,
+      fbc: getCookie("_fbc") || getFbcFromUrl(),
+      external_id: getCookie("_ext_id") || externalId,
+      country: "de"
+      // client_ip_address + client_user_agent werden vom Worker
+      // aus den Request-Headers extrahiert
+    };
+
+    if (userData.em) user_data.em = userData.em;
+    if (userData.fn) user_data.fn = userData.fn;
+    if (userData.ln) user_data.ln = userData.ln;
+    if (userData.ph) user_data.ph = userData.ph;
+
+    var payload = {
+      event_name: eventName,
+      event_time: Math.floor(Date.now() / 1000),
+      event_source_url: window.location.href,
+      event_id: eventId,
+      user_data: user_data,
+      custom_data: customData
+    };
+
+    var url = CAPI_WORKER_URL + "/event";
+    var body = JSON.stringify(payload);
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
+    } else {
+      fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
+    }
+  };
+
+  // ── 4. PageView mit garantiertem fbp ──
+  var pvId = generateEventId();
+  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
+  sendCAPIEvent("PageView", pvId);
+})();
+</script>
 
 </head>
 
@@ -1867,141 +2002,6 @@ if (window.location.hash) {
     }, 300);
   });
 }
-</script>
-
-
-<!-- Meta Pixel + CAPI — moved here for LCP performance -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1083293176093427', {}, {autoConfig: false, autoAdvancedMatching: true});
-// PageView fired with eventID in CAPI snippet below
-// Capture fbclid + gclid from URL and store in cookies
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  var fbclid = params.get('fbclid');
-  if (fbclid) {
-    var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
-    document.cookie = '_fbc=' + fbc + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Google Ads Click ID - persist for conversion attribution
-  var gclid = params.get('gclid');
-  if (gclid) {
-    document.cookie = '_gclid=' + gclid + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Store landing page + UTM params for lead attribution
-  if (params.get('utm_source') || gclid || fbclid) {
-    var attribution = JSON.stringify({
-      source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
-      medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
-      campaign: params.get('utm_campaign') || '',
-      landing: window.location.pathname,
-      ts: Date.now()
-    });
-    document.cookie = '_attribution=' + encodeURIComponent(attribution) + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-})();
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1"/></noscript>
-<script>
-(function() {
-  var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
-
-  // ── Hilfsfunktionen ──
-  function generateEventId() {
-    return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
-  }
-  function getCookie(name) {
-    var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
-    return match ? decodeURIComponent(match[2]) : null;
-  }
-  function setCookie(name, value, days) {
-    var maxAge = days * 86400;
-    document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
-  }
-  function getFbcFromUrl() {
-    var params = new URLSearchParams(window.location.search);
-    var fbclid = params.get("fbclid");
-    if (fbclid) return "fb.1." + Date.now() + "." + fbclid;
-    return null;
-  }
-
-  // ── 1. _fbp SELBST GENERIEREN wenn nicht vorhanden ──
-  // Das Meta Pixel SDK setzt _fbp, aber lädt async → oft noch nicht
-  // da wenn PageView feuert. Wir generieren es vorher selbst.
-  // Format: fb.1.<creation_time>.<random_number>
-  function ensureFbp() {
-    var existing = getCookie("_fbp");
-    if (existing) return existing;
-    var fbp = "fb.1." + Date.now() + "." + (Math.floor(Math.random() * 2147483647) + 1);
-    setCookie("_fbp", fbp, 90);
-    return fbp;
-  }
-
-  // ── 2. external_id — stabiler Pseudonym-Identifier ──
-  // Hilft Meta bei der Zuordnung auch ohne Login-Daten.
-  // Bleibt 180 Tage im Cookie, wird SHA256-gehasht im Worker.
-  function ensureExternalId() {
-    var existing = getCookie("_ext_id");
-    if (existing) return existing;
-    var id = "nt_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 12);
-    setCookie("_ext_id", id, 180);
-    return id;
-  }
-
-  // Sofort generieren (vor allem anderen)
-  var fbp = ensureFbp();
-  var externalId = ensureExternalId();
-
-  // ── 3. sendCAPIEvent — angereichert mit allen Match-Keys ──
-  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
-    customData = customData || {};
-    userData = userData || {};
-
-    var user_data = {
-      fbp: getCookie("_fbp") || fbp,
-      fbc: getCookie("_fbc") || getFbcFromUrl(),
-      external_id: getCookie("_ext_id") || externalId,
-      country: "de"
-      // client_ip_address + client_user_agent werden vom Worker
-      // aus den Request-Headers extrahiert
-    };
-
-    if (userData.em) user_data.em = userData.em;
-    if (userData.fn) user_data.fn = userData.fn;
-    if (userData.ln) user_data.ln = userData.ln;
-    if (userData.ph) user_data.ph = userData.ph;
-
-    var payload = {
-      event_name: eventName,
-      event_time: Math.floor(Date.now() / 1000),
-      event_source_url: window.location.href,
-      event_id: eventId,
-      user_data: user_data,
-      custom_data: customData
-    };
-
-    var url = CAPI_WORKER_URL + "/event";
-    var body = JSON.stringify(payload);
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
-    } else {
-      fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
-    }
-  };
-
-  // ── 4. PageView mit garantiertem fbp ──
-  var pvId = generateEventId();
-  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
-  sendCAPIEvent("PageView", pvId);
-})();
 </script>
 
 <script src="js/tracking.js" defer></script>
