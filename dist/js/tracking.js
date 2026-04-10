@@ -1,10 +1,29 @@
-// ═══ UNIVERSAL MICRO-CONVERSION TRACKING v2 ═══
-// Änderungen gegenüber v1:
-// - ScrollDepth, EngagedVisit, HighlyEngaged jetzt auch über CAPI
-// - capi() Funktion nutzt einheitlich window.sendCAPIEvent
-// - Saubere Dedup für alle Events die über beide Kanäle gehen
+// ═══ UNIVERSAL MICRO-CONVERSION TRACKING v3 ═══
+// Änderungen gegenüber v2:
+// - getUserData() liest fbp, fbc, external_id aus Cookies/URL
+// - Alle CAPI-Calls senden jetzt user_data mit → bessere Event-Qualität
+// - fbc-Fallback aus fbclid URL-Parameter
 (function() {
   var page = window.location.pathname;
+
+  // ── USER DATA HELPER (fbp, fbc, external_id) ──
+  function getUserData() {
+    var ud = {};
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var c = cookies[i].trim();
+      if (c.indexOf('_fbp=') === 0) ud.fbp = c.substring(5);
+      if (c.indexOf('_fbc=') === 0) ud.fbc = c.substring(5);
+    }
+    // Fallback: fbc aus URL bauen wenn fbclid vorhanden
+    if (!ud.fbc) {
+      var fbclid = new URLSearchParams(window.location.search).get('fbclid');
+      if (fbclid) ud.fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+    }
+    // external_id aus fbp ableiten (stabiler Cross-Session Identifier)
+    if (ud.fbp) ud.external_id = ud.fbp;
+    return ud;
+  }
 
   // Helper: send to CAPI + Pixel mit Deduplication
   function capi(eventName, customData, userData) {
@@ -23,7 +42,9 @@
     if (params.get('utm_content'))  enriched.utm_content  = params.get('utm_content');
     if (document.referrer)          enriched.referrer     = document.referrer;
 
-    window.sendCAPIEvent(eventName, eventId, enriched, userData);
+    // Merge getUserData() mit übergebenem userData
+    var mergedUser = Object.assign(getUserData(), userData || {});
+    window.sendCAPIEvent(eventName, eventId, enriched, mergedUser);
     return eventId;
   }
 
@@ -38,7 +59,8 @@
     if (typeof window.fbq !== 'undefined') {
       window.fbq('trackCustom', eventName, customData || {}, { eventID: eventId });
     }
-    window.sendCAPIEvent(eventName, eventId, customData);
+    // Jetzt mit user_data für besseres Matching
+    window.sendCAPIEvent(eventName, eventId, customData, getUserData());
   }
 
   // ── 1. PAGE-SPECIFIC VIEWCONTENT ──
@@ -68,7 +90,7 @@
     });
   }
 
-  // ── 2. SCROLL DEPTH (25/50/75%) — jetzt über CAPI ──
+  // ── 2. SCROLL DEPTH (25/50/75%) — über CAPI ──
   var scrollTracked = {};
   window.addEventListener('scroll', function() {
     var total = document.body.scrollHeight - window.innerHeight;
@@ -84,7 +106,7 @@
     });
   });
 
-  // ── 3. TIME ON PAGE — jetzt über CAPI ──
+  // ── 3. TIME ON PAGE — über CAPI ──
   setTimeout(function() {
     capiCustom('EngagedVisit', {duration: '30s', page: page});
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'engaged_visit', {engagement_time: 30, page_path: page});
@@ -172,7 +194,7 @@
     });
   }
 
- // ── 9. PORTFOLIO: Reportage link clicks (mit Navigation-Delay für CAPI) ──
+  // ── 9. PORTFOLIO: Reportage link clicks (mit Navigation-Delay für CAPI) ──
   if (page.indexOf('/portfolio') !== -1) {
     document.querySelectorAll('a[href*="reportagen"]').forEach(function(el) {
       el.addEventListener('click', function(e) {
