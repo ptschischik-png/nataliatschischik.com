@@ -198,7 +198,6 @@
   if (page.indexOf('/portfolio') !== -1) {
     document.querySelectorAll('a[href*="reportagen"]').forEach(function(el) {
       el.addEventListener('click', function(e) {
-        e.preventDefault();
         var href = el.getAttribute('href');
         var name = el.closest('.pf-card, .portfolio-item');
         var label = name ? name.querySelector('h3, .pf-title') : null;
@@ -211,7 +210,16 @@
           content_type: 'reportage',
           item_id: href
         });
-        setTimeout(function() { window.location.href = href; }, 150);
+
+        // Nur "normale" Link-Klicks verzögern; neue Tabs/Fenster nicht blockieren.
+        var isPrimaryClick = e.button === 0 && !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey;
+        var isNewWindowTarget = (el.target || '').toLowerCase() === '_blank';
+        var isDownload = el.hasAttribute('download');
+
+        if (isPrimaryClick && !isNewWindowTarget && !isDownload && href) {
+          e.preventDefault();
+          setTimeout(function() { window.location.href = href; }, 150);
+        }
       });
     });
   }
