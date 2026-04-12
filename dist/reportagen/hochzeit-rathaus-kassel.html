@@ -1986,4 +1986,16 @@ const chapters = ['kap1', 'kap2', 'kap3', 'kap4', 'kap5'];
 const dots = document.querySelectorAll('.chapter-dot');
 const chapterEls = chapters.map(id => document.getElementById(id));
 
-const chapterObserver 
+const chapterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      dots.forEach(dot => dot.classList.remove("active"));
+      const activeDot = document.querySelector('.chapter-dot[data-chapter="' + entry.target.id + '"]');
+      if (activeDot) activeDot.classList.add("active");
+    }
+  });
+}, {threshold: 0.2, rootMargin: "-20% 0px -60% 0px"});
+chapterEls.forEach(function(el) { if (el) chapterObserver.observe(el); });
+</script>
+</body>
+</html>

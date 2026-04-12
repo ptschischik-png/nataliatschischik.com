@@ -347,7 +347,7 @@ p { max-width: 60ch; }
   <div class="hero-content">
     <span class="hero-label">Hochzeitsfotografie &middot; Kassel &amp; Göttingen</span>
     <h1>Euer Hochzeitsfotograf <br>in <em><span id="city-rotate">Kassel</span>.</em></h1>
-    <p class="hero-label" style="margin-top: -0.5rem; margin-bottom: 1.5rem; font-size: var(--text-xs); letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-400);">Einmal. Für immer. Euer Tag.</p>
+    <p class="hero-label" style="margin-top: -0.5rem; margin-bottom: 1.5rem; font-size: var(--text-xs); letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-400);">Ruhig begleitet. Echt erzählt. Für immer fühlbar.</p>
     <p class="hero-text">
       Als Hochzeitsfotografin in Kassel halte ich seit 2012 die Momente fest, die man nicht wiederholen kann — den Blick eures Vaters am Altar, das Lachen eurer besten Freundin, den Augenblick, in dem ihr euch anschaut und wisst: Das ist es.
     </p>
@@ -886,21 +886,23 @@ async function handleFormSubmit(e) {
     const result = await res.json();
 
     if (res.ok && result.success) {
-      // Track Lead conversion with Advanced Matching + Deduplication
+      // Parse name once and use same payload for Pixel + CAPI deduplication
+      var cleanName = name.replace(/\s+(und|&|\+)\s+/gi, '|');
+      var people = cleanName.split('|').map(function(n) { return n.trim().split(/\s+/); });
+      var userData = {em: email.toLowerCase().trim()};
+      if (phone) userData.ph = phone.replace(/[^0-9]/g, '');
+      if (people[0] && people[0][0]) userData.fn = people[0][0].toLowerCase();
+      if (people[0] && people[0][1]) userData.ln = people[0][1].toLowerCase();
+
+      // Browser Pixel (falls verfügbar)
       if (typeof fbq !== 'undefined') {
-        // Parse name for Advanced Matching
-        var cleanName = name.replace(/\s+(und|&|\+)\s+/gi, '|');
-        var people = cleanName.split('|').map(function(n) { return n.trim().split(/\s+/); });
-        var userData = {em: email.toLowerCase()};
-        if (phone) userData.ph = phone.replace(/[^0-9]/g, '');
-        if (people[0] && people[0][0]) userData.fn = people[0][0].toLowerCase();
-        if (people[0] && people[0][1]) userData.ln = people[0][1].toLowerCase();
-        // Re-init with user data for Advanced Matching
         fbq('init', '1083293176093427', userData);
-        // Single Lead event with eventID for deduplication with CAPI
-        fbq('track', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {eventID: eventID});
-        // CAPI: Lead event with same eventID for deduplication
-        if (typeof sendCAPIEvent !== 'undefined') sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {em: email, fn: userData.fn, ln: userData.ln, ph: userData.ph});
+        fbq('trackSingle', '1083293176093427', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {eventID: eventID});
+      }
+
+      // CAPI immer separat senden (auch wenn fbq blockiert ist)
+      if (typeof sendCAPIEvent !== 'undefined') {
+        sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {em: userData.em, fn: userData.fn, ln: userData.ln, ph: userData.ph});
       }
       if (typeof zaraz !== 'undefined') zaraz.track('Lead');
       // GA4 Lead event (importable as Google Ads conversion)
