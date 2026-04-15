@@ -147,13 +147,21 @@
       if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
 
       if (type === 'WhatsApp') {
-        var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 300, currency: 'EUR'};
+        var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 30, currency: 'EUR'};
         var leadSent = capi('Lead', leadData);
         if (!leadSent && typeof window.fbq !== 'undefined') window.fbq('track', 'Lead', leadData);
+        var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
+        if (typeof window.gtag !== 'undefined' && adsConfig.id && adsConfig.label) {
+          window.gtag('event', 'conversion', {
+            send_to: adsConfig.id + '/' + adsConfig.label,
+            value: 30,
+            currency: 'EUR'
+          });
+        }
         if (typeof window.gtag !== 'undefined') window.gtag('event', 'generate_lead', {
           event_category: 'Contact',
           event_label: 'WhatsApp',
-          value: 300,
+          value: 30,
           currency: 'EUR'
         });
         if (typeof window.zaraz !== 'undefined') window.zaraz.track('Lead');

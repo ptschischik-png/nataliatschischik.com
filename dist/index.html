@@ -916,7 +916,7 @@ async function handleFormSubmit(e) {
         if (adsConfig.id && adsConfig.label) {
           gtag('event', 'conversion', {
             send_to: adsConfig.id + '/' + adsConfig.label,
-            value: 1.0,
+            value: 150,
             currency: 'EUR',
             transaction_id: eventID
           });
