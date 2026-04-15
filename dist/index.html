@@ -897,12 +897,12 @@ async function handleFormSubmit(e) {
       // Browser Pixel (falls verfügbar)
       if (typeof fbq !== 'undefined') {
         fbq('init', '1083293176093427', userData);
-        fbq('trackSingle', '1083293176093427', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {eventID: eventID});
+        fbq('trackSingle', '1083293176093427', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 150, currency: 'EUR'}, {eventID: eventID});
       }
 
       // CAPI immer separat senden (auch wenn fbq blockiert ist)
       if (typeof sendCAPIEvent !== 'undefined') {
-        sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 800, currency: 'EUR'}, {em: userData.em, fn: userData.fn, ln: userData.ln, ph: userData.ph});
+        sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 150, currency: 'EUR'}, {em: userData.em, fn: userData.fn, ln: userData.ln, ph: userData.ph});
       }
       if (typeof zaraz !== 'undefined') zaraz.track('Lead');
       // GA4 Lead event (importable as Google Ads conversion)
