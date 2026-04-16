@@ -1,28 +1,61 @@
-// ═══ UNIVERSAL MICRO-CONVERSION TRACKING v3 ═══
-// Änderungen gegenüber v2:
-// - getUserData() liest fbp, fbc, external_id aus Cookies/URL
-// - Alle CAPI-Calls senden jetzt user_data mit → bessere Event-Qualität
+// ═══ UNIVERSAL MICRO-CONVERSION TRACKING v4 ═══
+// Änderungen gegenüber v3:
+// - nutzt persistierte Identity-Hashes aus _ntu (em/ph/fn/ln)
+// - external_id kommt konsistent aus _ext_id (Fallback: stored em)
 // - fbc-Fallback aus fbclid URL-Parameter
 (function() {
   var page = window.location.pathname;
 
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+
+  function readStoredIdentity() {
+    var raw = getCookie('_ntu');
+    if (!raw) return {};
+    try {
+      var parsed = JSON.parse(raw);
+      return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
   // ── USER DATA HELPER (fbp, fbc, external_id) ──
   function getUserData() {
     var ud = {};
-    var cookies = document.cookie.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-      var c = cookies[i].trim();
-      if (c.indexOf('_fbp=') === 0) ud.fbp = c.substring(5);
-      if (c.indexOf('_fbc=') === 0) ud.fbc = c.substring(5);
-    }
+    var stored = readStoredIdentity();
+    ud.fbp = getCookie('_fbp') || '';
+    ud.fbc = getCookie('_fbc') || '';
+    ud.external_id = getCookie('_ext_id') || stored.em || '';
+    if (stored.em) ud.em = stored.em;
+    if (stored.ph) ud.ph = stored.ph;
+    if (stored.fn) ud.fn = stored.fn;
+    if (stored.ln) ud.ln = stored.ln;
     // Fallback: fbc aus URL bauen wenn fbclid vorhanden
     if (!ud.fbc) {
       var fbclid = new URLSearchParams(window.location.search).get('fbclid');
       if (fbclid) ud.fbc = 'fb.1.' + Date.now() + '.' + fbclid;
     }
-    // external_id aus fbp ableiten (stabiler Cross-Session Identifier)
-    if (ud.fbp) ud.external_id = ud.fbp;
+    if (!ud.fbp) delete ud.fbp;
+    if (!ud.fbc) delete ud.fbc;
+    if (!ud.external_id) delete ud.external_id;
     return ud;
+  }
+
+  function ensureGoogleAdsConfig() {
+    if (typeof window.gtag === 'undefined') return {};
+    var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
+    if (!adsConfig.id) return adsConfig;
+    if (!window.__googleAdsConfigured) {
+      window.gtag('config', adsConfig.id, {
+        allow_enhanced_conversions: true,
+        send_page_view: false
+      });
+      window.__googleAdsConfigured = true;
+    }
+    return adsConfig;
   }
 
   // Helper: send to CAPI + Pixel mit Deduplication
@@ -146,7 +179,7 @@
         var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 50, currency: 'EUR'};
         var leadSent = capi('Lead', leadData);
         if (!leadSent && typeof window.fbq !== 'undefined') window.fbq('track', 'Lead', leadData);
-        var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
+        var adsConfig = ensureGoogleAdsConfig();
         if (typeof window.gtag !== 'undefined' && adsConfig.id && adsConfig.label) {
           window.gtag('event', 'conversion', {
             send_to: adsConfig.id + '/' + adsConfig.label,

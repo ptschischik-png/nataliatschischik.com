@@ -1193,6 +1193,17 @@ if (window.location.hash) {
     document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
   }
 
+  function readStoredIdentity() {
+    var raw = getCookie("_ntu");
+    if (!raw) return {};
+    try {
+      var parsed = JSON.parse(raw);
+      return parsed && typeof parsed === "object" ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
   function getFbcFromUrl() {
     var params = new URLSearchParams(window.location.search);
     var fbclid = params.get("fbclid");
@@ -1211,6 +1222,11 @@ if (window.location.hash) {
   function ensureExternalId() {
     var existing = getCookie("_ext_id");
     if (existing) return existing;
+    var stored = readStoredIdentity();
+    if (stored.em) {
+      setCookie("_ext_id", stored.em, 180);
+      return stored.em;
+    }
     var id = "nt_" + Date.now().toString(36) + Math.random().toString(36).substring(2, 12);
     setCookie("_ext_id", id, 180);
     return id;
@@ -1245,6 +1261,7 @@ if (window.location.hash) {
   function sendCapiNow(eventName, eventId, customData, userData) {
     customData = customData || {};
     userData = userData || {};
+    var stored = readStoredIdentity();
 
     if (!bootFbp) bootFbp = ensureFbp();
     if (!bootExternalId) bootExternalId = ensureExternalId();
@@ -1252,9 +1269,14 @@ if (window.location.hash) {
     var user_data = {
       fbp: getCookie("_fbp") || bootFbp,
       fbc: getCookie("_fbc") || getFbcFromUrl(),
-      external_id: getCookie("_ext_id") || bootExternalId,
+      external_id: getCookie("_ext_id") || stored.em || bootExternalId,
       country: "de"
     };
+
+    if (stored.em) user_data.em = stored.em;
+    if (stored.fn) user_data.fn = stored.fn;
+    if (stored.ln) user_data.ln = stored.ln;
+    if (stored.ph) user_data.ph = stored.ph;
 
     if (userData.em) user_data.em = userData.em;
     if (userData.fn) user_data.fn = userData.fn;
@@ -1307,14 +1329,23 @@ if (window.location.hash) {
 
     window.gtag("js", new Date());
     window.gtag("config", MEASUREMENT_ID, { allow_enhanced_conversions: true });
-    if (window.GOOGLE_ADS_CONVERSION && window.GOOGLE_ADS_CONVERSION.id) {
-      window.gtag("config", window.GOOGLE_ADS_CONVERSION.id, { allow_enhanced_conversions: true });
-    }
 
     loadScript("https://www.googletagmanager.com/gtag/js?id=" + MEASUREMENT_ID);
   }
 
-  function initMetaPixel() {
+  function getPixelUserData() {
+    var stored = readStoredIdentity();
+    var externalId = getCookie("_ext_id") || stored.em || bootExternalId || ensureExternalId();
+    var userData = {};
+    if (stored.em) userData.em = stored.em;
+    if (stored.fn) userData.fn = stored.fn;
+    if (stored.ln) userData.ln = stored.ln;
+    if (stored.ph) userData.ph = stored.ph;
+    if (externalId) userData.external_id = externalId;
+    return userData;
+  }
+
+  function initMetaPixel(matchData) {
     !function(f,b,e,v,n,t,s){
       if (f.fbq) return;
       n = f.fbq = function(){ n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
@@ -1331,7 +1362,7 @@ if (window.location.hash) {
     }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
     if (typeof window.fbq !== "undefined") {
-      window.fbq("init", PIXEL_ID, {}, { autoConfig: false, autoAdvancedMatching: true });
+      window.fbq("init", PIXEL_ID, matchData || {}, { autoConfig: false, autoAdvancedMatching: true });
     }
   }
 
@@ -1347,7 +1378,8 @@ if (window.location.hash) {
     if (lateTrackingBooted) return;
     lateTrackingBooted = true;
 
-    initMetaPixel();
+    var pixelUserData = getPixelUserData();
+    initMetaPixel(pixelUserData);
 
     if (typeof window.fbq !== "undefined" && pageViewEventId) {
       window.fbq("trackSingle", PIXEL_ID, "PageView", {}, { eventID: pageViewEventId });

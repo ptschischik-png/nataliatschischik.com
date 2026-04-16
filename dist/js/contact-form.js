@@ -75,6 +75,59 @@
     status.style.display = 'block';
   }
 
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+
+  function setCookie(name, value, days) {
+    var maxAge = days * 86400;
+    document.cookie = name + '=' + encodeURIComponent(value) + ';max-age=' + maxAge + ';path=/;SameSite=Lax';
+  }
+
+  function readStoredIdentity() {
+    var raw = getCookie('_ntu');
+    if (!raw) return {};
+    try {
+      var parsed = JSON.parse(raw);
+      return parsed && typeof parsed === 'object' ? parsed : {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function persistIdentityHashes(hashes) {
+    var current = readStoredIdentity();
+    var merged = {
+      em: hashes && hashes.em ? hashes.em : current.em || '',
+      ph: hashes && hashes.ph ? hashes.ph : current.ph || '',
+      fn: hashes && hashes.fn ? hashes.fn : current.fn || '',
+      ln: hashes && hashes.ln ? hashes.ln : current.ln || ''
+    };
+    var payload = {};
+    if (merged.em) payload.em = merged.em;
+    if (merged.ph) payload.ph = merged.ph;
+    if (merged.fn) payload.fn = merged.fn;
+    if (merged.ln) payload.ln = merged.ln;
+    if (!Object.keys(payload).length) return;
+    setCookie('_ntu', JSON.stringify(payload), 180);
+    if (payload.em) setCookie('_ext_id', payload.em, 180);
+  }
+
+  function ensureGoogleAdsConfig() {
+    if (typeof gtag === 'undefined') return {};
+    var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
+    if (!adsConfig.id) return adsConfig;
+    if (!window.__googleAdsConfigured) {
+      gtag('config', adsConfig.id, {
+        allow_enhanced_conversions: true,
+        send_page_view: false
+      });
+      window.__googleAdsConfigured = true;
+    }
+    return adsConfig;
+  }
+
   async function handleFormSubmit(e) {
     e.preventDefault();
     var btn = document.getElementById('submitBtn');
@@ -152,6 +205,7 @@
         if (phoneHash) userData.ph = phoneHash;
         if (fnHash) userData.fn = fnHash;
         if (lnHash) userData.ln = lnHash;
+        persistIdentityHashes(userData);
 
         if (typeof fbq !== 'undefined') {
           fbq('init', '1083293176093427', userData);
@@ -183,7 +237,7 @@
           if (phoneHash) googleUserData.sha256_phone_number = phoneHash;
           if (Object.keys(googleUserData).length) gtag('set', 'user_data', googleUserData);
 
-          var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
+          var adsConfig = ensureGoogleAdsConfig();
           if (adsConfig.id && adsConfig.label) {
             gtag('event', 'conversion', {
               send_to: adsConfig.id + '/' + adsConfig.label,
