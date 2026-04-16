@@ -101,7 +101,6 @@
         scrollTracked[t] = true;
         capiCustom('ScrollDepth', {depth: t, page: page});
         if (typeof window.gtag !== 'undefined') window.gtag('event', 'scroll', {percent_scrolled: t});
-        if (typeof window.zaraz !== 'undefined') window.zaraz.track('Scroll Depth ' + t);
       }
     });
   });
@@ -110,7 +109,6 @@
   setTimeout(function() {
     capiCustom('EngagedVisit', {duration: '30s', page: page});
     if (typeof window.gtag !== 'undefined') window.gtag('event', 'engaged_visit', {engagement_time: 30, page_path: page});
-    if (typeof window.zaraz !== 'undefined') window.zaraz.track('EngagedVisit');
   }, 30000);
 
   setTimeout(function() {
@@ -133,7 +131,6 @@
       var label = el.textContent.trim().substring(0, 50);
       capiCustom('CTAClick', {content_name: label, content_category: 'CTA', page: page});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'cta_click', {event_label: label, page_path: page});
-      if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
     });
   });
 
@@ -144,7 +141,6 @@
       var sent = capi('Contact', {content_name: type});
       if (!sent && typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', {content_name: type});
       if (typeof window.gtag !== 'undefined') window.gtag('event', 'contact_click', {method: type, page_path: page});
-      if (typeof window.zaraz !== 'undefined') window.zaraz.track('Contact');
 
       if (type === 'WhatsApp') {
         var leadData = {content_name: 'WhatsApp', content_category: 'Hochzeitsfotografie', value: 50, currency: 'EUR'};
@@ -164,7 +160,6 @@
           value: 50,
           currency: 'EUR'
         });
-        if (typeof window.zaraz !== 'undefined') window.zaraz.track('Lead');
       }
     });
   });
