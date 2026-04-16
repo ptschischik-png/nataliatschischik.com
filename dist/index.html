@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 
 <!-- 🎯 LCP-critical preloads (first for preload scanner) -->
 <link rel="preload" as="image" type="image/webp" href="img/ext/gd-15zAiT52byizm3F-800w.webp" imagesrcset="img/ext/gd-15zAiT52byizm3F-400w.webp 400w, img/ext/gd-15zAiT52byizm3F-800w.webp 800w, img/ext/gd-15zAiT52byizm3F.webp 896w" imagesizes="(max-width: 768px) 100vw, 40vw" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
 
 <meta name="google-site-verification" content="VdwJ2n6jCGWsFH_AE7-wwXYc8crrWTDp-kNba3mWOP4" />
 <meta name="facebook-domain-verification" content="5e2jspggv55xycs247egl8diamhup4" />
@@ -1241,94 +1241,48 @@ if (window.location.hash) {
 </script>
 
 
-<!-- ═══ Tracking (moved from head for LCP) ═══ -->
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.GOOGLE_ADS_CONVERSION = {
-    id: 'AW-993521489',
-    label: 'lauZCJGOhpwcENHe39kD'
-  };
-  gtag('consent', 'default', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted',
-    'ad_personalization': 'granted',
-    'analytics_storage': 'granted'
-  });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WTB03GDRG"></script>
-<script>
-  gtag('js', new Date());
-  gtag('config', 'G-4WTB03GDRG', {
-    'allow_enhanced_conversions': true
-  });
-  if (window.GOOGLE_ADS_CONVERSION && window.GOOGLE_ADS_CONVERSION.id) {
-    gtag('config', window.GOOGLE_ADS_CONVERSION.id, {
-      'allow_enhanced_conversions': true
-    });
-  }
-</script>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1083293176093427', {}, {autoConfig: false, autoAdvancedMatching: true});
-// PageView fired with eventID in CAPI snippet below
-// Capture fbclid + gclid from URL and store in cookies
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  var fbclid = params.get('fbclid');
-  if (fbclid) {
-    var fbc = 'fb.1.' + Date.now() + '.' + fbclid;
-    document.cookie = '_fbc=' + fbc + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Google Ads Click ID - persist for conversion attribution
-  var gclid = params.get('gclid');
-  if (gclid) {
-    document.cookie = '_gclid=' + gclid + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-  // Store landing page + UTM params for lead attribution
-  if (params.get('utm_source') || gclid || fbclid) {
-    var attribution = JSON.stringify({
-      source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
-      medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
-      campaign: params.get('utm_campaign') || '',
-      landing: window.location.pathname,
-      ts: Date.now()
-    });
-    document.cookie = '_attribution=' + encodeURIComponent(attribution) + ';max-age=7776000;path=/;SameSite=Lax';
-  }
-})();
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" decoding="async" /></noscript>
-<!-- End Meta Pixel Code -->
-
-<!-- CAPI Server-Side Tracking v2 — fbp-Garantie + external_id -->
+<!-- ═══ Tracking (deferred until load/idle for LCP) ═══ -->
 <script>
 (function() {
+  var MEASUREMENT_ID = "G-4WTB03GDRG";
+  var PIXEL_ID = "1083293176093427";
   var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
+  var trackingBooted = false;
+  var capiQueue = [];
+  var bootFbp = null;
+  var bootExternalId = null;
 
-  // ── Hilfsfunktionen ──
+  window.GOOGLE_ADS_CONVERSION = {
+    id: "AW-993521489",
+    label: "lauZCJGOhpwcENHe39kD"
+  };
+
+  function loadScript(src, attrs) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    if (attrs) {
+      Object.keys(attrs).forEach(function(key) {
+        s.setAttribute(key, attrs[key]);
+      });
+    }
+    (document.head || document.body).appendChild(s);
+  }
+
   function generateEventId() {
     return Date.now().toString(36) + "-" + Math.random().toString(36).substring(2, 10);
   }
+
   function getCookie(name) {
     var match = document.cookie.match(new RegExp("(^| )" + name + "=([^;]+)"));
     return match ? decodeURIComponent(match[2]) : null;
   }
+
   function setCookie(name, value, days) {
     var maxAge = days * 86400;
     document.cookie = name + "=" + encodeURIComponent(value) + ";max-age=" + maxAge + ";path=/;SameSite=Lax";
   }
+
   function getFbcFromUrl() {
     var params = new URLSearchParams(window.location.search);
     var fbclid = params.get("fbclid");
@@ -1336,10 +1290,6 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" dec
     return null;
   }
 
-  // ── 1. _fbp SELBST GENERIEREN wenn nicht vorhanden ──
-  // Das Meta Pixel SDK setzt _fbp, aber lädt async → oft noch nicht
-  // da wenn PageView feuert. Wir generieren es vorher selbst.
-  // Format: fb.1.<creation_time>.<random_number>
   function ensureFbp() {
     var existing = getCookie("_fbp");
     if (existing) return existing;
@@ -1348,9 +1298,6 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" dec
     return fbp;
   }
 
-  // ── 2. external_id — stabiler Pseudonym-Identifier ──
-  // Hilft Meta bei der Zuordnung auch ohne Login-Daten.
-  // Bleibt 180 Tage im Cookie, wird SHA256-gehasht im Worker.
   function ensureExternalId() {
     var existing = getCookie("_ext_id");
     if (existing) return existing;
@@ -1359,22 +1306,44 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" dec
     return id;
   }
 
-  // Sofort generieren (vor allem anderen)
-  var fbp = ensureFbp();
-  var externalId = ensureExternalId();
+  // Capture click IDs early, but without loading 3rd-party scripts yet.
+  (function captureClickIds() {
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get("fbclid");
+    if (fbclid) {
+      var fbc = "fb.1." + Date.now() + "." + fbclid;
+      setCookie("_fbc", fbc, 90);
+    }
 
-  // ── 3. sendCAPIEvent — angereichert mit allen Match-Keys ──
-  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
+    var gclid = params.get("gclid");
+    if (gclid) {
+      setCookie("_gclid", gclid, 90);
+    }
+
+    if (params.get("utm_source") || gclid || fbclid) {
+      var attribution = JSON.stringify({
+        source: params.get("utm_source") || (gclid ? "google" : fbclid ? "meta" : ""),
+        medium: params.get("utm_medium") || (gclid ? "cpc" : fbclid ? "cpc" : ""),
+        campaign: params.get("utm_campaign") || "",
+        landing: window.location.pathname,
+        ts: Date.now()
+      });
+      setCookie("_attribution", attribution, 90);
+    }
+  })();
+
+  function sendCapiNow(eventName, eventId, customData, userData) {
     customData = customData || {};
     userData = userData || {};
 
+    if (!bootFbp) bootFbp = ensureFbp();
+    if (!bootExternalId) bootExternalId = ensureExternalId();
+
     var user_data = {
-      fbp: getCookie("_fbp") || fbp,
+      fbp: getCookie("_fbp") || bootFbp,
       fbc: getCookie("_fbc") || getFbcFromUrl(),
-      external_id: getCookie("_ext_id") || externalId,
+      external_id: getCookie("_ext_id") || bootExternalId,
       country: "de"
-      // client_ip_address + client_user_agent werden vom Worker
-      // aus den Request-Headers extrahiert
     };
 
     if (userData.em) user_data.em = userData.em;
@@ -1393,20 +1362,113 @@ src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" dec
 
     var url = CAPI_WORKER_URL + "/event";
     var body = JSON.stringify(payload);
+
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, new Blob([body], { type: "application/json" }));
     } else {
-      fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: body, keepalive: true }).catch(function() {});
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: body,
+        keepalive: true
+      }).catch(function() {});
     }
+  }
+
+  // Queue CAPI events until tracking bootstrap has finished.
+  window.sendCAPIEvent = function(eventName, eventId, customData, userData) {
+    if (!trackingBooted) {
+      capiQueue.push([eventName, eventId, customData, userData]);
+      return;
+    }
+    sendCapiNow(eventName, eventId, customData, userData);
   };
 
-  // ── 4. PageView mit garantiertem fbp ──
-  var pvId = generateEventId();
-  if (typeof fbq !== "undefined") fbq("trackSingle", "1083293176093427", "PageView", {}, { eventID: pvId });
-  sendCAPIEvent("PageView", pvId);
+  function initGoogle() {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
+
+    window.gtag("consent", "default", {
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      analytics_storage: "granted"
+    });
+
+    window.gtag("js", new Date());
+    window.gtag("config", MEASUREMENT_ID, { allow_enhanced_conversions: true });
+    if (window.GOOGLE_ADS_CONVERSION && window.GOOGLE_ADS_CONVERSION.id) {
+      window.gtag("config", window.GOOGLE_ADS_CONVERSION.id, { allow_enhanced_conversions: true });
+    }
+
+    loadScript("https://www.googletagmanager.com/gtag/js?id=" + MEASUREMENT_ID);
+  }
+
+  function initMetaPixel() {
+    !function(f,b,e,v,n,t,s){
+      if (f.fbq) return;
+      n = f.fbq = function(){ n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = true;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = true;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+
+    if (typeof window.fbq !== "undefined") {
+      window.fbq("init", PIXEL_ID, {}, { autoConfig: false, autoAdvancedMatching: true });
+    }
+  }
+
+  function flushQueuedCapi() {
+    if (!capiQueue.length) return;
+    capiQueue.forEach(function(args) {
+      sendCapiNow(args[0], args[1], args[2], args[3]);
+    });
+    capiQueue = [];
+  }
+
+  function bootTracking() {
+    if (trackingBooted) return;
+    trackingBooted = true;
+
+    initGoogle();
+    initMetaPixel();
+
+    var pvId = generateEventId();
+    if (typeof window.fbq !== "undefined") {
+      window.fbq("trackSingle", PIXEL_ID, "PageView", {}, { eventID: pvId });
+    }
+    sendCapiNow("PageView", pvId);
+    flushQueuedCapi();
+
+    loadScript("js/tracking.js");
+    loadScript("https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516", {
+      integrity: "sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==",
+      crossorigin: "anonymous",
+      "data-cf-beacon": "{\"version\":\"2024.11.0\",\"token\":\"086648f4cb124d5489b8acf9734352f3\",\"r\":1,\"server_timing\":{\"name\":{\"cfCacheStatus\":true,\"cfEdge\":true,\"cfExtPri\":true,\"cfL4\":true,\"cfOrigin\":true,\"cfSpeedBrain\":true},\"location_startswith\":null}}"
+    });
+  }
+
+  function scheduleTrackingBoot() {
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(bootTracking, { timeout: 2000 });
+    } else {
+      setTimeout(bootTracking, 1);
+    }
+  }
+
+  if (document.readyState === "complete") {
+    scheduleTrackingBoot();
+  } else {
+    window.addEventListener("load", scheduleTrackingBoot, { once: true });
+  }
 })();
 </script>
-
-<script src="js/tracking.js" defer></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"086648f4cb124d5489b8acf9734352f3","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<!-- Inline tracking removed — handled by js/tracking.js -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1083293176093427&ev=PageView&noscript=1" /></noscript>
+<!-- Inline tracking removed — handled by deferred boot -->
