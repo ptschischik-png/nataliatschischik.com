@@ -843,190 +843,98 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach(el => observer.observe(el));
 
-// ═══ CONTACT FORM — WhatsApp via Cloudflare Pages Function ═══
-function normalizeEmail(value) {
-  return (value || '').trim().toLowerCase();
-}
+// ═══ CONTACT FORM (lazy-loaded to keep initial main-thread work low) ═══
+(function() {
+  var SCRIPT_SRC = 'js/contact-form.js';
+  var loaded = false;
+  var loading = false;
+  var shouldReplaySubmit = false;
 
-function isValidEmail(value) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-}
+  function loadContactFormScript() {
+    if (loaded || loading) return;
+    loading = true;
 
-function normalizePhoneToE164(value) {
-  var raw = (value || '').trim();
-  if (!raw) return '';
-  var compact = raw.replace(/[^\d+]/g, '');
-  if (compact.indexOf('00') === 0) compact = '+' + compact.slice(2);
-  if (compact.charAt(0) !== '+') {
-    var digits = compact.replace(/\D/g, '');
-    if (digits.charAt(0) === '0') digits = '49' + digits.slice(1);
-    compact = '+' + digits;
-  } else {
-    compact = '+' + compact.slice(1).replace(/\D/g, '');
-  }
-  if (!/^\+[1-9]\d{7,14}$/.test(compact)) return '';
-  return compact;
-}
-
-function normalizeNamePart(value) {
-  return (value || '')
-    .trim()
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z\s'-]/g, '')
-    .replace(/\s+/g, ' ');
-}
-
-function parseNameParts(fullName) {
-  var cleaned = (fullName || '').replace(/\s+(und|&|\+)\s+/gi, '|');
-  var firstPerson = cleaned.split('|')[0] || '';
-  var parts = firstPerson.trim().split(/\s+/).filter(Boolean);
-  return {
-    fn: parts[0] ? normalizeNamePart(parts[0]) : '',
-    ln: parts[1] ? normalizeNamePart(parts[1]) : ''
-  };
-}
-
-function toHex(buffer) {
-  return Array.from(new Uint8Array(buffer)).map(function(b) {
-    return b.toString(16).padStart(2, '0');
-  }).join('');
-}
-
-function isSha256Hex(value) {
-  return /^[a-f0-9]{64}$/.test(value || '');
-}
-
-async function sha256Hex(value) {
-  if (!value) return '';
-  var normalized = String(value).trim().toLowerCase();
-  if (!normalized) return '';
-  if (isSha256Hex(normalized)) return normalized;
-  if (!window.crypto || !window.crypto.subtle || !window.TextEncoder) return '';
-  var data = new TextEncoder().encode(normalized);
-  var digest = await window.crypto.subtle.digest('SHA-256', data);
-  return toHex(digest);
-}
-
-async function handleFormSubmit(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  const status = document.getElementById('formStatus');
-  const form = document.getElementById('contactForm');
-
-  const name = form.querySelector('#name').value.trim();
-  const emailRaw = form.querySelector('#email').value.trim();
-  const phoneRaw = form.querySelector('#phone').value.trim();
-  const message = form.querySelector('#message').value.trim();
-  const date = ''; // removed from form, may be in message
-  const location = ''; // removed from form, may be in message
-
-  const normalizedEmail = normalizeEmail(emailRaw);
-  const normalizedPhone = normalizePhoneToE164(phoneRaw);
-  const parsedName = parseNameParts(name);
-
-  if (!name || !normalizedEmail) return;
-  if (!isValidEmail(normalizedEmail)) {
-    showStatus('❌ Bitte gebt eine gültige E-Mail-Adresse ein.', '#c0392b');
-    return;
-  }
-  if (phoneRaw && !normalizedPhone) {
-    showStatus('❌ Bitte gebt eine gültige Telefonnummer im Format +49... ein.', '#c0392b');
-    return;
+    var s = document.createElement('script');
+    s.src = SCRIPT_SRC;
+    s.async = true;
+    s.onload = function() {
+      loaded = true;
+      loading = false;
+      replayPendingSubmit();
+    };
+    s.onerror = function() {
+      loading = false;
+      shouldReplaySubmit = false;
+      var status = document.getElementById('formStatus');
+      if (status) {
+        status.textContent = 'Bitte Seite neu laden oder direkt an natalia@nataliatschischik.com schreiben.';
+        status.style.color = '#c0392b';
+        status.style.display = 'block';
+      }
+    };
+    (document.head || document.body).appendChild(s);
   }
 
-  btn.disabled = true;
-  btn.textContent = 'Wird gesendet...';
-  btn.style.opacity = '0.6';
-  status.style.display = 'none';
-
-  try {
-    // Collect Meta + Google click IDs for server-side tracking
-    const fbclid = new URLSearchParams(window.location.search).get('fbclid') || '';
-    const fbpMatch = document.cookie.match(/(?:^|;\s*)_fbp=([^;]*)/);
-    const fbcMatch = document.cookie.match(/(?:^|;\s*)_fbc=([^;]*)/);
-    const gclidMatch = document.cookie.match(/(?:^|;\s*)_gclid=([^;]*)/);
-    const attrMatch = document.cookie.match(/(?:^|;\s*)_attribution=([^;]*)/);
-    const fbp = fbpMatch ? fbpMatch[1] : '';
-    const fbc = fbcMatch ? fbcMatch[1] : '';
-    const gclid = gclidMatch ? gclidMatch[1] : '';
-    const attribution = attrMatch ? decodeURIComponent(attrMatch[1]) : '';
-    const eventID = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-
-    const res = await fetch('https://natalia-form-handler.icy-sunset-af0f.workers.dev', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email: normalizedEmail, phone: normalizedPhone, date, location, message, fbclid, fbp, fbc, gclid, attribution, event_id: eventID, source_url: window.location.href }),
-    });
-    const result = await res.json();
-
-    if (res.ok && result.success) {
-      var emailHash = await sha256Hex(normalizedEmail);
-      var phoneHash = normalizedPhone ? await sha256Hex(normalizedPhone) : '';
-      var fnHash = parsedName.fn ? await sha256Hex(parsedName.fn) : '';
-      var lnHash = parsedName.ln ? await sha256Hex(parsedName.ln) : '';
-      var userData = {};
-      if (emailHash) userData.em = emailHash;
-      if (phoneHash) userData.ph = phoneHash;
-      if (fnHash) userData.fn = fnHash;
-      if (lnHash) userData.ln = lnHash;
-
-      // Browser Pixel (falls verfügbar)
-      if (typeof fbq !== 'undefined') {
-        fbq('init', '1083293176093427', userData);
-        fbq('trackSingle', '1083293176093427', 'Lead', {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 150, currency: 'EUR'}, {eventID: eventID});
-      }
-
-      // CAPI immer separat senden (auch wenn fbq blockiert ist)
-      if (typeof sendCAPIEvent !== 'undefined') {
-        sendCAPIEvent('Lead', eventID, {content_name: 'Kontaktformular', content_category: 'Hochzeitsfotografie', value: 150, currency: 'EUR'}, {em: userData.em, fn: userData.fn, ln: userData.ln, ph: userData.ph});
-      }
-      if (typeof zaraz !== 'undefined') zaraz.track('Lead');
-      // GA4 Lead event (importable as Google Ads conversion)
-      if (typeof gtag !== 'undefined') {
-        // Enhanced Conversions: send hashed user data to Google
-        var googleUserData = {};
-        if (emailHash) googleUserData.sha256_email_address = emailHash;
-        if (phoneHash) googleUserData.sha256_phone_number = phoneHash;
-        if (Object.keys(googleUserData).length) gtag('set', 'user_data', googleUserData);
-        var adsConfig = window.GOOGLE_ADS_CONVERSION || {};
-        if (adsConfig.id && adsConfig.label) {
-          gtag('event', 'conversion', {
-            send_to: adsConfig.id + '/' + adsConfig.label,
-            value: 150,
-            currency: 'EUR',
-            transaction_id: eventID
-          });
-        }
-        gtag('event', 'generate_lead', {
-          event_category: 'Contact',
-          event_label: 'Kontaktformular',
-          value: 150,
-          currency: 'EUR',
-          transaction_id: eventID
-        });
-      }
-      showStatus('\u2705 Vielen Dank! Eure Anfrage wurde gesendet. Natalia meldet sich innerhalb von 24 Stunden.', 'var(--accent)');
-      form.reset();
-    } else {
-      showStatus('\u274C Es gab ein Problem beim Senden. Bitte versucht es erneut oder schreibt direkt an natalia@nataliatschischik.com', '#c0392b');
+  function replayPendingSubmit() {
+    if (!shouldReplaySubmit) return;
+    if (window.handleFormSubmit === lazySubmitHandler) return;
+    shouldReplaySubmit = false;
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    if (typeof form.requestSubmit === 'function') {
+      form.requestSubmit();
+      return;
     }
-  } catch (err) {
-    showStatus('\u274C Verbindungsfehler. Bitte versucht es erneut oder schreibt direkt an natalia@nataliatschischik.com', '#c0392b');
+    if (typeof window.handleFormSubmit === 'function') {
+      window.handleFormSubmit({ preventDefault: function() {} });
+    }
   }
 
-  btn.disabled = false;
-  btn.textContent = 'Anfrage absenden';
-  btn.style.opacity = '1';
-}
+  function lazySubmitHandler(e) {
+    e.preventDefault();
+    shouldReplaySubmit = true;
+    loadContactFormScript();
+  }
 
-function showStatus(msg, color) {
-  const status = document.getElementById('formStatus');
-  status.textContent = msg;
-  status.style.color = color;
-  status.style.display = 'block';
-}
+  // Inline onsubmit uses this stub until the real handler is loaded.
+  window.handleFormSubmit = lazySubmitHandler;
+
+  var form = document.getElementById('contactForm');
+  var contactSection = document.getElementById('contact');
+
+  if (form) {
+    form.addEventListener('focusin', loadContactFormScript, { once: true });
+    form.addEventListener('pointerdown', loadContactFormScript, { once: true, passive: true });
+    form.addEventListener('touchstart', loadContactFormScript, { once: true, passive: true });
+  }
+
+  if ('IntersectionObserver' in window && contactSection) {
+    var io = new IntersectionObserver(function(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          loadContactFormScript();
+          io.disconnect();
+          break;
+        }
+      }
+    }, { rootMargin: '350px 0px', threshold: 0.01 });
+    io.observe(contactSection);
+  }
+
+  function scheduleIdleLoad() {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadContactFormScript, { timeout: 4000 });
+    } else {
+      setTimeout(loadContactFormScript, 2200);
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    scheduleIdleLoad();
+  } else {
+    window.addEventListener('load', scheduleIdleLoad, { once: true });
+  }
+})();
 </script>
 
 <!-- Tracking handled by js/tracking.js -->
@@ -1248,9 +1156,11 @@ if (window.location.hash) {
   var PIXEL_ID = "1083293176093427";
   var CAPI_WORKER_URL = "https://meta-capi.icy-sunset-af0f.workers.dev";
   var trackingBooted = false;
+  var lateTrackingBooted = false;
   var capiQueue = [];
   var bootFbp = null;
   var bootExternalId = null;
+  var pageViewEventId = null;
 
   window.GOOGLE_ADS_CONVERSION = {
     id: "AW-993521489",
@@ -1433,19 +1343,15 @@ if (window.location.hash) {
     capiQueue = [];
   }
 
-  function bootTracking() {
-    if (trackingBooted) return;
-    trackingBooted = true;
+  function bootLateTracking() {
+    if (lateTrackingBooted) return;
+    lateTrackingBooted = true;
 
-    initGoogle();
     initMetaPixel();
 
-    var pvId = generateEventId();
-    if (typeof window.fbq !== "undefined") {
-      window.fbq("trackSingle", PIXEL_ID, "PageView", {}, { eventID: pvId });
+    if (typeof window.fbq !== "undefined" && pageViewEventId) {
+      window.fbq("trackSingle", PIXEL_ID, "PageView", {}, { eventID: pageViewEventId });
     }
-    sendCapiNow("PageView", pvId);
-    flushQueuedCapi();
 
     loadScript("js/tracking.js");
     loadScript("https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516", {
@@ -1453,6 +1359,41 @@ if (window.location.hash) {
       crossorigin: "anonymous",
       "data-cf-beacon": "{\"version\":\"2024.11.0\",\"token\":\"086648f4cb124d5489b8acf9734352f3\",\"r\":1,\"server_timing\":{\"name\":{\"cfCacheStatus\":true,\"cfEdge\":true,\"cfExtPri\":true,\"cfL4\":true,\"cfOrigin\":true,\"cfSpeedBrain\":true},\"location_startswith\":null}}"
     });
+  }
+
+  function scheduleLateTracking() {
+    var fired = false;
+    function trigger() {
+      if (fired) return;
+      fired = true;
+      bootLateTracking();
+      window.removeEventListener("pointerdown", trigger, true);
+      window.removeEventListener("keydown", trigger, true);
+      window.removeEventListener("touchstart", trigger, true);
+      window.removeEventListener("scroll", trigger, true);
+    }
+
+    window.addEventListener("pointerdown", trigger, { once: true, passive: true, capture: true });
+    window.addEventListener("keydown", trigger, { once: true, capture: true });
+    window.addEventListener("touchstart", trigger, { once: true, passive: true, capture: true });
+    window.addEventListener("scroll", trigger, { once: true, passive: true, capture: true });
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(trigger, { timeout: 6000 });
+    }
+    setTimeout(trigger, 4000);
+  }
+
+  function bootTracking() {
+    if (trackingBooted) return;
+    trackingBooted = true;
+
+    initGoogle();
+
+    pageViewEventId = generateEventId();
+    sendCapiNow("PageView", pageViewEventId);
+    flushQueuedCapi();
+    scheduleLateTracking();
   }
 
   function scheduleTrackingBoot() {
