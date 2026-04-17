@@ -1,5 +1,0 @@
-@media (max-width: 768px) {
-  section[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-}

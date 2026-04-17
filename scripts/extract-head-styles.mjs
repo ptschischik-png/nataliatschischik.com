@@ -5,6 +5,7 @@ import path from 'node:path';
 const repoRoot = path.resolve(new URL('..', import.meta.url).pathname);
 const distDir = path.join(repoRoot, 'dist');
 const extractedDir = path.join(distDir, 'css', 'extracted');
+const MAX_INLINE_HEAD_STYLES = 2;
 
 await fs.mkdir(extractedDir, { recursive: true });
 
@@ -12,33 +13,43 @@ const htmlFiles = await collectFiles(distDir, (filePath, stats) => stats.isFile(
 
 for (const file of htmlFiles) {
   const html = await fs.readFile(file, 'utf8');
+  const rel = path.relative(distDir, file).replace(/\\/g, '/');
+  const pageDir = getPageDir(rel);
   const headMatch = html.match(/<head>([\s\S]*?)<\/head>/i);
   if (!headMatch) continue;
 
-  const rel = path.relative(distDir, file).replace(/\\/g, '/');
-  const pageDir = getPageDir(rel);
-  let changed = false;
-  const extractedBodyLinks = [];
+  const headContent = headMatch[1];
+  const headStyleMatches = Array.from(headContent.matchAll(/<style(?:[^>]*)>([\s\S]*?)<\/style>/gi));
+  const extractedCssChunks = [];
 
-  const replacedHead = await replaceAsync(headMatch[1], /<style(?:[^>]*)>([\s\S]*?)<\/style>/gi, async (_, css) => {
-    const linkTag = await emitCssFile(css, pageDir);
-    changed = true;
-    return linkTag;
-  });
-
-  let nextHtml = html.replace(headMatch[0], `<head>${replacedHead}</head>`);
-
-  nextHtml = await replaceAsync(nextHtml, /<style(?:[^>]*)>([\s\S]*?)<\/style>/gi, async (_, css) => {
-    extractedBodyLinks.push(await emitCssFile(css, pageDir));
-    changed = true;
+  let headStyleIndex = 0;
+  const nextHead = headContent.replace(/<style(?:[^>]*)>([\s\S]*?)<\/style>/gi, (_, css) => {
+    headStyleIndex += 1;
+    if (headStyleIndex <= MAX_INLINE_HEAD_STYLES) {
+      return `<style>${css}</style>`;
+    }
+    extractedCssChunks.push(rewriteRelativeCssUrls(css.trim(), pageDir));
     return '';
   });
 
-  if (extractedBodyLinks.length) {
-    nextHtml = nextHtml.replace('</head>', `${extractedBodyLinks.join('\n')}\n</head>`);
+  const bodyOnly = html.slice(headMatch.index + headMatch[0].length);
+  const nextBody = bodyOnly.replace(/<style(?:[^>]*)>([\s\S]*?)<\/style>/gi, (_, css) => {
+    extractedCssChunks.push(rewriteRelativeCssUrls(css.trim(), pageDir));
+    return '';
+  });
+
+  let bundleMarkup = '';
+  if (extractedCssChunks.length) {
+    const href = await emitCssBundle(extractedCssChunks);
+    bundleMarkup = [
+      `<link rel="preload" as="style" href="${href}">`,
+      `<link rel="stylesheet" href="${href}" media="print" onload="this.media='all'">`,
+      `<noscript><link rel="stylesheet" href="${href}"></noscript>`
+    ].join('\n');
   }
 
-  if (!changed) continue;
+  const rebuiltHead = bundleMarkup ? insertBundleMarkup(nextHead, bundleMarkup) : nextHead;
+  const nextHtml = `${html.slice(0, headMatch.index)}<head>${rebuiltHead}</head>${nextBody}`;
   await fs.writeFile(file, nextHtml, 'utf8');
 }
 
@@ -57,8 +68,14 @@ function rewriteRelativeCssUrls(css, pageDir) {
   });
 }
 
-async function emitCssFile(css, pageDir) {
-  const normalizedCss = rewriteRelativeCssUrls(css.trim(), pageDir);
+function insertBundleMarkup(headContent, bundleMarkup) {
+  const scriptIndex = headContent.search(/<script\b/i);
+  if (scriptIndex === -1) return `${headContent}\n${bundleMarkup}`;
+  return `${headContent.slice(0, scriptIndex)}${bundleMarkup}\n${headContent.slice(scriptIndex)}`;
+}
+
+async function emitCssBundle(chunks) {
+  const normalizedCss = chunks.join('\n\n').trim();
   const hash = crypto.createHash('sha256').update(normalizedCss).digest('hex').slice(0, 16);
   const cssFilename = `${hash}.css`;
   const cssPath = path.join(extractedDir, cssFilename);
@@ -69,7 +86,7 @@ async function emitCssFile(css, pageDir) {
     await fs.writeFile(cssPath, normalizedCss + '\n', 'utf8');
   }
 
-  return `<link rel="stylesheet" href="/css/extracted/${cssFilename}">`;
+  return `/css/extracted/${cssFilename}`;
 }
 
 function isAbsoluteUrl(value) {
@@ -81,23 +98,6 @@ function isAbsoluteUrl(value) {
     value.startsWith('//') ||
     value.startsWith('#')
   );
-}
-
-async function replaceAsync(input, regex, replacer) {
-  const matches = Array.from(input.matchAll(regex));
-  if (!matches.length) return input;
-
-  let output = '';
-  let lastIndex = 0;
-
-  for (const match of matches) {
-    const replacement = await replacer(...match);
-    output += input.slice(lastIndex, match.index) + replacement;
-    lastIndex = match.index + match[0].length;
-  }
-
-  output += input.slice(lastIndex);
-  return output;
 }
 
 async function collectFiles(dir, predicate) {

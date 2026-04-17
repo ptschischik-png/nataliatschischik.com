@@ -69,9 +69,11 @@ async function checkHtmlFiles(files) {
     const rel = path.relative(distDir, file).replace(/\\/g, '/');
     const html = await fs.readFile(file, 'utf8');
     const head = capture(html, /<head>([\s\S]*?)<\/head>/i);
+    const body = capture(html, /<body[^>]*>([\s\S]*?)<\/body>/i);
     const robots = capture(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i).toLowerCase();
     const canonical = capture(html, /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i);
     const ogUrl = capture(html, /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["'][^>]*>/i);
+    const headStyleCount = (head.match(/<style(?:\s|>)/gi) || []).length;
 
     if (rel !== '404.html' && rel !== 'datenschutzerklaerung.html') {
       if (!html.includes('/js/tracking-bootstrap.js')) {
@@ -91,8 +93,12 @@ async function checkHtmlFiles(files) {
       failures.push(`${rel} contains a contact form without the form handler script.`);
     }
 
-    if (/<style(?:\s|>)/i.test(html)) {
-      failures.push(`${rel} still contains inline styles instead of extracted CSS files.`);
+    if (headStyleCount > 2) {
+      failures.push(`${rel} has ${headStyleCount} inline head style blocks; expected at most 2 critical-inline blocks.`);
+    }
+
+    if (/<style(?:\s|>)/i.test(body)) {
+      failures.push(`${rel} still contains body inline styles instead of bundled CSS files.`);
     }
   }
 }
