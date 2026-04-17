@@ -16,6 +16,10 @@ const site = {
     "mapsUrl": "https://maps.app.goo.gl/ak2VVrbKNQpdYCc16?g_st=ic",
     "whatsappUrl": "https://wa.me/4917634948598?text=Hallo%20Natalia%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eure%20Hochzeitsfotografie."
   },
+  "social": {
+    "instagram": "https://www.instagram.com/hochzeitsfotografin.natalia",
+    "googleMaps": "https://maps.app.goo.gl/ak2VVrbKNQpdYCc16?g_st=ic"
+  },
   "tracking": {
     "measurementId": "G-4WTB03GDRG",
     "pixelId": "1083293176093427",
@@ -66,3 +70,101 @@ const site = {
 };
 site.clientConfigJson = JSON.stringify(site.clientConfig);
 module.exports = site;
+
+site.schema = {
+  websiteId: site.url + '/#website',
+  businessId: site.url + '/#business',
+  personId: site.url + '/#person',
+  serviceId: site.url + '/#service',
+  defaultImage: site.url + '/images/og-default.jpg',
+  profileImage: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+  sameAs: [site.social.instagram, site.social.googleMaps],
+  areaServed: [
+    { '@type': 'City', name: 'Kassel' },
+    { '@type': 'City', name: 'Göttingen' },
+    { '@type': 'City', name: 'Marburg' },
+    { '@type': 'City', name: 'Fulda' },
+    { '@type': 'AdministrativeArea', name: 'Nordhessen' },
+    { '@type': 'AdministrativeArea', name: 'Hessen' },
+    { '@type': 'AdministrativeArea', name: 'Niedersachsen' }
+  ],
+  graph: {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': site.url + '/#website',
+        url: site.url,
+        name: site.contact.businessName,
+        inLanguage: site.language,
+        publisher: { '@id': site.url + '/#business' }
+      },
+      {
+        '@type': ['LocalBusiness', 'ProfessionalService', 'Photographer'],
+        '@id': site.url + '/#business',
+        name: site.contact.businessName,
+        alternateName: site.contact.displayName,
+        description: 'Hochzeitsfotografie in Kassel, Göttingen und ganz Hessen mit dokumentarischen, zeitlosen Reportagen.',
+        url: site.url,
+        image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+        logo: site.url + '/favicon.svg',
+        telephone: site.contact.phoneDisplay,
+        email: site.contact.email,
+        hasMap: site.contact.mapsUrl,
+        priceRange: '€€',
+        areaServed: [
+          { '@type': 'City', name: 'Kassel' },
+          { '@type': 'City', name: 'Göttingen' },
+          { '@type': 'City', name: 'Marburg' },
+          { '@type': 'City', name: 'Fulda' },
+          { '@type': 'AdministrativeArea', name: 'Nordhessen' },
+          { '@type': 'AdministrativeArea', name: 'Hessen' },
+          { '@type': 'AdministrativeArea', name: 'Niedersachsen' }
+        ],
+        sameAs: [site.social.instagram, site.social.googleMaps],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Harleshäuser Str. 38',
+          addressLocality: 'Vellmar',
+          postalCode: '34246',
+          addressRegion: 'Hessen',
+          addressCountry: 'DE'
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 51.3127,
+          longitude: 9.4797
+        },
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'booking',
+            telephone: site.contact.phoneDisplay,
+            email: site.contact.email,
+            areaServed: 'DE',
+            availableLanguage: ['de', 'en']
+          }
+        ],
+        founder: { '@id': site.url + '/#person' },
+        serviceType: [
+          'Hochzeitsfotografie',
+          'Standesamtbegleitung',
+          'Ganztagesreportagen',
+          'Brautpaarshootings'
+        ]
+      },
+      {
+        '@type': 'Person',
+        '@id': site.url + '/#person',
+        name: site.contact.displayName,
+        jobTitle: 'Hochzeitsfotografin',
+        description: 'Hochzeitsfotografin aus Kassel mit dokumentarischem, editorial geprägtem Blick.',
+        url: site.url + '/ueber-mich',
+        image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+        sameAs: [site.social.instagram],
+        worksFor: { '@id': site.url + '/#business' }
+      }
+    ]
+  }
+};
+site.schemaGraphJson = JSON.stringify(site.schema.graph, null, 2);

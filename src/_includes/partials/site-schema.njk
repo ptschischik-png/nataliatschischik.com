@@ -1,0 +1,6 @@
+{% set robotsValue = seo.robots or 'index, follow' %}
+{% if schemaEnabled !== false and not isHome and robotsValue != 'noindex, follow' and robotsValue != 'noindex, nofollow' %}
+<script type="application/ld+json">
+{{ site.schemaGraphJson | safe }}
+</script>
+{% endif %}
