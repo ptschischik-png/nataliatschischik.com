@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+{% include 'partials/site-verification.njk' %}
+{% include 'partials/icons.njk' %}
+<title>{{ seo.title }}</title>
+{% if seo.description %}<meta name="description" content="{{ seo.description }}">{% endif %}
+{% if seo.keywords %}<meta name="keywords" content="{{ seo.keywords }}">{% endif %}
+<meta property="og:title" content="{{ seo.ogTitle or seo.title }}">
+{% if seo.ogDescription or seo.description %}<meta property="og:description" content="{{ seo.ogDescription or seo.description }}">{% endif %}
+<meta property="og:type" content="{{ seo.ogType or 'website' }}">
+<meta property="og:locale" content="{{ seo.ogLocale or site.locale }}">
+{% if seo.canonical %}<meta property="og:url" content="{{ seo.canonical }}">{% endif %}
+{% if seo.ogImage %}<meta property="og:image" content="{{ seo.ogImage }}">{% endif %}
+{% if seo.ogImageWidth %}<meta property="og:image:width" content="{{ seo.ogImageWidth }}">{% endif %}
+{% if seo.ogImageHeight %}<meta property="og:image:height" content="{{ seo.ogImageHeight }}">{% endif %}
+<meta name="twitter:card" content="{{ seo.twitterCard or 'summary_large_image' }}">
+{% if seo.twitterSite or site.twitterSite %}<meta name="twitter:site" content="{{ seo.twitterSite or site.twitterSite }}">{% endif %}
+<meta name="twitter:title" content="{{ seo.twitterTitle or seo.ogTitle or seo.title }}">
+{% if seo.twitterDescription or seo.ogDescription or seo.description %}<meta name="twitter:description" content="{{ seo.twitterDescription or seo.ogDescription or seo.description }}">{% endif %}
+{% if seo.twitterImage or seo.ogImage %}<meta name="twitter:image" content="{{ seo.twitterImage or seo.ogImage }}">{% endif %}
+{% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}">{% endif %}
+{% if seo.canonical %}<link rel="alternate" hreflang="de" href="{{ seo.canonical }}">{% endif %}
+{% if seo.canonical %}<link rel="alternate" hreflang="x-default" href="{{ seo.canonical }}">{% endif %}
+<meta name="robots" content="{{ seo.robots or 'index, follow' }}">
+{% if seo.geoRegion %}<meta name="geo.region" content="{{ seo.geoRegion }}">{% endif %}
+{% if seo.geoPlacename %}<meta name="geo.placename" content="{{ seo.geoPlacename }}">{% endif %}
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+{{ headExtra | safe }}
+{% include 'partials/tracking-head.njk' %}
+</head>
+<body{% if bodyAttributes %} {{ bodyAttributes | safe }}{% endif %}>
+{% if trackingEnabled !== false %}{% include 'partials/tracking-noscript.njk' %}{% endif %}
+{{ content | safe }}
+</body>
+</html>

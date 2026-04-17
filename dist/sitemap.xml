@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://nataliatschischik.com/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nataliatschischik.com/portfolio</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/preise</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/ueber-mich</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://nataliatschischik.com/faq</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nataliatschischik.com/journal</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Reportagen -->
   <url>
-    <loc>https://nataliatschischik.com/reportagen/hochzeit-goettingen</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nataliatschischik.com/journal/brautpaar-shooting-tipps</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/journal/golden-hour</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/journal/hochzeit-timeline-kassel</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/journal/hochzeitsalbum</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/journal/hochzeitslocations-kassel</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/journal/orangerie-kassel</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/portfolio</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/preise</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://nataliatschischik.com/reportagen/img/sg-goettingen/3-Ceremony_00445_Hochzeit.webp</image:loc>
-      <image:caption>Hochzeit S &amp; G G&#246;ttingen &#8212; S &amp; G standesamtliche Trauung</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://nataliatschischik.com/reportagen/img/renthof/5-03.webp</image:loc>
-      <image:caption>Hochzeit im Renthof Kassel — A &amp; W Hochzeitsreportage</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/reportagen/hochzeit-sababurg-dornroeschenschloss</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://nataliatschischik.com/reportagen/img/sababurg/hero-kiss.webp</image:loc>
-      <image:caption>Hochzeit im Dornröschenschloss Sababurg — J &amp; J</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://nataliatschischik.com/reportagen/hochzeit-bergpark-wilhelmshoehe</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -79,78 +77,18 @@
     </image:image>
   </url>
   <url>
-    <loc>https://nataliatschischik.com/reportagen/hochzeit-schloss-bad-arolsen</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp</image:loc>
-      <image:caption>Hochzeit im Schloss Bad Arolsen — V &amp; S</image:caption>
-    </image:image>
-  </url>
-  <!-- Journal -->
-  <url>
-    <loc>https://nataliatschischik.com/journal/hochzeitslocations-kassel</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/journal/hochzeit-timeline-kassel</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/journal/brautpaar-shooting-tipps</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/journal/golden-hour</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/journal/hochzeitsalbum</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/journal/orangerie-kassel</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Legal -->
-  <url>
-    <loc>https://nataliatschischik.com/impressum</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/datenschutz</loc>
-    <lastmod>2026-04-16</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://nataliatschischik.com/reportagen/hochzeit-schloss-berlepsch</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://nataliatschischik.com/reportagen/hochzeit-goettingen</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://nataliatschischik.com/reportagen/img/berlepsch/hero.webp</image:loc>
-      <image:caption>Hochzeit im Schloss Berlepsch — A &amp; W Trauung in Witzenhausen</image:caption>
+      <image:loc>https://nataliatschischik.com/reportagen/img/sg-goettingen/3-Ceremony_00445_Hochzeit.webp</image:loc>
+      <image:caption>Hochzeit S &amp; G Göttingen — S &amp; G standesamtliche Trauung</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://nataliatschischik.com/reportagen/hochzeit-rathaus-kassel</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -159,13 +97,59 @@
     </image:image>
   </url>
   <url>
+    <loc>https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nataliatschischik.com/reportagen/img/renthof/5-03.webp</image:loc>
+      <image:caption>Hochzeit im Renthof Kassel — A &amp; W Hochzeitsreportage</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel-ra</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://nataliatschischik.com/reportagen/img/ra-renthof/hero.webp</image:loc>
       <image:caption>Hochzeit im Renthof Kassel — R &amp; A Hochzeitsreportage</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/reportagen/hochzeit-sababurg-dornroeschenschloss</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nataliatschischik.com/reportagen/img/sababurg/hero-kiss.webp</image:loc>
+      <image:caption>Hochzeit im Dornröschenschloss Sababurg — J &amp; J</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/reportagen/hochzeit-schloss-bad-arolsen</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp</image:loc>
+      <image:caption>Hochzeit im Schloss Bad Arolsen — V &amp; S</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/reportagen/hochzeit-schloss-berlepsch</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nataliatschischik.com/reportagen/img/berlepsch/hero.webp</image:loc>
+      <image:caption>Hochzeit im Schloss Berlepsch — A &amp; W Trauung in Witzenhausen</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://nataliatschischik.com/ueber-mich</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

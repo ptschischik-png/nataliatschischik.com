@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-auto_awesome" viewBox="0 0 24 24">
+    <path d="M12 4l1.8 4.2L18 10l-4.2 1.8L12 16l-1.8-4.2L6 10l4.2-1.8L12 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 4v2M4 5h2M19 15v2M18 16h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-camera" viewBox="0 0 24 24">
+    <path d="M4 8h4l1.6-2h4.8L16 8h4v10H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+  </symbol>
+
+  <symbol id="icon-check" viewBox="0 0 24 24">
+    <path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-cloud_off" viewBox="0 0 24 24">
+    <path d="M7 18h9a4 4 0 0 0 .7-7.9 5 5 0 0 0-9.6-1.6A4 4 0 0 0 7 18z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M4 4l16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-expand_more" viewBox="0 0 24 24">
+    <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-favorite" viewBox="0 0 24 24">
+    <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.2A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-format_quote" viewBox="0 0 24 24">
+    <path d="M4 7h7v6H8v4H4v-4c0-3.2 1.8-6 3.7-6zm9 0h7v6h-3v4h-4v-4c0-3.2 1.8-6 3.7-6z" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-history_edu" viewBox="0 0 24 24">
+    <path d="M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M7 15l8.8-8.8 2 2L9 17H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M14.8 6l2-2 2 2-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-landscape" viewBox="0 0 24 24">
+    <circle cx="8" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M3 18l6-7 4 5 3-3 5 5H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-park" viewBox="0 0 24 24">
+    <path d="M12 3l5 5h-2l4 5h-4l3 4H6l3-4H5l4-5H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M12 17v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-schedule" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M12 8v4.5l3.2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="icon-water" viewBox="0 0 24 24">
+    <path d="M3 11c2 2 4 2 6 0s4-2 6 0 4 2 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M3 15c2 2 4 2 6 0s4-2 6 0 4 2 6 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+</svg>

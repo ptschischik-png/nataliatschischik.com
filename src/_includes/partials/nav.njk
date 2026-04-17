@@ -1,0 +1,22 @@
+{% set contactHref = '#contact' if isHome else '/#contact' %}
+<nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
+  <a href="/" class="nav-logo">Natalia Tschischik</a>
+  <div class="nav-links">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/ueber-mich">Über mich</a>
+    <a href="/preise">Preise</a>
+    <a href="/faq">FAQ</a>
+    <a href="/journal">Journal</a>
+    <a href="{{ contactHref }}">Kontakt</a>
+  </div>
+  <a href="{{ contactHref }}" class="nav-cta">Anfrage</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <a href="/portfolio" onclick="closeMobile()">Portfolio</a>
+  <a href="/ueber-mich" onclick="closeMobile()">Über mich</a>
+  <a href="/preise" onclick="closeMobile()">Preise</a>
+  <a href="/faq" onclick="closeMobile()">FAQ</a>
+  <a href="/journal" onclick="closeMobile()">Journal</a>
+  <a href="{{ contactHref }}" class="mobile-cta" onclick="closeMobile()">Anfrage senden</a>
+</div>

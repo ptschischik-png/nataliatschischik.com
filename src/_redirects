@@ -1,0 +1,35 @@
+# .html-Endungen → ohne .html
+/portfolio.html /portfolio 301
+/ueber-mich.html /ueber-mich 301
+/preise.html /preise 301
+/faq.html /faq 301
+/journal.html /journal 301
+/impressum.html /impressum 301
+/datenschutz.html /datenschutz 301
+/datenschutzerklaerung.html /datenschutz 301
+
+# Alte Reportage-Slugs → neue Slugs
+/reportagen/renthof-kassel.html /reportagen/hochzeit-renthof-kassel 301
+/reportagen/renthof-kassel /reportagen/hochzeit-renthof-kassel 301
+/reportagen/sababurg.html /reportagen/hochzeit-sababurg-dornroeschenschloss 301
+/reportagen/sababurg /reportagen/hochzeit-sababurg-dornroeschenschloss 301
+/reportagen/vs-schloss-bad-arolsen.html /reportagen/hochzeit-schloss-bad-arolsen 301
+/reportagen/vs-schloss-bad-arolsen /reportagen/hochzeit-schloss-bad-arolsen 301
+
+# Reportagen mit .html-Endung → ohne
+/reportagen/hochzeit-renthof-kassel.html /reportagen/hochzeit-renthof-kassel 301
+/reportagen/hochzeit-renthof-kassel-ra.html /reportagen/hochzeit-renthof-kassel-ra 301
+/reportagen/hochzeit-goettingen.html /reportagen/hochzeit-goettingen 301
+/reportagen/hochzeit-sababurg-dornroeschenschloss.html /reportagen/hochzeit-sababurg-dornroeschenschloss 301
+/reportagen/hochzeit-bergpark-wilhelmshoehe.html /reportagen/hochzeit-bergpark-wilhelmshoehe 301
+/reportagen/hochzeit-schloss-bad-arolsen.html /reportagen/hochzeit-schloss-bad-arolsen 301
+/reportagen/hochzeit-schloss-berlepsch.html /reportagen/hochzeit-schloss-berlepsch 301
+/reportagen/hochzeit-rathaus-kassel.html /reportagen/hochzeit-rathaus-kassel 301
+
+# Journal mit .html
+/journal/hochzeitslocations-kassel.html /journal/hochzeitslocations-kassel 301
+/journal/hochzeit-timeline-kassel.html /journal/hochzeit-timeline-kassel 301
+/journal/brautpaar-shooting-tipps.html /journal/brautpaar-shooting-tipps 301
+/journal/golden-hour.html /journal/golden-hour 301
+/journal/hochzeitsalbum.html /journal/hochzeitsalbum 301
+/journal/orangerie-kassel.html /journal/orangerie-kassel 301

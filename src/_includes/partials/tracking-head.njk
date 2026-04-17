@@ -1,0 +1,4 @@
+{% if trackingEnabled !== false %}
+<script>window.__NT_SITE_CONFIG = {{ site.clientConfigJson | safe }};</script>
+<script src="/js/tracking-bootstrap.js" defer></script>
+{% endif %}

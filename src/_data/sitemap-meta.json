@@ -1,0 +1,152 @@
+{
+  "https://nataliatschischik.com/": {
+    "changefreq": "weekly",
+    "priority": "1.0",
+    "images": []
+  },
+  "https://nataliatschischik.com/portfolio": {
+    "changefreq": "weekly",
+    "priority": "0.9",
+    "images": []
+  },
+  "https://nataliatschischik.com/preise": {
+    "changefreq": "monthly",
+    "priority": "0.9",
+    "images": []
+  },
+  "https://nataliatschischik.com/ueber-mich": {
+    "changefreq": "monthly",
+    "priority": "0.8",
+    "images": []
+  },
+  "https://nataliatschischik.com/faq": {
+    "changefreq": "monthly",
+    "priority": "0.7",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal": {
+    "changefreq": "weekly",
+    "priority": "0.7",
+    "images": []
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-goettingen": {
+    "changefreq": "monthly",
+    "priority": "0.9",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/sg-goettingen/3-Ceremony_00445_Hochzeit.webp",
+        "caption": "Hochzeit S & G Göttingen — S & G standesamtliche Trauung"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel": {
+    "changefreq": "monthly",
+    "priority": "0.8",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/renthof/5-03.webp",
+        "caption": "Hochzeit im Renthof Kassel — A & W Hochzeitsreportage"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-sababurg-dornroeschenschloss": {
+    "changefreq": "monthly",
+    "priority": "0.8",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/sababurg/hero-kiss.webp",
+        "caption": "Hochzeit im Dornröschenschloss Sababurg — J & J"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-bergpark-wilhelmshoehe": {
+    "changefreq": "monthly",
+    "priority": "0.8",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/bergpark/tv-portrait.webp",
+        "caption": "Hochzeit im Bergpark Wilhelmshöhe — T & V"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-schloss-bad-arolsen": {
+    "changefreq": "monthly",
+    "priority": "0.8",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp",
+        "caption": "Hochzeit im Schloss Bad Arolsen — V & S"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/journal/hochzeitslocations-kassel": {
+    "changefreq": "monthly",
+    "priority": "0.7",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal/hochzeit-timeline-kassel": {
+    "changefreq": "monthly",
+    "priority": "0.7",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal/brautpaar-shooting-tipps": {
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal/golden-hour": {
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal/hochzeitsalbum": {
+    "changefreq": "monthly",
+    "priority": "0.6",
+    "images": []
+  },
+  "https://nataliatschischik.com/journal/orangerie-kassel": {
+    "changefreq": "monthly",
+    "priority": "0.7",
+    "images": []
+  },
+  "https://nataliatschischik.com/impressum": {
+    "changefreq": "yearly",
+    "priority": "0.2",
+    "images": []
+  },
+  "https://nataliatschischik.com/datenschutz": {
+    "changefreq": "yearly",
+    "priority": "0.2",
+    "images": []
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-schloss-berlepsch": {
+    "changefreq": "monthly",
+    "priority": "0.9",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/berlepsch/hero.webp",
+        "caption": "Hochzeit im Schloss Berlepsch — A & W Trauung in Witzenhausen"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-rathaus-kassel": {
+    "changefreq": "monthly",
+    "priority": "0.9",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/vm-kassel/hero.webp",
+        "caption": "Hochzeit im Rathaus Kassel — V & M Standesamtliche Trauung"
+      }
+    ]
+  },
+  "https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel-ra": {
+    "changefreq": "monthly",
+    "priority": "1.0",
+    "images": [
+      {
+        "loc": "https://nataliatschischik.com/reportagen/img/ra-renthof/hero.webp",
+        "caption": "Hochzeit im Renthof Kassel — R & A Hochzeitsreportage"
+      }
+    ]
+  }
+}
