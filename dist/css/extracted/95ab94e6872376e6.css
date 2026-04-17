@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    header[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      min-height: auto !important;
+    }
+    header[style*="grid-template-columns: 1fr 1fr"] > div:last-child {
+      height: 50vh;
+    }
+  }

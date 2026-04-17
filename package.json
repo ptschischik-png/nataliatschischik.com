@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "clean": "node scripts/clean-dist.mjs",
-    "build": "npm run clean && eleventy && node scripts/generate-sitemap.mjs",
+    "build": "npm run clean && eleventy && node scripts/extract-head-styles.mjs && node scripts/generate-sitemap.mjs",
     "check": "node scripts/check-site.mjs",
     "dev": "npm run clean && eleventy --serve"
   },

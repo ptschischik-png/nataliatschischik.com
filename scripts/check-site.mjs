@@ -68,6 +68,7 @@ async function checkHtmlFiles(files) {
   for (const file of files) {
     const rel = path.relative(distDir, file).replace(/\\/g, '/');
     const html = await fs.readFile(file, 'utf8');
+    const head = capture(html, /<head>([\s\S]*?)<\/head>/i);
     const robots = capture(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i).toLowerCase();
     const canonical = capture(html, /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i);
     const ogUrl = capture(html, /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["'][^>]*>/i);
@@ -88,6 +89,10 @@ async function checkHtmlFiles(files) {
 
     if (html.includes('id="contactForm"') && !html.includes('contact-form.js')) {
       failures.push(`${rel} contains a contact form without the form handler script.`);
+    }
+
+    if (/<style(?:\s|>)/i.test(html)) {
+      failures.push(`${rel} still contains inline styles instead of extracted CSS files.`);
     }
   }
 }
