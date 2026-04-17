@@ -174,7 +174,7 @@
       var attribution = attrMatch ? decodeURIComponent(attrMatch[1]) : '';
       var eventID = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
-      var res = await fetch('https://natalia-form-handler.icy-sunset-af0f.workers.dev', {
+      var res = await fetch('https://form-handler.nataliatschischik.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
