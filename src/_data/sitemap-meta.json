@@ -109,16 +109,6 @@
     "priority": "0.7",
     "images": []
   },
-  "https://nataliatschischik.com/impressum": {
-    "changefreq": "yearly",
-    "priority": "0.2",
-    "images": []
-  },
-  "https://nataliatschischik.com/datenschutz": {
-    "changefreq": "yearly",
-    "priority": "0.2",
-    "images": []
-  },
   "https://nataliatschischik.com/reportagen/hochzeit-schloss-berlepsch": {
     "changefreq": "monthly",
     "priority": "0.9",
