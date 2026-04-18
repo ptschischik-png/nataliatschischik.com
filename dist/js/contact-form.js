@@ -225,27 +225,12 @@
         persistIdentityHashes(userData);
 
         if (typeof fbq !== 'undefined') {
-          fbq('init', trackingConfig.pixelId || '1083293176093427', userData);
           fbq('trackSingle', trackingConfig.pixelId || '1083293176093427', 'Lead', {
             content_name: 'Kontaktformular',
             content_category: 'Hochzeitsfotografie',
             value: 150,
             currency: 'EUR'
           }, { eventID: eventID });
-        }
-
-        if (typeof sendCAPIEvent !== 'undefined') {
-          sendCAPIEvent('Lead', eventID, {
-            content_name: 'Kontaktformular',
-            content_category: 'Hochzeitsfotografie',
-            value: 150,
-            currency: 'EUR'
-          }, {
-            em: userData.em,
-            fn: userData.fn,
-            ln: userData.ln,
-            ph: userData.ph
-          });
         }
 
         if (typeof gtag !== 'undefined') {
