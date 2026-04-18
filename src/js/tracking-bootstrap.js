@@ -201,7 +201,7 @@
     return userData;
   }
 
-  function initMetaPixel(matchData) {
+  function initMetaPixel() {
     !function(f,b,e,v,n,t,s){
       if (f.fbq) return;
       n = f.fbq = function(){ n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
@@ -218,7 +218,7 @@
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
     if (typeof window.fbq !== 'undefined') {
-      window.fbq('init', pixelId, matchData || {}, { autoConfig: false, autoAdvancedMatching: true });
+      window.fbq('init', pixelId, {}, { autoConfig: false, autoAdvancedMatching: false });
       log('meta:init', { pixelId: pixelId });
     }
   }
@@ -234,9 +234,10 @@
   function bootLateTracking() {
     if (lateTrackingBooted) return;
     lateTrackingBooted = true;
-    initMetaPixel(getPixelUserData());
+    var matchData = getPixelUserData();
+    initMetaPixel();
     if (typeof window.fbq !== 'undefined' && pageViewEventId) {
-      window.fbq('trackSingle', pixelId, 'PageView', {}, { eventID: pageViewEventId });
+      window.fbq('trackSingle', pixelId, 'PageView', matchData, { eventID: pageViewEventId });
       log('meta:pageview', { eventId: pageViewEventId });
     }
     loadScript('/js/tracking.js');
