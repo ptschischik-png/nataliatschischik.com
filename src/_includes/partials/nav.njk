@@ -1,4 +1,5 @@
-{% set contactHref = '#contact' if isHome else '/#contact' %}
+{% set hasContactSection = hasInlineContactSection or isHome %}
+{% set contactHref = '#contact' if hasContactSection else '/#contact' %}
 <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
   <a href="/" class="nav-logo">Natalia Tschischik</a>
   <div class="nav-links">

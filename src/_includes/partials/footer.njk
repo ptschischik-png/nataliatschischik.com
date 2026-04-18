@@ -1,4 +1,5 @@
-{% set contactHref = '#contact' if isHome else '/#contact' %}
+{% set hasContactSection = hasInlineContactSection or isHome %}
+{% set contactHref = '#contact' if hasContactSection else '/#contact' %}
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div>
@@ -11,6 +12,11 @@
         <a href="{{ site.contact.emailHref }}" style="color:inherit;">{{ site.contact.email }}</a><br>
         <a href="{{ site.contact.mapsUrl }}" target="_blank" rel="noopener" style="color:rgba(196,181,171,0.5);text-decoration:underline;text-underline-offset:3px;">Auf Google Maps ansehen</a>
       </address>
+      <div style="margin-top:1rem;font-size:0.75rem;line-height:1.8;color:rgba(196,181,171,0.7);">
+        <a href="/" style="color:rgba(196,181,171,0.7);text-decoration:underline;text-underline-offset:3px;">Hochzeitsfotograf Kassel</a>
+        <span style="color:rgba(196,181,171,0.35);"> | </span>
+        <a href="/hochzeitsfotograf-goettingen" style="color:rgba(196,181,171,0.7);text-decoration:underline;text-underline-offset:3px;">Hochzeitsfotograf G&ouml;ttingen</a>
+      </div>
     </div>
     <div class="footer-links">
       <div class="footer-col">
