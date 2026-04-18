@@ -54,10 +54,13 @@
   }
 
   function capi(eventName, customData, userData) {
-    if (typeof window.sendCAPIEvent === 'undefined') return;
     var eventId = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 10);
     if (typeof window.fbq !== 'undefined') {
       window.fbq('trackSingle', pixelId, eventName, customData || {}, { eventID: eventId });
+    }
+    if (typeof window.sendCAPIEvent === 'undefined') {
+      debugLog('event', { name: eventName, id: eventId, destination: 'pixel-only (capi unavailable)' });
+      return eventId;
     }
     var params = new URLSearchParams(window.location.search);
     var enriched = Object.assign({}, customData || {});
@@ -74,16 +77,17 @@
   }
 
   function capiCustom(eventName, customData) {
-    if (typeof window.sendCAPIEvent === 'undefined') {
-      if (typeof window.fbq !== 'undefined') window.fbq('trackCustom', eventName, customData);
-      return;
-    }
     var eventId = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 10);
     if (typeof window.fbq !== 'undefined') {
       window.fbq('trackCustom', eventName, customData || {}, { eventID: eventId });
     }
+    if (typeof window.sendCAPIEvent === 'undefined') {
+      debugLog('event', { name: eventName, id: eventId, destination: 'pixel-only (capi unavailable custom)' });
+      return eventId;
+    }
     debugLog('event', { name: eventName, id: eventId, destination: 'pixel+capi-custom' });
     window.sendCAPIEvent(eventName, eventId, customData, getUserData());
+    return eventId;
   }
 
   var pageData = {};
@@ -104,8 +108,7 @@
   }
 
   if (pageData.content_name) {
-    var vcSent = capi('ViewContent', pageData);
-    if (!vcSent && typeof window.fbq !== 'undefined') window.fbq('track', 'ViewContent', pageData);
+    capi('ViewContent', pageData);
     if (typeof window.gtag !== 'undefined') {
       window.gtag('event', 'view_item', {
         item_name: pageData.content_name,
@@ -157,8 +160,7 @@
   document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"], a[href*="wa.me"]').forEach(function(el) {
     el.addEventListener('click', function() {
       var type = el.href.indexOf('tel:') === 0 ? 'Telefon' : el.href.indexOf('mailto:') === 0 ? 'Email' : 'WhatsApp';
-      var sent = capi('Contact', { content_name: type, page: page });
-      if (!sent && typeof window.fbq !== 'undefined') window.fbq('track', 'Contact', { content_name: type });
+      capi('Contact', { content_name: type, page: page });
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'contact_click', { method: type, page_path: page });
       }
@@ -176,10 +178,7 @@
           value: 50,
           currency: 'EUR'
         };
-        var leadSent = capi('Lead', leadData);
-        if (!leadSent && typeof window.fbq !== 'undefined') {
-          window.fbq('track', 'Lead', leadData);
-        }
+        capi('Lead', leadData);
 
         if (typeof window.gtag !== 'undefined') {
           window.gtag('event', 'whatsapp_click', {

@@ -189,6 +189,15 @@
 
       debugLog('submit:start', { eventId: eventID, destination: workers.formHandler || '' });
 
+      if (typeof fbq !== 'undefined') {
+        fbq('trackSingle', trackingConfig.pixelId || '1083293176093427', 'Lead', {
+          content_name: 'Kontaktformular',
+          content_category: 'Hochzeitsfotografie',
+          value: 150,
+          currency: 'EUR'
+        }, { eventID: eventID });
+      }
+
       var res = await fetch(workers.formHandler || 'https://form-handler.nataliatschischik.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -223,15 +232,6 @@
         if (fnHash) userData.fn = fnHash;
         if (lnHash) userData.ln = lnHash;
         persistIdentityHashes(userData);
-
-        if (typeof fbq !== 'undefined') {
-          fbq('trackSingle', trackingConfig.pixelId || '1083293176093427', 'Lead', {
-            content_name: 'Kontaktformular',
-            content_category: 'Hochzeitsfotografie',
-            value: 150,
-            currency: 'EUR'
-          }, { eventID: eventID });
-        }
 
         if (typeof gtag !== 'undefined') {
           var googleUserData = {};
