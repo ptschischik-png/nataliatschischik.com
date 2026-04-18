@@ -3,6 +3,8 @@
 // - keeps WhatsApp mapped as Lead per project preference
 // - adds debug logging via ?debug_tracking=1
 (function() {
+  if (window.__NTTrackingLoaded) return;
+  window.__NTTrackingLoaded = true;
   var page = window.location.pathname;
   var siteConfig = window.__NT_SITE_CONFIG || {};
   var trackingConfig = siteConfig.tracking || {};
