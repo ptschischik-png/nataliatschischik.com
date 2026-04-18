@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-renthof-kassel-ra.html",
   "seo": {
     "title": "Hochzeit im Renthof Kassel — R & A | Natalia Tschischik",
-    "description": "Emotionale Hochzeitsreportage im Renthof Kassel — standesamtliche Trauung in Fritzlar, Brautpaar-Shooting in Siebenbergen, Dinner und Party im historischen Renthof. Hochzeitsfotografin Kassel Natalia Tschischik.",
+    "description": "Hochzeitsreportage im Renthof Kassel mit Trauung in Fritzlar, Paarshooting in Siebenbergen und Feier im historischen Gewölbe.",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel-ra",
     "ogTitle": "Hochzeit im Renthof Kassel — R & A | Natalia Tschischik",
     "ogDescription": "Emotionale Hochzeitsreportage im Renthof Kassel — standesamtliche Trauung in Fritzlar, Brautpaar-Shooting in Siebenbergen, Dinner und Party im historischen Renthof.",

@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
   "seo": {
     "title": "Hochzeit im Bergpark Wilhelmshöhe | Natalia Tschischik",
-    "description": "Hochzeitsreportage im Bergpark Wilhelmshöhe, Kassel — UNESCO Weltkulturerbe. Zeremonie, Brautpaar-Shooting und Hochzeitsessen im größten Bergpark Europas. Hochzeitsfotografin Kassel.",
+    "description": "Hochzeitsreportage im Bergpark Wilhelmshöhe in Kassel mit Zeremonie, Paarshooting und Feier im UNESCO-Weltkulturerbe.",
     "keywords": "Hochzeit Bergpark Wilhelmshöhe, UNESCO Weltkulturerbe Hochzeit, Hochzeitsfotografin Kassel, Hochzeitsreportage Kassel, Bergpark Hochzeit, Herkules Kassel Hochzeit, Hochzeitsfotograf Kassel, Hochzeit Schloss Wilhelmshöhe",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-bergpark-wilhelmshoehe",
     "ogTitle": "Hochzeit im Bergpark Wilhelmshöhe | Natalia Tschischik",

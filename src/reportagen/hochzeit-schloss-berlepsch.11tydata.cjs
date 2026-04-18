@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-schloss-berlepsch.html",
   "seo": {
     "title": "Hochzeit im Schloss Berlepsch | A & W — Natalia Tschischik",
-    "description": "Emotionale Hochzeitsreportage im Schloss Berlepsch, Witzenhausen — Bräutigamvorbereitung, Brautvorbereitung, Trauung, Sektempfang und Brautpaar-Shooting. Hochzeitsfotografin Kassel.",
+    "description": "Hochzeitsreportage im Schloss Berlepsch bei Witzenhausen mit Getting Ready, Trauung, Sektempfang und Paarshooting.",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-schloss-berlepsch",
     "ogTitle": "Hochzeit im Schloss Berlepsch | A & W — Natalia Tschischik",
     "ogDescription": "Emotionale Hochzeitsreportage im Schloss Berlepsch, Witzenhausen — Bräutigamvorbereitung, Brautvorbereitung, Trauung, Sektempfang und Brautpaar-Shooting. Hochzeitsfotografin Kassel.",

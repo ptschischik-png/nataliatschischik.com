@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "ueber-mich.html",
   "seo": {
     "title": "Über mich | Hochzeitsfotografin Kassel — Natalia Tschischik",
-    "description": "Hochzeitsfotografin aus Kassel — seit 2012 Autodidaktin, über 200 Paare begleitet. Editorial Hochzeitsfotografie in Kassel, Göttingen und in Hessen & Niedersachsen.",
+    "description": "Hochzeitsfotografin aus Kassel mit ruhigem, dokumentarischem Blick. Seit 2012 habe ich über 200 Paare in Kassel, Göttingen und der Region begleitet.",
     "keywords": "Hochzeitsfotografin Kassel, Über mich, Natalia Tschischik, Hochzeitsfotograf Göttingen, Hochzeitsfotografie Nordhessen",
     "canonical": "https://nataliatschischik.com/ueber-mich",
     "ogTitle": "Über mich | Hochzeitsfotografin Kassel — Natalia Tschischik",

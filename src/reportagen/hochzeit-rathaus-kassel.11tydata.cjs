@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-rathaus-kassel.html",
   "seo": {
     "title": "Hochzeit im Rathaus Kassel — V & M | Natalia Tschischik",
-    "description": "Hochzeitsreportage V & M — Standesamtliche Trauung im Rathaus Kassel (Standesamt), Brautpaar-Shooting an der Karlsaue und Hochzeitsfeier in Schauenburg. Natalia Tschischik, Hochzeitsfotografin Kassel.",
+    "description": "Hochzeitsreportage im Rathaus Kassel mit standesamtlicher Trauung, Paarshooting an der Karlsaue und Feier in Schauenburg.",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-rathaus-kassel",
     "ogTitle": "Hochzeit im Rathaus Kassel — V & M | Natalia Tschischik",
     "ogDescription": "Hochzeitsreportage V & M — Standesamtliche Trauung im Rathaus Kassel, Brautpaar-Shooting Karlsaue und Hochzeitsfeier in Schauenburg. Hochzeitsfotografin Kassel.",

@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-sababurg-dornroeschenschloss.html",
   "seo": {
     "title": "Hochzeit im Dornröschenschloss Sababurg | Natalia Tschischik",
-    "description": "Märchenhafte Hochzeitsreportage im Dornröschenschloss Sababurg im Reinhardswald — Brautvorbereitung, freie Trauung, Brautpaar-Shooting und Hochzeitsfeier. Hochzeitsfotografin Kassel.",
+    "description": "Hochzeitsreportage auf der Sababurg im Reinhardswald mit freier Trauung, Paarshooting und Feier im Dornröschenschloss.",
     "keywords": "Hochzeit Sababurg, Dornröschenschloss Hochzeit, Hochzeitsfotograf Sababurg, Hochzeitsfotografin Kassel, Hochzeitsreportage Sababurg, Reinhardswald Hochzeit, Märchenhochzeit Sababurg, Hochzeit Dornröschenschloss",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-sababurg-dornroeschenschloss",
     "ogTitle": "Hochzeit im Dornröschenschloss Sababurg | Natalia Tschischik",

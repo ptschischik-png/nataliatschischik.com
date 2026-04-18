@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-goettingen.html",
   "seo": {
     "title": "Hochzeit in Göttingen — S & G | Natalia Tschischik",
-    "description": "Emotionale Hochzeitsreportage in Göttingen — standesamtliche und kirchliche Trauung, First Look, Busfahrt, Brautpaar-Shooting, Golden Hour und Party. Hochzeitsfotografin Natalia Tschischik.",
+    "description": "Hochzeitsreportage in Göttingen mit standesamtlicher und kirchlicher Trauung, Paarshooting, Golden Hour und ausgelassener Feier.",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-goettingen",
     "ogTitle": "Hochzeit in Göttingen | S & G — Natalia Tschischik",
     "ogDescription": "Standesamtliche und kirchliche Trauung, Brautpaar-Shooting und unvergessliche Party — eine Hochzeitsreportage voller Liebe und Freude.",

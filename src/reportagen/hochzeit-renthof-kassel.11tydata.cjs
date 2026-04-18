@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "reportagen/hochzeit-renthof-kassel.html",
   "seo": {
     "title": "Hochzeit im Renthof Kassel | Natalia Tschischik",
-    "description": "Emotionale Hochzeitsreportage in Kassel — Brautvorbereitung, standesamtliche Trauung im Waldhotel Schäferberg, kirchliche Trauung in der Ev. Kirche Obervellmar und rauschende Feier im Renthof Kassel. Hochzeitsfotograf Kassel.",
+    "description": "Emotionale Hochzeitsreportage in Kassel mit First Look, Trauungen und Feier im Renthof. Dokumentarisch begleitet von Natalia Tschischik.",
     "keywords": "Hochzeit Renthof Kassel, Hochzeitsfotograf Kassel, Hochzeitsreportage Renthof, Renthof Kassel Hochzeit, Hochzeitsfotografin Kassel, standesamtliche Trauung Waldhotel Schäferberg, kirchliche Trauung Obervellmar, Ev. Kirche Obervellmar Hochzeit",
     "canonical": "https://nataliatschischik.com/reportagen/hochzeit-renthof-kassel",
     "ogTitle": "Hochzeit im Renthof Kassel | Natalia Tschischik",

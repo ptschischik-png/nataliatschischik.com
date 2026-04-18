@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-goettingen.html",
   "seo": {
     "title": "Hochzeitsfotograf Göttingen — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Göttingen für natürliche Reportagen mit Gefühl: ruhig begleitet, ungestellt fotografiert, zeitlos erzählt. Jetzt Termin anfragen.",
+    "description": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Ruhige, natürliche Reportagen in Göttingen und Südniedersachsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-goettingen",
     "ogTitle": "Hochzeitsfotograf Göttingen — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotografin in Göttingen für emotionale, ungestellte Hochzeitsreportagen in Göttingen und Südniedersachsen.",
+    "ogDescription": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Ruhig, natürlich und zeitlos erzählt.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/images/og-default.jpg",
@@ -18,7 +18,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Göttingen — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotografin in Göttingen für emotionale, ungestellte Hochzeitsreportagen in Göttingen und Südniedersachsen.",
+    "twitterDescription": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Ruhig, natürlich und zeitlos erzählt.",
     "twitterImage": "https://nataliatschischik.com/images/og-default.jpg"
   },
   "bodyAttributes": "",

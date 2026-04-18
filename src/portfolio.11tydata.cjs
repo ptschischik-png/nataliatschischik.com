@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "portfolio.html",
   "seo": {
     "title": "Portfolio | Hochzeitsreportagen Kassel — Natalia Tschischik",
-    "description": "Hochzeitsreportagen aus Hessen und Nordhessen — Renthof, Schloss Berlepsch, Sababurg, Schloss Wilhelmshöhe und mehr. Emotionale Hochzeitsfotografie.",
+    "description": "Hochzeitsreportagen aus Kassel, Göttingen und der Region: Renthof, Schloss Berlepsch, Sababurg, Wilhelmshöhe und mehr.",
     "keywords": "Hochzeitsreportage Kassel, Portfolio Hochzeitsfotograf, Schloss Bad Arolsen Hochzeit, Residenzschloss Bad Arolsen, Sababurg Hochzeit, Schloss Wilhelmshöhe Hochzeit, Renthof Kassel Hochzeit, Orangerie Kassel Hochzeit",
     "canonical": "https://nataliatschischik.com/portfolio",
     "ogTitle": "Portfolio | Hochzeitsreportagen Kassel — Natalia Tschischik",
