@@ -5,7 +5,7 @@ const site = {
   "twitterSite": "@natalia_photography",
   "contact": {
     "displayName": "Natalia Tschischik",
-    "businessName": "Natalia Tschischik Photography",
+    "businessName": "Hochzeitsfotograf Natalia Tschischik",
     "phoneDisplay": "+49 176 34948598",
     "phoneHref": "tel:+4917634948598",
     "email": "natalia@nataliatschischik.com",
@@ -40,7 +40,7 @@ const site = {
     "siteUrl": "https://nataliatschischik.com",
     "contact": {
       "displayName": "Natalia Tschischik",
-      "businessName": "Natalia Tschischik Photography",
+      "businessName": "Hochzeitsfotograf Natalia Tschischik",
       "phoneDisplay": "+49 176 34948598",
       "phoneHref": "tel:+4917634948598",
       "email": "natalia@nataliatschischik.com",
