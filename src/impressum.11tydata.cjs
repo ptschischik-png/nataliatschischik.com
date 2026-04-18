@@ -3,7 +3,7 @@ module.exports = {
   "permalink": "impressum.html",
   "seo": {
     "title": "Impressum — Hochzeitsfotograf Natalia Tschischik",
-    "description": "Impressum von Natalia Tschischik Photography mit allen Pflichtangaben gemäß § 5 TMG und Kontaktinformationen.",
+    "description": "Impressum von Hochzeitsfotograf Natalia Tschischik mit allen Pflichtangaben gemäß § 5 TMG und Kontaktinformationen.",
     "canonical": "https://nataliatschischik.com/impressum",
     "ogTitle": "Impressum — Hochzeitsfotograf Natalia Tschischik",
     "ogType": "website",

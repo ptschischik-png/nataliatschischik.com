@@ -2,10 +2,10 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "datenschutz.html",
   "seo": {
-    "title": "Datenschutzerklärung — Natalia Tschischik Photography",
-    "description": "Datenschutzerklärung von Natalia Tschischik Photography mit Informationen zur Verarbeitung personenbezogener Daten, Cookies und Tracking-Tools.",
+    "title": "Datenschutzerklärung — Hochzeitsfotograf Natalia Tschischik",
+    "description": "Datenschutzerklärung von Hochzeitsfotograf Natalia Tschischik mit Informationen zur Verarbeitung personenbezogener Daten, Cookies und Tracking-Tools.",
     "canonical": "https://nataliatschischik.com/datenschutz",
-    "ogTitle": "Datenschutzerklärung — Natalia Tschischik Photography",
+    "ogTitle": "Datenschutzerklärung — Hochzeitsfotograf Natalia Tschischik",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/images/og-default.jpg",
@@ -15,7 +15,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Datenschutzerklärung | Natalia Tschischik",
-    "twitterDescription": "Datenschutzerklärung von Natalia Tschischik Photography.",
+    "twitterDescription": "Datenschutzerklärung von Hochzeitsfotograf Natalia Tschischik.",
     "twitterImage": "https://nataliatschischik.com/images/og-default.jpg"
   },
   "bodyAttributes": "class=\"bg-[#F5F0E8] text-brown-600\"",
