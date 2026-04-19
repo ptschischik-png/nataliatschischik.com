@@ -108,7 +108,7 @@ site.schema = {
         '@id': site.url + '/#business',
         name: site.contact.businessName,
         alternateName: site.contact.displayName,
-        description: 'Hochzeitsfotografie in Kassel, Göttingen, Marburg, Gießen, Fulda, Bad Hersfeld, Borken, Hofgeismar und ganz Hessen mit dokumentarischen, zeitlosen Reportagen.',
+        description: 'Hochzeitsfotografie in Kassel, Nordhessen, Göttingen, Marburg, Gießen, Fulda, Bad Hersfeld, Borken, Hofgeismar und ganz Hessen mit dokumentarischen, zeitlosen Reportagen.',
         url: site.url,
         image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
         logo: site.url + '/favicon.svg',
