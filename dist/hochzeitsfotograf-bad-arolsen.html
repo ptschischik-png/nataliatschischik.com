@@ -1167,15 +1167,17 @@ reveals.forEach(el => observer.observe(el));
   var el = document.getElementById('city-rotate');
   if (!el) return;
   var i = 0;
-  var interval = setInterval(function() {
-    i++;
-    if (i >= cities.length) { clearInterval(interval); return; }
-    el.style.opacity = '0';
-    setTimeout(function() {
-      el.textContent = cities[i];
-      el.style.opacity = '1';
-    }, 400);
-  }, 1200);
+  setTimeout(function() {
+    var interval = setInterval(function() {
+      i++;
+      if (i >= cities.length) { clearInterval(interval); return; }
+      el.style.opacity = '0';
+      setTimeout(function() {
+        el.textContent = cities[i];
+        el.style.opacity = '1';
+      }, 400);
+    }, 1200);
+  }, 2000);
 })();
 </script>
 
