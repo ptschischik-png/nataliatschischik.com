@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-marburg.html",
   "seo": {
     "title": "Hochzeitsfotograf Marburg — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Hochzeitsreportagen in Marburg und Mittelhessen.",
+    "description": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Oberstadt, Schlossblick und Mittelhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-marburg",
     "ogTitle": "Hochzeitsfotograf Marburg — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Hochzeitsreportagen in Marburg und Mittelhessen.",
+    "ogDescription": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Oberstadt, Schlossblick und Mittelhessen.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Marburg — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Hochzeitsreportagen in Marburg und Mittelhessen.",
+    "twitterDescription": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Oberstadt, Schlossblick und Mittelhessen.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",
