@@ -87,6 +87,7 @@ site.schema = {
     { '@type': 'City', name: 'Fulda' },
     { '@type': 'City', name: 'Bad Hersfeld' },
     { '@type': 'City', name: 'Borken (Hessen)' },
+    { '@type': 'City', name: 'Hofgeismar' },
     { '@type': 'AdministrativeArea', name: 'Nordhessen' },
     { '@type': 'AdministrativeArea', name: 'Hessen' },
     { '@type': 'AdministrativeArea', name: 'Niedersachsen' }
@@ -107,7 +108,7 @@ site.schema = {
         '@id': site.url + '/#business',
         name: site.contact.businessName,
         alternateName: site.contact.displayName,
-        description: 'Hochzeitsfotografie in Kassel, Göttingen, Marburg, Gießen, Fulda, Bad Hersfeld, Borken und ganz Hessen mit dokumentarischen, zeitlosen Reportagen.',
+        description: 'Hochzeitsfotografie in Kassel, Göttingen, Marburg, Gießen, Fulda, Bad Hersfeld, Borken, Hofgeismar und ganz Hessen mit dokumentarischen, zeitlosen Reportagen.',
         url: site.url,
         image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
         logo: site.url + '/favicon.svg',
@@ -123,6 +124,7 @@ site.schema = {
           { '@type': 'City', name: 'Fulda' },
           { '@type': 'City', name: 'Bad Hersfeld' },
           { '@type': 'City', name: 'Borken (Hessen)' },
+          { '@type': 'City', name: 'Hofgeismar' },
           { '@type': 'AdministrativeArea', name: 'Nordhessen' },
           { '@type': 'AdministrativeArea', name: 'Hessen' },
           { '@type': 'AdministrativeArea', name: 'Niedersachsen' }
