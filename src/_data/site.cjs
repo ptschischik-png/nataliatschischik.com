@@ -81,6 +81,7 @@ site.schema = {
   sameAs: [site.social.instagram, site.social.googleMaps],
   areaServed: [
     { '@type': 'City', name: 'Kassel' },
+    { '@type': 'City', name: 'Baunatal' },
     { '@type': 'City', name: 'Göttingen' },
     { '@type': 'City', name: 'Marburg' },
     { '@type': 'City', name: 'Gießen' },
@@ -116,7 +117,7 @@ site.schema = {
         '@id': site.url + '/#business',
         name: site.contact.businessName,
         alternateName: site.contact.displayName,
-        description: 'Hochzeitsfotografie in Kassel, Nordhessen, Göttingen, Marburg, Gießen, Fulda, Frankenberg, Schwalmstadt, Kirchheim, Paderborn, Hildesheim, Northeim, Warburg, Bad Hersfeld, Bad Arolsen, Borken, Hofgeismar und darüber hinaus mit dokumentarischen, zeitlosen Reportagen.',
+        description: 'Hochzeitsfotografie in Kassel, Baunatal, Nordhessen, Göttingen, Marburg, Gießen, Fulda, Frankenberg, Schwalmstadt, Kirchheim, Paderborn, Hildesheim, Northeim, Warburg, Bad Hersfeld, Bad Arolsen, Borken, Hofgeismar und darüber hinaus mit dokumentarischen, zeitlosen Reportagen.',
         url: site.url,
         image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
         logo: site.url + '/favicon.svg',
@@ -126,6 +127,7 @@ site.schema = {
         priceRange: '€€',
         areaServed: [
           { '@type': 'City', name: 'Kassel' },
+          { '@type': 'City', name: 'Baunatal' },
           { '@type': 'City', name: 'Göttingen' },
           { '@type': 'City', name: 'Marburg' },
           { '@type': 'City', name: 'Gießen' },
