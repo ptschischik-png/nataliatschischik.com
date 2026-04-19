@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-paderborn.html",
   "seo": {
     "title": "Hochzeitsfotograf Paderborn — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Paderborn und Ostwestfalen.",
+    "description": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Paderquellen, Schloß Neuhaus und Ostwestfalen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-paderborn",
     "ogTitle": "Hochzeitsfotograf Paderborn — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Paderborn und Ostwestfalen.",
+    "ogDescription": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Paderquellen, Schloß Neuhaus und Ostwestfalen.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Paderborn — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Paderborn und Ostwestfalen.",
+    "twitterDescription": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Paderquellen, Schloß Neuhaus und Ostwestfalen.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

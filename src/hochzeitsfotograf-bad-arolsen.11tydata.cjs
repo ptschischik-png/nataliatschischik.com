@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-bad-arolsen.html",
   "seo": {
     "title": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Hochzeitsreportagen rund um Residenzschloss, Große Allee und Waldeck-Frankenberg.",
+    "description": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und das Waldecker Land.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-bad-arolsen",
     "ogTitle": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Hochzeitsreportagen rund um Residenzschloss, Große Allee und Waldeck-Frankenberg.",
+    "ogDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und das Waldecker Land.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Hochzeitsreportagen rund um Residenzschloss, Große Allee und Waldeck-Frankenberg.",
+    "twitterDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und das Waldecker Land.",
     "twitterImage": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp"
   },
   "bodyAttributes": "",
