@@ -683,31 +683,46 @@ p { max-width: 60ch; }
   stroke: var(--accent);
 }
 
+.p2-season-note {
+  margin-top: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: 10px;
+  background: rgba(185, 151, 126, 0.08);
+  border: 1px solid rgba(90,38,40,0.1);
+}
+
+.p2-season-note p {
+  max-width: 52rem;
+  margin-bottom: 0;
+  color: var(--brown-500);
+}
+
 .p2-feature-review {
-  background: var(--dark-bg);
-  color: var(--cream-light);
+  background: var(--cream-light);
+  color: var(--brown-700);
 }
 
 .p2-feature-review-card {
   max-width: 900px;
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3.5rem);
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(90,38,40,0.12);
   border-radius: 12px;
-  background: var(--dark-card);
+  background: var(--white);
+  box-shadow: 0 24px 48px -38px rgba(44,24,16,0.24);
 }
 
 .p2-review-stars {
   margin-bottom: 1.25rem;
   font-size: 1rem;
   letter-spacing: 0.3em;
-  color: var(--accent-light);
+  color: var(--accent);
 }
 
 .p2-feature-review-card blockquote,
 .p2-feature-review-card p {
   max-width: none;
-  color: var(--cream-light);
+  color: var(--brown-700);
 }
 
 .p2-feature-review-card blockquote {
@@ -812,25 +827,30 @@ p { max-width: 60ch; }
 
 .p2-final-call {
   padding: clamp(4rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 6rem);
-  background: var(--dark-bg);
-  color: var(--cream-light);
+  background: var(--cream-light);
+  color: var(--brown-700);
 }
 
 .p2-final-call .container {
   max-width: 900px;
   text-align: center;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid rgba(90,38,40,0.12);
+  box-shadow: 0 24px 48px -38px rgba(44,24,16,0.22);
 }
 
 .p2-final-call h2 {
   margin-bottom: 1rem;
   font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
-  color: var(--cream-light);
+  color: var(--brown-700);
 }
 
 .p2-final-call p {
   max-width: 620px;
   margin: 0 auto 1.75rem;
-  color: rgba(250,248,244,0.82);
+  color: var(--brown-500);
 }
 
 .section,
