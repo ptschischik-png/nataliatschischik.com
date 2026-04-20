@@ -528,10 +528,10 @@ p { max-width: 60ch; }
   display: flex;
   flex-direction: column;
   padding: 2rem 1.75rem;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(90,38,40,0.12);
   border-radius: 10px;
   background: var(--white);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  box-shadow: 0 18px 40px -34px rgba(44,24,16,0.28);
 }
 
 .p2-plan-standesamt { order: 1; }
@@ -542,9 +542,9 @@ p { max-width: 60ch; }
   position: relative;
   transform: translateY(-10px);
   padding-top: 2.35rem;
-  border-color: rgba(90,38,40,0.3);
-  background: linear-gradient(180deg, rgba(253,252,250,1) 0%, rgba(248,241,236,1) 100%);
-  box-shadow: 0 28px 70px -36px rgba(44,24,16,0.45);
+  border-color: rgba(90,38,40,0.42);
+  background: linear-gradient(180deg, rgba(255,252,249,1) 0%, rgba(244,232,225,1) 100%);
+  box-shadow: 0 32px 80px -36px rgba(44,24,16,0.52);
 }
 
 .p2-plan-badge {
@@ -654,12 +654,22 @@ p { max-width: 60ch; }
   padding: 2rem;
   border-radius: 10px;
   background: var(--white);
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(90,38,40,0.12);
+  box-shadow: 0 18px 40px -34px rgba(44,24,16,0.25);
 }
 
 .p2-custom h3 {
   margin-bottom: 0.8rem;
   font-size: clamp(1.6rem, 1.3rem + 0.8vw, 2.2rem);
+}
+
+.p2-custom-price {
+  margin-bottom: 0.85rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .p2-custom-list {
@@ -690,7 +700,7 @@ p { max-width: 60ch; }
   max-width: 900px;
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3.5rem);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 12px;
   background: var(--dark-card);
 }
@@ -716,8 +726,6 @@ p { max-width: 60ch; }
 }
 
 .p2-review-body {
-  display: grid;
-  gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -756,9 +764,10 @@ p { max-width: 60ch; }
 .p2-factor-card,
 .p2-addon-card {
   padding: 1.5rem;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(90,38,40,0.1);
   border-radius: 10px;
-  background: var(--cream-light);
+  background: var(--white);
+  box-shadow: 0 18px 36px -34px rgba(44,24,16,0.22);
 }
 
 .p2-include-card h3,
@@ -789,7 +798,7 @@ p { max-width: 60ch; }
 }
 
 .p2-addons {
-  background: var(--cream-light);
+  background: #f1ebe2;
 }
 
 .p2-addon-grid {
@@ -803,6 +812,10 @@ p { max-width: 60ch; }
 
 .p2-faq {
   background: var(--cream-light);
+}
+
+.seo-footer-text {
+  background: var(--white);
 }
 
 .p2-final-call {
@@ -914,7 +927,7 @@ p { max-width: 60ch; }
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Preise & Leistungen für Hochzeitsfotografie — Natalia Tschischik",
-  "description": "Transparente Preise für Hochzeitsfotografie in Kassel, Göttingen und Nordhessen. Standesamtbegleitung ab 500 €, Halbtagsreportage ab 1.400 €, Ganztagsreportage ab 2.400 € und individuelle Begleitungen ab 3.400 €.",
+  "description": "Hochzeitsfotograf Kassel Preise: transparente Begleitungen für Standesamt, Halbtagsreportage und Ganztagsreportage in Kassel und Nordhessen.",
   "provider": {
     "@type": ["LocalBusiness", "Photographer"],
     "name": "Natalia Tschischik — Hochzeitsfotograf Kassel",
@@ -995,6 +1008,14 @@ p { max-width: 60ch; }
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Was kostet ein Hochzeitsfotograf in Kassel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 500 €. Halbtagsreportagen beginnen bei 1.400 €, Ganztagsreportagen bei 2.400 €. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Wie sichern wir unser Datum?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -1050,12 +1071,12 @@ module.exports = {
   permalink: "preise2.html",
   hasInlineContactSection: true,
   seo: {
-    title: "Preise & Leistungen | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    description: "Transparente Preise für Hochzeitsfotografie: Standesamtbegleitung ab 500 €, Halbtagsreportage ab 1.400 € und Ganztagsreportage ab 2.400 €.",
+    title: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 500 €, Halbtagsreportage ab 1.400 € und Ganztagsreportage ab 2.400 €. Transparente Leistungen für Kassel und Nordhessen.",
     keywords: "Hochzeitsfotograf Kassel Preise, Hochzeitsfotografie Kosten, Standesamtbegleitung Preis, Ganztagsreportage Preis",
     canonical: "https://nataliatschischik.com/preise2",
-    ogTitle: "Preise & Leistungen | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    ogDescription: "Klare Preise für Hochzeitsfotografie: Standesamtbegleitung, Halbtagsreportage, Ganztagsreportage und individuelle Begleitungen.",
+    ogTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    ogDescription: "Klare Preise für Hochzeitsfotografie in Kassel: Standesamt, Halbtagsreportage, Ganztagsreportage und individuelle Begleitungen.",
     ogType: "website",
     ogLocale: "de_DE",
     ogImage: "https://nataliatschischik.com/images/og-default.jpg",
@@ -1066,8 +1087,8 @@ module.exports = {
     geoPlacename: "Kassel",
     twitterCard: "summary_large_image",
     twitterSite: "@natalia_photography",
-    twitterTitle: "Preise & Leistungen | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    twitterDescription: "Transparente Preise für Hochzeitsfotografie von Standesamt bis Ganztagsreportage.",
+    twitterTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    twitterDescription: "Transparente Preise für Hochzeitsfotografie in Kassel von Standesamt bis Ganztagsreportage.",
     twitterImage: "https://nataliatschischik.com/images/og-default.jpg"
   },
   bodyAttributes: "",
