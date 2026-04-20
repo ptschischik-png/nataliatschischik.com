@@ -730,6 +730,7 @@ p { max-width: 60ch; }
   font-style: italic;
   font-size: clamp(1.45rem, 1.15rem + 1vw, 2.25rem);
   line-height: 1.45;
+  text-wrap: balance;
 }
 
 .p2-review-body {
@@ -841,10 +842,15 @@ p { max-width: 60ch; }
   box-shadow: 0 24px 48px -38px rgba(44,24,16,0.22);
 }
 
+.p2-final-call .section-label {
+  margin-bottom: 0.85rem;
+}
+
 .p2-final-call h2 {
   margin-bottom: 1rem;
   font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
   color: var(--brown-700);
+  text-wrap: balance;
 }
 
 .p2-final-call p {
