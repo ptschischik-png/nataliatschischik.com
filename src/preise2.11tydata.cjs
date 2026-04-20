@@ -280,59 +280,6 @@ p { max-width: 60ch; }
   color: var(--brown-900);
 }
 
-.trust-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1.4rem, 3vw, 2.75rem);
-  padding: 1.5rem 2rem;
-  background: var(--white);
-  border-top: 1px solid rgba(0,0,0,0.04);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  flex-wrap: wrap;
-}
-
-.trust-item {
-  display: flex;
-  align-items: baseline;
-  gap: 0.45rem;
-}
-
-.trust-number {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 500;
-  color: var(--accent);
-}
-
-.trust-label {
-  font-size: var(--text-xs);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--brown-400);
-}
-
-.trust-divider {
-  width: 1px;
-  height: 24px;
-  background: var(--brown-200);
-}
-
-.trust-highlight {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background: var(--accent);
-}
-
-.trust-highlight .trust-number,
-.trust-highlight .trust-label { color: var(--cream-light); }
-
-.trust-highlight .trust-number {
-  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.4rem);
-}
-
-.trust-highlight .trust-label { opacity: 0.82; }
-
 .p2-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
@@ -883,17 +830,6 @@ p { max-width: 60ch; }
     min-height: 360px;
     border-top: 1px solid rgba(0,0,0,0.04);
   }
-
-  .trust-divider { display: none; }
-
-  .trust-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 0.75rem;
-    padding: 1.35rem 1.25rem;
-  }
-
-  .trust-item { justify-content: center; text-align: center; }
 
   .p2-price-grid,
   .p2-proof-grid,
