@@ -1036,13 +1036,6 @@ p { max-width: 60ch; }
 </a>
 
 
-<!-- ═══ SCROLL CTA ═══ -->
-<div class="scroll-cta" id="scrollCta">
-  <span class="scroll-cta-text">Euer Datum noch frei?</span>
-  <a href="#contact" class="scroll-cta-btn" onclick="document.getElementById('scrollCta').classList.remove('visible')">Jetzt anfragen</a>
-  <span class="scroll-cta-close" onclick="document.getElementById('scrollCta').classList.remove('visible');window.__ctaDismissed=true;" aria-label="Schließen">&times;</span>
-</div>
-
 <script>
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -1053,13 +1046,6 @@ window.addEventListener('scroll', () => {
   var contactTop = contactEl ? contactEl.getBoundingClientRect().top : 9999;
   var showWa = window.scrollY > 400 && contactTop > 200;
   if (wa) wa.classList.toggle('visible', showWa);
-
-  if (!window.__ctaDismissed) {
-    var total = document.body.scrollHeight - window.innerHeight;
-    var pct = total > 0 ? window.scrollY / total : 0;
-    var cta = document.getElementById('scrollCta');
-    if (cta) cta.classList.toggle('visible', pct > 0.5 && contactTop > 300);
-  }
 }, { passive: true });
 
 const hamburger = document.getElementById('hamburger');

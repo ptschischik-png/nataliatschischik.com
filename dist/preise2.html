@@ -1717,12 +1717,6 @@ p { max-width: 60ch; }
 </a>
 
 
-<div class="scroll-cta" id="scrollCta">
-  <span class="scroll-cta-text">Fragen zu den Preisen?</span>
-  <a href="#contact" class="scroll-cta-btn" onclick="document.getElementById('scrollCta').classList.remove('visible')">Jetzt anfragen</a>
-  <button type="button" class="scroll-cta-close" onclick="document.getElementById('scrollCta').classList.remove('visible');window.__ctaDismissed=true;" aria-label="Schließen">&times;</button>
-</div>
-
 
 
 <script>
@@ -1731,18 +1725,10 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 
   const wa = document.getElementById('waSticky');
-  const cta = document.getElementById('scrollCta');
   const contactEl = document.getElementById('contact');
   const contactTop = contactEl ? contactEl.getBoundingClientRect().top : 9999;
-  let ctaVisible = false;
-  if (!window.__ctaDismissed) {
-    const total = document.body.scrollHeight - window.innerHeight;
-    const pct = total > 0 ? window.scrollY / total : 0;
-    ctaVisible = pct > 0.38 && contactTop > 320;
-    if (cta) cta.classList.toggle('visible', ctaVisible);
-  }
 
-  const showWa = window.scrollY > 400 && contactTop > 200 && !ctaVisible;
+  const showWa = window.scrollY > 400 && contactTop > 200;
   if (wa) wa.classList.toggle('visible', showWa);
 }, { passive: true });
 
