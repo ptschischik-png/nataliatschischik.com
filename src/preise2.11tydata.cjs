@@ -326,6 +326,10 @@ p { max-width: 60ch; }
 .trust-highlight .trust-number,
 .trust-highlight .trust-label { color: var(--cream-light); }
 
+.trust-highlight .trust-number {
+  font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.4rem);
+}
+
 .trust-highlight .trust-label { opacity: 0.82; }
 
 .p2-hero {
@@ -530,25 +534,32 @@ p { max-width: 60ch; }
   box-shadow: 0 1px 2px rgba(0,0,0,0.02);
 }
 
+.p2-plan-standesamt { order: 1; }
+.p2-plan-featured { order: 2; }
+.p2-plan-half { order: 3; }
+
 .p2-plan-featured {
   position: relative;
   transform: translateY(-10px);
-  border-color: rgba(90,38,40,0.18);
-  box-shadow: 0 24px 60px -36px rgba(44,24,16,0.38);
+  padding-top: 2.35rem;
+  border-color: rgba(90,38,40,0.3);
+  background: linear-gradient(180deg, rgba(253,252,250,1) 0%, rgba(248,241,236,1) 100%);
+  box-shadow: 0 28px 70px -36px rgba(44,24,16,0.45);
 }
 
 .p2-plan-badge {
   position: absolute;
-  top: -0.8rem;
+  top: -0.95rem;
   left: 1.5rem;
-  padding: 0.38rem 0.7rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 999px;
   background: var(--accent);
   color: var(--cream-light);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  box-shadow: 0 10px 24px -14px rgba(44,24,16,0.7);
 }
 
 .p2-plan-for {
@@ -589,6 +600,15 @@ p { max-width: 60ch; }
 .p2-plan-copy {
   margin-bottom: 1.25rem;
   color: var(--brown-600);
+}
+
+.p2-plan-recommendation {
+  margin: -0.25rem 0 1.1rem;
+  padding-left: 0.95rem;
+  border-left: 2px solid rgba(90,38,40,0.28);
+  font-size: var(--text-sm);
+  color: var(--accent-dark);
+  max-width: none;
 }
 
 .p2-features {
@@ -858,8 +878,28 @@ p { max-width: 60ch; }
   .p2-hero-copy { padding: 2rem 1.5rem 2.5rem; }
   .p2-hero-media { min-height: 300px; }
   .p2-hero-card { left: 1rem; right: 1rem; max-width: none; }
+  .p2-hero h1 {
+    max-width: 8.5ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+  .p2-hero-lead {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .p2-hero-note {
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
   .p2-budget-line { gap: 0.5rem; }
   .p2-budget-chip { width: fit-content; }
+  .p2-pricing-intro { margin-bottom: 2rem; }
+  .p2-pricing-intro p { max-width: 30ch; }
+  .p2-plan-featured { order: 1; }
+  .p2-plan-standesamt { order: 2; }
+  .p2-plan-half { order: 3; }
+  .p2-plan-badge { left: 1.2rem; }
   .p2-feature-review-card { padding: 1.75rem 1.25rem; }
 }
 </style>
@@ -945,6 +985,63 @@ p { max-width: 60ch; }
     "reviewCount": "40",
     "bestRating": "5"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie sichern wir unser Datum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Euer Termin ist fest reserviert, sobald der Vertrag unterschrieben und die Anzahlung von etwa 20 % eingegangen ist. So habt ihr früh Planungssicherheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wann erhalten wir unsere Bilder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ihr bekommt innerhalb von 48 Stunden eine kleine Preview. Die vollständige Galerie erhaltet ihr in der Regel nach 6 bis 8 Wochen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist im Inklusivradius enthalten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei der Standesamtbegleitung sind 50 km inklusive, bei Halb- und Ganztagsreportagen 200 km. Wenn euer Ort darüber hinaus liegt, sage ich euch die zusätzlichen Reisekosten transparent vorab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert bei Krankheit oder technischem Ausfall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ich arbeite mit Backup-Kameras und doppelter Speichersicherung. Für den unwahrscheinlichen Krankheitsfall habe ich ein Netzwerk an erfahrenen Kolleginnen und Kollegen, die einspringen können."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Bilder bekommen wir ungefähr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als Orientierung könnt ihr meist mit etwa 60 bis 100 sorgfältig kuratierten Bildern pro Stunde rechnen. Die Mindestmengen in den Begleitungen geben euch zusätzlich Sicherheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Können wir Stunden oder einen Second Shooter ergänzen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Viele Begleitungen lassen sich sinnvoll erweitern, wenn euer Tag länger wird, ihr mehrere Orte plant oder eine zweite Perspektive hilfreich ist."
+      }
+    }
+  ]
 }
 </script>`;
 
