@@ -938,11 +938,11 @@ p { max-width: 60ch; }
         "@type": "Offer",
         "name": "Standesamtbegleitung",
         "description": "Ab 3 Stunden Begleitung, mindestens 150 bearbeitete Bilder, Online-Galerie, 50 km inklusive",
-        "price": "500",
+        "price": "590",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "minPrice": "500",
+          "minPrice": "590",
           "priceCurrency": "EUR"
         }
       },
@@ -950,11 +950,11 @@ p { max-width: 60ch; }
         "@type": "Offer",
         "name": "Halbtagsreportage",
         "description": "8 Stunden Begleitung, mindestens 400 bearbeitete Bilder, Galerie & Download, 200 km inklusive",
-        "price": "1400",
+        "price": "1790",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "minPrice": "1400",
+          "minPrice": "1790",
           "priceCurrency": "EUR"
         }
       },
@@ -962,11 +962,11 @@ p { max-width: 60ch; }
         "@type": "Offer",
         "name": "Ganztagsreportage",
         "description": "10 Stunden Begleitung, mindestens 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, 200 km inklusive",
-        "price": "2400",
+        "price": "2490",
         "priceCurrency": "EUR",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "minPrice": "2400",
+          "minPrice": "2490",
           "priceCurrency": "EUR"
         }
       }
@@ -991,7 +991,7 @@ p { max-width: 60ch; }
       "name": "Was kostet ein Hochzeitsfotograf in Kassel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 500 €. Halbtagsreportagen beginnen bei 1.400 €, Ganztagsreportagen bei 2.400 €. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
+        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 590 €. Halbtagsreportagen beginnen bei 1.790 €, Ganztagsreportagen bei 2.490 €. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
       }
     },
     {
@@ -1052,7 +1052,7 @@ module.exports = {
   hasInlineContactSection: true,
   seo: {
     title: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
-    description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 500 €, Halbtagsreportage ab 1.400 € und Ganztagsreportage ab 2.400 €. Transparente Leistungen für Kassel und Nordhessen.",
+    description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 590 €, Halbtagsreportage ab 1.790 € und Ganztagsreportage ab 2.490 €. Transparente Leistungen für Kassel und Nordhessen.",
     keywords: "Hochzeitsfotograf Kassel Preise, Hochzeitsfotografie Kosten, Standesamtbegleitung Preis, Ganztagsreportage Preis",
     canonical: "https://nataliatschischik.com/preise2",
     ogTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
