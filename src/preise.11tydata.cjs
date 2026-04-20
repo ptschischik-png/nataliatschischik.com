@@ -477,7 +477,7 @@ p { max-width: 60ch; }
   flex-direction: column;
   padding: 2rem 1.75rem;
   border: 1px solid rgba(90,38,40,0.12);
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: var(--white);
   box-shadow: 0 18px 40px -34px rgba(44,24,16,0.28);
 }
@@ -600,7 +600,7 @@ p { max-width: 60ch; }
   align-items: center;
   margin-top: 2rem;
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: var(--white);
   border: 1px solid rgba(90,38,40,0.12);
   box-shadow: 0 18px 40px -34px rgba(44,24,16,0.25);
@@ -633,7 +633,7 @@ p { max-width: 60ch; }
 .p2-season-note {
   margin-top: 1.25rem;
   padding: 1.35rem 1.5rem;
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: rgba(185, 151, 126, 0.08);
   border: 1px solid rgba(90,38,40,0.1);
 }
@@ -654,7 +654,7 @@ p { max-width: 60ch; }
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3.5rem);
   border: 1px solid rgba(90,38,40,0.12);
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: var(--white);
   box-shadow: 0 24px 48px -38px rgba(44,24,16,0.24);
 }
@@ -720,7 +720,7 @@ p { max-width: 60ch; }
 .p2-addon-card {
   padding: 1.5rem;
   border: 1px solid rgba(90,38,40,0.1);
-  border-radius: 10px;
+  border-radius: var(--radius);
   background: var(--white);
   box-shadow: 0 18px 36px -34px rgba(44,24,16,0.22);
 }
@@ -783,7 +783,7 @@ p { max-width: 60ch; }
   max-width: 900px;
   text-align: center;
   padding: clamp(2rem, 4vw, 3.25rem);
-  border-radius: 12px;
+  border-radius: var(--radius);
   background: var(--white);
   border: 1px solid rgba(90,38,40,0.12);
   box-shadow: 0 24px 48px -38px rgba(44,24,16,0.22);

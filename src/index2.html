@@ -213,90 +213,167 @@
     padding: clamp(2rem, 5vw, 4rem);
   }
 
-  .index2-pricing-teaser-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.22fr) minmax(17rem, 0.78fr);
-    gap: clamp(1.75rem, 4vw, 3.5rem);
-    align-items: center;
+  .index2-pricing-teaser-head {
+    text-align: center;
+    max-width: 44rem;
+    margin: 0 auto 2.5rem;
   }
 
-  .index2-pricing-teaser-copy .section-title {
+  .index2-pricing-teaser-head .section-title {
     margin-bottom: 1rem;
-    max-width: 15ch;
-    line-height: 1.02;
-    font-size: clamp(2rem, 1.45rem + 2.2vw, 3.4rem);
+    font-size: clamp(2rem, 1.35rem + 2vw, 3rem);
   }
 
-  .index2-pricing-teaser-copy p {
-    max-width: 33rem;
+  .index2-pricing-teaser-head p {
     color: var(--brown-500);
+    margin: 0 auto;
   }
 
-  .index2-pricing-teaser-side {
-    display: flex;
-    flex-direction: column;
+  .index2-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     align-items: stretch;
+    margin-bottom: 2rem;
   }
 
-  .index2-pricing-chip {
+  .index2-pricing-plan {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.15rem;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.92);
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.5rem 1.35rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.88);
     border: 1px solid rgba(122, 98, 88, 0.14);
-    box-shadow: 0 10px 24px rgba(44, 24, 16, 0.04);
+    box-shadow: 0 12px 30px rgba(44, 24, 16, 0.04);
+    min-height: 100%;
   }
 
-  .index2-pricing-chip-label {
+  .index2-pricing-plan.is-featured {
+    background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,243,237,0.98) 100%);
+    border-color: rgba(90, 38, 40, 0.18);
+    box-shadow: 0 18px 38px rgba(44, 24, 16, 0.08);
+    transform: translateY(-6px);
+  }
+
+  .index2-pricing-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(90, 38, 40, 0.08);
+    color: var(--accent);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .index2-pricing-plan-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .index2-pricing-plan-label {
     font-size: var(--text-xs);
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--brown-500);
   }
 
-  .index2-pricing-chip-price {
-    font-size: var(--text-lg);
+  .index2-pricing-plan h3 {
+    font-size: clamp(1.5rem, 1.25rem + 0.5vw, 1.9rem);
+    line-height: 1.05;
+  }
+
+  .index2-pricing-plan-price {
+    font-size: clamp(1.65rem, 1.35rem + 0.6vw, 2rem);
     font-family: var(--font-display);
     color: var(--brown-900);
     white-space: nowrap;
   }
 
-  .index2-pricing-teaser-note {
-    margin-top: 0.2rem;
+  .index2-pricing-plan-copy {
     font-size: var(--text-sm);
-    color: var(--brown-400);
+    line-height: 1.75;
+    color: var(--brown-500);
+  }
+
+  .index2-pricing-plan-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: auto;
+  }
+
+  .index2-pricing-plan-meta span {
+    padding: 0.4rem 0.65rem;
+    border-radius: 999px;
+    background: rgba(122, 98, 88, 0.08);
+    color: var(--brown-600);
+    font-size: 0.74rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .index2-pricing-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 1.5rem;
+  }
+
+  .index2-pricing-footer-copy {
+    font-size: var(--text-sm);
+    color: var(--brown-500);
+    max-width: 36rem;
+  }
+
+  .index2-pricing-footer-copy strong {
+    color: var(--brown-700);
+    font-weight: 500;
+  }
+
+  .index2-pricing-footer .btn-primary {
+    min-width: min(100%, 24rem);
     text-align: center;
   }
 
-  @media (max-width: 860px) {
-    .index2-pricing-teaser-layout {
+  @media (max-width: 980px) {
+    .index2-pricing-grid {
       grid-template-columns: 1fr;
     }
 
-    .index2-pricing-teaser-copy {
-      text-align: center;
+    .index2-pricing-plan.is-featured {
+      transform: none;
     }
 
-    .index2-pricing-teaser-copy .section-title,
-    .index2-pricing-teaser-copy p {
-      margin-left: auto;
-      margin-right: auto;
+    .index2-pricing-footer {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 
   @media (max-width: 560px) {
-    .index2-pricing-chip {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.35rem;
+    .index2-pricing-teaser-card {
+      padding: 1.5rem 1.25rem;
     }
 
-    .index2-pricing-chip-price {
-      font-size: var(--text-xl);
+    .index2-pricing-teaser-head {
+      margin-bottom: 1.75rem;
+    }
+
+    .index2-pricing-plan {
+      padding: 1.25rem 1.1rem;
+    }
+
+    .index2-pricing-footer .btn-primary {
+      width: 100%;
     }
   }
 </style>
@@ -305,30 +382,63 @@
 <section class="section" id="preise-teaser" aria-label="Preise und Leistungen">
   <div class="container">
     <div class="reveal index2-pricing-teaser-card">
-      <div class="index2-pricing-teaser-layout">
-        <div class="index2-pricing-teaser-copy">
-          <span class="section-label">Preise &amp; Leistungen</span>
-          <h2 class="section-title"><em>Der passende Rahmen für euren Hochzeitstag.</em></h2>
-          <p>
-            Von der Standesamtbegleitung bis zur Ganztagsreportage findet ihr hier einen klaren Überblick über meine Begleitungen in Kassel und Nordhessen.
+      <div class="index2-pricing-teaser-head">
+        <span class="section-label">Preise &amp; Leistungen</span>
+        <h2 class="section-title"><em>Drei klare Rahmen für unterschiedliche Hochzeitstage.</em></h2>
+        <p>
+          Statt nur Preise zu nennen, seht ihr hier direkt, welche Begleitung zu welchem Ablauf passt: vom Standesamt bis zur Ganztagsreportage.
+        </p>
+      </div>
+      <div class="index2-pricing-grid">
+        <article class="index2-pricing-plan">
+          <div class="index2-pricing-plan-top">
+            <span class="index2-pricing-plan-label">Standesamt</span>
+            <h3>Kurze Begleitung</h3>
+            <strong class="index2-pricing-plan-price">ab 590&nbsp;€</strong>
+          </div>
+          <p class="index2-pricing-plan-copy">
+            Ideal für das Ja-Wort, Gratulationen und ein entspanntes Paarshooting ohne Zeitdruck.
           </p>
-        </div>
-        <div class="index2-pricing-teaser-side">
-          <div class="index2-pricing-chip">
-            <span class="index2-pricing-chip-label">Standesamt</span>
-            <strong class="index2-pricing-chip-price">ab 590&nbsp;€</strong>
+          <div class="index2-pricing-plan-meta">
+            <span>ab 3 Stunden</span>
+            <span>50 km inkl.</span>
           </div>
-          <div class="index2-pricing-chip">
-            <span class="index2-pricing-chip-label">8 Stunden</span>
-            <strong class="index2-pricing-chip-price">ab 1.790&nbsp;€</strong>
+        </article>
+        <article class="index2-pricing-plan is-featured">
+          <span class="index2-pricing-badge">Beliebt</span>
+          <div class="index2-pricing-plan-top">
+            <span class="index2-pricing-plan-label">8 Stunden</span>
+            <h3>Kompakte Reportage</h3>
+            <strong class="index2-pricing-plan-price">ab 1.790&nbsp;€</strong>
           </div>
-          <div class="index2-pricing-chip">
-            <span class="index2-pricing-chip-label">Ganztägig</span>
-            <strong class="index2-pricing-chip-price">ab 2.490&nbsp;€</strong>
+          <p class="index2-pricing-plan-copy">
+            Für Tage mit Trauung, Gästen, Paarzeit und einem spürbaren Teil der Feier in einem klaren Rahmen.
+          </p>
+          <div class="index2-pricing-plan-meta">
+            <span>Trauung bis Abend</span>
+            <span>200 km inkl.</span>
           </div>
-          <a href="preise" class="btn-primary" style="width: 100%;">Preise für eure Hochzeitsreportage ansehen</a>
-          <p class="index2-pricing-teaser-note">Klarer Überblick statt komplizierter Pakettabelle.</p>
-        </div>
+        </article>
+        <article class="index2-pricing-plan">
+          <div class="index2-pricing-plan-top">
+            <span class="index2-pricing-plan-label">Ganztägig</span>
+            <h3>Volle Geschichte</h3>
+            <strong class="index2-pricing-plan-price">ab 2.490&nbsp;€</strong>
+          </div>
+          <p class="index2-pricing-plan-copy">
+            Wenn ihr euren Tag vom Getting Ready bis zur Abendstimmung vollständig und ohne enge Grenzen erzählen lassen möchtet.
+          </p>
+          <div class="index2-pricing-plan-meta">
+            <span>10 Stunden</span>
+            <span>Album inkl.</span>
+          </div>
+        </article>
+      </div>
+      <div class="index2-pricing-footer">
+        <p class="index2-pricing-footer-copy">
+          Auf der Preis-Seite seht ihr alle Leistungen im Detail, inklusive Orientierung für <strong>Kassel und Nordhessen</strong>.
+        </p>
+        <a href="preise" class="btn-primary">Preise für eure Hochzeitsreportage ansehen</a>
       </div>
     </div>
   </div>

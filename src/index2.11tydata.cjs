@@ -1,6 +1,6 @@
 module.exports = {
   "layout": "layouts/page.njk",
-  "permalink": false,
+  "permalink": "index2.html",
   "seo": {
     "title": "Hochzeitsfotograf Kassel — Natalia Tschischik (Preview)",
     "description": "Hochzeitsfotograf Kassel für natürliche Hochzeitsreportagen: ungestellte Bilder, 10+ Jahre Erfahrung, 200+ begleitete Hochzeiten. Jetzt Termin anfragen.",
