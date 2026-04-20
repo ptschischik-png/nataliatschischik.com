@@ -539,10 +539,10 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 
   const wa = document.getElementById('waSticky');
-  const contactEl = document.getElementById('contact');
-  const contactTop = contactEl ? contactEl.getBoundingClientRect().top : 9999;
+  const endCta = document.querySelector('.p2-final-call[aria-label="Abschluss Call to Action"]');
+  const endCtaTop = endCta ? endCta.getBoundingClientRect().top : 9999;
 
-  const showWa = window.scrollY > 400 && contactTop > 200;
+  const showWa = window.scrollY > 400 && endCtaTop > 200;
   if (wa) wa.classList.toggle('visible', showWa);
 }, { passive: true });
 
@@ -594,132 +594,4 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 reveals.forEach((el) => observer.observe(el));
-
-function buildPrefill(plan, price) {
-  const offerLine = price
-    ? 'wir interessieren uns für die ' + plan + ' (' + price + ').'
-    : 'wir interessieren uns für ' + plan + '.';
-  return [
-    'Hallo Natalia,',
-    '',
-    offerLine,
-    'Unser Datum ist ...',
-    'Unsere Location ist ...',
-    'Wichtig ist uns vor allem ...'
-  ].join('\\n');
-}
-
-function prefillInquiry(plan, price) {
-  const message = document.getElementById('message');
-  if (!message) return;
-
-  const prefill = buildPrefill(plan, price);
-  if (!message.value.trim()) {
-    message.value = prefill;
-  } else if (!message.value.includes(plan)) {
-    message.value = prefill + '\\n\\n' + message.value.trim();
-  }
-
-  setTimeout(() => {
-    message.focus();
-    message.setSelectionRange(message.value.length, message.value.length);
-  }, 450);
-}
-
-document.querySelectorAll('[data-plan]').forEach((link) => {
-  link.addEventListener('click', () => {
-    prefillInquiry(link.getAttribute('data-plan'), link.getAttribute('data-price'));
-  });
-});
-
-(function() {
-  const SCRIPT_SRC = 'js/contact-form.js';
-  let loaded = false;
-  let loading = false;
-  let shouldReplaySubmit = false;
-
-  function loadContactFormScript() {
-    if (loaded || loading) return;
-    loading = true;
-
-    const s = document.createElement('script');
-    s.src = SCRIPT_SRC;
-    s.async = true;
-    s.onload = function() {
-      loaded = true;
-      loading = false;
-      replayPendingSubmit();
-    };
-    s.onerror = function() {
-      loading = false;
-      shouldReplaySubmit = false;
-      const status = document.getElementById('formStatus');
-      if (status) {
-        status.textContent = 'Bitte Seite neu laden oder direkt an natalia@nataliatschischik.com schreiben.';
-        status.style.color = '#c0392b';
-        status.style.display = 'block';
-      }
-    };
-    (document.head || document.body).appendChild(s);
-  }
-
-  function replayPendingSubmit() {
-    if (!shouldReplaySubmit) return;
-    if (window.handleFormSubmit === lazySubmitHandler) return;
-    shouldReplaySubmit = false;
-    const form = document.getElementById('contactForm');
-    if (!form) return;
-    if (typeof form.requestSubmit === 'function') {
-      form.requestSubmit();
-      return;
-    }
-    if (typeof window.handleFormSubmit === 'function') {
-      window.handleFormSubmit({ preventDefault: function() {} });
-    }
-  }
-
-  function lazySubmitHandler(e) {
-    e.preventDefault();
-    shouldReplaySubmit = true;
-    loadContactFormScript();
-  }
-
-  window.handleFormSubmit = lazySubmitHandler;
-
-  const form = document.getElementById('contactForm');
-  const contactSection = document.getElementById('contact');
-
-  if (form) {
-    form.addEventListener('focusin', loadContactFormScript, { once: true });
-    form.addEventListener('pointerdown', loadContactFormScript, { once: true, passive: true });
-    form.addEventListener('touchstart', loadContactFormScript, { once: true, passive: true });
-  }
-
-  if ('IntersectionObserver' in window && contactSection) {
-    const io = new IntersectionObserver((entries) => {
-      for (let i = 0; i < entries.length; i += 1) {
-        if (entries[i].isIntersecting) {
-          loadContactFormScript();
-          io.disconnect();
-          break;
-        }
-      }
-    }, { rootMargin: '350px 0px', threshold: 0.01 });
-    io.observe(contactSection);
-  }
-
-  function scheduleIdleLoad() {
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(loadContactFormScript, { timeout: 4000 });
-    } else {
-      setTimeout(loadContactFormScript, 2200);
-    }
-  }
-
-  if (document.readyState === 'complete') {
-    scheduleIdleLoad();
-  } else {
-    window.addEventListener('load', scheduleIdleLoad, { once: true });
-  }
-})();
 </script>
