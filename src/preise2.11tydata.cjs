@@ -50,6 +50,7 @@ ul { list-style: none; }
   --text-2xl: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem);
   --text-3xl: clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem);
   --text-hero: clamp(2.6rem, 1.55rem + 4.6vw, 5.25rem);
+  --text-display: clamp(3.5rem, 1.5rem + 6vw, 7rem);
   --radius: 6px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition: 300ms var(--ease-out);
@@ -663,15 +664,6 @@ p { max-width: 60ch; }
   font-size: clamp(1.6rem, 1.3rem + 0.8vw, 2.2rem);
 }
 
-.p2-custom-price {
-  margin-bottom: 0.85rem;
-  font-size: var(--text-sm);
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
 .p2-custom-list {
   display: grid;
   gap: 0.65rem;
@@ -975,18 +967,6 @@ p { max-width: 60ch; }
         "priceSpecification": {
           "@type": "PriceSpecification",
           "minPrice": "2400",
-          "priceCurrency": "EUR"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": "Individuelle Begleitung",
-        "description": "Ab 12 Stunden, Second Shooter, Album 30x30, mehrere Orte oder parallele Abläufe",
-        "price": "3400",
-        "priceCurrency": "EUR",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "minPrice": "3400",
           "priceCurrency": "EUR"
         }
       }

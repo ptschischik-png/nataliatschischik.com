@@ -199,19 +199,18 @@
         <div>
           <span class="section-label" style="margin-bottom: 0.75rem;">Für längere oder individuellere Tage</span>
           <h3>Nicht das passende Angebot dabei?</h3>
-          <p class="p2-custom-price">Individuelle Begleitung ab 3.400&nbsp;€</p>
           <p>
-            Wenn euer Tag mehr Wege, parallele Abläufe, deutlich mehr Zeit oder einen anderen Zuschnitt braucht, erstelle ich euch gern ein individuelles Angebot.
+            Wenn euer Tag kürzer, länger oder anders aufgebaut ist, erstelle ich euch gern ein individuelles Angebot. So bekommt ihr eine Begleitung, die wirklich zu eurem Ablauf passt.
           </p>
         </div>
         <div>
           <ul class="p2-custom-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span><strong>Ab 12 Stunden</strong> dokumentarische Begleitung</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span><strong>Second Shooter</strong> für parallele Perspektiven</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Album <strong>30×30</strong> und individuelle Tagesstruktur</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span><strong>Mehr Stunden</strong> oder mehrere Orte</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span><strong>Second Shooter</strong> bei Bedarf</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Album- und <strong>Leistungsumfang</strong> passend zu eurem Tag</span></li>
           </ul>
           <div style="margin-top: 1.25rem;">
-            <a href="#contact" class="btn-primary" data-plan="Individuelle Begleitung" data-price="ab 3.400 €">Individuelles Angebot anfragen</a>
+            <a href="#contact" class="btn-primary" data-plan="Individuelles Angebot">Individuelles Angebot anfragen</a>
           </div>
         </div>
       </div>
@@ -642,10 +641,13 @@ const observer = new IntersectionObserver((entries) => {
 reveals.forEach((el) => observer.observe(el));
 
 function buildPrefill(plan, price) {
+  const offerLine = price
+    ? 'wir interessieren uns für die ' + plan + ' (' + price + ').'
+    : 'wir interessieren uns für ' + plan + '.';
   return [
     'Hallo Natalia,',
     '',
-    'wir interessieren uns für die ' + plan + ' (' + price + ').',
+    offerLine,
     'Unser Datum ist ...',
     'Unsere Location ist ...',
     'Wichtig ist uns vor allem ...'
@@ -669,7 +671,7 @@ function prefillInquiry(plan, price) {
   }, 450);
 }
 
-document.querySelectorAll('[data-plan][data-price]').forEach((link) => {
+document.querySelectorAll('[data-plan]').forEach((link) => {
   link.addEventListener('click', () => {
     prefillInquiry(link.getAttribute('data-plan'), link.getAttribute('data-price'));
   });
