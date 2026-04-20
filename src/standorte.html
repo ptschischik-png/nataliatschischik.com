@@ -118,3 +118,30 @@
 </section>
 
 {% include "partials/footer.njk" %}
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+if (hamburger && mobileNav) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+}
+
+function closeMobile() {
+  if (!mobileNav || !hamburger) return;
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-label', 'Menü öffnen');
+  document.body.style.overflow = '';
+}
+</script>
