@@ -933,12 +933,6 @@ p { max-width: 60ch; }
         }
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "40",
-    "bestRating": "5"
   }
 }
 </script>
