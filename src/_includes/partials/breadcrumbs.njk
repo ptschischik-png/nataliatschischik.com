@@ -2,29 +2,23 @@
 .breadcrumbs {
   padding-top: 4.5rem;
   background: var(--cream, #F5F0E8);
-  border-top: 1px solid rgba(44, 24, 16, 0.04);
   border-bottom: 1px solid rgba(44, 24, 16, 0.06);
-}
-.breadcrumbs-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 1rem clamp(1.5rem, 5vw, 6rem);
 }
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  gap: 0;
   align-items: center;
-  justify-content: flex-start;
-  font-size: clamp(0.95rem, 0.9rem + 0.15vw, 1.05rem);
-  letter-spacing: 0.04em;
+  font-size: var(--text-xs, 0.75rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
   color: var(--brown-400, #9E8A80);
   line-height: 1.4;
+  padding: 1rem 1.5rem;
 }
 .breadcrumbs-list li {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
 }
 .breadcrumbs-list a {
   color: var(--brown-500, #7A6258);
@@ -36,43 +30,43 @@
 }
 .breadcrumbs-sep {
   color: var(--brown-300, #C4B5AB);
-  margin: 0 0.55rem;
+  margin: 0 0.5rem;
 }
 .breadcrumbs-current {
-  color: var(--accent, #5A2628);
+  color: var(--brown-500, #7A6258);
 }
 @media (max-width: 768px) {
   .breadcrumbs {
     padding-top: 4.35rem;
   }
-  .breadcrumbs-inner {
-    padding: 0.95rem 1.25rem;
-  }
   .breadcrumbs-list {
-    font-size: 0.92rem;
-    letter-spacing: 0.03em;
+    padding: 0.95rem 1.25rem;
   }
   .breadcrumbs-sep {
     margin: 0 0.4rem;
   }
 }
+@media (min-width: 768px) {
+  .breadcrumbs-list {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
 </style>
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  <div class="breadcrumbs-inner">
-    <ol class="breadcrumbs-list">
-      {% for crumb in breadcrumbItems %}
-        <li>
-          {% if crumb.url and not loop.last %}
-            <a href="{{ crumb.url }}">{{ crumb.name }}</a>
-          {% else %}
-            <span class="breadcrumbs-current">{{ crumb.name }}</span>
-          {% endif %}
-          {% if not loop.last %}
-            <span class="breadcrumbs-sep" aria-hidden="true">/</span>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ol>
-  </div>
+  <ol class="breadcrumbs-list">
+    {% for crumb in breadcrumbItems %}
+      <li>
+        {% if crumb.url and not loop.last %}
+          <a href="{{ crumb.url }}">{{ crumb.name }}</a>
+        {% else %}
+          <span class="breadcrumbs-current">{{ crumb.name }}</span>
+        {% endif %}
+        {% if not loop.last %}
+          <span class="breadcrumbs-sep" aria-hidden="true">/</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
 </nav>
