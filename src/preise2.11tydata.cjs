@@ -1049,7 +1049,7 @@ p { max-width: 60ch; }
 module.exports = {
   layout: "layouts/page.njk",
   permalink: "preise2.html",
-  hasInlineContactSection: true,
+  hasInlineContactSection: false,
   seo: {
     title: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
     description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 590 €, Halbtagsreportage ab 1.790 € und Ganztagsreportage ab 2.490 €. Transparente Leistungen für Kassel und Nordhessen.",
