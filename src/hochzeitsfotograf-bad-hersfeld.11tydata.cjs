@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-bad-hersfeld.html",
   "seo": {
     "title": "Hochzeitsfotograf Bad Hersfeld — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Bad Hersfeld und Waldhessen.",
+    "description": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Bad Hersfeld und Waldhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-bad-hersfeld",
     "ogTitle": "Hochzeitsfotograf Bad Hersfeld — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Bad Hersfeld und Waldhessen.",
+    "ogDescription": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Bad Hersfeld und Waldhessen.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Bad Hersfeld — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Bad Hersfeld und Waldhessen.",
+    "twitterDescription": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Bad Hersfeld und Waldhessen.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

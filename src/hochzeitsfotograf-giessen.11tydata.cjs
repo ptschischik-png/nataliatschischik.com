@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-giessen.html",
   "seo": {
     "title": "Hochzeitsfotograf Gießen — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
+    "description": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-giessen",
     "ogTitle": "Hochzeitsfotograf Gießen — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
+    "ogDescription": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Gießen — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
+    "twitterDescription": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

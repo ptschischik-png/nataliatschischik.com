@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-schwalmstadt.html",
   "seo": {
     "title": "Hochzeitsfotograf Schwalmstadt — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Schwalmstadt und im Rotkäppchenland.",
+    "description": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Schwalmstadt und im Rotkäppchenland.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-schwalmstadt",
     "ogTitle": "Hochzeitsfotograf Schwalmstadt — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Schwalmstadt und im Rotkäppchenland.",
+    "ogDescription": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Schwalmstadt und im Rotkäppchenland.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Schwalmstadt — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, warme Hochzeitsreportagen in Schwalmstadt und im Rotkäppchenland.",
+    "twitterDescription": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Schwalmstadt und im Rotkäppchenland.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

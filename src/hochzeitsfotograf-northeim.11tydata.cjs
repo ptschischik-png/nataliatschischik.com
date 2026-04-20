@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-northeim.html",
   "seo": {
     "title": "Hochzeitsfotograf Northeim — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Northeim und Südniedersachsen.",
+    "description": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Northeim und Südniedersachsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-northeim",
     "ogTitle": "Hochzeitsfotograf Northeim — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Northeim und Südniedersachsen.",
+    "ogDescription": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Northeim und Südniedersachsen.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Northeim — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Northeim und Südniedersachsen.",
+    "twitterDescription": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Northeim und Südniedersachsen.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

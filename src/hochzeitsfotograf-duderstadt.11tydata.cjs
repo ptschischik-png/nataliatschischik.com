@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-duderstadt.html",
   "seo": {
     "title": "Hochzeitsfotograf Duderstadt — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
+    "description": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-duderstadt",
     "ogTitle": "Hochzeitsfotograf Duderstadt — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
+    "ogDescription": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Duderstadt — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
+    "twitterDescription": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

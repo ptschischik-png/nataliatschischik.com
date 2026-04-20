@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-kirchheim.html",
   "seo": {
     "title": "Hochzeitsfotograf Kirchheim — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Kirchheim (Hessen), am Seepark und in Waldhessen.",
+    "description": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Kirchheim, am Seepark und in Waldhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-kirchheim",
     "ogTitle": "Hochzeitsfotograf Kirchheim — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Kirchheim (Hessen), am Seepark und in Waldhessen.",
+    "ogDescription": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Kirchheim, am Seepark und in Waldhessen.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Kirchheim — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Kirchheim (Hessen), am Seepark und in Waldhessen.",
+    "twitterDescription": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Kirchheim, am Seepark und in Waldhessen.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

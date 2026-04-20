@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-baunatal.html",
   "seo": {
     "title": "Hochzeitsfotograf Baunatal — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und südlich von Kassel.",
+    "description": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und Kassel.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-baunatal",
     "ogTitle": "Hochzeitsfotograf Baunatal — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und südlich von Kassel.",
+    "ogDescription": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und Kassel.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Baunatal — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und südlich von Kassel.",
+    "twitterDescription": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und Kassel.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

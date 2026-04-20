@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-frankenberg.html",
   "seo": {
     "title": "Hochzeitsfotograf Frankenberg — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, elegante Hochzeitsreportagen in Frankenberg (Eder) und Waldeck-Frankenberg.",
+    "description": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen in Frankenberg und Waldeck-Frankenberg.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-frankenberg",
     "ogTitle": "Hochzeitsfotograf Frankenberg — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, elegante Hochzeitsreportagen in Frankenberg (Eder) und Waldeck-Frankenberg.",
+    "ogDescription": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen in Frankenberg und Waldeck-Frankenberg.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Frankenberg — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, elegante Hochzeitsreportagen in Frankenberg (Eder) und Waldeck-Frankenberg.",
+    "twitterDescription": "Hochzeitsfotograf Frankenberg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen in Frankenberg und Waldeck-Frankenberg.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-nordhessen.html",
   "seo": {
     "title": "Hochzeitsfotograf Nordhessen — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen zwischen Kassel, Reinhardswald und Waldeck.",
+    "description": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen zwischen Kassel, Reinhardswald und Waldeck.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-nordhessen",
     "ogTitle": "Hochzeitsfotograf Nordhessen — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen zwischen Kassel, Reinhardswald und Waldeck.",
+    "ogDescription": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen zwischen Kassel, Reinhardswald und Waldeck.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Nordhessen — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen zwischen Kassel, Reinhardswald und Waldeck.",
+    "twitterDescription": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen zwischen Kassel, Reinhardswald und Waldeck.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

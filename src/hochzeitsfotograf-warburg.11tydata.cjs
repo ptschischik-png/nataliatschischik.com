@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-warburg.html",
   "seo": {
     "title": "Hochzeitsfotograf Warburg — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Warburg und der Warburger Börde.",
+    "description": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Warburg und der Warburger Börde.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-warburg",
     "ogTitle": "Hochzeitsfotograf Warburg — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Warburg und der Warburger Börde.",
+    "ogDescription": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Warburg und der Warburger Börde.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Warburg — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, zeitlose Hochzeitsreportagen in Warburg und der Warburger Börde.",
+    "twitterDescription": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Warburg und der Warburger Börde.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

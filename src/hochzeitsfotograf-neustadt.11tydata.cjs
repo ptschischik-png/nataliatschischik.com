@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-neustadt.html",
   "seo": {
     "title": "Hochzeitsfotograf Neustadt — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
+    "description": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-neustadt",
     "ogTitle": "Hochzeitsfotograf Neustadt — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
+    "ogDescription": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Neustadt — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
+    "twitterDescription": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",

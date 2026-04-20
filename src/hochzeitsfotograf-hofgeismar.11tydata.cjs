@@ -3,10 +3,10 @@ module.exports = {
   "permalink": "hochzeitsfotograf-hofgeismar.html",
   "seo": {
     "title": "Hochzeitsfotograf Hofgeismar — Natalia Tschischik",
-    "description": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Hofgeismar und rund um den Reinhardswald.",
+    "description": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Hofgeismar und am Reinhardswald.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-hofgeismar",
     "ogTitle": "Hochzeitsfotograf Hofgeismar — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Hofgeismar und rund um den Reinhardswald.",
+    "ogDescription": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Hofgeismar und am Reinhardswald.",
     "ogType": "website",
     "ogLocale": "de_DE",
     "ogImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp",
@@ -16,7 +16,7 @@ module.exports = {
     "twitterCard": "summary_large_image",
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Hofgeismar — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ begleiteten Hochzeiten. Natürliche, ruhige Hochzeitsreportagen in Hofgeismar und rund um den Reinhardswald.",
+    "twitterDescription": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Hofgeismar und am Reinhardswald.",
     "twitterImage": "https://nataliatschischik.com/img/ext/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",
