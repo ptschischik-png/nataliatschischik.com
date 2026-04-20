@@ -98,6 +98,7 @@
 }
 .location-link-card {
   display: block;
+  position: relative;
   background: rgba(253,252,250,0.9);
   border: 1px solid rgba(44,24,16,0.08);
   border-radius: 18px;
@@ -119,10 +120,6 @@
   display: block;
 }
 .location-link-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
   margin-bottom: 1rem;
 }
 .location-link-pill {
@@ -139,8 +136,17 @@
   text-transform: uppercase;
 }
 .location-link-arrow {
+  position: absolute;
+  top: 1.35rem;
+  right: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
   color: var(--accent);
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
   transform: translateX(0);
   transition: transform var(--transition);
 }
@@ -256,7 +262,7 @@
     <header class="locations-hero">
       <div class="locations-hero-copy">
         <span class="locations-hub-label">Standorte</span>
-        <h1>Hochzeitsfotograf <em>an euren Orten.</em></h1>
+        <h1>Hochzeitsfotograf <em>in eurer N&auml;he.</em></h1>
         <p>Von der Kasseler Region bis nach S&uuml;dniedersachsen, Mittelhessen und Ostwestfalen begleite ich Hochzeiten mit einem ruhigen, dokumentarischen Blick. Hier findet ihr alle Standortseiten im &Uuml;berblick &mdash; jeweils mit passenden Trauorten, Feierlocations und Fotospots f&uuml;r die jeweilige Region.</p>
       </div>
       <div class="locations-hero-aside">
