@@ -1,29 +1,1040 @@
-module.exports = {
-  "layout": "layouts/page.njk",
-  "permalink": "preise.html",
-  "seo": {
-    "title": "Preise | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    "description": "Hochzeitsfotografie-Pakete ab 500 € — Standesamt, Essential, Premium und Deluxe. Transparente Preise. Hochzeitsfotograf Kassel.",
-    "keywords": "Hochzeitsfotograf Kassel Preise, Hochzeitsfotografie Kosten, Hochzeitsfotograf Preis, Hochzeitsreportage Preise Kassel, Fotograf Hochzeit Kosten",
-    "canonical": "https://nataliatschischik.com/preise",
-    "ogTitle": "Preise | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    "ogDescription": "Hochzeitsfotografie-Pakete ab 500 €. Standesamt, Essential, Premium & Deluxe — individuell auf euren Tag abgestimmt.",
-    "ogType": "website",
-    "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/images/og-default.jpg",
-    "ogImageWidth": "1200",
-    "ogImageHeight": "630",
-    "robots": "index, follow",
-    "geoRegion": "DE-HE",
-    "geoPlacename": "Kassel",
-    "twitterCard": "summary_large_image",
-    "twitterSite": "@natalia_photography",
-    "twitterTitle": "Preise | Hochzeitsfotograf Kassel — Natalia Tschischik",
-    "twitterDescription": "Hochzeitsfotografie-Pakete ab 500 €. Standesamt, Essential, Premium & Deluxe — individuell auf euren Tag abgestimmt.",
-    "twitterImage": "https://nataliatschischik.com/images/og-default.jpg"
+const headExtra = `<!-- LCP-critical preloads -->
+<link rel="preload" as="image" type="image/webp" href="/reportagen/img/ra-renthof/hero-800w.webp" imagesrcset="/reportagen/img/ra-renthof/hero-400w.webp 400w, /reportagen/img/ra-renthof/hero-800w.webp 800w, /reportagen/img/ra-renthof/hero.webp 1200w" imagesizes="(max-width: 900px) 100vw, 48vw" fetchpriority="high">
+<link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+
+<style>
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }
+img { display: block; max-width: 100%; height: auto; }
+button,
+a { font: inherit; color: inherit; text-decoration: none; }
+button { cursor: pointer; background: none; border: none; }
+ul { list-style: none; }
+
+:root {
+  --cream: #F5F0E8;
+  --cream-light: #FAF8F4;
+  --cream-dark: #EDE7DB;
+  --white: #FDFCFA;
+  --brown-900: #2C1810;
+  --brown-800: #3D2518;
+  --brown-700: #4A3228;
+  --brown-600: #5E443A;
+  --brown-500: #7A6258;
+  --brown-400: #9E8A80;
+  --brown-300: #C4B5AB;
+  --brown-200: #DDD3CA;
+  --brown-100: #EDE7E0;
+  --accent: #5A2628;
+  --accent-dark: #481E20;
+  --accent-light: #835C5D;
+  --dark-bg: #1E1B18;
+  --dark-card: #2A2622;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --text-xs: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+  --text-lg: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  --text-xl: clamp(1.375rem, 1.1rem + 0.8vw, 1.75rem);
+  --text-2xl: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem);
+  --text-3xl: clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem);
+  --text-hero: clamp(2.6rem, 1.55rem + 4.6vw, 5.25rem);
+  --text-display: clamp(3.5rem, 1.5rem + 6vw, 7rem);
+  --radius: 6px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 300ms var(--ease-out);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--brown-600);
+  background: var(--cream);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--brown-900);
+}
+
+p { max-width: 60ch; }
+
+::selection {
+  background: rgba(74, 93, 58, 0.18);
+  color: var(--brown-900);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem clamp(1.5rem, 3vw, 3rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(245, 240, 232, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  transition: padding var(--transition), background var(--transition);
+}
+
+.nav.scrolled { padding: 0.75rem clamp(1.5rem, 3vw, 3rem); }
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--brown-900);
+}
+
+.nav-links { display: flex; gap: 2.25rem; align-items: center; }
+
+.nav-links a {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-500);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.nav-links a:hover { color: var(--brown-900); }
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--brown-900);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after { width: 100%; }
+
+.nav-cta {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.625rem 1.5rem;
+  background: var(--accent);
+  color: var(--cream-light);
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+
+.nav-cta:hover { background: var(--accent-dark); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 24px;
+  padding: 0;
+}
+
+.hamburger span {
+  display: block;
+  height: 1.5px;
+  background: var(--brown-900);
+  transition: transform var(--transition), opacity var(--transition);
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+.nav-mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--cream);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-mobile.open { display: flex; }
+
+.nav-mobile a {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--brown-900);
+  transition: color var(--transition);
+}
+
+.nav-mobile a:hover { color: var(--accent); }
+
+.nav-mobile .mobile-cta {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.875rem 2.5rem;
+  background: var(--accent);
+  color: var(--cream-light);
+}
+
+@media (max-width: 900px) {
+  .nav-links,
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+}
+
+.container { max-width: 1140px; margin: 0 auto; }
+
+.section {
+  padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 5vw, 6rem);
+}
+
+.section-label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.section-title em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.btn-primary,
+.btn-ghost,
+.p2-plan-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: var(--radius);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+}
+
+.btn-primary,
+.p2-plan-cta-primary {
+  padding: 1rem 2.5rem;
+  background: var(--accent);
+  color: var(--cream-light);
+}
+
+.btn-primary:hover,
+.p2-plan-cta-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.btn-ghost,
+.p2-plan-cta-ghost {
+  padding: 1rem 2rem;
+  border: 1px solid var(--brown-300);
+  color: var(--brown-700);
+}
+
+.btn-ghost:hover,
+.p2-plan-cta-ghost:hover {
+  border-color: var(--brown-900);
+  color: var(--brown-900);
+}
+
+.p2-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
+  min-height: calc(100vh - 4.5rem);
+  background: linear-gradient(180deg, rgba(253,252,250,0.92) 0%, rgba(245,240,232,0.98) 100%);
+}
+
+.p2-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 4vw, 5rem) clamp(1.5rem, 5vw, 6rem);
+}
+
+.p2-kicker {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.p2-hero h1 {
+  max-width: 11ch;
+  margin-bottom: 1.5rem;
+  font-size: var(--text-hero);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+}
+
+.p2-hero-lead {
+  max-width: 56ch;
+  margin-bottom: 2rem;
+  font-size: var(--text-lg);
+  line-height: 1.75;
+  color: var(--brown-600);
+}
+
+.p2-hero-note {
+  margin-top: 1rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.p2-budget-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.p2-budget-chip {
+  border: 1px solid rgba(90,38,40,0.12);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown-700);
+  background: rgba(255,255,255,0.66);
+}
+
+.p2-hero-media {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--dark-bg);
+}
+
+.p2-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p2-hero-card {
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  max-width: 260px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  background: rgba(30,27,24,0.72);
+  backdrop-filter: blur(12px);
+  color: var(--cream-light);
+}
+
+.p2-hero-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+
+.p2-hero-card span {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(250,248,244,0.82);
+}
+
+.p2-proof-strip {
+  background: var(--cream-light);
+}
+
+.p2-proof-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.p2-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.p2-proof-card {
+  display: block;
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out), border-color var(--transition);
+}
+
+.p2-proof-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(90,38,40,0.18);
+}
+
+.p2-proof-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.p2-proof-info {
+  padding: 1rem 1rem 1.1rem;
+}
+
+.p2-proof-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-proof-info h3 {
+  margin-bottom: 0.45rem;
+  font-size: var(--text-xl);
+}
+
+.p2-proof-info p {
+  max-width: none;
+  color: var(--brown-500);
+}
+
+.p2-pricing {
+  background: var(--cream);
+}
+
+.p2-pricing-intro {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.p2-price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.p2-plan {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.75rem;
+  border: 1px solid rgba(90,38,40,0.12);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 18px 40px -34px rgba(44,24,16,0.28);
+}
+
+.p2-plan-standesamt { order: 1; }
+.p2-plan-featured { order: 2; }
+.p2-plan-half { order: 3; }
+
+.p2-plan-featured {
+  position: relative;
+  transform: translateY(-10px);
+  padding-top: 2.35rem;
+  border-color: rgba(90,38,40,0.42);
+  background: linear-gradient(180deg, rgba(255,252,249,1) 0%, rgba(244,232,225,1) 100%);
+  box-shadow: 0 32px 80px -36px rgba(44,24,16,0.52);
+}
+
+.p2-plan-badge {
+  position: absolute;
+  top: -0.95rem;
+  left: 1.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--cream-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 24px -14px rgba(44,24,16,0.7);
+}
+
+.p2-plan-for {
+  margin-bottom: 0.85rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-plan h3 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.65rem, 1.4rem + 0.6vw, 2.2rem);
+}
+
+.p2-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.p2-price-from {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--brown-400);
+}
+
+.p2-price-amount {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 2rem + 1vw, 3.35rem);
+  line-height: 0.95;
+}
+
+.p2-plan-copy {
+  margin-bottom: 1.25rem;
+  color: var(--brown-600);
+}
+
+.p2-plan-recommendation {
+  margin: -0.25rem 0 1.1rem;
+  padding-left: 0.95rem;
+  border-left: 2px solid rgba(90,38,40,0.28);
+  font-size: var(--text-sm);
+  color: var(--accent-dark);
+  max-width: none;
+}
+
+.p2-features {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.p2-features li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  color: var(--brown-700);
+}
+
+.p2-features svg {
+  width: 17px;
+  height: 17px;
+  margin-top: 0.18rem;
+  flex: 0 0 auto;
+  stroke: var(--accent);
+}
+
+.p2-plan-cta {
+  margin-top: auto;
+  min-height: 48px;
+}
+
+.p2-plan-note {
+  margin-bottom: 1rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-custom {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid rgba(90,38,40,0.12);
+  box-shadow: 0 18px 40px -34px rgba(44,24,16,0.25);
+}
+
+.p2-custom h3 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.6rem, 1.3rem + 0.8vw, 2.2rem);
+}
+
+.p2-custom-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.p2-custom-list li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.p2-custom-list svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 0.2rem;
+  flex: 0 0 auto;
+  stroke: var(--accent);
+}
+
+.p2-season-note {
+  margin-top: 1.25rem;
+  padding: 1.35rem 1.5rem;
+  border-radius: 10px;
+  background: rgba(185, 151, 126, 0.08);
+  border: 1px solid rgba(90,38,40,0.1);
+}
+
+.p2-season-note p {
+  max-width: 52rem;
+  margin-bottom: 0;
+  color: var(--brown-500);
+}
+
+.p2-feature-review {
+  background: var(--cream-light);
+  color: var(--brown-700);
+}
+
+.p2-feature-review-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border: 1px solid rgba(90,38,40,0.12);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 24px 48px -38px rgba(44,24,16,0.24);
+}
+
+.p2-review-stars {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+}
+
+.p2-feature-review-card blockquote,
+.p2-feature-review-card p {
+  max-width: none;
+  color: var(--brown-700);
+}
+
+.p2-feature-review-card blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.45rem, 1.15rem + 1vw, 2.25rem);
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.p2-review-body {
+  margin-bottom: 1.5rem;
+}
+
+.p2-review-meta {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-review-proof {
+  margin-top: 0.5rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown-500);
+}
+
+.p2-includes {
+  background: var(--white);
+}
+
+.p2-includes-grid,
+.p2-factors-grid,
+.p2-addon-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.p2-includes-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+}
+
+.p2-include-card,
+.p2-factor-card,
+.p2-addon-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(90,38,40,0.1);
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: 0 18px 36px -34px rgba(44,24,16,0.22);
+}
+
+.p2-include-card h3,
+.p2-factor-card h3,
+.p2-addon-card h3 {
+  margin-bottom: 0.65rem;
+  font-size: var(--text-xl);
+}
+
+.p2-include-card p,
+.p2-factor-card p,
+.p2-addon-card p {
+  max-width: none;
+  color: var(--brown-500);
+}
+
+.p2-connection {
+  background: var(--cream-light);
+}
+
+.p2-factors {
+  background: var(--white);
+}
+
+.p2-factors-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.p2-addons {
+  background: #f1ebe2;
+}
+
+.p2-addon-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.p2-process {
+  background: var(--white);
+}
+
+.p2-faq {
+  background: var(--cream-light);
+}
+
+.seo-footer-text {
+  background: var(--white);
+}
+
+.p2-final-call {
+  padding: clamp(4rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 6rem);
+  background: var(--cream-light);
+  color: var(--brown-700);
+}
+
+.p2-final-call .container {
+  max-width: 900px;
+  text-align: center;
+  padding: clamp(2rem, 4vw, 3.25rem);
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid rgba(90,38,40,0.12);
+  box-shadow: 0 24px 48px -38px rgba(44,24,16,0.22);
+}
+
+.p2-final-call .section-label {
+  margin-bottom: 0.85rem;
+}
+
+.p2-final-call h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+  color: var(--brown-700);
+  text-wrap: balance;
+}
+
+.p2-final-call p {
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  color: var(--brown-500);
+}
+
+.section,
+.p2-final-call {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+@media (max-width: 1024px) {
+  .p2-price-grid,
+  .p2-includes-grid,
+  .p2-factors-grid,
+  .p2-addon-grid,
+  .p2-proof-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  .p2-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .p2-hero-media {
+    min-height: 360px;
+    border-top: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .p2-price-grid,
+  .p2-proof-grid,
+  .p2-includes-grid,
+  .p2-factors-grid,
+  .p2-addon-grid,
+  .p2-custom { grid-template-columns: 1fr; }
+
+  .p2-plan-featured { transform: none; }
+}
+
+@media (max-width: 640px) {
+  .p2-hero-copy { padding: 2rem 1.5rem 2.5rem; }
+  .p2-hero-media { min-height: 300px; }
+  .p2-hero-card { left: 1rem; right: 1rem; max-width: none; }
+  .p2-hero h1 {
+    max-width: 8.5ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 10vw, 3.4rem);
+  }
+  .p2-hero-lead {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .p2-hero-note {
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+  }
+  .p2-budget-line { gap: 0.5rem; }
+  .p2-budget-chip { width: fit-content; }
+  .p2-pricing-intro { margin-bottom: 2rem; }
+  .p2-pricing-intro p { max-width: 30ch; }
+  .p2-plan-featured { order: 1; }
+  .p2-plan-standesamt { order: 2; }
+  .p2-plan-half { order: 3; }
+  .p2-plan-badge { left: 1.2rem; }
+  .p2-feature-review-card { padding: 1.75rem 1.25rem; }
+}
+</style>
+
+<link rel="stylesheet" href="/css/below-fold.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/below-fold.css"></noscript>
+<link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Preise & Leistungen für Hochzeitsfotografie — Natalia Tschischik",
+  "description": "Hochzeitsfotograf Kassel Preise: transparente Begleitungen für Standesamt, Halbtagsreportage und Ganztagsreportage in Kassel und Nordhessen.",
+  "provider": {
+    "@type": ["LocalBusiness", "Photographer"],
+    "name": "Natalia Tschischik — Hochzeitsfotograf Kassel",
+    "url": "https://nataliatschischik.com"
   },
-  "bodyAttributes": "class=\"bg-[#F5F0E8] text-brown-600\"",
-  "headExtra": "<!-- Google tag (gtag.js) -->\n<!-- JSON-LD Structured Data -->\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Service\",\n  \"name\": \"Hochzeitsfotografie — Natalia Tschischik\",\n  \"description\": \"Professionelle Hochzeitsfotografie in Kassel, Göttingen und in Hessen & Niedersachsen. Vier Pakete von der Standesamtbegleitung bis zur ganztägigen Deluxe-Reportage.\",\n  \"provider\": {\n    \"@type\": [\"LocalBusiness\", \"Photographer\"],\n    \"name\": \"Natalia Tschischik — Hochzeitsfotograf Kassel\",\n    \"url\": \"https://nataliatschischik.com\"\n  },\n  \"areaServed\": [\n    { \"@type\": \"City\", \"name\": \"Kassel\" },\n    { \"@type\": \"City\", \"name\": \"Göttingen\" },\n    { \"@type\": \"AdministrativeArea\", \"name\": \"Nordhessen\" }\n  ],\n  \"hasOfferCatalog\": {\n    \"@type\": \"OfferCatalog\",\n    \"name\": \"Hochzeitsreportagen\",\n    \"itemListElement\": [\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Standesamt-Paket\",\n        \"description\": \"Ab 3 Stunden Begleitung, min. 150 bearbeitete Bilder, Online-Galerie\",\n        \"price\": \"500\",\n        \"priceCurrency\": \"EUR\",\n        \"priceSpecification\": {\"@type\": \"PriceSpecification\", \"minPrice\": \"500\", \"priceCurrency\": \"EUR\"}\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Essential-Paket\",\n        \"description\": \"8 Stunden Begleitung, min. 400 bearbeitete Bilder, Online-Galerie & Download\",\n        \"price\": \"1400\",\n        \"priceCurrency\": \"EUR\",\n        \"priceSpecification\": {\"@type\": \"PriceSpecification\", \"minPrice\": \"1400\", \"priceCurrency\": \"EUR\"}\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Premium-Paket\",\n        \"description\": \"10 Stunden Begleitung, min. 600 bearbeitete Bilder, Highlight-Diashow, Premium-Album\",\n        \"price\": \"2400\",\n        \"priceCurrency\": \"EUR\",\n        \"priceSpecification\": {\"@type\": \"PriceSpecification\", \"minPrice\": \"2400\", \"priceCurrency\": \"EUR\"}\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Deluxe-Paket\",\n        \"description\": \"12 Stunden Full-Day, Second Shooter, Premium Album Large (30x30)\",\n        \"price\": \"3400\",\n        \"priceCurrency\": \"EUR\",\n        \"priceSpecification\": {\"@type\": \"PriceSpecification\", \"minPrice\": \"3400\", \"priceCurrency\": \"EUR\"}\n      }\n    ]\n  },\n  \"aggregateRating\": {\n    \"@type\": \"AggregateRating\",\n    \"ratingValue\": \"4.8\",\n    \"reviewCount\": \"40\",\n    \"bestRating\": \"5\"\n  }\n}\n</script>\n\n<!-- Fonts -->\n<link rel=\"preload\" href=\"/fonts/cg-italic-latin.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n<link rel=\"preload\" href=\"/fonts/cg-normal-latin.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n<link rel=\"preload\" href=\"/fonts/dm-normal-latin.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n<style>\n/* Cormorant Garamond italic – 300/400/500 (gleiche Dateien) */\n@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}\n@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}\n/* Cormorant Garamond normal – 300/400/500 (gleiche Dateien) */\n@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}\n@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}\n/* DM Sans normal – 400/500 (gleiche Dateien) */\n@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}\n@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}\n</style>\n<link rel=\"stylesheet\" href=\"/fonts/fonts-secondary.css\" media=\"print\" onload=\"this.media='all'\">\n<noscript><link rel=\"stylesheet\" href=\"/fonts/fonts-secondary.css\"></noscript>\n\n<style>\n\n/* ═══ TAILWIND UTILITY REPLACEMENTS ═══ */\n\n/* --- Layout --- */\n.block { display: block; }\n.inline-block { display: inline-block; }\n.flex { display: flex; }\n.grid { display: grid; }\n.flex-col { flex-direction: column; }\n.flex-grow { flex-grow: 1; }\n.items-start { align-items: flex-start; }\n.items-center { align-items: center; }\n.items-stretch { align-items: stretch; }\n.justify-center { justify-content: center; }\n.justify-end { justify-content: flex-end; }\n.justify-between { justify-content: space-between; }\n.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }\n.grid-rows-2 { grid-template-rows: repeat(2, minmax(0, 1fr)); }\n.gap-2 { gap: 0.5rem; }\n.gap-4 { gap: 1rem; }\n.gap-6 { gap: 1.5rem; }\n.gap-12 { gap: 3rem; }\n.gap-16 { gap: 4rem; }\n.space-y-3 > :not(:first-child) { margin-top: 0.75rem; }\n.space-y-8 > :not(:first-child) { margin-top: 2rem; }\n\n/* --- Positioning --- */\n.relative { position: relative; }\n.absolute { position: absolute; }\n.inset-0 { inset: 0; }\n.left-1\\/2 { left: 50%; }\n.-translate-x-1\\/2 { transform: translateX(-50%); }\n.z-10 { z-index: 10; }\n\n/* --- Sizing --- */\n.w-full { width: 100%; }\n.w-12 { width: 3rem; }\n.w-fit { width: fit-content; }\n.h-full { height: 100%; }\n.h-\\[1px\\] { height: 1px; }\n.h-\\[600px\\] { height: 600px; }\n.max-w-2xl { max-width: 42rem; }\n.max-w-3xl { max-width: 48rem; }\n.max-w-4xl { max-width: 56rem; }\n.max-w-lg { max-width: 32rem; }\n.max-w-sm { max-width: 24rem; }\n.max-w-xs { max-width: 20rem; }\n.max-w-screen-xl { max-width: 1280px; }\n.max-w-screen-2xl { max-width: 1536px; }\n.aspect-\\[4\\/5\\] { aspect-ratio: 4/5; }\n\n/* --- Spacing --- */\n.p-3 { padding: 0.75rem; }\n.p-6 { padding: 1.5rem; }\n.p-8 { padding: 2rem; }\n.p-10 { padding: 2.5rem; }\n.px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }\n.px-8 { padding-left: 2rem; padding-right: 2rem; }\n.px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }\n.py-1\\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }\n.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }\n.py-4 { padding-top: 1rem; padding-bottom: 1rem; }\n.py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }\n.py-8 { padding-top: 2rem; padding-bottom: 2rem; }\n.py-24 { padding-top: 6rem; padding-bottom: 6rem; }\n.py-32 { padding-top: 8rem; padding-bottom: 8rem; }\n.pt-4 { padding-top: 1rem; }\n.pt-12 { padding-top: 3rem; }\n.pb-1 { padding-bottom: 0.25rem; }\n.pb-32 { padding-bottom: 8rem; }\n.mx-auto { margin-left: auto; margin-right: auto; }\n.mb-1 { margin-bottom: 0.25rem; }\n.mb-2 { margin-bottom: 0.5rem; }\n.mb-3 { margin-bottom: 0.75rem; }\n.mb-4 { margin-bottom: 1rem; }\n.mb-6 { margin-bottom: 1.5rem; }\n.mb-8 { margin-bottom: 2rem; }\n.mb-10 { margin-bottom: 2.5rem; }\n.mb-20 { margin-bottom: 5rem; }\n.mt-4 { margin-top: 1rem; }\n\n/* --- Typography --- */\n.text-center { text-align: center; }\n.text-xs { font-size: 0.75rem; line-height: 1rem; }\n.text-sm { font-size: 0.875rem; line-height: 1.25rem; }\n.text-lg { font-size: 1.125rem; line-height: 1.75rem; }\n.text-xl { font-size: 1.25rem; line-height: 1.75rem; }\n.text-2xl { font-size: 1.5rem; line-height: 2rem; }\n.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }\n.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }\n.text-5xl { font-size: 3rem; line-height: 1; }\n.uppercase { text-transform: uppercase; }\n.italic { font-style: italic; }\n.font-light { font-weight: 300; }\n.font-medium { font-weight: 500; }\n.font-semibold { font-weight: 600; }\n.font-bold { font-weight: 700; }\n.leading-tight { line-height: 1.25; }\n.leading-relaxed { line-height: 1.625; }\n.tracking-widest { letter-spacing: 0.1em; }\n.tracking-\\[0\\.2em\\] { letter-spacing: 0.2em; }\n.tracking-\\[0\\.3em\\] { letter-spacing: 0.3em; }\n.text-\\[10px\\] { font-size: 10px; }\n.text-\\[11px\\] { font-size: 11px; }\n.text-\\[12px\\] { font-size: 12px; }\n.text-\\[13px\\] { font-size: 13px; }\n\n/* --- Colors --- */\n.bg-\\[\\#F5F0E8\\] { background-color: #F5F0E8; }\n.bg-\\[\\#FAF8F4\\] { background-color: #FAF8F4; }\n.bg-\\[\\#FDFCFA\\] { background-color: #FDFCFA; }\n.bg-\\[\\#f0e8eb\\] { background-color: #f0e8eb; }\n.bg-\\[\\#5A2628\\] { background-color: #5A2628; }\n.bg-\\[\\#2C1810\\]\\/40 { background-color: rgba(44, 24, 16, 0.4); }\n.bg-\\[\\#2C1810\\]\\/50 { background-color: rgba(44, 24, 16, 0.5); }\n.bg-white { background-color: #fff; }\n.bg-brown-900 { background-color: #2C1810; }\n.text-\\[\\#5A2628\\] { color: #5A2628; }\n.text-\\[\\#FAF8F4\\] { color: #FAF8F4; }\n.text-white { color: #fff; }\n.text-brown-300 { color: #C4B5AB; }\n.text-brown-400 { color: #9E8A80; }\n.text-brown-500 { color: #7A6258; }\n.text-brown-600 { color: #5E443A; }\n.text-brown-700 { color: #4A3228; }\n.text-brown-900 { color: #2C1810; }\n.text-accent { color: #5A2628; }\n.opacity-90 { opacity: 0.9; }\n\n/* --- Borders --- */\n.border { border-width: 1px; border-style: solid; border-color: #e5e7eb; }\n.border-x { border-left-width: 1px; border-right-width: 1px; border-style: solid; border-color: #e5e7eb; }\n.border-y { border-top-width: 1px; border-bottom-width: 1px; border-style: solid; border-color: #e5e7eb; }\n.border-b { border-bottom-width: 1px; border-bottom-style: solid; }\n.border-t { border-top-width: 1px; border-top-style: solid; border-color: #e5e7eb; }\n.border-t-4 { border-top-width: 4px; border-top-style: solid; }\n.border-\\[rgba\\(0\\,0\\,0\\,0\\.04\\)\\] { border-color: rgba(0,0,0,0.04); }\n.border-\\[rgba\\(140\\,106\\,116\\,0\\.15\\)\\] { border-color: rgba(140,106,116,0.15); }\n.border-brown-300 { border-color: #C4B5AB; }\n.border-brown-900 { border-color: #2C1810; }\n.border-white { border-color: #fff; }\n.rounded-sm { border-radius: 0.125rem; }\n.ring-1 { box-shadow: 0 0 0 1px var(--tw-ring-color, rgba(0,0,0,0.05)); }\n\n/* --- Effects --- */\n.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }\n.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }\n.overflow-hidden { overflow: hidden; }\n.object-cover { object-fit: cover; }\n\n/* --- Transitions --- */\n.transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }\n.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }\n.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }\n.duration-700 { transition-duration: 700ms; }\n\n/* --- Hover States --- */\n.hover\\:bg-\\[\\#FAF8F4\\]:hover { background-color: #FAF8F4; }\n.hover\\:bg-\\[\\#481E20\\]:hover { background-color: #481E20; }\n.hover\\:bg-brown-800:hover { background-color: #3D2518; }\n.hover\\:bg-brown-900:hover { background-color: #2C1810; }\n.hover\\:text-\\[\\#FAF8F4\\]:hover { color: #FAF8F4; }\n.group:hover .group-hover\\:scale-110 { transform: scale(1.1); }\n\n/* --- Responsive (md: 768px) --- */\n@media (min-width: 768px) {\n  .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }\n  .md\\:col-span-1 { grid-column: span 1 / span 1; }\n  .md\\:col-span-2 { grid-column: span 2 / span 2; }\n  .md\\:row-span-2 { grid-row: span 2 / span 2; }\n  .md\\:flex-row { flex-direction: row; }\n  .md\\:w-1\\/2 { width: 50%; }\n  .md\\:w-auto { width: auto; }\n  .md\\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }\n  .md\\:text-5xl { font-size: 3rem; line-height: 1; }\n  .md\\:text-7xl { font-size: 4.5rem; line-height: 1; }\n  .md\\:text-left { text-align: left; }\n}\n\n/* --- Responsive (sm: 640px) --- */\n@media (min-width: 640px) {\n  .sm\\:flex-row { flex-direction: row; }\n}\n\n/* ═══ RESET ═══ */\n*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }\nhtml { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; scroll-padding-top: 5rem; }\nimg { display: block; max-width: 100%; height: auto; }\nbutton, a { font: inherit; color: inherit; text-decoration: none; }\nbutton { cursor: pointer; background: none; border: none; }\nul { list-style: none; }\n\n/* ═══ CUSTOM PROPERTIES ═══ */\n:root {\n  --cream: #F5F0E8;\n  --cream-light: #FAF8F4;\n  --cream-dark: #EDE7DB;\n  --white: #FDFCFA;\n  --brown-900: #2C1810;\n  --brown-800: #3D2518;\n  --brown-700: #4A3228;\n  --brown-600: #5E443A;\n  --brown-500: #7A6258;\n  --brown-400: #9E8A80;\n  --brown-300: #C4B5AB;\n  --brown-200: #DDD3CA;\n  --brown-100: #EDE7E0;\n  --accent: #5A2628;\n  --accent-dark: #481E20;\n  --accent-light: #835C5D;\n  --dark-bg: #1E1B18;\n  --dark-card: #2A2622;\n\n  --font-display: 'Cormorant Garamond', 'Georgia', serif;\n  --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;\n\n  --text-xs: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);\n  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);\n  --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);\n  --text-lg: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);\n  --text-xl: clamp(1.375rem, 1.1rem + 0.8vw, 1.75rem);\n  --text-2xl: clamp(1.75rem, 1.3rem + 1.5vw, 2.75rem);\n  --text-3xl: clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem);\n  --text-hero: clamp(2.75rem, 1rem + 5.5vw, 5.5rem);\n\n  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);\n  --transition: 300ms var(--ease-out);\n}\n\n/* ═══ BASE ═══ */\nbody {\n  font-family: var(--font-body);\n  font-size: var(--text-base);\n  line-height: 1.65;\n  color: var(--brown-600);\n  background: var(--cream);\n}\n\nh1, h2, h3, h4 {\n  font-family: var(--font-display);\n  font-weight: 400;\n  line-height: 1.1;\n  color: var(--brown-900);\n}\n\np { max-width: 60ch; }\n\n::selection {\n  background: rgba(74, 93, 58, 0.18);\n  color: var(--brown-900);\n}\n\n/* ═══ NAV ═══ */\n.nav {\n  position: fixed; top: 0; left: 0; right: 0; z-index: 100;\n  padding: 1.25rem clamp(1.5rem, 3vw, 3rem);\n  display: flex; justify-content: space-between; align-items: center;\n  background: rgba(245, 240, 232, 0.88);\n  backdrop-filter: blur(16px);\n  -webkit-backdrop-filter: blur(16px);\n  border-bottom: 1px solid rgba(0,0,0,0.04);\n  transition: padding var(--transition), background var(--transition);\n}\n.nav.scrolled { padding: 0.75rem clamp(1.5rem, 3vw, 3rem); }\n.nav-logo {\n  font-family: var(--font-display);\n  font-size: 1.5rem;\n  font-style: italic;\n  font-weight: 500;\n  letter-spacing: -0.01em;\n  color: var(--brown-900);\n}\n.nav-links { display: flex; gap: 2.25rem; align-items: center; }\n.nav-links a {\n  font-size: var(--text-xs);\n  font-weight: 500;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n  color: var(--brown-500);\n  transition: color var(--transition);\n  position: relative;\n}\n.nav-links a:hover { color: var(--brown-900); }\n.nav-links a::after {\n  content: ''; position: absolute; bottom: -4px; left: 0;\n  width: 0; height: 1px; background: var(--brown-900);\n  transition: width var(--transition);\n}\n.nav-links a:hover::after { width: 100%; }\n.nav-links a.active {\n  color: var(--brown-900);\n}\n.nav-links a.active::after {\n  width: 100%;\n}\n.nav-cta {\n  font-size: var(--text-xs);\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  padding: 0.625rem 1.5rem;\n  background: var(--accent);\n  color: var(--cream-light);\n  border-radius: 6px;\n  transition: background var(--transition);\n  display: inline-block;\n}\n.nav-cta:hover { background: var(--accent-dark); }\n\n/* Mobile menu */\n.hamburger {\n  display: none; flex-direction: column; gap: 5px;\n  width: 24px; padding: 0;\n}\n.hamburger span {\n  display: block; height: 1.5px; background: var(--brown-900);\n  transition: transform var(--transition), opacity var(--transition);\n  transform-origin: center;\n}\n.hamburger.active span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }\n.hamburger.active span:nth-child(2) { opacity: 0; }\n.hamburger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }\n\n.nav-mobile {\n  display: none; position: fixed; inset: 0; z-index: 99;\n  background: var(--cream);\n  flex-direction: column; justify-content: center; align-items: center; gap: 2rem;\n}\n.nav-mobile.open { display: flex; }\n.nav-mobile a {\n  font-family: var(--font-display);\n  font-size: var(--text-xl);\n  font-style: italic;\n  color: var(--brown-900);\n  transition: color var(--transition);\n}\n.nav-mobile a:hover { color: var(--accent); }\n.nav-mobile .mobile-cta {\n  margin-top: 1rem;\n  font-family: var(--font-body);\n  font-style: normal;\n  font-size: var(--text-xs);\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  padding: 0.875rem 2.5rem;\n  background: var(--accent);\n  color: var(--cream-light);\n}\n\n@media (max-width: 900px) {\n  .nav-links, .nav-cta { display: none; }\n  .hamburger { display: flex; }\n}\n\n/* ═══ FOOTER ═══ */\n.footer {\n  background: var(--dark-bg);\n  color: var(--brown-400);\n  padding: 4rem clamp(1.5rem, 5vw, 6rem) 2rem;\n}\n.footer-inner {\n  max-width: 1240px;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  flex-wrap: wrap;\n  gap: 2rem;\n}\n.footer-brand {\n  font-family: var(--font-display);\n  font-style: italic;\n  font-size: var(--text-xl);\n  color: var(--cream);\n  margin-bottom: 0.5rem;\n}\n.footer-tagline {\n  font-size: var(--text-xs);\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n  color: var(--brown-500);\n  max-width: 280px;\n  line-height: 1.6;\n}\n.footer-links { display: flex; gap: 3rem; }\n.footer-col h4 {\n  font-size: var(--text-xs);\n  font-family: var(--font-body);\n  font-weight: 500;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n  color: var(--brown-300);\n  margin-bottom: 0.75rem;\n}\n.footer-col a {\n  display: block;\n  font-size: var(--text-sm);\n  color: var(--brown-500);\n  margin-bottom: 0.375rem;\n  transition: color var(--transition);\n}\n.footer-col a:hover { color: var(--cream); }\n.footer-bottom {\n  max-width: 1240px;\n  margin: 3rem auto 0;\n  padding-top: 1.5rem;\n  border-top: 1px solid rgba(255,255,255,0.06);\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 1rem;\n}\n@media (max-width: 768px) {\n  .footer-inner { flex-direction: column; }\n  .footer-links { flex-wrap: wrap; gap: 1.5rem 2rem; }\n  .footer-col { min-width: 120px; }\n  .footer-bottom { flex-direction: column; text-align: center; }\n}\n.footer-copy {\n  font-size: var(--text-xs);\n  letter-spacing: 0.08em;\n  text-transform: uppercase;\n  color: var(--brown-500);\n}\n.footer-bottom a {\n  font-size: var(--text-xs);\n  color: var(--brown-500);\n  transition: color var(--transition);\n}\n.footer-bottom a:hover { color: var(--cream); }\n</style>\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"BreadcrumbList\",\n  \"itemListElement\": [\n    {\"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://nataliatschischik.com/\"},\n    {\"@type\": \"ListItem\", \"position\": 2, \"name\": \"Preise\", \"item\": \"https://nataliatschischik.com/preise\"}\n  ]\n}\n</script>",
-  "trackingEnabled": true,
-  "isHome": false
+  "areaServed": [
+    { "@type": "City", "name": "Kassel" },
+    { "@type": "City", "name": "Göttingen" },
+    { "@type": "AdministrativeArea", "name": "Nordhessen" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hochzeitsfotografie Begleitungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Standesamtbegleitung",
+        "description": "Ab 3 Stunden Begleitung, mindestens 150 bearbeitete Bilder, Online-Galerie, 50 km inklusive",
+        "price": "590",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "590",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Halbtagsreportage",
+        "description": "8 Stunden Begleitung, mindestens 400 bearbeitete Bilder, Galerie & Download, 200 km inklusive",
+        "price": "1790",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "1790",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Ganztagsreportage",
+        "description": "10 Stunden Begleitung, mindestens 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, 200 km inklusive",
+        "price": "2490",
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": "2490",
+          "priceCurrency": "EUR"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "40",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was kostet ein Hochzeitsfotograf in Kassel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 590 €. Halbtagsreportagen beginnen bei 1.790 €, Ganztagsreportagen bei 2.490 €. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie sichern wir unser Datum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Euer Termin ist fest reserviert, sobald der Vertrag unterschrieben und die Anzahlung von etwa 20 % eingegangen ist. So habt ihr früh Planungssicherheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wann erhalten wir unsere Bilder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ihr bekommt innerhalb von 48 Stunden eine kleine Preview. Die vollständige Galerie erhaltet ihr in der Regel nach 6 bis 8 Wochen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist im Inklusivradius enthalten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei der Standesamtbegleitung sind 50 km inklusive, bei Halb- und Ganztagsreportagen 200 km. Wenn euer Ort darüber hinaus liegt, sage ich euch die zusätzlichen Reisekosten transparent vorab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert bei Krankheit oder technischem Ausfall?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ich arbeite mit Backup-Kameras und doppelter Speichersicherung. Für den unwahrscheinlichen Krankheitsfall habe ich ein Netzwerk an erfahrenen Kolleginnen und Kollegen, die einspringen können."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Bilder bekommen wir ungefähr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als Orientierung könnt ihr meist mit etwa 60 bis 100 sorgfältig kuratierten Bildern pro Stunde rechnen. Die Mindestmengen in den Begleitungen geben euch zusätzlich Sicherheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Können wir Stunden oder einen Second Shooter ergänzen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Viele Begleitungen lassen sich sinnvoll erweitern, wenn euer Tag länger wird, ihr mehrere Orte plant oder eine zweite Perspektive hilfreich ist."
+      }
+    }
+  ]
+}
+</script>`;
+
+module.exports = {
+  layout: "layouts/page.njk",
+  permalink: "preise.html",
+  hasInlineContactSection: false,
+  seo: {
+    title: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 590 €, Halbtagsreportage ab 1.790 € und Ganztagsreportage ab 2.490 €. Transparente Leistungen für Kassel und Nordhessen.",
+    keywords: "Hochzeitsfotograf Kassel Preise, Hochzeitsfotografie Kosten, Standesamtbegleitung Preis, Ganztagsreportage Preis",
+    canonical: "https://nataliatschischik.com/preise",
+    ogTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    ogDescription: "Klare Preise für Hochzeitsfotografie in Kassel: Standesamt, Halbtagsreportage, Ganztagsreportage und individuelle Begleitungen.",
+    ogType: "website",
+    ogLocale: "de_DE",
+    ogImage: "https://nataliatschischik.com/images/og-default.jpg",
+    ogImageWidth: "1200",
+    ogImageHeight: "630",
+    robots: "index, follow",
+    geoRegion: "DE-HE",
+    geoPlacename: "Kassel",
+    twitterCard: "summary_large_image",
+    twitterSite: "@natalia_photography",
+    twitterTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+    twitterDescription: "Transparente Preise für Hochzeitsfotografie in Kassel von Standesamt bis Ganztagsreportage.",
+    twitterImage: "https://nataliatschischik.com/images/og-default.jpg"
+  },
+  bodyAttributes: "",
+  headExtra,
+  trackingEnabled: true,
+  isHome: false
 };
