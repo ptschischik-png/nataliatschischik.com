@@ -3,10 +3,10 @@ module.exports = {
   permalink: "standorte.html",
   seo: {
     title: "Standorte — Hochzeitsfotograf Natalia Tschischik",
-    description: "Alle Standorte im Überblick: Hochzeitsfotograf für Kassel, Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und weitere Regionen.",
+    description: "Alle Standorte im Überblick: Hochzeitsfotograf für Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und viele weitere Regionen.",
     canonical: "https://nataliatschischik.com/standorte",
     ogTitle: "Standorte — Hochzeitsfotograf Natalia Tschischik",
-    ogDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Kassel, Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und weitere Regionen.",
+    ogDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und viele weitere Regionen.",
     ogType: "website",
     ogLocale: "de_DE",
     ogImage: "https://nataliatschischik.com/images/og-default.jpg",
@@ -16,11 +16,305 @@ module.exports = {
     twitterCard: "summary_large_image",
     twitterSite: "@natalia_photography",
     twitterTitle: "Standorte — Hochzeitsfotograf Natalia Tschischik",
-    twitterDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Kassel, Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und weitere Regionen.",
+    twitterDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und viele weitere Regionen.",
     twitterImage: "https://nataliatschischik.com/images/og-default.jpg"
   },
   bodyAttributes: "",
-  headExtra: "",
+  headExtra: `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Standorte von Hochzeitsfotograf Natalia Tschischik",
+  "url": "https://nataliatschischik.com/standorte",
+  "numberOfItems": 17,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Hochzeitsfotograf Bad Arolsen", "url": "https://nataliatschischik.com/hochzeitsfotograf-bad-arolsen" },
+    { "@type": "ListItem", "position": 2, "name": "Hochzeitsfotograf Bad Hersfeld", "url": "https://nataliatschischik.com/hochzeitsfotograf-bad-hersfeld" },
+    { "@type": "ListItem", "position": 3, "name": "Hochzeitsfotograf Baunatal", "url": "https://nataliatschischik.com/hochzeitsfotograf-baunatal" },
+    { "@type": "ListItem", "position": 4, "name": "Hochzeitsfotograf Borken", "url": "https://nataliatschischik.com/hochzeitsfotograf-borken" },
+    { "@type": "ListItem", "position": 5, "name": "Hochzeitsfotograf Frankenberg", "url": "https://nataliatschischik.com/hochzeitsfotograf-frankenberg" },
+    { "@type": "ListItem", "position": 6, "name": "Hochzeitsfotograf Fulda", "url": "https://nataliatschischik.com/hochzeitsfotograf-fulda" },
+    { "@type": "ListItem", "position": 7, "name": "Hochzeitsfotograf Gießen", "url": "https://nataliatschischik.com/hochzeitsfotograf-giessen" },
+    { "@type": "ListItem", "position": 8, "name": "Hochzeitsfotograf Göttingen", "url": "https://nataliatschischik.com/hochzeitsfotograf-goettingen" },
+    { "@type": "ListItem", "position": 9, "name": "Hochzeitsfotograf Hildesheim", "url": "https://nataliatschischik.com/hochzeitsfotograf-hildesheim" },
+    { "@type": "ListItem", "position": 10, "name": "Hochzeitsfotograf Hofgeismar", "url": "https://nataliatschischik.com/hochzeitsfotograf-hofgeismar" },
+    { "@type": "ListItem", "position": 11, "name": "Hochzeitsfotograf Kirchheim", "url": "https://nataliatschischik.com/hochzeitsfotograf-kirchheim" },
+    { "@type": "ListItem", "position": 12, "name": "Hochzeitsfotograf Marburg", "url": "https://nataliatschischik.com/hochzeitsfotograf-marburg" },
+    { "@type": "ListItem", "position": 13, "name": "Hochzeitsfotograf Nordhessen", "url": "https://nataliatschischik.com/hochzeitsfotograf-nordhessen" },
+    { "@type": "ListItem", "position": 14, "name": "Hochzeitsfotograf Northeim", "url": "https://nataliatschischik.com/hochzeitsfotograf-northeim" },
+    { "@type": "ListItem", "position": 15, "name": "Hochzeitsfotograf Paderborn", "url": "https://nataliatschischik.com/hochzeitsfotograf-paderborn" },
+    { "@type": "ListItem", "position": 16, "name": "Hochzeitsfotograf Schwalmstadt", "url": "https://nataliatschischik.com/hochzeitsfotograf-schwalmstadt" },
+    { "@type": "ListItem", "position": 17, "name": "Hochzeitsfotograf Warburg", "url": "https://nataliatschischik.com/hochzeitsfotograf-warburg" }
+  ]
+}
+</script>
+
+<link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dm-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+</style>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:5rem}
+img{display:block;max-width:100%;height:auto}
+button,a{font:inherit;color:inherit;text-decoration:none}
+button{cursor:pointer;background:none;border:none}
+ul{list-style:none}
+:root{
+  --cream:#F5F0E8;
+  --cream-light:#FAF8F4;
+  --cream-dark:#EDE7DB;
+  --white:#FDFCFA;
+  --brown-900:#2C1810;
+  --brown-800:#3D2518;
+  --brown-700:#4A3228;
+  --brown-600:#5E443A;
+  --brown-500:#7A6258;
+  --brown-400:#9E8A80;
+  --brown-300:#C4B5AB;
+  --brown-200:#DDD3CA;
+  --brown-100:#EDE7E0;
+  --accent:#5A2628;
+  --accent-dark:#481E20;
+  --accent-light:#835C5D;
+  --dark-bg:#1E1B18;
+  --dark-card:#2A2622;
+  --font-display:'Cormorant Garamond','Georgia',serif;
+  --font-body:'DM Sans','Helvetica Neue',sans-serif;
+  --text-xs:clamp(0.6875rem,0.65rem + 0.15vw,0.75rem);
+  --text-sm:clamp(0.8125rem,0.78rem + 0.15vw,0.875rem);
+  --text-base:clamp(0.9375rem,0.9rem + 0.2vw,1rem);
+  --text-lg:clamp(1.0625rem,1rem + 0.4vw,1.25rem);
+  --text-xl:clamp(1.375rem,1.1rem + 0.8vw,1.75rem);
+  --text-2xl:clamp(1.75rem,1.3rem + 1.5vw,2.75rem);
+  --text-3xl:clamp(2.25rem,1.5rem + 2.5vw,3.75rem);
+  --text-hero:clamp(2.75rem,1rem + 5.5vw,5.5rem);
+  --radius:6px;
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --transition:300ms var(--ease-out)
+}
+body{
+  font-family:var(--font-body);
+  font-size:var(--text-base);
+  line-height:1.65;
+  color:var(--brown-600);
+  background:var(--cream)
+}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:400;
+  line-height:1.1;
+  color:var(--brown-900)
+}
+p{max-width:60ch}
+::selection{background:rgba(107,45,62,0.15);color:var(--brown-900)}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.25rem clamp(1.5rem,3vw,3rem);
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(245,240,232,0.88);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(0,0,0,0.04);
+  transition:padding var(--transition),background var(--transition)
+}
+.nav.scrolled{padding:0.75rem clamp(1.5rem,3vw,3rem)}
+.nav-logo{
+  font-family:var(--font-display);
+  font-size:1.5rem;
+  font-style:italic;
+  font-weight:500;
+  letter-spacing:-0.01em;
+  color:var(--brown-900)
+}
+.nav-links{display:flex;gap:2.25rem;align-items:center}
+.nav-links a{
+  font-size:var(--text-xs);
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--brown-500);
+  transition:color var(--transition);
+  position:relative
+}
+.nav-links a:hover{color:var(--brown-900)}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0;
+  height:1px;
+  background:var(--brown-900);
+  transition:width var(--transition)
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a.active{color:var(--brown-900)}
+.nav-cta{
+  font-size:var(--text-xs);
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:0.625rem 1.5rem;
+  background:var(--accent);
+  color:var(--cream-light);
+  border-radius:var(--radius);
+  transition:background var(--transition);
+  display:inline-block
+}
+.nav-cta:hover{background:var(--accent-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;width:24px;padding:0}
+.hamburger span{
+  display:block;
+  height:1.5px;
+  background:var(--brown-900);
+  transition:transform var(--transition),opacity var(--transition);
+  transform-origin:center
+}
+.hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-mobile{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:99;
+  background:var(--cream);
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:2rem
+}
+.nav-mobile.open{display:flex}
+.nav-mobile a{
+  font-family:var(--font-display);
+  font-size:var(--text-xl);
+  font-style:italic;
+  color:var(--brown-900);
+  transition:color var(--transition)
+}
+.nav-mobile a:hover{color:var(--accent)}
+.nav-mobile .mobile-cta{
+  margin-top:1rem;
+  font-family:var(--font-body);
+  font-style:normal;
+  font-size:var(--text-xs);
+  font-weight:500;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:0.875rem 2.5rem;
+  background:var(--accent);
+  color:var(--cream-light)
+}
+.btn-primary,.btn-ghost{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.55rem;
+  font-size:var(--text-xs);
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  border-radius:var(--radius);
+  transition:all var(--transition)
+}
+.btn-primary{
+  padding:1rem 2.5rem;
+  background:var(--accent);
+  color:var(--cream-light)
+}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-ghost{
+  padding:1rem 2rem;
+  border:1px solid var(--brown-300);
+  color:var(--brown-600)
+}
+.btn-ghost:hover{border-color:var(--brown-900);color:var(--brown-900)}
+.footer{
+  background:var(--dark-bg);
+  color:var(--brown-400);
+  padding:4rem clamp(1.5rem,5vw,6rem) 2rem
+}
+.footer-inner{
+  max-width:1240px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:2rem
+}
+.footer-brand{
+  font-family:var(--font-display);
+  font-style:italic;
+  font-size:var(--text-xl);
+  color:var(--cream);
+  margin-bottom:0.5rem
+}
+.footer-tagline{
+  font-size:var(--text-xs);
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--brown-500);
+  max-width:280px;
+  line-height:1.6
+}
+.footer-links{display:flex;gap:3rem}
+.footer-col h4{
+  font-size:var(--text-xs);
+  font-family:var(--font-body);
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--brown-300);
+  margin-bottom:0.75rem
+}
+.footer-col a{
+  display:block;
+  font-size:var(--text-sm);
+  color:var(--brown-500);
+  margin-bottom:0.375rem;
+  transition:color var(--transition)
+}
+.footer-col a:hover{color:var(--cream)}
+.footer-bottom{
+  max-width:1240px;
+  margin:3rem auto 0;
+  padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,0.06);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem
+}
+.footer-copy{
+  font-size:var(--text-xs);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--brown-500)
+}
+@media (max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+}
+@media (max-width:768px){
+  .footer-links{flex-direction:column;gap:2rem}
+  .footer-inner{flex-direction:column;align-items:center;text-align:center}
+  .footer-tagline{max-width:100%}
+}
+</style>
+
+<link rel="stylesheet" href="/css/below-fold.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/below-fold.css"></noscript>
+<link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>`,
   trackingEnabled: true,
   isHome: false
 };
