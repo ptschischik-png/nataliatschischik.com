@@ -1,5 +1,11 @@
 <!-- ═══ NAVIGATION ═══ -->
 {% include "partials/nav.njk" %}
+{% set breadcrumbItems = [
+  { name: "Home", url: "/" },
+  { name: "Standorte", url: "/standorte" },
+  { name: seo.title | replace(" — Natalia Tschischik", "") }
+] %}
+{% include "partials/breadcrumbs.njk" %}
 
 <!-- ═══ HERO ═══ -->
 <section class="hero" aria-label="Willkommen">

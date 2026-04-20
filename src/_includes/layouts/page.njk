@@ -30,6 +30,24 @@
 {% if seo.geoPlacename %}<meta name="geo.placename" content="{{ seo.geoPlacename }}">{% endif %}
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 {% include 'partials/site-schema.njk' %}
+{% if breadcrumbItems %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {% for crumb in breadcrumbItems %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "name": "{{ crumb.name }}"{% if crumb.url and not loop.last %},
+      "item": "{{ crumb.url if crumb.url.startsWith('http') else site.url + crumb.url }}"{% endif %}
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
 {{ headExtra | safe }}
 {% include 'partials/tracking-head.njk' %}
 </head>
