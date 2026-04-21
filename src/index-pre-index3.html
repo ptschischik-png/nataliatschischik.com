@@ -5,7 +5,7 @@
 <section class="hero" aria-label="Willkommen">
   <div class="hero-content">
     <span class="hero-label">Hochzeitsfotografie &middot; Kassel &amp; Göttingen</span>
-    <h1>Euer Hochzeitsfotograf <br>in <em>Kassel.</em></h1>
+    <h1>Euer Hochzeitsfotograf <br>in <em><span id="city-rotate">Kassel</span>.</em></h1>
     <p class="hero-label" style="margin-top: -0.5rem; margin-bottom: 1.5rem; font-size: var(--text-xs); letter-spacing: 0.15em; text-transform: uppercase; color: var(--brown-400);">Ruhig begleitet. Echt erzählt. Für immer fühlbar.</p>
     <p class="hero-text">
       Als Hochzeitsfotografin in Kassel halte ich seit 2012 die Momente fest, die man nicht wiederholen kann — den Blick eures Vaters am Altar, das Lachen eurer besten Freundin, den Augenblick, in dem ihr euch anschaut und wisst: Das ist es.
@@ -14,19 +14,34 @@
       <a href="#contact" class="btn-primary">Termin prüfen</a>
       <a href="portfolio" class="btn-ghost">Reportagen ansehen</a>
     </div>
-    <div class="hero-proof-inline" aria-label="Vertrauensindikatoren">
-      <span>200+ Paare begleitet</span>
-      <span aria-hidden="true">&middot;</span>
-      <span>10+ Jahre Erfahrung</span>
-      <span aria-hidden="true">&middot;</span>
-      <span>4.8 ★ Google Bewertung</span>
-    </div>
-    <p class="hero-travel-note">Anreise in Hessen und Niedersachsen inklusive</p>
   </div>
   <div class="hero-image">
-    <img src="reportagen/img/sababurg/2-14.webp" srcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w, reportagen/img/sababurg/2-14.webp 1920w" sizes="(max-width: 768px) 100vw, 40vw" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1080">
+    <img src="img/ext/gd-15zAiT52byizm3F.webp" srcset="img/ext/gd-15zAiT52byizm3F-400w.webp 400w, img/ext/gd-15zAiT52byizm3F-800w.webp 800w, img/ext/gd-15zAiT52byizm3F.webp 896w" sizes="(max-width: 768px) 100vw, 40vw" alt="Portrait von Natalia Tschischik, Hochzeitsfotografin aus Kassel" fetchpriority="high" width="800" height="1000">
   </div>
 </section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar" aria-label="Vertrauensindikatoren">
+  <div class="trust-item">
+    <span class="trust-number">200+</span>
+    <span class="trust-label">Paare begleitet</span>
+  </div>
+  <span class="trust-divider" aria-hidden="true"></span>
+  <div class="trust-item">
+    <span class="trust-number">10+</span>
+    <span class="trust-label">Jahre Erfahrung</span>
+  </div>
+  <span class="trust-divider" aria-hidden="true"></span>
+  <div class="trust-item">
+    <span class="trust-number">4.8</span>
+    <span class="trust-label">★ Google Bewertung</span>
+  </div>
+  <span class="trust-divider" aria-hidden="true"></span>
+  <div class="trust-item trust-highlight">
+    <span class="trust-number">200</span>
+    <span class="trust-label">km Anfahrt inklusive</span>
+  </div>
+</div>
 
 <!-- ═══ PORTFOLIO TEASER ═══ -->
 <section class="section portfolio" id="portfolio" aria-label="Portfolio">
@@ -190,12 +205,12 @@
 </section>
 
 <style>
-  #preise-teaser {
-    background: linear-gradient(180deg, rgba(253, 252, 250, 0.92) 0%, rgba(250, 248, 244, 0.98) 100%);
-  }
-
   .index2-pricing-teaser-card {
-    padding: clamp(2rem, 5vw, 4rem) 0;
+    background: linear-gradient(180deg, rgba(253, 252, 250, 0.92) 0%, rgba(250, 248, 244, 0.98) 100%);
+    border: 1px solid rgba(122, 98, 88, 0.12);
+    border-radius: var(--radius);
+    box-shadow: 0 22px 60px rgba(44, 24, 16, 0.06);
+    padding: clamp(2rem, 5vw, 4rem);
   }
 
   .index2-pricing-teaser-head {
@@ -231,14 +246,14 @@
     border-radius: var(--radius);
     background: rgba(255, 255, 255, 0.88);
     border: 1px solid rgba(122, 98, 88, 0.14);
-    box-shadow: 0 10px 26px rgba(44, 24, 16, 0.035);
+    box-shadow: 0 12px 30px rgba(44, 24, 16, 0.04);
     min-height: 100%;
   }
 
   .index2-pricing-plan.is-featured {
     background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,243,237,0.98) 100%);
     border-color: rgba(90, 38, 40, 0.18);
-    box-shadow: 0 16px 34px rgba(44, 24, 16, 0.06);
+    box-shadow: 0 18px 38px rgba(44, 24, 16, 0.08);
     transform: translateY(-6px);
   }
 
@@ -401,7 +416,7 @@
           </p>
           <div class="index2-pricing-plan-meta">
             <span>10 Stunden</span>
-            <span>Album inkl.</span>
+            <span>Anreise inkl.</span>
           </div>
         </article>
         <article class="index2-pricing-plan">
@@ -421,7 +436,7 @@
       </div>
       <div class="index2-pricing-footer">
         <p class="index2-pricing-footer-copy">
-          Auf der Preis-Seite seht ihr alle Leistungen im Detail – von der Standesamtbegleitung bis zur Ganztagsreportage für Hochzeiten in <strong>Kassel, Hessen und Niedersachsen</strong>.
+          Auf der Preis-Seite seht ihr alle Leistungen im Detail, inklusive Orientierung für <strong>Kassel und Nordhessen</strong>.
         </p>
         <a href="preise" class="album-link">
           Preise &amp; Leistungen ansehen

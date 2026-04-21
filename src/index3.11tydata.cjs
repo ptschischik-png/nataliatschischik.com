@@ -1,4 +1,4 @@
-const base = require("./index-pre-index3.11tydata.cjs");
+const base = require("./index.11tydata.cjs");
 
 const heroExtra = `
 <style>
@@ -86,8 +86,20 @@ const heroExtra = `
 
 module.exports = {
   ...base,
-  permalink: "index.html",
+  permalink: "index3/index.html",
+  seo: {
+    ...base.seo,
+    title: "Hero Preview | Natalia Tschischik",
+    description: "Preview der Startseite mit Sababurg-Hero und reduzierter Proof-Zeile.",
+    canonical: "https://nataliatschischik.com/index3/",
+    ogTitle: "Hero Preview | Natalia Tschischik",
+    ogDescription: "Preview der Startseite mit Sababurg-Hero und reduzierter Proof-Zeile.",
+    robots: "noindex, nofollow",
+    twitterTitle: "Hero Preview | Natalia Tschischik",
+    twitterDescription: "Preview der Startseite mit Sababurg-Hero und reduzierter Proof-Zeile."
+  },
   headExtra:
+    '<base href="/">' +
     base.headExtra
       .replace(/img\/ext\/gd-15zAiT52byizm3F-800w\.webp/g, "reportagen/img/sababurg/2-14-800w.webp")
       .replace(/img\/ext\/gd-15zAiT52byizm3F-400w\.webp/g, "reportagen/img/sababurg/2-14-400w.webp")

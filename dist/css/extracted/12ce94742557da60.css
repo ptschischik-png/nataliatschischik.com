@@ -1,9 +1,90 @@
-.index2-pricing-teaser-card {
-    background: linear-gradient(180deg, rgba(253, 252, 250, 0.92) 0%, rgba(250, 248, 244, 0.98) 100%);
-    border: 1px solid rgba(122, 98, 88, 0.12);
+.hero {
+  min-height: clamp(64rem, 118vh, 78rem);
+}
+.portfolio {
+  background: var(--cream-light);
+}
+.hero-image img,
+.hero-image:hover img {
+  transform: none !important;
+  transition: none !important;
+}
+.hero-proof-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.35rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+.hero-proof-inline span[aria-hidden="true"] {
+  color: var(--brown-300);
+}
+.hero-travel-note {
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(122, 98, 88, 0.18);
+  font-size: var(--text-sm);
+  color: var(--brown-500);
+  max-width: none;
+}
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    grid-template-columns: 1fr;
+  }
+  .hero-image {
+    order: -1;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-position: 52% 42%;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    margin: -2.5rem 1rem 0;
+    padding: 1.75rem 1.5rem 2.75rem;
+    background: rgba(253,252,250,0.96);
     border-radius: var(--radius);
-    box-shadow: 0 22px 60px rgba(44, 24, 16, 0.06);
-    padding: clamp(2rem, 5vw, 4rem);
+    box-shadow: 0 18px 38px rgba(44, 24, 16, 0.08);
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 10vw, 4rem);
+    line-height: 1.02;
+    margin-bottom: 1.15rem;
+  }
+  .hero-label {
+    margin-bottom: 0.9rem;
+  }
+  .hero-text {
+    font-size: var(--text-sm);
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+  }
+  .hero-proof-inline {
+    margin-top: 1rem;
+    gap: 0.45rem;
+    line-height: 1.8;
+  }
+  .hero-travel-note {
+    margin-top: 0.85rem;
+    padding-top: 0.75rem;
+  }
+}
+
+#preise-teaser {
+    background: linear-gradient(180deg, rgba(253, 252, 250, 0.92) 0%, rgba(250, 248, 244, 0.98) 100%);
+  }
+
+  .index2-pricing-teaser-card {
+    padding: clamp(2rem, 5vw, 4rem) 0;
   }
 
   .index2-pricing-teaser-head {
@@ -39,14 +120,14 @@
     border-radius: var(--radius);
     background: rgba(255, 255, 255, 0.88);
     border: 1px solid rgba(122, 98, 88, 0.14);
-    box-shadow: 0 12px 30px rgba(44, 24, 16, 0.04);
+    box-shadow: 0 10px 26px rgba(44, 24, 16, 0.035);
     min-height: 100%;
   }
 
   .index2-pricing-plan.is-featured {
     background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,243,237,0.98) 100%);
     border-color: rgba(90, 38, 40, 0.18);
-    box-shadow: 0 18px 38px rgba(44, 24, 16, 0.08);
+    box-shadow: 0 16px 34px rgba(44, 24, 16, 0.06);
     transform: translateY(-6px);
   }
 
