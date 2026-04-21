@@ -645,58 +645,30 @@ p { max-width: 60ch; }
 }
 
 .p2-feature-review {
-  background: var(--cream-light);
-  color: var(--brown-700);
+  background: var(--dark-bg);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
 }
 
 .p2-feature-review-card {
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3.5rem);
-  border: 1px solid rgba(90,38,40,0.12);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: 0 24px 48px -38px rgba(44,24,16,0.24);
+  min-height: 100%;
 }
 
-.p2-review-stars {
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
-  letter-spacing: 0.3em;
-  color: var(--accent);
+.p2-feature-review .testimonial-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: none;
 }
 
-.p2-feature-review-card blockquote,
-.p2-feature-review-card p {
-  max-width: none;
-  color: var(--brown-700);
-}
-
-.p2-feature-review-card blockquote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1.45rem, 1.15rem + 1vw, 2.25rem);
-  line-height: 1.45;
-  text-wrap: balance;
-}
-
-.p2-review-body {
+.p2-feature-review .testimonial-quote {
   margin-bottom: 1.5rem;
 }
 
-.p2-review-meta {
-  font-size: var(--text-xs);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brown-400);
-}
-
-.p2-review-proof {
-  margin-top: 0.5rem;
-  font-size: var(--text-xs);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--brown-500);
+.p2-feature-review .testimonials-stars {
+  margin-top: 2rem;
 }
 
 .p2-includes {
@@ -770,7 +742,7 @@ p { max-width: 60ch; }
 }
 
 .seo-footer-text {
-  background: var(--white);
+  background: var(--cream-light);
 }
 
 .p2-final-call {
@@ -971,7 +943,7 @@ p { max-width: 60ch; }
       "name": "Was ist im Inklusivradius enthalten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bei der Standesamtbegleitung sind 50 km inklusive, bei Halb- und Ganztagsreportagen 200 km. Wenn euer Ort darüber hinaus liegt, sage ich euch die zusätzlichen Reisekosten transparent vorab."
+        "text": "Bei der Standesamtbegleitung sind 50 km inklusive. Bei Halb- und Ganztagsreportagen ist die Anreise in Hessen und Niedersachsen bereits enthalten. Wenn euer Ort darüber hinaus liegt, sage ich euch die zusätzlichen Reisekosten transparent vorab."
       }
     },
     {

@@ -305,9 +305,10 @@ p{max-width:60ch}
   .hamburger{display:flex}
 }
 @media (max-width:768px){
-  .footer-links{flex-direction:column;gap:2rem}
-  .footer-inner{flex-direction:column;align-items:center;text-align:center}
-  .footer-tagline{max-width:100%}
+  .footer-inner{flex-direction:column}
+  .footer-links{flex-wrap:wrap;gap:1.5rem 2rem}
+  .footer-col{min-width:120px}
+  .footer-bottom{flex-direction:column;text-align:center}
 }
 </style>
 
