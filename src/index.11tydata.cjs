@@ -72,14 +72,28 @@ const heroExtra = `
     line-height: 1.75;
     margin-bottom: 1.75rem;
   }
+  .hero-cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .hero-cta-row .btn-primary,
+  .hero-cta-row .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
   .hero-proof-inline {
-    margin-top: 1rem;
-    gap: 0.45rem;
+    margin-top: 0.95rem;
+    gap: 0.35rem 0.45rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
     line-height: 1.8;
   }
   .hero-travel-note {
-    margin-top: 0.85rem;
+    margin-top: 0.8rem;
     padding-top: 0.75rem;
+    font-size: 0.88rem;
   }
 }
 </style>`;
