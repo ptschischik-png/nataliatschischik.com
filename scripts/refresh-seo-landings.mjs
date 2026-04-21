@@ -11,7 +11,7 @@ const heroAndPricingStyles = `
   min-height: clamp(64rem, 118vh, 78rem);
 }
 .portfolio {
-  background: var(--cream-light);
+  background: var(--cream);
 }
 .hero-image img,
 .hero-image:hover img {
@@ -267,7 +267,7 @@ function updateHero(html, fileName) {
       <span aria-hidden="true">&middot;</span>
       <span>4.8 ★ Google Bewertung</span>
     </div>
-    <p class="hero-travel-note">Anreise inklusive</p>
+    <p class="hero-travel-note">Anreise in Hessen und Niedersachsen inklusive</p>
   </div>
   <div class="hero-image">
     <img src="reportagen/img/sababurg/2-14.webp" srcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w, reportagen/img/sababurg/2-14.webp 1920w" sizes="(max-width: 768px) 100vw, 40vw" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1080">
@@ -403,14 +403,14 @@ function updateOfferCatalog(html) {
       {
         "@type": "Offer",
         "name": "Halbtagsreportage",
-        "description": "8 Stunden Begleitung, min. 400 bearbeitete Bilder, Galerie & Download, Anreise inklusive",
+        "description": "8 Stunden Begleitung, min. 400 bearbeitete Bilder, Galerie & Download, Anreise in Hessen und Niedersachsen inklusive",
         "price": "1790",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "name": "Ganztagsreportage",
-        "description": "10 Stunden Begleitung, min. 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, Anreise inklusive",
+        "description": "10 Stunden Begleitung, min. 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, Anreise in Hessen und Niedersachsen inklusive",
         "price": "2490",
         "priceCurrency": "EUR"
       }

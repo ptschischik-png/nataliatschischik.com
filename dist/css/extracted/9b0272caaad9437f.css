@@ -132,7 +132,7 @@
   min-height: clamp(64rem, 118vh, 78rem);
 }
 .portfolio {
-  background: var(--cream-light);
+  background: var(--cream);
 }
 .hero-image img,
 .hero-image:hover img {
