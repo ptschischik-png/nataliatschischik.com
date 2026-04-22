@@ -1,0 +1,585 @@
+{% set kap1_row1 = ['1-02','1-03'] %}
+{% set kap1_row2 = ['1-04','1-05','1-06'] %}
+{% set kap1_row3 = ['1-07','1-08','1-09'] %}
+{% set kap1_last = '1-10' %}
+
+{% set kap2_row1 = ['2-02','2-03','2-04'] %}
+{% set kap2_bento1 = ['2-05','2-06'] %}
+{% set kap2_row2 = ['2-07','2-08','2-09'] %}
+{% set kap2_row3 = ['2-10','2-11','2-12'] %}
+{% set kap2_row4 = ['2-13','2-14','2-15'] %}
+{% set kap2_bento2 = ['2-16','2-17'] %}
+{% set kap2_row5 = ['2-18','2-19','2-20'] %}
+{% set kap2_row6 = ['2-21','2-22','2-23'] %}
+{% set kap2_row7 = ['2-24','2-25','2-26'] %}
+{% set kap2_last = '2-27' %}
+
+{% set kap3_row1 = ['3-02','3-03','3-04'] %}
+{% set kap3_row2 = ['3-05','3-06','3-07'] %}
+{% set kap3_row3 = ['3-08','3-09','3-10'] %}
+{% set kap3_last = '3-11' %}
+
+{% set kap4_row1 = ['4-02','4-03','4-04'] %}
+{% set kap4_row2 = ['4-05','4-06','4-07'] %}
+{% set kap4_last = '4-08' %}
+
+{% set kap5_bento = ['5-01','5-02'] %}
+{% set kap5_row1 = ['5-04','5-05','5-06'] %}
+{% set kap5_row2 = ['5-07','5-08','5-09'] %}
+{% set kap5_last = '5-10' %}
+
+{% set kap6_row1 = ['6-02','6-03','6-04'] %}
+{% set kap6_row2 = ['6-05','6-06','6-07'] %}
+{% set kap6_bento = ['6-08','6-09'] %}
+
+{% include "partials/nav.njk" %}
+
+<aside class="chapter-sidebar" id="chapterSidebar">
+  <a href="#kap1"><div class="chapter-dot" data-chapter="kap1"></div><span class="chapter-sidebar-label">Ankunft</span></a>
+  <a href="#kap2"><div class="chapter-dot" data-chapter="kap2"></div><span class="chapter-sidebar-label">Freie Trauung</span></a>
+  <a href="#kap3"><div class="chapter-dot" data-chapter="kap3"></div><span class="chapter-sidebar-label">Sektempfang</span></a>
+  <a href="#kap4"><div class="chapter-dot" data-chapter="kap4"></div><span class="chapter-sidebar-label">Gästefotos</span></a>
+  <a href="#kap5"><div class="chapter-dot" data-chapter="kap5"></div><span class="chapter-sidebar-label">Brautpaar</span></a>
+  <a href="#kap6"><div class="chapter-dot" data-chapter="kap6"></div><span class="chapter-sidebar-label">Location &amp; Brauch</span></a>
+</aside>
+
+<style>
+.reportage-ee .photo-frame {
+  overflow: hidden;
+}
+
+.reportage-ee .photo-frame img,
+.reportage-ee .img-cover {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block;
+  transform: none !important;
+  transition: none !important;
+}
+
+.reportage-ee .hero-shell {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.reportage-ee .hero-shell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-width: none;
+  max-height: none;
+}
+
+.reportage-ee .hero-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 2;
+  text-align: center;
+}
+
+.reportage-ee .hero-copy-inner {
+  max-width: min(92vw, 860px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1.25rem, 2.8vw, 2.25rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.reportage-ee .hero-kicker,
+.reportage-ee .hero-meta,
+.reportage-ee .hero-title,
+.reportage-ee .hero-subtitle {
+  text-shadow: 0 2px 18px rgba(0,0,0,0.48);
+}
+
+.reportage-ee .hero-kicker {
+  font-size: clamp(0.72rem, 0.8vw, 0.9rem);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(250,248,244,0.86);
+}
+
+.reportage-ee .hero-title {
+  font-size: clamp(4.5rem, 8vw, 7.25rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.reportage-ee .hero-subtitle {
+  max-width: 24ch;
+  font-size: clamp(1.4rem, 2vw, 2.15rem);
+  line-height: 1.28;
+  color: rgba(255,255,255,0.96);
+  margin: 0;
+}
+
+.reportage-ee .hero-divider {
+  width: 4.5rem;
+  height: 1px;
+  background: rgba(255,255,255,0.52);
+}
+
+.reportage-ee .hero-meta {
+  width: 100%;
+  max-width: 46rem;
+  font-size: clamp(0.72rem, 0.8vw, 0.9rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(250,248,244,0.76);
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.reportage-ee .section-copy p + p {
+  margin-top: 1rem;
+}
+
+.reportage-ee .single-photo {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .reportage-ee .hero-copy {
+    padding: 1.25rem;
+  }
+}
+</style>
+
+<main class="reportage-ee" style="padding-top:4.5rem;">
+  <div class="px-6 md:px-12 py-4 breadcrumb">
+    <a href="/">Home</a>
+    <span>/</span>
+    <a href="../portfolio">Portfolio</a>
+    <span>/</span>
+    E &amp; E @ Herkulesterrassen Kassel
+  </div>
+
+  <section class="relative w-full h-screen overflow-hidden" style="background:linear-gradient(180deg, #5d6a56 0%, #384238 55%, #22231f 100%);">
+    <div class="hero-shell">
+      <picture>
+        <source media="(max-width: 768px)" srcset="img/ee-herkulesterrassen/slider-400w.webp 400w, img/ee-herkulesterrassen/slider-800w.webp 800w, img/ee-herkulesterrassen/slider.webp 1080w" sizes="100vw">
+        <img src="img/ee-herkulesterrassen/hero.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" loading="eager" fetchpriority="high" width="1980" height="1322" srcset="img/ee-herkulesterrassen/hero-400w.webp 400w, img/ee-herkulesterrassen/hero-800w.webp 800w, img/ee-herkulesterrassen/hero.webp 1980w" sizes="100vw">
+      </picture>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35"></div>
+    <div class="hero-copy">
+      <div class="hero-copy-inner">
+        <p class="hero-kicker" style="font-family:var(--font-body);">Hochzeitsreportage</p>
+        <h1 class="hero-title text-white font-light" style="font-family:var(--font-display);">E &amp; E<span class="sr-only"> — Herkulesterrassen Hochzeit Kassel</span></h1>
+        <div class="hero-divider"></div>
+        <p class="hero-subtitle italic font-light" style="font-family:var(--font-display);">Eine freie Trauung voller Ruhe, Nähe und Sommerlicht über Kassel</p>
+        <p class="hero-meta" style="font-family:var(--font-body);">Herkulesterrassen · Kassel · Freie Trauung · Brautpaar-Shooting</p>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 px-6 max-w-3xl mx-auto text-center fade-up">
+    <p class="text-2xl md:text-3xl italic leading-relaxed mb-8" style="font-family:var(--font-display);color:var(--brown-900);">
+      Zwischen Terrassen, Bäumen und weitem Blick entstand ein Hochzeitstag, der sich nicht groß gemacht hat, um groß zu wirken.
+    </p>
+    <div class="divider-dots"><span></span><span></span><span></span></div>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-8 pb-16 text-center fade-up section-copy">
+    <p style="color:var(--brown-500);font-size:1.05rem;line-height:1.8;max-width:760px;margin:0 auto;">
+      Eine <strong style="color:var(--brown-900);">Herkulesterrassen Hochzeit in Kassel</strong> fühlt sich anders an als viele andere Feiern in Nordhessen. Die Lage oberhalb der Stadt, die Nähe zum <strong style="color:var(--brown-900);">Bergpark Wilhelmshöhe</strong> und die historische Atmosphäre rund um den Herkules geben dem Tag Weite, ohne ihn unnahbar wirken zu lassen. Genau diese Mischung macht die Location so stark für emotionale Reportagen.
+    </p>
+    <p style="color:var(--brown-500);font-size:1.05rem;line-height:1.8;max-width:760px;margin:1rem auto 0;">
+      E &amp; E haben ihren Tag in sechs Kapiteln gefeiert: <strong style="color:var(--brown-900);">Ankunft</strong>, <strong style="color:var(--brown-900);">freie Trauung</strong>, <strong style="color:var(--brown-900);">Sektempfang</strong>, <strong style="color:var(--brown-900);">Gästefotos</strong>, <strong style="color:var(--brown-900);">Brautpaar-Shooting</strong> sowie <strong style="color:var(--brown-900);">Location &amp; Brauch</strong>. Für das Storytelling ist das ideal, weil der Ort nicht nur schön aussieht, sondern die ganze Reportage trägt. Für SEO heißt das ganz bewusst: eine emotional erzählte und zugleich klar verankerte Seite rund um das Suchthema <strong style="color:var(--brown-900);">Herkulesterrassen Hochzeit Kassel</strong>.
+    </p>
+  </section>
+
+  <section id="kap1" class="pb-24 md:pb-32 px-6" style="background:var(--cream);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-16 fade-up">
+        <div class="md:col-span-5">
+          <span class="chapter-label block mb-4">Kapitel Eins</span>
+          <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Ankunft zwischen Grün und Vorfreude</h2>
+          <p class="text-lg max-w-md leading-relaxed" style="color:var(--brown-600);">
+            Noch bevor die Zeremonie beginnt, erzählt der Ort schon seine eigene Geschichte. Die ersten Gäste kommen an, suchen ihre Plätze, begrüßen sich und schauen in die Bäume hinein, als würde die Feier dort schon in der Luft liegen. Gerade bei einer <strong style="color:var(--brown-900);">Hochzeit in den Herkulesterrassen Kassel</strong> ist dieses ruhige Ankommen ein echter Teil der Atmosphäre.
+          </p>
+        </div>
+        <div class="md:col-span-7 photo-frame">
+          <img src="img/ee-herkulesterrassen/1-01.webp" alt="Zeremoniebereich für die Hochzeit von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="eager" width="1600" height="1067">
+        </div>
+      </div>
+
+      <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
+        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap1_row1[0] }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 1" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap1_row1[1] }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 2" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap1_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 2 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap1_row3 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 5 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="fade-up single-photo">
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap1_last }}.webp" alt="Ankunftsmoment vor der freien Trauung von E und E in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kap2" class="py-24 md:py-32 px-6" style="background:var(--cream-light);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16 fade-up">
+        <div class="md:col-span-7 photo-frame">
+          <img src="img/ee-herkulesterrassen/2-01.webp" alt="Freie Trauung von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+        </div>
+        <div class="md:col-span-5 sticky-text">
+          <span class="chapter-label block mb-4">Kapitel Zwei</span>
+          <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Freie Trauung unter Bäumen</h2>
+          <p class="text-lg leading-relaxed" style="color:var(--brown-600);">
+            Die freie Trauung war der emotionale Mittelpunkt dieses Tages. Offen, aber nicht verloren. Feierlich, ohne starr zu wirken. Genau darin liegt für viele Paare der Reiz einer <strong style="color:var(--brown-900);">Herkulesterrassen Hochzeit in Kassel</strong>: Die Landschaft gibt Raum, und trotzdem bleibt alles nah genug, um jede Regung zu fühlen.
+          </p>
+        </div>
+      </div>
+
+      <div class="my-12 fade-up">
+        <div class="quote-block text-center" style="background:transparent;padding:2rem 0;">
+          <p style="font-size:var(--text-2xl);color:var(--brown-700);max-width:none;">„Zwischen den Bäumen wurde aus Vorfreude Gewissheit.“</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row1 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
+        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap2_bento1[0] }}.webp" alt="Freie Trauung von E und E in Kassel — emotionaler Augenblick" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap2_bento1[1] }}.webp" alt="Detail während der freien Trauung bei den Herkulesterrassen" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row3 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 7 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row4 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 10 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
+        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap2_bento2[0] }}.webp" alt="Zeremonie unter freiem Himmel bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap2_bento2[1] }}.webp" alt="Emotionale Details der freien Trauung von E und E" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row5 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 13 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row6 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 16 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap2_row7 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 19 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="fade-up single-photo">
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap2_last }}.webp" alt="Finaler Augenblick der freien Trauung von E und E bei den Herkulesterrassen" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kap3" class="py-24 md:py-32 px-6" style="background:var(--cream);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-16 fade-up">
+        <div class="md:col-span-5">
+          <span class="chapter-label block mb-4">Kapitel Drei</span>
+          <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Sektempfang mit gelöster Leichtigkeit</h2>
+          <p class="text-lg leading-relaxed" style="color:var(--brown-600);">
+            Nach dem Ja kippt die Stimmung ganz sanft in den freien Teil des Tages. Gläser heben sich, Umarmungen werden länger, und aus Spannung wird Wärme. Diese Übergänge erzählen in einer Reportage oft am meisten über die Menschen, die dabei waren.
+          </p>
+        </div>
+        <div class="md:col-span-7 photo-frame">
+          <img src="img/ee-herkulesterrassen/3-01.webp" alt="Sektempfang nach der Trauung von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap3_row1 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap3_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap3_row3 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 7 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="fade-up single-photo">
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap3_last }}.webp" alt="Sektempfang von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kap4" class="py-24 md:py-32 px-6 dark-section">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16 fade-up">
+        <span class="chapter-label block mb-4">Kapitel Vier</span>
+        <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Gästefotos, die natürlich bleiben</h2>
+        <p class="text-lg leading-relaxed mx-auto" style="color:var(--brown-300);max-width:560px;">
+          Gruppenbilder müssen nicht wie ein Einschnitt wirken. Vor dem floralen Rahmen und im weichen Grün der Umgebung entstehen hier Bilder, die klar aussehen und trotzdem leicht bleiben.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        <div class="photo-frame md:col-span-3"><img src="img/ee-herkulesterrassen/4-01.webp" alt="Gruppenfoto von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap4_row1 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Gästefotos bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap4_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Gästefotos bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="fade-up single-photo">
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap4_last }}.webp" alt="Gäste von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kap5" class="py-24 md:py-32 px-6" style="background:var(--cream-light);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16 fade-up">
+        <div class="md:col-span-7 photo-frame">
+          <img src="img/ee-herkulesterrassen/5-03.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+        </div>
+        <div class="md:col-span-5 sticky-text">
+          <span class="chapter-label block mb-4">Kapitel Fünf</span>
+          <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Brautpaar-Shooting mit Wald, Stein und Ruhe</h2>
+          <p class="text-lg leading-relaxed" style="color:var(--brown-600);">
+            Für ein gutes Brautpaar-Shooting braucht es hier keinen großen Ortswechsel. Wege, Naturstein, Schatten, offene Flächen und die Nähe zum Park geben genug Varianz, ohne den Tag zu unterbrechen. Für E &amp; E war genau das perfekt: intime Bilder, die leicht bleiben und trotzdem charaktervoll wirken.
+          </p>
+        </div>
+      </div>
+
+      <div class="my-12 fade-up">
+        <div class="quote-block text-center" style="background:transparent;padding:2rem 0;">
+          <p style="font-size:var(--text-2xl);color:var(--brown-700);max-width:none;">„Es brauchte keinen großen Auftritt, nur die zwei und diesen Ort.“</p>
+        </div>
+      </div>
+
+      <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
+        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap5_bento[0] }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 1" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap5_bento[1] }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 2" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap5_row1 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 2 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap5_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 5 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="fade-up single-photo">
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap5_last }}.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel im Abendlicht" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kap6" class="py-24 md:py-32 px-6" style="background:var(--cream);">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-16 fade-up">
+        <div class="md:col-span-5">
+          <span class="chapter-label block mb-4">Kapitel Sechs</span>
+          <h2 class="text-4xl md:text-5xl xl:text-6xl mb-8" style="font-family:var(--font-display);">Location, Details und Brauch am Abend</h2>
+          <p class="text-lg leading-relaxed" style="color:var(--brown-600);">
+            Wenn der Tag in die Abendstunden kippt, wird die Reportage oft noch einmal dichter. Tischbilder, Kerzen, florale Details und kleine Rituale halten fest, wie sich die Feier angefühlt hat. Gerade diese Mischung aus Architektur, Dekor und persönlichen Gesten macht die <strong style="color:var(--brown-900);">Herkulesterrassen Hochzeit Kassel</strong> fotografisch so rund.
+          </p>
+        </div>
+        <div class="md:col-span-7 photo-frame">
+          <img src="img/ee-herkulesterrassen/6-01.webp" alt="Festtafel und Dekoration bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap6_row1 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Location und Brauch bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
+        {% for file in kap6_row2 %}
+        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Location und Brauch bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        {% endfor %}
+      </div>
+
+      <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
+        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap6_bento[0] }}.webp" alt="Abendliche Details bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap6_bento[1] }}.webp" alt="Hochzeitsbrauch und Stimmungsbild bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 px-6 border-t" style="background:var(--cream-dark);border-color:rgba(0,0,0,0.05);">
+    <div class="max-w-3xl mx-auto text-center fade-up">
+      <h2 class="text-4xl md:text-6xl mb-6" style="font-family:var(--font-display);color:var(--brown-900);">Plant ihr eure Hochzeit in den Herkulesterrassen?</h2>
+      <p class="mb-10 max-w-xl mx-auto leading-relaxed" style="color:var(--brown-500);">
+        Wenn ihr euch eine Reportage wünscht, die eure Hochzeit in Kassel echt, ruhig und mit viel Gefühl erzählt, begleite ich euch gern.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contact" class="btn-primary">Termin prüfen</a>
+        <a href="../portfolio" class="btn-ghost">Mehr Reportagen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-6" style="background:var(--cream);">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="mb-10" style="font-family:var(--font-display);font-size:var(--text-xl);font-style:italic;color:var(--brown-700);">Weitere Reportagen</p>
+      <div class="flex flex-wrap justify-center gap-8" style="font-size:var(--text-sm);">
+        <a href="hochzeit-bergpark-wilhelmshoehe" style="color:var(--brown-500);border-bottom:1px solid var(--brown-300);padding-bottom:2px;">T &amp; V @ Bergpark Wilhelmshöhe</a>
+        <a href="hochzeit-rathaus-kassel" style="color:var(--brown-500);border-bottom:1px solid var(--brown-300);padding-bottom:2px;">V &amp; M @ Rathaus Kassel</a>
+        <a href="../portfolio" style="color:var(--brown-500);border-bottom:1px solid var(--brown-300);padding-bottom:2px;">Alle Reportagen</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "partials/footer.njk" %}
+{% include "partials/whatsapp-sticky.njk" %}
+<style>
+.wa-sticky{position:fixed;bottom:1.25rem;right:1.25rem;z-index:90;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .3s,opacity .3s;opacity:0;transform:scale(.8);pointer-events:none}
+.wa-sticky.visible{opacity:1;transform:scale(1);pointer-events:auto}
+.wa-sticky:hover{transform:scale(1.08)}
+.wa-sticky svg{width:26px;height:26px;fill:#fff}
+</style>
+<script>
+window.addEventListener('scroll', function() {
+  var wa = document.getElementById('waSticky');
+  if (wa) wa.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+</script>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+function closeMobile() {
+  mobileNav.classList.remove('open');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-label', 'Menü öffnen');
+  document.body.style.overflow = '';
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+const chapterSections = document.querySelectorAll('section[id^="kap"]');
+const chapterDots = document.querySelectorAll('.chapter-dot');
+const chapterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      chapterDots.forEach(dot => dot.classList.toggle('active', dot.dataset.chapter === entry.target.id));
+    }
+  });
+}, { threshold: 0.35 });
+
+chapterSections.forEach(section => chapterObserver.observe(section));
+
+function hasClassInTree(element, className) {
+  let current = element;
+  while (current) {
+    if (current.classList && current.classList.contains(className)) {
+      return true;
+    }
+    current = current.parentElement;
+  }
+  return false;
+}
+
+document.querySelectorAll('.reportage-ee img[src^="img/ee-herkulesterrassen/"]').forEach((img) => {
+  if (img.hasAttribute('srcset')) return;
+
+  const src = img.getAttribute('src');
+  if (!src || !src.endsWith('.webp')) return;
+
+  const base = src.replace(/\.webp$/, '');
+  let sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw';
+
+  if (hasClassInTree(img, 'hero-shell')) {
+    sizes = '100vw';
+  } else if (hasClassInTree(img, 'single-photo')) {
+    sizes = '(max-width: 768px) 100vw, 82vw';
+  }
+
+  img.setAttribute('srcset', `${base}-400w.webp 400w, ${base}-800w.webp 800w, ${base}.webp 2000w`);
+  img.setAttribute('sizes', sizes);
+});
+</script>
