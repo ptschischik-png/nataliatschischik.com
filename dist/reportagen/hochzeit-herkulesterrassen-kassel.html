@@ -941,30 +941,12 @@ const chapterDots = document.querySelectorAll('.chapter-dot');
 function updateActiveChapter() {
   if (!chapterSections.length || !chapterDots.length) return;
 
-  const viewportMiddle = window.innerHeight * 0.5;
+  const triggerY = window.scrollY + (window.innerHeight * 0.38);
   let activeSectionId = chapterSections[0].id;
-  let closestDistance = Number.POSITIVE_INFINITY;
 
   chapterSections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    const sectionContainsMiddle = rect.top <= viewportMiddle && rect.bottom >= viewportMiddle;
-
-    if (sectionContainsMiddle) {
+    if (section.offsetTop <= triggerY) {
       activeSectionId = section.id;
-      closestDistance = -1;
-      return;
-    }
-
-    if (closestDistance !== -1) {
-      const distanceToMiddle = Math.min(
-        Math.abs(rect.top - viewportMiddle),
-        Math.abs(rect.bottom - viewportMiddle)
-      );
-
-      if (distanceToMiddle < closestDistance) {
-        closestDistance = distanceToMiddle;
-        activeSectionId = section.id;
-      }
     }
   });
 
@@ -975,6 +957,7 @@ function updateActiveChapter() {
 
 window.addEventListener('scroll', updateActiveChapter, { passive: true });
 window.addEventListener('resize', updateActiveChapter);
+window.addEventListener('load', updateActiveChapter);
 updateActiveChapter();
 
 function hasClassInTree(element, className) {
