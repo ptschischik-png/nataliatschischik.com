@@ -1,3 +1,7 @@
 node_modules/
 .DS_Store
 dist/.claude/worktrees/elated-liskov-58b3d1/
+.claude/launch.json
+dist/ueber-mich2.html
+src/ueber-mich2.11tydata.cjs
+src/ueber-mich2.html
