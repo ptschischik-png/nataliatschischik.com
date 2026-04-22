@@ -937,15 +937,45 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 const chapterSections = document.querySelectorAll('section[id^="kap"]');
 const chapterDots = document.querySelectorAll('.chapter-dot');
-const chapterObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      chapterDots.forEach(dot => dot.classList.toggle('active', dot.dataset.chapter === entry.target.id));
+
+function updateActiveChapter() {
+  if (!chapterSections.length || !chapterDots.length) return;
+
+  const viewportMiddle = window.innerHeight * 0.5;
+  let activeSectionId = chapterSections[0].id;
+  let closestDistance = Number.POSITIVE_INFINITY;
+
+  chapterSections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const sectionContainsMiddle = rect.top <= viewportMiddle && rect.bottom >= viewportMiddle;
+
+    if (sectionContainsMiddle) {
+      activeSectionId = section.id;
+      closestDistance = -1;
+      return;
+    }
+
+    if (closestDistance !== -1) {
+      const distanceToMiddle = Math.min(
+        Math.abs(rect.top - viewportMiddle),
+        Math.abs(rect.bottom - viewportMiddle)
+      );
+
+      if (distanceToMiddle < closestDistance) {
+        closestDistance = distanceToMiddle;
+        activeSectionId = section.id;
+      }
     }
   });
-}, { threshold: 0.35 });
 
-chapterSections.forEach(section => chapterObserver.observe(section));
+  chapterDots.forEach((dot) => {
+    dot.classList.toggle('active', dot.dataset.chapter === activeSectionId);
+  });
+}
+
+window.addEventListener('scroll', updateActiveChapter, { passive: true });
+window.addEventListener('resize', updateActiveChapter);
+updateActiveChapter();
 
 function hasClassInTree(element, className) {
   let current = element;
