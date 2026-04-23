@@ -22,15 +22,20 @@
       <p class="p2-hero-note">Unverbindliches Kennenlernen · Antwort innerhalb von 24 Stunden</p>
     </div>
     <div class="p2-hero-media">
-      <img
-        src="reportagen/img/ra-renthof/preise-party-800w.webp"
-        srcset="reportagen/img/ra-renthof/preise-party-400w.webp 400w, reportagen/img/ra-renthof/preise-party-800w.webp 800w"
-        sizes="(max-width: 900px) 100vw, 50vw"
-        alt="Brautpaar und Gäste auf der Tanzfläche"
-        width="2022"
-        height="1350"
-        fetchpriority="high"
-      >
+      <picture>
+        <source
+          media="(max-width: 900px)"
+          srcset="reportagen/img/ra-renthof/preise-party-400w.webp 400w, reportagen/img/ra-renthof/preise-party-800w.webp 800w"
+          sizes="100vw"
+        >
+        <img
+          src="reportagen/img/ra-renthof/preise-party.webp"
+          alt="Brautpaar und Gäste auf der Tanzfläche"
+          width="2022"
+          height="1350"
+          fetchpriority="high"
+        >
+      </picture>
       <div class="p2-hero-card">
         <strong>48h Preview</strong>
         <span>Erste Highlights kurz nach der Hochzeit, finale Galerie in 6–8 Wochen.</span>
