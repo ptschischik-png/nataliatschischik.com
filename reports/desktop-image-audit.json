@@ -1,0 +1,336 @@
+{
+  "generatedAt": "2026-04-23T19:55:10.050Z",
+  "profile": {
+    "device": "desktop",
+    "viewport": "1440x1000 @ DPR 1",
+    "baseUrl": "http://127.0.0.1:4183"
+  },
+  "summary": {
+    "pageCount": 46,
+    "failedPages": []
+  },
+  "results": [
+    {
+      "rel": "index.html",
+      "url": "http://127.0.0.1:4183/",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "404.html",
+      "url": "http://127.0.0.1:4183/404.html",
+      "imageRequestCount": 0,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "datenschutz.html",
+      "url": "http://127.0.0.1:4183/datenschutz.html",
+      "imageRequestCount": 0,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "faq.html",
+      "url": "http://127.0.0.1:4183/faq.html",
+      "imageRequestCount": 2,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-arolsen.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-bad-arolsen.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-hersfeld.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-bad-hersfeld.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-baunatal.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-baunatal.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-borken.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-borken.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-duderstadt.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-duderstadt.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-eschwege.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-eschwege.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-frankenberg.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-frankenberg.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-fritzlar.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-fritzlar.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-fulda.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-fulda.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-giessen.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-giessen.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-goettingen.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-goettingen.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-hildesheim.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-hildesheim.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-hofgeismar.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-hofgeismar.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-kirchheim.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-kirchheim.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-marburg.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-marburg.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-neustadt.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-neustadt.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-nordhessen.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-nordhessen.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-northeim.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-northeim.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-paderborn.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-paderborn.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-schwalmstadt.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-schwalmstadt.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "hochzeitsfotograf-warburg.html",
+      "url": "http://127.0.0.1:4183/hochzeitsfotograf-warburg.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "impressum.html",
+      "url": "http://127.0.0.1:4183/impressum.html",
+      "imageRequestCount": 0,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal.html",
+      "url": "http://127.0.0.1:4183/journal.html",
+      "imageRequestCount": 6,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/brautpaar-shooting-tipps.html",
+      "url": "http://127.0.0.1:4183/journal/brautpaar-shooting-tipps.html",
+      "imageRequestCount": 6,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/golden-hour.html",
+      "url": "http://127.0.0.1:4183/journal/golden-hour.html",
+      "imageRequestCount": 6,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/hochzeit-timeline-kassel.html",
+      "url": "http://127.0.0.1:4183/journal/hochzeit-timeline-kassel.html",
+      "imageRequestCount": 6,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/hochzeitsalbum.html",
+      "url": "http://127.0.0.1:4183/journal/hochzeitsalbum.html",
+      "imageRequestCount": 5,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/hochzeitslocations-kassel.html",
+      "url": "http://127.0.0.1:4183/journal/hochzeitslocations-kassel.html",
+      "imageRequestCount": 7,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "journal/orangerie-kassel.html",
+      "url": "http://127.0.0.1:4183/journal/orangerie-kassel.html",
+      "imageRequestCount": 1,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "portfolio.html",
+      "url": "http://127.0.0.1:4183/portfolio.html",
+      "imageRequestCount": 15,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "preise.html",
+      "url": "http://127.0.0.1:4183/preise.html",
+      "imageRequestCount": 4,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "imageRequestCount": 14,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-goettingen.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-goettingen.html",
+      "imageRequestCount": 35,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "imageRequestCount": 38,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-rathaus-kassel.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-rathaus-kassel.html",
+      "imageRequestCount": 22,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel-ra.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-renthof-kassel-ra.html",
+      "imageRequestCount": 46,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-renthof-kassel.html",
+      "imageRequestCount": 21,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "imageRequestCount": 16,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-bad-arolsen.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-schloss-bad-arolsen.html",
+      "imageRequestCount": 34,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-berlepsch.html",
+      "url": "http://127.0.0.1:4183/reportagen/hochzeit-schloss-berlepsch.html",
+      "imageRequestCount": 20,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "standorte.html",
+      "url": "http://127.0.0.1:4183/standorte.html",
+      "imageRequestCount": 0,
+      "responsiveImageRequests": [],
+      "failures": []
+    },
+    {
+      "rel": "ueber-mich.html",
+      "url": "http://127.0.0.1:4183/ueber-mich.html",
+      "imageRequestCount": 6,
+      "responsiveImageRequests": [],
+      "failures": []
+    }
+  ]
+}

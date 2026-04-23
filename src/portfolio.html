@@ -139,9 +139,7 @@
           fetchpriority="high"
           decoding="sync"
           {% else %}
-          data-src="{{ slide.image }}-800w.webp"
-          data-srcset="{{ slide.image }}-400w.webp 400w, {{ slide.image }}-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="{{ slide.image }}.webp"
           loading="lazy"
           decoding="async"
           {% endif %}
@@ -390,11 +388,7 @@
       source.removeAttribute('data-sizes');
     }
     img.src = img.dataset.src;
-    if (img.dataset.srcset) img.srcset = img.dataset.srcset;
-    if (img.dataset.sizes) img.sizes = img.dataset.sizes;
     img.removeAttribute('data-src');
-    img.removeAttribute('data-srcset');
-    img.removeAttribute('data-sizes');
   }
 
   const firstImage = slides[0]?.querySelector('.hslide-image');

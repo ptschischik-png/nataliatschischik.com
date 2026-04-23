@@ -881,15 +881,59 @@ reveals.forEach(el => observer.observe(el));
 </style>
 
 <script>
-// Fix anchor scroll after lazy images load
-if (window.location.hash) {
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var el = document.querySelector(window.location.hash);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
+// Keep same-page anchor jumps accurate after lazy layout and content-visibility.
+(function() {
+  function getHashTarget(hash) {
+    if (!hash || hash === '#') return null;
+    var id = hash.slice(1);
+    try { id = decodeURIComponent(id); } catch (e) {}
+    return document.getElementById(id);
+  }
+
+  function scrollHashIntoView(hash, behavior) {
+    var el = getHashTarget(hash);
+    if (!el) return;
+
+    [0, 120, 360, 900].forEach(function(delay, index) {
+      setTimeout(function() {
+        el.scrollIntoView({
+          behavior: index === 0 ? behavior : 'auto',
+          block: 'start'
+        });
+      }, delay);
+    });
+  }
+
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest ? event.target.closest('a[href^="#"]') : null;
+    if (!link) return;
+
+    var hash = link.getAttribute('href');
+    if (!getHashTarget(hash)) return;
+
+    event.preventDefault();
+    if (history.pushState) {
+      history.pushState(null, '', hash);
+    } else {
+      window.location.hash = hash;
+    }
+    scrollHashIntoView(hash, 'smooth');
   });
-}
+
+  window.addEventListener('hashchange', function() {
+    scrollHashIntoView(window.location.hash, 'smooth');
+  });
+
+  window.addEventListener('popstate', function() {
+    scrollHashIntoView(window.location.hash, 'auto');
+  });
+
+  if (window.location.hash) {
+    window.addEventListener('load', function() {
+      scrollHashIntoView(window.location.hash, 'auto');
+    }, { once: true });
+  }
+})();
 </script>
 
 <!-- ═══ Structured Data (moved from head for LCP) ═══ -->

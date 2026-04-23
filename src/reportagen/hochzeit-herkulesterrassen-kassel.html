@@ -568,33 +568,4 @@ window.addEventListener('resize', updateActiveChapter);
 window.addEventListener('load', updateActiveChapter);
 updateActiveChapter();
 
-function hasClassInTree(element, className) {
-  let current = element;
-  while (current) {
-    if (current.classList && current.classList.contains(className)) {
-      return true;
-    }
-    current = current.parentElement;
-  }
-  return false;
-}
-
-document.querySelectorAll('.reportage-ee img[src^="img/ee-herkulesterrassen/"]').forEach((img) => {
-  if (img.hasAttribute('srcset')) return;
-
-  const src = img.getAttribute('src');
-  if (!src || !src.endsWith('.webp')) return;
-
-  const base = src.replace(/(?:-800w)?\.webp$/, '');
-  let sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw';
-
-  if (hasClassInTree(img, 'hero-shell')) {
-    sizes = '100vw';
-  } else if (hasClassInTree(img, 'single-photo')) {
-    sizes = '(max-width: 768px) 100vw, 82vw';
-  }
-
-  img.setAttribute('srcset', `${base}-400w.webp 400w, ${base}-800w.webp 800w`);
-  img.setAttribute('sizes', sizes);
-});
 </script>

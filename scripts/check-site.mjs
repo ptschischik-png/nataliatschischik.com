@@ -116,6 +116,19 @@ function checkDesktopFullResolutionImages(rel, html) {
     if (/\ssrcset=["'][^"']+["']/i.test(tag)) {
       failures.push(`${rel} has img srcset; use <source media="(max-width: ...)"> plus full-resolution img src for desktop.`);
     }
+
+    const dataSrc = capture(tag, /\sdata-src=["']([^"']+)["']/i);
+    if (dataSrc && /-(?:400w|800w)\.webp(?:$|[?#])/i.test(dataSrc)) {
+      failures.push(`${rel} has lazy desktop image data-src limited to responsive candidate: ${dataSrc}`);
+    }
+
+    if (/\sdata-srcset=["'][^"']+-(?:400w|800w)\.webp[^"']*["']/i.test(tag)) {
+      failures.push(`${rel} has img data-srcset; lazy desktop images must keep the full-resolution data-src.`);
+    }
+  }
+
+  if (/\bimg\.setAttribute\(\s*["']srcset["']/i.test(html) || /\bimg\.srcset\s*=/i.test(html)) {
+    failures.push(`${rel} dynamically sets img srcset; desktop must keep the full-resolution img src.`);
   }
 
   for (const tag of html.match(/<source\b[^>]*>/gi) || []) {

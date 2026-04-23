@@ -220,7 +220,7 @@
         </button>
         <div class="faq-answer" role="region">
           <div class="faq-answer-inner">
-            Eure Hochzeit ist einzigartig — euer Paket sollte es auch sein. Von der Standesamtbegleitung ab 500&nbsp;€ bis zur ganztägigen Reportage ab 1.400&nbsp;€ gestalte ich alles so, dass es zu eurem Tag passt. Schreibt mir — in einem lockeren Gespräch klären wir den Rest.
+            Von der Standesamtbegleitung ab 590&nbsp;€ über 8&nbsp;Stunden ab 1.790&nbsp;€ bis zur ganztägigen Reportage ab 2.490&nbsp;€ findet ihr auf meiner Preis-Seite einen klaren Überblick. Wenn ihr unsicher seid, welche Begleitung zu eurem Tag passt, berate ich euch gern ehrlich dazu.
           </div>
         </div>
       </div>
@@ -617,15 +617,59 @@ reveals.forEach(el => observer.observe(el));
 </style>
 
 <script>
-// Fix anchor scroll after lazy images load
-if (window.location.hash) {
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      var el = document.querySelector(window.location.hash);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
+// Keep same-page anchor jumps accurate after lazy layout and content-visibility.
+(function() {
+  function getHashTarget(hash) {
+    if (!hash || hash === '#') return null;
+    var id = hash.slice(1);
+    try { id = decodeURIComponent(id); } catch (e) {}
+    return document.getElementById(id);
+  }
+
+  function scrollHashIntoView(hash, behavior) {
+    var el = getHashTarget(hash);
+    if (!el) return;
+
+    [0, 120, 360, 900].forEach(function(delay, index) {
+      setTimeout(function() {
+        el.scrollIntoView({
+          behavior: index === 0 ? behavior : 'auto',
+          block: 'start'
+        });
+      }, delay);
+    });
+  }
+
+  document.addEventListener('click', function(event) {
+    var link = event.target.closest ? event.target.closest('a[href^="#"]') : null;
+    if (!link) return;
+
+    var hash = link.getAttribute('href');
+    if (!getHashTarget(hash)) return;
+
+    event.preventDefault();
+    if (history.pushState) {
+      history.pushState(null, '', hash);
+    } else {
+      window.location.hash = hash;
+    }
+    scrollHashIntoView(hash, 'smooth');
   });
-}
+
+  window.addEventListener('hashchange', function() {
+    scrollHashIntoView(window.location.hash, 'smooth');
+  });
+
+  window.addEventListener('popstate', function() {
+    scrollHashIntoView(window.location.hash, 'auto');
+  });
+
+  if (window.location.hash) {
+    window.addEventListener('load', function() {
+      scrollHashIntoView(window.location.hash, 'auto');
+    }, { once: true });
+  }
+})();
 </script>
 
 <!-- ═══ Structured Data (moved from head for LCP) ═══ -->
@@ -710,14 +754,21 @@ if (window.location.hash) {
         "@type": "Offer",
         "name": "Standesamt-Reportage",
         "description": "Ab 3 Stunden Begleitung, min. 150 bearbeitete Bilder, An- & Abreise bis 50 km inklusive",
-        "price": "500",
+        "price": "590",
+        "priceCurrency": "EUR"
+      },
+      {
+        "@type": "Offer",
+        "name": "Kompakte Reportage",
+        "description": "8 Stunden Begleitung, min. 400 bearbeitete Bilder, Galerie & Download, Anreise in Hessen und Niedersachsen inklusive",
+        "price": "1790",
         "priceCurrency": "EUR"
       },
       {
         "@type": "Offer",
         "name": "Ganztags-Reportage",
-        "description": "8–12 Stunden Begleitung, min. 400–600 bearbeitete Bilder, An- & Abreise bis 200 km inklusive",
-        "price": "1400",
+        "description": "10 Stunden Begleitung, min. 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, Anreise in Hessen und Niedersachsen inklusive",
+        "price": "2490",
         "priceCurrency": "EUR"
       }
     ]
@@ -739,7 +790,7 @@ if (window.location.hash) {
       "name": "Was kostet eine Hochzeitsreportage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Eure Hochzeit ist einzigartig — euer Paket sollte es auch sein. Von der Standesamtbegleitung ab 500 € bis zur ganztägigen Reportage ab 1.400 € gestalte ich alles so, dass es zu eurem Tag passt. Schreibt mir — in einem lockeren Gespräch klären wir den Rest."
+        "text": "Von der Standesamtbegleitung ab 590 € über 8 Stunden ab 1.790 € bis zur ganztägigen Reportage ab 2.490 € findet ihr auf meiner Preis-Seite einen klaren Überblick. Wenn ihr unsicher seid, welche Begleitung zu eurem Tag passt, berate ich euch gern ehrlich dazu."
       }
     },
     {

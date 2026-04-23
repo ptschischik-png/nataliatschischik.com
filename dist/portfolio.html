@@ -462,9 +462,7 @@
           width="800"
           height="1065"
           
-          data-src="reportagen/img/sg-goettingen/main-card-800w.webp"
-          data-srcset="reportagen/img/sg-goettingen/main-card-400w.webp 400w, reportagen/img/sg-goettingen/main-card-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/sg-goettingen/main-card.webp"
           loading="lazy"
           decoding="async"
           
@@ -494,9 +492,7 @@
           width="800"
           height="534"
           
-          data-src="reportagen/img/renthof/5-03-800w.webp"
-          data-srcset="reportagen/img/renthof/5-03-400w.webp 400w, reportagen/img/renthof/5-03-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/renthof/5-03.webp"
           loading="lazy"
           decoding="async"
           
@@ -526,9 +522,7 @@
           width="800"
           height="1067"
           
-          data-src="reportagen/img/ee-herkulesterrassen/slider-800w.webp"
-          data-srcset="reportagen/img/ee-herkulesterrassen/slider-400w.webp 400w, reportagen/img/ee-herkulesterrassen/slider-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/ee-herkulesterrassen/slider.webp"
           loading="lazy"
           decoding="async"
           
@@ -558,9 +552,7 @@
           width="800"
           height="1199"
           
-          data-src="reportagen/img/berlepsch/slider-card-800w.webp"
-          data-srcset="reportagen/img/berlepsch/slider-card-400w.webp 400w, reportagen/img/berlepsch/slider-card-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/berlepsch/slider-card.webp"
           loading="lazy"
           decoding="async"
           
@@ -590,9 +582,7 @@
           width="800"
           height="635"
           
-          data-src="reportagen/img/sababurg/hero-kiss-800w.webp"
-          data-srcset="reportagen/img/sababurg/hero-kiss-400w.webp 400w, reportagen/img/sababurg/hero-kiss-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/sababurg/hero-kiss.webp"
           loading="lazy"
           decoding="async"
           
@@ -622,9 +612,7 @@
           width="800"
           height="533"
           
-          data-src="reportagen/img/vm-kassel/hero-800w.webp"
-          data-srcset="reportagen/img/vm-kassel/hero-400w.webp 400w, reportagen/img/vm-kassel/hero-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/vm-kassel/hero.webp"
           loading="lazy"
           decoding="async"
           
@@ -654,9 +642,7 @@
           width="800"
           height="1200"
           
-          data-src="reportagen/img/bergpark/2-21-800w.webp"
-          data-srcset="reportagen/img/bergpark/2-21-400w.webp 400w, reportagen/img/bergpark/2-21-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="reportagen/img/bergpark/2-21.webp"
           loading="lazy"
           decoding="async"
           
@@ -686,9 +672,7 @@
           width="800"
           height="1260"
           
-          data-src="img/ext/vs-schloss-portrait-800w.webp"
-          data-srcset="img/ext/vs-schloss-portrait-400w.webp 400w, img/ext/vs-schloss-portrait-800w.webp 800w"
-          data-sizes="100vw"
+          data-src="img/ext/vs-schloss-portrait.webp"
           loading="lazy"
           decoding="async"
           
@@ -743,11 +727,7 @@
       source.removeAttribute('data-sizes');
     }
     img.src = img.dataset.src;
-    if (img.dataset.srcset) img.srcset = img.dataset.srcset;
-    if (img.dataset.sizes) img.sizes = img.dataset.sizes;
     img.removeAttribute('data-src');
-    img.removeAttribute('data-srcset');
-    img.removeAttribute('data-sizes');
   }
 
   const firstImage = slides[0]?.querySelector('.hslide-image');
