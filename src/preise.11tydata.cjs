@@ -546,6 +546,13 @@ p { max-width: 60ch; }
   line-height: 0.95;
 }
 
+.p2-price-asterisk {
+  margin-left: 0.08em;
+  font-size: 0.52em;
+  vertical-align: top;
+  line-height: 1;
+}
+
 .p2-plan-copy {
   margin-bottom: 1.25rem;
   color: var(--brown-600);
@@ -592,6 +599,14 @@ p { max-width: 60ch; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brown-400);
+}
+
+.p2-pricing-footnote {
+  margin-top: 1rem;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--brown-500);
+  max-width: 72ch;
 }
 
 .p2-custom {

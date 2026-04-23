@@ -778,6 +778,13 @@ p { max-width: 60ch; }
   line-height: 0.95;
 }
 
+.p2-price-asterisk {
+  margin-left: 0.08em;
+  font-size: 0.52em;
+  vertical-align: top;
+  line-height: 1;
+}
+
 .p2-plan-copy {
   margin-bottom: 1.25rem;
   color: var(--brown-600);
@@ -824,6 +831,14 @@ p { max-width: 60ch; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--brown-400);
+}
+
+.p2-pricing-footnote {
+  margin-top: 1rem;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--brown-500);
+  max-width: 72ch;
 }
 
 .p2-custom {
@@ -1401,7 +1416,7 @@ p { max-width: 60ch; }
           <h3>Standesamtbegleitung</h3>
           <div class="p2-price">
             <span class="p2-price-from">ab</span>
-            <span class="p2-price-amount">590&nbsp;€</span>
+            <span class="p2-price-amount">590&nbsp;€<span class="p2-price-asterisk" aria-hidden="true">*</span></span>
           </div>
           <p class="p2-plan-copy">
             Wenn ihr euer Ja-Wort, die Gratulationen danach und ein entspanntes Paarshooting festhalten möchtet, ist das meist der passende Rahmen.
@@ -1412,7 +1427,6 @@ p { max-width: 60ch; }
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Private Online-Galerie in hoher Auflösung</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span><strong>50 km</strong> Anfahrt inklusive</span></li>
           </ul>
-          <p class="p2-plan-note">Dieses Angebot berücksichtigt bereits einen Preisvorteil, wenn ich ausgewählte Bilder eurer Hochzeit auf meiner Website und in Social Media zeigen darf: 100&nbsp;€ bei Standesamtbegleitungen.</p>
           <a href="/#contact" class="p2-plan-cta p2-plan-cta-ghost">Standesamt anfragen</a>
         </article>
 
@@ -1422,7 +1436,7 @@ p { max-width: 60ch; }
           <h3>Ganztagsreportage</h3>
           <div class="p2-price">
             <span class="p2-price-from">ab</span>
-            <span class="p2-price-amount">2.490&nbsp;€</span>
+            <span class="p2-price-amount">2.490&nbsp;€<span class="p2-price-asterisk" aria-hidden="true">*</span></span>
           </div>
           <p class="p2-plan-copy">
             Wenn ihr euren Hochzeitstag nicht in einzelne Programmpunkte aufteilen, sondern als vollständige Geschichte festhalten möchtet, ist das meist die passende Begleitung.
@@ -1436,7 +1450,6 @@ p { max-width: 60ch; }
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Fine-Art-Album <strong>20×20</strong> inklusive</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Anreise in <strong>Hessen &amp; Niedersachsen</strong> inkl.</span></li>
           </ul>
-          <p class="p2-plan-note">Dieses Angebot berücksichtigt bereits einen Preisvorteil, wenn ich ausgewählte Bilder eurer Hochzeit auf meiner Website und in Social Media zeigen darf: 250&nbsp;€ bei Hochzeitsreportagen ab 6 Stunden.</p>
           <a href="/#contact" class="p2-plan-cta p2-plan-cta-primary">Ganztagsreportage anfragen</a>
         </article>
 
@@ -1445,7 +1458,7 @@ p { max-width: 60ch; }
           <h3>Halbtagsreportage</h3>
           <div class="p2-price">
             <span class="p2-price-from">ab</span>
-            <span class="p2-price-amount">1.790&nbsp;€</span>
+            <span class="p2-price-amount">1.790&nbsp;€<span class="p2-price-asterisk" aria-hidden="true">*</span></span>
           </div>
           <p class="p2-plan-copy">
             Wenn ihr Trauung, Sektempfang, Paarzeit und die ersten Stunden der Feier vollständig begleitet haben möchtet, ohne den ganzen Tag zu buchen.
@@ -1456,10 +1469,13 @@ p { max-width: 60ch; }
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Galerie &amp; Download für euch und eure Gäste</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Anreise in <strong>Hessen &amp; Niedersachsen</strong> inkl.</span></li>
           </ul>
-          <p class="p2-plan-note">Dieses Angebot berücksichtigt bereits einen Preisvorteil, wenn ich ausgewählte Bilder eurer Hochzeit auf meiner Website und in Social Media zeigen darf: 250&nbsp;€ bei Hochzeitsreportagen ab 6 Stunden.</p>
           <a href="/#contact" class="p2-plan-cta p2-plan-cta-ghost">Halbtagsreportage anfragen</a>
         </article>
       </div>
+
+      <p class="p2-pricing-footnote reveal">
+        * Die genannten Paketpreise berücksichtigen bereits einen Preisvorteil bei Freigabe ausgewählter Bilder für Website und Social Media: 100&nbsp;€ bei Standesamtbegleitungen, 250&nbsp;€ bei Hochzeitsreportagen ab 6 Stunden.
+      </p>
 
       <div class="p2-custom reveal">
         <div>
