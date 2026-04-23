@@ -1,5 +1,5 @@
 const headExtra = `<!-- LCP-critical preloads -->
-<link rel="preload" as="image" type="image/webp" href="/reportagen/img/ra-renthof/hero-800w.webp" imagesrcset="/reportagen/img/ra-renthof/hero-400w.webp 400w, /reportagen/img/ra-renthof/hero-800w.webp 800w, /reportagen/img/ra-renthof/hero.webp 1200w" imagesizes="(max-width: 900px) 100vw, 48vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="/reportagen/img/bad-arolsen/preise-hero-800w.webp" imagesrcset="/reportagen/img/bad-arolsen/preise-hero-400w.webp 400w, /reportagen/img/bad-arolsen/preise-hero-800w.webp 800w, /reportagen/img/bad-arolsen/preise-hero.webp 1200w" imagesizes="(max-width: 900px) 100vw, 48vw" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -284,7 +284,7 @@ p { max-width: 60ch; }
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
   min-height: calc(100vh - 4.5rem);
-  background: linear-gradient(180deg, rgba(253,252,250,0.92) 0%, rgba(245,240,232,0.98) 100%);
+  background: var(--cream);
 }
 
 .p2-hero-copy {
@@ -363,6 +363,7 @@ p { max-width: 60ch; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 28%;
 }
 
 .p2-hero-card {
@@ -815,8 +816,11 @@ p { max-width: 60ch; }
 
 @media (max-width: 640px) {
   .p2-hero-copy { padding: 2rem 1.5rem 2.5rem; }
-  .p2-hero-media { min-height: 300px; }
+  .p2-hero-media {
+    min-height: 340px;
+  }
   .p2-hero-card { left: 1rem; right: 1rem; max-width: none; }
+  .p2-hero-media img { object-position: center 22%; }
   .p2-hero h1 {
     max-width: 8.5ch;
     margin-bottom: 1rem;
@@ -927,7 +931,7 @@ p { max-width: 60ch; }
       "name": "Wie sichern wir unser Datum?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Euer Termin ist fest reserviert, sobald der Vertrag unterschrieben und die Anzahlung von etwa 20 % eingegangen ist. So habt ihr früh Planungssicherheit."
+        "text": "Euer Termin ist fest reserviert, sobald der Vertrag unterschrieben und die Anzahlung von 50 % eingegangen ist. So habt ihr früh Planungssicherheit."
       }
     },
     {

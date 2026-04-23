@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-paderborn.html",
   "seo": {
-    "title": "Hochzeitsfotograf Paderborn — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Paderborn – Natalia Tschischik",
     "description": "Hochzeitsfotograf Paderborn mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Paderquellen, Schloß Neuhaus und Ostwestfalen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-paderborn",
     "ogTitle": "Hochzeitsfotograf Paderborn — Natalia Tschischik",

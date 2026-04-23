@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-goettingen.html",
   "seo": {
-    "title": "Hochzeitsfotograf Göttingen — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Göttingen – Natalia Tschischik",
     "description": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Gänseliesel und Südniedersachsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-goettingen",
     "ogTitle": "Hochzeitsfotograf Göttingen — Natalia Tschischik",

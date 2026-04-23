@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-baunatal.html",
   "seo": {
-    "title": "Hochzeitsfotograf Baunatal — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Baunatal – Natalia Tschischik",
     "description": "Hochzeitsfotograf Baunatal mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Rathaus, Fuldaauen und Kassel.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-baunatal",
     "ogTitle": "Hochzeitsfotograf Baunatal — Natalia Tschischik",

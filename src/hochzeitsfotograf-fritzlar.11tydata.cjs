@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-fritzlar.html",
   "seo": {
-    "title": "Hochzeitsfotograf Fritzlar — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Fritzlar – Natalia Tschischik",
     "description": "Hochzeitsfotograf Fritzlar mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Dom, Hochzeitshaus und Schwalm-Eder.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-fritzlar",
     "ogTitle": "Hochzeitsfotograf Fritzlar — Natalia Tschischik",

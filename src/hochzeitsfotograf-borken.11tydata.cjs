@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-borken.html",
   "seo": {
-    "title": "Hochzeitsfotograf Borken — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Borken – Natalia Tschischik",
     "description": "Hochzeitsfotograf Borken mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Borken und im Schwalm-Eder-Kreis.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-borken",
     "ogTitle": "Hochzeitsfotograf Borken — Natalia Tschischik",

@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-giessen.html",
   "seo": {
-    "title": "Hochzeitsfotograf Gießen — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Gießen – Natalia Tschischik",
     "description": "Hochzeitsfotograf Gießen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Villa Leutert, Lahn und der Lahnregion.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-giessen",
     "ogTitle": "Hochzeitsfotograf Gießen — Natalia Tschischik",

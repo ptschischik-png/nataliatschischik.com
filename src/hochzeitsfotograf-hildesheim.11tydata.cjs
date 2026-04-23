@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-hildesheim.html",
   "seo": {
-    "title": "Hochzeitsfotograf Hildesheim — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Hildesheim – Natalia Tschischik",
     "description": "Hochzeitsfotograf Hildesheim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Hildesheim und Südniedersachsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-hildesheim",
     "ogTitle": "Hochzeitsfotograf Hildesheim — Natalia Tschischik",

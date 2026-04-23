@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-duderstadt.html",
   "seo": {
-    "title": "Hochzeitsfotograf Duderstadt — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Duderstadt – Natalia Tschischik",
     "description": "Hochzeitsfotograf Duderstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Westerturm und Eichsfeld.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-duderstadt",
     "ogTitle": "Hochzeitsfotograf Duderstadt — Natalia Tschischik",

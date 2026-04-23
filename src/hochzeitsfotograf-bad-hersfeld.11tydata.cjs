@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-bad-hersfeld.html",
   "seo": {
-    "title": "Hochzeitsfotograf Bad Hersfeld — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Bad Hersfeld – Natalia Tschischik",
     "description": "Hochzeitsfotograf Bad Hersfeld mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Bad Hersfeld und Waldhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-bad-hersfeld",
     "ogTitle": "Hochzeitsfotograf Bad Hersfeld — Natalia Tschischik",

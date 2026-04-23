@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-nordhessen.html",
   "seo": {
-    "title": "Hochzeitsfotograf Nordhessen — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Nordhessen – Natalia Tschischik",
     "description": "Hochzeitsfotograf Nordhessen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen zwischen Kassel, Reinhardswald und Waldeck.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-nordhessen",
     "ogTitle": "Hochzeitsfotograf Nordhessen — Natalia Tschischik",

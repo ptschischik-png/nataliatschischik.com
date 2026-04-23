@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-marburg.html",
   "seo": {
-    "title": "Hochzeitsfotograf Marburg — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Marburg – Natalia Tschischik",
     "description": "Hochzeitsfotograf Marburg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Oberstadt, Schlossblick und Mittelhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-marburg",
     "ogTitle": "Hochzeitsfotograf Marburg — Natalia Tschischik",

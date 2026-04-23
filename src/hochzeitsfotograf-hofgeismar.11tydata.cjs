@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-hofgeismar.html",
   "seo": {
-    "title": "Hochzeitsfotograf Hofgeismar — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Hofgeismar – Natalia Tschischik",
     "description": "Hochzeitsfotograf Hofgeismar mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Hofgeismar und am Reinhardswald.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-hofgeismar",
     "ogTitle": "Hochzeitsfotograf Hofgeismar — Natalia Tschischik",

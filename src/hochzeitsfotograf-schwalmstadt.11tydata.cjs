@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-schwalmstadt.html",
   "seo": {
-    "title": "Hochzeitsfotograf Schwalmstadt — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Schwalmstadt – Natalia Tschischik",
     "description": "Hochzeitsfotograf Schwalmstadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Schwalmstadt und im Rotkäppchenland.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-schwalmstadt",
     "ogTitle": "Hochzeitsfotograf Schwalmstadt — Natalia Tschischik",

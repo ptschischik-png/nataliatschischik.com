@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-warburg.html",
   "seo": {
-    "title": "Hochzeitsfotograf Warburg — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Warburg – Natalia Tschischik",
     "description": "Hochzeitsfotograf Warburg mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Warburg und der Warburger Börde.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-warburg",
     "ogTitle": "Hochzeitsfotograf Warburg — Natalia Tschischik",

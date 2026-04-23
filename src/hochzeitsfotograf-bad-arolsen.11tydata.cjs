@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-bad-arolsen.html",
   "seo": {
-    "title": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Bad Arolsen – Natalia Tschischik",
     "description": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und Arolsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-bad-arolsen",
     "ogTitle": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",

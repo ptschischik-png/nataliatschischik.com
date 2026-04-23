@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-northeim.html",
   "seo": {
-    "title": "Hochzeitsfotograf Northeim — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Northeim – Natalia Tschischik",
     "description": "Hochzeitsfotograf Northeim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen in Northeim und Südniedersachsen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-northeim",
     "ogTitle": "Hochzeitsfotograf Northeim — Natalia Tschischik",

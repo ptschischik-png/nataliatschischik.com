@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-neustadt.html",
   "seo": {
-    "title": "Hochzeitsfotograf Neustadt — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Neustadt – Natalia Tschischik",
     "description": "Hochzeitsfotograf Neustadt mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Junker-Hansen-Turm und Altstadt.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-neustadt",
     "ogTitle": "Hochzeitsfotograf Neustadt — Natalia Tschischik",

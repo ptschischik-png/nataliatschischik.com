@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-eschwege.html",
   "seo": {
-    "title": "Hochzeitsfotograf Eschwege — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Eschwege – Natalia Tschischik",
     "description": "Hochzeitsfotograf Eschwege mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Leuchtberg und Werratal.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-eschwege",
     "ogTitle": "Hochzeitsfotograf Eschwege — Natalia Tschischik",

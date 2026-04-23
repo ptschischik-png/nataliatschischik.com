@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-kirchheim.html",
   "seo": {
-    "title": "Hochzeitsfotograf Kirchheim — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Kirchheim – Natalia Tschischik",
     "description": "Hochzeitsfotograf Kirchheim mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Ruhige Reportagen in Kirchheim, am Seepark und in Waldhessen.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-kirchheim",
     "ogTitle": "Hochzeitsfotograf Kirchheim — Natalia Tschischik",

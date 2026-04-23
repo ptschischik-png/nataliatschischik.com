@@ -2,7 +2,7 @@ module.exports = {
   "layout": "layouts/page.njk",
   "permalink": "hochzeitsfotograf-fulda.html",
   "seo": {
-    "title": "Hochzeitsfotograf Fulda — Natalia Tschischik",
+    "title": "Hochzeitsfotograf Fulda – Natalia Tschischik",
     "description": "Hochzeitsfotograf Fulda mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen zwischen Stadtschloss, Schlossgarten und Rhönregion.",
     "canonical": "https://nataliatschischik.com/hochzeitsfotograf-fulda",
     "ogTitle": "Hochzeitsfotograf Fulda — Natalia Tschischik",
