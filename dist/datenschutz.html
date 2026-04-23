@@ -103,6 +103,52 @@
   <a href="/standorte" onclick="closeMobile()">Standorte</a>
   <a href="/#contact" class="mobile-cta" onclick="closeMobile()">Anfrage senden</a>
 </div>
+<script>
+(() => {
+  let lockedScrollY = 0;
+
+  window.setMobileMenuLock = function setMobileMenuLock(isLocked) {
+    const docEl = document.documentElement;
+    const body = document.body;
+
+    if (!docEl || !body) return;
+
+    if (isLocked) {
+      if (body.dataset.menuLocked === 'true') return;
+
+      lockedScrollY = window.scrollY || window.pageYOffset || 0;
+      body.dataset.menuLocked = 'true';
+      body.style.position = 'fixed';
+      body.style.top = `-${lockedScrollY}px`;
+      body.style.left = '0';
+      body.style.right = '0';
+      body.style.width = '100%';
+      body.style.overflow = 'hidden';
+      docEl.style.overflow = 'hidden';
+      return;
+    }
+
+    if (body.dataset.menuLocked !== 'true') return;
+
+    const restoreScrollY = Math.abs(parseInt(body.style.top || '0', 10)) || lockedScrollY;
+    delete body.dataset.menuLocked;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.left = '';
+    body.style.right = '';
+    body.style.width = '';
+    body.style.overflow = '';
+    docEl.style.overflow = '';
+    window.scrollTo(0, restoreScrollY);
+  };
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      window.setMobileMenuLock(false);
+    }
+  });
+})();
+</script>
 
 
 <main style="padding-top: 4.5rem;">
@@ -353,13 +399,13 @@ hamburger.addEventListener('click', () => {
   const isOpen = mobileNav.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  setMobileMenuLock(isOpen);
 });
 function closeMobile() {
   mobileNav.classList.remove('open');
   hamburger.classList.remove('active');
   hamburger.setAttribute('aria-label', 'Menü öffnen');
-  document.body.style.overflow = '';
+  setMobileMenuLock(false);
 }
 </script>
 

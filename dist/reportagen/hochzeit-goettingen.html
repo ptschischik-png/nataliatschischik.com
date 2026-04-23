@@ -387,6 +387,52 @@
   <a href="/standorte" onclick="closeMobile()">Standorte</a>
   <a href="/#contact" class="mobile-cta" onclick="closeMobile()">Anfrage senden</a>
 </div>
+<script>
+(() => {
+  let lockedScrollY = 0;
+
+  window.setMobileMenuLock = function setMobileMenuLock(isLocked) {
+    const docEl = document.documentElement;
+    const body = document.body;
+
+    if (!docEl || !body) return;
+
+    if (isLocked) {
+      if (body.dataset.menuLocked === 'true') return;
+
+      lockedScrollY = window.scrollY || window.pageYOffset || 0;
+      body.dataset.menuLocked = 'true';
+      body.style.position = 'fixed';
+      body.style.top = `-${lockedScrollY}px`;
+      body.style.left = '0';
+      body.style.right = '0';
+      body.style.width = '100%';
+      body.style.overflow = 'hidden';
+      docEl.style.overflow = 'hidden';
+      return;
+    }
+
+    if (body.dataset.menuLocked !== 'true') return;
+
+    const restoreScrollY = Math.abs(parseInt(body.style.top || '0', 10)) || lockedScrollY;
+    delete body.dataset.menuLocked;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.left = '';
+    body.style.right = '';
+    body.style.width = '';
+    body.style.overflow = '';
+    docEl.style.overflow = '';
+    window.scrollTo(0, restoreScrollY);
+  };
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      window.setMobileMenuLock(false);
+    }
+  });
+})();
+</script>
 
 <aside class="chapter-sidebar" id="chapterSidebar">
   <a href="#kap1"><div class="chapter-dot" data-chapter="kap1"></div><span class="chapter-sidebar-label">Vorbereitung</span></a>
@@ -966,9 +1012,9 @@ hamburger.addEventListener('click',()=>{
   const isOpen=mobileNav.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-label',isOpen?'Menü schließen':'Menü öffnen');
-  document.body.style.overflow=isOpen?'hidden':'';
+  setMobileMenuLock(isOpen);
 });
-function closeMobile(){mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-label','Menü öffnen');document.body.style.overflow='';}
+function closeMobile(){mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-label','Menü öffnen');setMobileMenuLock(false);}
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 const chapters=document.querySelectorAll('[id^="kap"]');

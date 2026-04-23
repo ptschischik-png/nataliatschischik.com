@@ -110,13 +110,13 @@ hamburger.addEventListener('click', () => {
   const isOpen = mobileNav.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  setMobileMenuLock(isOpen);
 });
 function closeMobile() {
   mobileNav.classList.remove('open');
   hamburger.classList.remove('active');
   hamburger.setAttribute('aria-label', 'Menü öffnen');
-  document.body.style.overflow = '';
+  setMobileMenuLock(false);
 }
 </script>
 

@@ -538,9 +538,9 @@ hamburger.addEventListener('click',()=>{
   const isOpen=mobileNav.classList.toggle('open');
   hamburger.classList.toggle('active');
   hamburger.setAttribute('aria-label',isOpen?'Menü schließen':'Menü öffnen');
-  document.body.style.overflow=isOpen?'hidden':'';
+  setMobileMenuLock(isOpen);
 });
-function closeMobile(){mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-label','Menü öffnen');document.body.style.overflow='';}
+function closeMobile(){mobileNav.classList.remove('open');hamburger.classList.remove('active');hamburger.setAttribute('aria-label','Menü öffnen');setMobileMenuLock(false);}
 const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 const chapters=document.querySelectorAll('[id^="kap"]');
