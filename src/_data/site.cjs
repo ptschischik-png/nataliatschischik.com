@@ -124,7 +124,7 @@ site.schema = {
         description: 'Hochzeitsfotografie in Kassel, Baunatal, Nordhessen, Göttingen, Duderstadt, Eschwege, Marburg, Gießen, Fulda, Neustadt, Fritzlar, Frankenberg, Schwalmstadt, Kirchheim, Paderborn, Hildesheim, Northeim, Warburg, Bad Hersfeld, Bad Arolsen, Borken, Hofgeismar und darüber hinaus mit dokumentarischen, zeitlosen Reportagen.',
         url: site.url,
         image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
-        logo: site.url + '/favicon.svg',
+        logo: site.url + '/apple-touch-icon.png',
         telephone: site.contact.phoneDisplay,
         email: site.contact.email,
         hasMap: site.contact.mapsUrl,
