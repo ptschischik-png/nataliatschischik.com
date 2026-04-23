@@ -101,6 +101,37 @@ async function checkHtmlFiles(files) {
     if (/<style(?:\s|>)/i.test(body)) {
       failures.push(`${rel} still contains body inline styles instead of bundled CSS files.`);
     }
+
+    checkDesktopFullResolutionImages(rel, html);
+  }
+}
+
+function checkDesktopFullResolutionImages(rel, html) {
+  for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
+    const src = capture(tag, /\ssrc=["']([^"']+)["']/i);
+    if (src && /-(?:400w|800w)\.webp(?:$|[?#])/i.test(src)) {
+      failures.push(`${rel} has desktop image src limited to responsive candidate: ${src}`);
+    }
+
+    if (/\ssrcset=["'][^"']+["']/i.test(tag)) {
+      failures.push(`${rel} has img srcset; use <source media="(max-width: ...)"> plus full-resolution img src for desktop.`);
+    }
+  }
+
+  for (const tag of html.match(/<source\b[^>]*>/gi) || []) {
+    if (!/-(?:400w|800w)\.webp/i.test(tag)) continue;
+    const media = capture(tag, /\smedia=["']([^"']+)["']/i);
+    if (!/\bmax-width\b/i.test(media) || /\bmin-width\b/i.test(media)) {
+      failures.push(`${rel} has responsive image source without mobile-only media: ${tag.slice(0, 160)}`);
+    }
+  }
+
+  for (const tag of html.match(/<link\b[^>]*rel=["']preload["'][^>]*as=["']image["'][^>]*>|<link\b[^>]*as=["']image["'][^>]*rel=["']preload["'][^>]*>/gi) || []) {
+    if (!/-(?:400w|800w)\.webp/i.test(tag)) continue;
+    const media = capture(tag, /\smedia=["']([^"']+)["']/i);
+    if (!/\bmax-width\b/i.test(media) || /\bmin-width\b/i.test(media)) {
+      failures.push(`${rel} has responsive image preload without mobile-only media: ${tag.slice(0, 160)}`);
+    }
   }
 }
 
