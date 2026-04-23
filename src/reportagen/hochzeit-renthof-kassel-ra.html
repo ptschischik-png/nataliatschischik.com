@@ -1,3 +1,10 @@
+{% macro renthofImage(file, alt, width='', height='') %}
+<picture>
+  <source media="(max-width: 768px)" srcset="img/ra-renthof/{{ file }}-400w.webp 400w, img/ra-renthof/{{ file }}-800w.webp 800w" sizes="100vw">
+  <img src="img/ra-renthof/{{ file }}.webp" alt="{{ alt }}" class="img-cover" loading="lazy" decoding="async"{% if width %} width="{{ width }}"{% endif %}{% if height %} height="{{ height }}"{% endif %}>
+</picture>
+{% endmacro %}
+
 <!-- ═══ NAVIGATION ═══ -->
 {% include "partials/nav.njk" %}
 
@@ -71,11 +78,14 @@
 <!-- ═══ HERO ═══ -->
 <section class="relative w-full h-screen overflow-hidden">
   <div style="position:absolute;inset:0;overflow:hidden;">
-    <img src="img/ra-renthof/hero.webp"
-         alt="Brautpaar R &amp; A im Renthof Kassel — Hochzeitsreportage von Natalia Tschischik, Hochzeitsfotografin Kassel"
-         style="width:100%;height:100%;object-fit:cover;display:block;"
-         loading="eager" decoding="async"
-         width="2022" height="1350">
+    <picture>
+      <source media="(max-width: 768px)" srcset="img/ra-renthof/hero-400w.webp 400w, img/ra-renthof/hero-800w.webp 800w" sizes="100vw">
+      <img src="img/ra-renthof/hero.webp"
+           alt="Brautpaar R &amp; A im Renthof Kassel — Hochzeitsreportage von Natalia Tschischik, Hochzeitsfotografin Kassel"
+           style="width:100%;height:100%;object-fit:cover;display:block;"
+           loading="eager" decoding="async" fetchpriority="high"
+           width="2022" height="1350">
+    </picture>
   </div>
   <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-black/10"></div>
   <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
@@ -123,10 +133,7 @@
       </div>
       <div class="md:col-span-7">
         <div class="photo-frame">
-          <img src="img/ra-renthof/1_Br_utigamvorbereitung_00026_Hochzeit.webp"
-             alt="Bräutigam Getting Ready zuhause — Hochzeit im Renthof Kassel, Bräutigamvorbereitung Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="1959" height="1350">
+          {{ renthofImage("1_Br_utigamvorbereitung_00026_Hochzeit", "Bräutigam Getting Ready zuhause — Hochzeit im Renthof Kassel, Bräutigamvorbereitung Kassel", "1959", "1350") }}
         </div>
       </div>
     </div>
@@ -134,38 +141,23 @@
     <!-- Bento Grid: 8+4 -->
     <div class="bento-grid fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00032_Hochzeit.webp"
-             alt="Bräutigam bindet Krawatte — Hochzeitsdetail Getting Ready Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00032_Hochzeit", "Bräutigam bindet Krawatte — Hochzeitsdetail Getting Ready Kassel", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00037_Hochzeit.webp"
-             alt="Hochzeitsdetails Bräutigam — Manschettenknöpfe und Anzug"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00037_Hochzeit", "Hochzeitsdetails Bräutigam — Manschettenknöpfe und Anzug", "2022", "1350") }}
       </div>
     </div>
 
     <!-- 3-column -->
     <div class="grid grid-cols-3 gap-3 my-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00041_Hochzeit.webp"
-             alt="Bräutigam Getting Ready — stiller Morgen vor der Hochzeit im Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="1914" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00041_Hochzeit", "Bräutigam Getting Ready — stiller Morgen vor der Hochzeit im Renthof", "1914", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00043_Hochzeit.webp"
-             alt="Bräutigam im Anzug — letzter Blick in den Spiegel, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00043_Hochzeit", "Bräutigam im Anzug — letzter Blick in den Spiegel, Hochzeit Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00046_Hochzeit.webp"
-             alt="Hochzeitsvorbereitung Bräutigam — Geduld und Vorfreude, Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00046_Hochzeit", "Hochzeitsvorbereitung Bräutigam — Geduld und Vorfreude, Kassel", "2025", "1350") }}
       </div>
     </div>
 
@@ -175,58 +167,37 @@
         <p>In dieser ruhigen Stunde liegt eine eigene Art von Schönheit — die verhaltene Erwartung kurz vor dem größten Ja des Lebens.</p>
       </div>
             <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00057_Hochzeit.webp"
-             alt="Bräutigam bereit — emotionaler Moment vor der Trauung, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2006" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00057_Hochzeit", "Bräutigam bereit — emotionaler Moment vor der Trauung, Hochzeitsfotografin Kassel", "2006", "1350") }}
       </div>
     </div>
 
     <!-- 2-col -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00064_Hochzeit.webp"
-             alt="Bräutigam Getting Ready — ruhiger Moment zu Hause, Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="1911" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00064_Hochzeit", "Bräutigam Getting Ready — ruhiger Moment zu Hause, Hochzeit Renthof Kassel", "1911", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00065_Hochzeit.webp"
-             alt="Vorfreude vor der Trauung — Bräutigam Portrait, Hochzeitsfotografie Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2037" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00065_Hochzeit", "Vorfreude vor der Trauung — Bräutigam Portrait, Hochzeitsfotografie Kassel", "2037", "1350") }}
       </div>
     </div>
 
     <!-- Asymmetric 4+8 -->
     <div class="bento-grid fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00068_Hochzeit.webp"
-             alt="Detail Hochzeitsanzug — Bräutigam, Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2051" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00068_Hochzeit", "Detail Hochzeitsanzug — Bräutigam, Hochzeitsreportage Kassel", "2051", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00073_Hochzeit.webp"
-             alt="Bräutigam im Spiegel — letzter Moment vor dem Aufbruch zur Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00073_Hochzeit", "Bräutigam im Spiegel — letzter Moment vor dem Aufbruch zur Trauung", "2022", "1350") }}
       </div>
     </div>
 
     <!-- 2-col finale -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00075_Hochzeit.webp"
-             alt="Bräutigam bereit — Aufbruch zur standesamtlichen Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00075_Hochzeit", "Bräutigam bereit — Aufbruch zur standesamtlichen Trauung in Fritzlar", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/1_Br_utigamvorbereitung_00081_Hochzeit.webp"
-             alt="Bräutigam Portrait — Hochzeit im Renthof Kassel, Hochzeitsfotograf Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("1_Br_utigamvorbereitung_00081_Hochzeit", "Bräutigam Portrait — Hochzeit im Renthof Kassel, Hochzeitsfotograf Natalia Tschischik", "2025", "1350") }}
       </div>
     </div>
 
@@ -249,154 +220,88 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00096_Hochzeit.webp"
-             alt="Brautvorbereitung zuhause — erste Augenblicke des Morgens, Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00096_Hochzeit", "Brautvorbereitung zuhause — erste Augenblicke des Morgens, Hochzeit Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00100_Hochzeit.webp"
-             alt="Brautkleid wird angelegt — Getting Ready Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00100_Hochzeit", "Brautkleid wird angelegt — Getting Ready Hochzeit Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00124_Hochzeit.webp"
-             alt="Haarstyling der Braut — Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00124_Hochzeit", "Haarstyling der Braut — Hochzeitsreportage Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00144_Hochzeit.webp"
-             alt="Make-up der Braut — stille Konzentration, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00144_Hochzeit", "Make-up der Braut — stille Konzentration, Hochzeit Kassel", "2029", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00158_Hochzeit.webp"
-             alt="Brautdetails — Schmuck und Accessoires, Hochzeit im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00158_Hochzeit", "Brautdetails — Schmuck und Accessoires, Hochzeit im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00200_Hochzeit.webp"
-             alt="Braut im Spiegel — emotionaler Moment der Vorbereitung, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00200_Hochzeit", "Braut im Spiegel — emotionaler Moment der Vorbereitung, Hochzeitsfotografin Kassel", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up items-stretch">
       <div class="quote-block flex flex-col justify-center">
         <p>In diesem Zimmer lag etwas in der Luft — diese Art von Aufregung, die sich nicht in Worte fassen lässt. Nur spüren.</p>
       </div>
             <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00229_Hochzeit.webp"
-             alt="Lachen unter Freundinnen — Brautvorbereitung Hochzeit Kassel Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00229_Hochzeit", "Lachen unter Freundinnen — Brautvorbereitung Hochzeit Kassel Renthof", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00237_Hochzeit.webp"
-             alt="Braut beim Ankleiden — Hochzeitskleid wird befestigt, Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00237_Hochzeit", "Braut beim Ankleiden — Hochzeitskleid wird befestigt, Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00258_Hochzeit.webp"
-             alt="Schleier der Braut — zartes Detail, Hochzeit Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00258_Hochzeit", "Schleier der Braut — zartes Detail, Hochzeit Renthof", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00277_Hochzeit.webp"
-             alt="Braut lacht mit Trauzeugin — Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00277_Hochzeit", "Braut lacht mit Trauzeugin — Hochzeitsreportage Kassel", "2029", "1350") }}
       </div>
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00285_Hochzeit.webp"
-             alt="Braut fertig angekleidet — letzter Moment vor der Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00285_Hochzeit", "Braut fertig angekleidet — letzter Moment vor der Trauung", "2029", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00295_Hochzeit.webp"
-             alt="Detail Brautstrauß — Hochzeit Kassel Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00295_Hochzeit", "Detail Brautstrauß — Hochzeit Kassel Renthof", "2029", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00306_Hochzeit.webp"
-             alt="Emotionaler Moment mit der Mutter — Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00306_Hochzeit", "Emotionaler Moment mit der Mutter — Hochzeitsreportage Kassel", "2029", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00324_Hochzeit.webp"
-             alt="Braut und Trauzeugin — innige Umarmung vor dem Aufbruch, Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00324_Hochzeit", "Braut und Trauzeugin — innige Umarmung vor dem Aufbruch, Renthof Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00328_Hochzeit.webp"
-             alt="Braut bereit — Aufbruch zur standesamtlichen Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00328_Hochzeit", "Braut bereit — Aufbruch zur standesamtlichen Trauung in Fritzlar", "2025", "1350") }}
       </div></div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00329_Hochzeit.webp"
-             alt="Hochzeitsschuhe der Braut — zartes Detail, Hochzeitsfotografie Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00329_Hochzeit", "Hochzeitsschuhe der Braut — zartes Detail, Hochzeitsfotografie Kassel", "2029", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00333_Hochzeit.webp"
-             alt="Braut mit Brautstrauß — Vorfreude auf die Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00333_Hochzeit", "Braut mit Brautstrauß — Vorfreude auf die Trauung in Fritzlar", "2029", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00341_Hochzeit.webp"
-             alt="Braut Portrait — Hochzeitsfotografin Kassel, Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00341_Hochzeit", "Braut Portrait — Hochzeitsfotografin Kassel, Natalia Tschischik", "2029", "1350") }}
       </div>
     </div>
     <div class="bento-grid fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00353_Hochzeit.webp"
-             alt="Eheringe auf dem Tisch — Hochzeitsdetails, Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2029" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00353_Hochzeit", "Eheringe auf dem Tisch — Hochzeitsdetails, Kassel", "2029", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00355_Hochzeit.webp"
-             alt="Braut in voller Pracht — kurz vor dem Einzug, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2013" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00355_Hochzeit", "Braut in voller Pracht — kurz vor dem Einzug, Hochzeit Kassel", "2013", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 12;">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00367_Hochzeit.webp"
-             alt="Braut und Begleitung — auf dem Weg zur Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00367_Hochzeit", "Braut und Begleitung — auf dem Weg zur Trauung in Fritzlar", "2022", "1350") }}
       </div>
     </div>
     <div class="mt-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/2_Brautvorbereitung_00375_Hochzeit.webp"
-             alt="Die Braut ist bereit — Aufbruch zur standesamtlichen Trauung in der Domstadt Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("2_Brautvorbereitung_00375_Hochzeit", "Die Braut ist bereit — Aufbruch zur standesamtlichen Trauung in der Domstadt Fritzlar", "2025", "1350") }}
       </div></div>
 
   </div>
@@ -417,134 +322,77 @@
         </p>
       </div>
       <div class="md:col-span-7">
-        <div class="photo-frame"><img src="img/ra-renthof/3_Standesamtliche_Trauung_00381_Hochzeit.webp"
-             alt="Standesamtliche Trauung Fritzlar — Brautpaar gibt das Ja-Wort in der mittelalterlichen Domstadt nahe Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350"></div>
+        <div class="photo-frame">{{ renthofImage("3_Standesamtliche_Trauung_00381_Hochzeit", "Standesamtliche Trauung Fritzlar — Brautpaar gibt das Ja-Wort in der mittelalterlichen Domstadt nahe Kassel", "2025", "1350") }}</div>
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00432_Hochzeit.webp"
-             alt="Einzug zur standesamtlichen Trauung in Fritzlar — Hochzeitsfotograf Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00432_Hochzeit", "Einzug zur standesamtlichen Trauung in Fritzlar — Hochzeitsfotograf Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00439_Hochzeit.webp"
-             alt="Brautpaar vor dem Standesbeamten in Fritzlar — standesamtliche Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00439_Hochzeit", "Brautpaar vor dem Standesbeamten in Fritzlar — standesamtliche Trauung", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00464_Hochzeit.webp"
-             alt="Gäste versammeln sich zur Trauung — Standesamt Fritzlar, Nordhessen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00464_Hochzeit", "Gäste versammeln sich zur Trauung — Standesamt Fritzlar, Nordhessen", "2025", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00467_Hochzeit.webp"
-             alt="Ringwechsel — feierlicher Moment der standesamtlichen Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00467_Hochzeit", "Ringwechsel — feierlicher Moment der standesamtlichen Trauung in Fritzlar", "2022", "1350") }}
       </div></div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
       <p>Das Ja-Wort in den alten Gemäuern der Domstadt — es klingt anders. Tiefer. Als würden die Jahrhunderte mithören.</p>
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 6;">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00468_Hochzeit.webp"
-             alt="Erster Kuss als Ehepaar — standesamtliche Trauung Fritzlar, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00468_Hochzeit", "Erster Kuss als Ehepaar — standesamtliche Trauung Fritzlar, Hochzeitsfotografin Kassel", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 6;">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00472_Hochzeit.webp"
-             alt="Emotionaler Kuss des Brautpaares — Trauung Fritzlar nahe Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00472_Hochzeit", "Emotionaler Kuss des Brautpaares — Trauung Fritzlar nahe Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00474_Hochzeit.webp"
-             alt="Hochzeitsgäste applaudieren — standesamtliche Trauung Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00474_Hochzeit", "Hochzeitsgäste applaudieren — standesamtliche Trauung Fritzlar", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00502_Hochzeit.webp"
-             alt="Brautpaar Portrait nach der Trauung — Standesamt Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00502_Hochzeit", "Brautpaar Portrait nach der Trauung — Standesamt Fritzlar", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00503_Hochzeit.webp"
-             alt="Detail Ringe — Hochzeitsdetails Fritzlar, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="901" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00503_Hochzeit", "Detail Ringe — Hochzeitsdetails Fritzlar, Hochzeitsfotografin Kassel", "901", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00509_Hochzeit.webp"
-             alt="Brautpaar verlässt das Standesamt Fritzlar — Hochzeitsreportage Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00509_Hochzeit", "Brautpaar verlässt das Standesamt Fritzlar — Hochzeitsreportage Natalia Tschischik", "2025", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00511_Hochzeit.webp"
-             alt="Brautpaar vor historischer Kulisse in Fritzlar — Hochzeitsfotografie Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00511_Hochzeit", "Brautpaar vor historischer Kulisse in Fritzlar — Hochzeitsfotografie Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00521_Hochzeit.webp"
-             alt="Glückliches Brautpaar nach der Trauung — Fritzlar, Nordhessen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00521_Hochzeit", "Glückliches Brautpaar nach der Trauung — Fritzlar, Nordhessen", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00528_Hochzeit.webp"
-             alt="Gratulationen nach der Trauung — Hochzeitsgäste Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00528_Hochzeit", "Gratulationen nach der Trauung — Hochzeitsgäste Fritzlar", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00529_Hochzeit.webp"
-             alt="Braut und Bräutigam — Ausmarsch nach der Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00529_Hochzeit", "Braut und Bräutigam — Ausmarsch nach der Trauung in Fritzlar", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00557_Hochzeit.webp"
-             alt="Feier auf dem Marktplatz Fritzlar — nach der standesamtlichen Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00557_Hochzeit", "Feier auf dem Marktplatz Fritzlar — nach der standesamtlichen Trauung", "2022", "1350") }}
       </div>
     </div>
     <div class="bento-grid fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00571_Hochzeit.webp"
-             alt="Brautpaar in der Altstadt Fritzlar — malerische Kulisse nach der Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00571_Hochzeit", "Brautpaar in der Altstadt Fritzlar — malerische Kulisse nach der Trauung", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00588_Hochzeit.webp"
-             alt="Details nach der Trauung — Blumenstrauß und Eheringe, Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00588_Hochzeit", "Details nach der Trauung — Blumenstrauß und Eheringe, Fritzlar", "2025", "1350") }}
       </div>
     </div>
     <div class="mt-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/3_Standesamtliche_Trauung_00624_Hochzeit.webp"
-             alt="Letzter Blick auf Fritzlar — Brautpaar verabschiedet sich, weiter zum Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("3_Standesamtliche_Trauung_00624_Hochzeit", "Letzter Blick auf Fritzlar — Brautpaar verabschiedet sich, weiter zum Renthof Kassel", "2022", "1350") }}
       </div></div>
 
   </div>
@@ -565,70 +413,40 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00625_Hochzeit.webp"
-             alt="Sektempfang nach der Trauung — Gratulationen und Umarmungen, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00625_Hochzeit", "Sektempfang nach der Trauung — Gratulationen und Umarmungen, Hochzeit Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00628_Hochzeit.webp"
-             alt="Hochzeitsgäste stoßen an — Sektempfang nach standesamtlicher Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00628_Hochzeit", "Hochzeitsgäste stoßen an — Sektempfang nach standesamtlicher Trauung in Fritzlar", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00630_Hochzeit.webp"
-             alt="Sektgläser klingen — Hochzeitsfeier nach der Trauung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00630_Hochzeit", "Sektgläser klingen — Hochzeitsfeier nach der Trauung", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00633_Hochzeit.webp"
-             alt="Brautpaar beim Sektempfang — Hochzeitsreportage Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("4_Sektempfang_00633_Hochzeit", "Brautpaar beim Sektempfang — Hochzeitsreportage Renthof Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00636_Hochzeit.webp"
-             alt="Gäste feiern beim Sektempfang — Hochzeit R &amp; A Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00636_Hochzeit", "Gäste feiern beim Sektempfang — Hochzeit R &amp; A Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00646_Hochzeit.webp"
-             alt="Stimmung beim Sektempfang — Hochzeitsfeier nach der Trauung in Fritzlar"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00646_Hochzeit", "Stimmung beim Sektempfang — Hochzeitsfeier nach der Trauung in Fritzlar", "2022", "1350") }}
       </div></div>
     <div class="bento-grid fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 6;">
-        <img src="img/ra-renthof/4_Sektempfang_00657_Hochzeit.webp"
-             alt="Brautpaar beim Sektempfang — glückliche Momente, Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00657_Hochzeit", "Brautpaar beim Sektempfang — glückliche Momente, Hochzeit Renthof Kassel", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 3;">
-        <img src="img/ra-renthof/4_Sektempfang_00660_Hochzeit.webp"
-             alt="Stille Zweisamkeit inmitten der Feier — Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00660_Hochzeit", "Stille Zweisamkeit inmitten der Feier — Hochzeit Kassel", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 3;">
-        <img src="img/ra-renthof/4_Sektempfang_00673_Hochzeit.webp"
-             alt="Gäste im Gespräch — Sektempfang Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("4_Sektempfang_00673_Hochzeit", "Gäste im Gespräch — Sektempfang Hochzeit Renthof Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/4_Sektempfang_00710_Hochzeit.webp"
-             alt="Letzter Augenblick des Sektempfangs — Aufbruch zur Blumeninsel Siebenbergen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("4_Sektempfang_00710_Hochzeit", "Letzter Augenblick des Sektempfangs — Aufbruch zur Blumeninsel Siebenbergen", "2022", "1350") }}
       </div>
     </div>
 
@@ -650,30 +468,18 @@
         </p>
       </div>
       <div class="md:col-span-7">
-        <div class="photo-frame"><img src="img/ra-renthof/5_Brautpaar-Shooting_00832_Hochzeit.webp"
-             alt="Brautpaar-Shooting auf der Blumeninsel Siebenbergen in der Karlsaue Kassel — Hochzeitsfotografie"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350"></div>
+        <div class="photo-frame">{{ renthofImage("5_Brautpaar-Shooting_00832_Hochzeit", "Brautpaar-Shooting auf der Blumeninsel Siebenbergen in der Karlsaue Kassel — Hochzeitsfotografie", "2022", "1350") }}</div>
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00836_Hochzeit.webp"
-             alt="Brautpaar am Teich in Siebenbergen — Hängeweiden und stilles Wasser, Karlsaue Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00836_Hochzeit", "Brautpaar am Teich in Siebenbergen — Hängeweiden und stilles Wasser, Karlsaue Kassel", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00848_Hochzeit.webp"
-             alt="Zärtlicher Moment — Brautpaar-Portrait Siebenbergen Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00848_Hochzeit", "Zärtlicher Moment — Brautpaar-Portrait Siebenbergen Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00859_Hochzeit.webp"
-             alt="Braut und Bräutigam unter Hängeweiden — romantisches Shooting Siebenbergen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00859_Hochzeit", "Braut und Bräutigam unter Hängeweiden — romantisches Shooting Siebenbergen", "2022", "1350") }}
       </div>
     </div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
@@ -681,57 +487,33 @@
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00875_Hochzeit.webp"
-             alt="Brautpaar im Blütenmeer — Siebenbergen Karlsaue Kassel, Hochzeitsfotos"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00875_Hochzeit", "Brautpaar im Blütenmeer — Siebenbergen Karlsaue Kassel, Hochzeitsfotos", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00903_Hochzeit.webp"
-             alt="Brautpaar küsst sich — goldenes Licht auf der Blumeninsel Siebenbergen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2136" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00903_Hochzeit", "Brautpaar küsst sich — goldenes Licht auf der Blumeninsel Siebenbergen", "2136", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00909_Hochzeit.webp"
-             alt="Portrait Braut in Siebenbergen — Hochzeitsfotografin Kassel Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="900" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00909_Hochzeit", "Portrait Braut in Siebenbergen — Hochzeitsfotografin Kassel Natalia Tschischik", "900", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00927_Hochzeit.webp"
-             alt="Brautpaar Hand in Hand — Brautpaar-Shooting Siebenbergen Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00927_Hochzeit", "Brautpaar Hand in Hand — Brautpaar-Shooting Siebenbergen Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00934_Hochzeit.webp"
-             alt="Romantisches Portrait — Nachmittagslicht Siebenbergen, Hochzeitsfoto Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00934_Hochzeit", "Romantisches Portrait — Nachmittagslicht Siebenbergen, Hochzeitsfoto Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 6;">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00943_Hochzeit.webp"
-             alt="Brautpaar mit Blick über die Karlsaue — Siebenbergen Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00943_Hochzeit", "Brautpaar mit Blick über die Karlsaue — Siebenbergen Kassel", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 6;">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00953_Hochzeit.webp"
-             alt="Brautpaar im Abendlicht — Siebenbergen, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00953_Hochzeit", "Brautpaar im Abendlicht — Siebenbergen, Hochzeitsfotografin Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/5_Brautpaar-Shooting_00962_Hochzeit.webp"
-             alt="Letztes Bild in Siebenbergen — Aufbruch zum Renthof Kassel für die Feier"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("5_Brautpaar-Shooting_00962_Hochzeit", "Letztes Bild in Siebenbergen — Aufbruch zum Renthof Kassel für die Feier", "2022", "1350") }}
       </div></div>
 
   </div>
@@ -751,57 +533,33 @@
       </p>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_00980_Hochzeit.webp"
-             alt="Ankunft im Renthof Kassel — historisches Kirchengewölbe als Hochzeitslocation"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_00980_Hochzeit", "Ankunft im Renthof Kassel — historisches Kirchengewölbe als Hochzeitslocation", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_00982_Hochzeit.webp"
-             alt="Hochzeitsgäste betreten den Renthof Kassel — Hochzeitsfeier in der historischen Location"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_00982_Hochzeit", "Hochzeitsgäste betreten den Renthof Kassel — Hochzeitsfeier in der historischen Location", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_00993_Hochzeit.webp"
-             alt="Eingang zum Renthof Kassel — Gäste strömen herein"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_00993_Hochzeit", "Eingang zum Renthof Kassel — Gäste strömen herein", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_01052_Hochzeit.webp"
-             alt="Ankunft Hochzeitsgäste im Renthof — Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_01052_Hochzeit", "Ankunft Hochzeitsgäste im Renthof — Hochzeitsreportage Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_01131_Hochzeit.webp"
-             alt="Gäste begrüßen das Brautpaar — Ankunft Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_01131_Hochzeit", "Gäste begrüßen das Brautpaar — Ankunft Renthof Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_01157_Hochzeit.webp"
-             alt="Stimmungsvolle Atmosphäre im Renthof — historische Hochzeitslocation Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_01157_Hochzeit", "Stimmungsvolle Atmosphäre im Renthof — historische Hochzeitslocation Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_01168_Hochzeit.webp"
-             alt="Brautpaar beim Einzug in den Renthof — Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_01168_Hochzeit", "Brautpaar beim Einzug in den Renthof — Hochzeitsreportage Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/6_Ankunft_der_G_ste_01243_Hochzeit.webp"
-             alt="Gäste und Brautpaar im Renthof Kassel — historisches Gewölbe als Kulisse"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("6_Ankunft_der_G_ste_01243_Hochzeit", "Gäste und Brautpaar im Renthof Kassel — historisches Gewölbe als Kulisse", "2025", "1350") }}
       </div>
     </div>
 
@@ -823,141 +581,81 @@
         </p>
       </div>
       <div class="md:col-span-7">
-        <div class="photo-frame"><img src="img/ra-renthof/7_Hochzeitsessen_01374_Hochzeit.webp"
-             alt="Hochzeitsessen im Renthof Kassel — festlich gedeckte Tafel im historischen Kirchengewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350"></div>
+        <div class="photo-frame">{{ renthofImage("7_Hochzeitsessen_01374_Hochzeit", "Hochzeitsessen im Renthof Kassel — festlich gedeckte Tafel im historischen Kirchengewölbe", "2022", "1350") }}</div>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01408_Hochzeit.webp"
-             alt="Gedeckte Tisch im Renthof Kassel — Hochzeitsdekoration im Kirchengewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01408_Hochzeit", "Gedeckte Tisch im Renthof Kassel — Hochzeitsdekoration im Kirchengewölbe", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01411_Hochzeit.webp"
-             alt="Hochzeitsessen — festliche Atmosphäre im Renthof, historische Hochzeitslocation Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01411_Hochzeit", "Hochzeitsessen — festliche Atmosphäre im Renthof, historische Hochzeitslocation Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01453_Hochzeit.webp"
-             alt="Hochzeitsrede — Gäste lauschen gespannt, Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01453_Hochzeit", "Hochzeitsrede — Gäste lauschen gespannt, Hochzeit Renthof Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01459_Hochzeit.webp"
-             alt="Tischdekoration im Renthof — Blumen und Kerzen, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01459_Hochzeit", "Tischdekoration im Renthof — Blumen und Kerzen, Hochzeit Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01461_Hochzeit.webp"
-             alt="Hochzeitsessen Details — Menü im Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01461_Hochzeit", "Hochzeitsessen Details — Menü im Renthof Kassel, Hochzeitsreportage", "2025", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01463_Hochzeit.webp"
-             alt="Stimmungsvolles Abendlicht im Renthof Kassel — Hochzeitsessen im Kirchengewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01463_Hochzeit", "Stimmungsvolles Abendlicht im Renthof Kassel — Hochzeitsessen im Kirchengewölbe", "2025", "1350") }}
       </div></div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
       <p>Dieser Raum — hohes Gewölbe, warmes Licht, der Klang von Gläsern und Gelächter. Für einen Abend gehört er nur euch.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01466_Hochzeit.webp"
-             alt="Hochzeitsreden im Renthof Kassel — emotionale Momente beim Dinner"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01466_Hochzeit", "Hochzeitsreden im Renthof Kassel — emotionale Momente beim Dinner", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01468_Hochzeit.webp"
-             alt="Gäste beim Hochzeitsessen — Hochzeitsfeier im historischen Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01468_Hochzeit", "Gäste beim Hochzeitsessen — Hochzeitsfeier im historischen Renthof", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01473_Hochzeit.webp"
-             alt="Brautpaar beim Hochzeitsessen — inniger Moment, Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01473_Hochzeit", "Brautpaar beim Hochzeitsessen — inniger Moment, Renthof Kassel", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01502_Hochzeit.webp"
-             alt="Hochzeitsgäste feiern — festliches Abendessen im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01502_Hochzeit", "Hochzeitsgäste feiern — festliches Abendessen im Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01558_Hochzeit.webp"
-             alt="Lachen beim Hochzeitsessen — ungezwungene Stimmung, Hochzeit Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01558_Hochzeit", "Lachen beim Hochzeitsessen — ungezwungene Stimmung, Hochzeit Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01560_Hochzeit.webp"
-             alt="Feierliche Stimmung beim Hochzeitsessen im Renthof — Kerzen und Gewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01560_Hochzeit", "Feierliche Stimmung beim Hochzeitsessen im Renthof — Kerzen und Gewölbe", "2025", "1350") }}
       </div></div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01562_Hochzeit.webp"
-             alt="Renthof Kassel von innen — historisches Kirchengewölbe beim Hochzeitsessen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01562_Hochzeit", "Renthof Kassel von innen — historisches Kirchengewölbe beim Hochzeitsessen", "2025", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01598_Hochzeit.webp"
-             alt="Detail Tischdekoration — Hochzeitsessen Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01598_Hochzeit", "Detail Tischdekoration — Hochzeitsessen Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01656_Hochzeit.webp"
-             alt="Hochzeitsessen im Gewölbe — stimmungsvolle Aufnahme, Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01656_Hochzeit", "Hochzeitsessen im Gewölbe — stimmungsvolle Aufnahme, Hochzeitsreportage Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01675_Hochzeit.webp"
-             alt="Gäste beim Dinner — lebendige Atmosphäre, Hochzeit Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01675_Hochzeit", "Gäste beim Dinner — lebendige Atmosphäre, Hochzeit Renthof Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01678_Hochzeit.webp"
-             alt="Hochzeitsessen Renthof — stille Momente zwischen den Gängen"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01678_Hochzeit", "Hochzeitsessen Renthof — stille Momente zwischen den Gängen", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01689_Hochzeit.webp"
-             alt="Brautpaar genießt das Hochzeitsessen — Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01689_Hochzeit", "Brautpaar genießt das Hochzeitsessen — Renthof Kassel, Hochzeitsreportage", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/7_Hochzeitsessen_01697_Hochzeit.webp"
-             alt="Festlicher Abend im Renthof Kassel — Hochzeitsessen im Kirchengewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("7_Hochzeitsessen_01697_Hochzeit", "Festlicher Abend im Renthof Kassel — Hochzeitsessen im Kirchengewölbe", "2025", "1350") }}
       </div>
     </div>
 
@@ -979,76 +677,43 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01389_Hochzeit.webp"
-             alt="Hochzeitsfeier im Renthof Kassel — lebendige Stimmung im historischen Gewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01389_Hochzeit", "Hochzeitsfeier im Renthof Kassel — lebendige Stimmung im historischen Gewölbe", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01753_Hochzeit.webp"
-             alt="Programmpunkt Hochzeitsfeier — Gäste und Brautpaar im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01753_Hochzeit", "Programmpunkt Hochzeitsfeier — Gäste und Brautpaar im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01782_Hochzeit.webp"
-             alt="Hochzeitsfeier Kassel — emotionale Momente und Lachen im Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01782_Hochzeit", "Hochzeitsfeier Kassel — emotionale Momente und Lachen im Renthof", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01813_Hochzeit.webp"
-             alt="Gäste feiern im Renthof Kassel — Hochzeitsreportage Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01813_Hochzeit", "Gäste feiern im Renthof Kassel — Hochzeitsreportage Natalia Tschischik", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01826_Hochzeit.webp"
-             alt="Stimmungsvolle Aufnahme der Hochzeitsfeier — Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01826_Hochzeit", "Stimmungsvolle Aufnahme der Hochzeitsfeier — Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01849_Hochzeit.webp"
-             alt="Hochzeitsfeier im Renthof — Panorama des historischen Kirchengewölbes, Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01849_Hochzeit", "Hochzeitsfeier im Renthof — Panorama des historischen Kirchengewölbes, Kassel", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01852_Hochzeit.webp"
-             alt="Hochzeitsfeier Renthof — Brautpaar und Gäste, Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01852_Hochzeit", "Hochzeitsfeier Renthof — Brautpaar und Gäste, Hochzeitsfotografin Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01864_Hochzeit.webp"
-             alt="Freude bei der Hochzeitsfeier — ungezwungene Momente im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01864_Hochzeit", "Freude bei der Hochzeitsfeier — ungezwungene Momente im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01898_Hochzeit.webp"
-             alt="Hochzeitsfeier — ungestellte Momente im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01898_Hochzeit", "Hochzeitsfeier — ungestellte Momente im Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01901_Hochzeit.webp"
-             alt="Hochzeitsgäste beim Feiern — Hochzeitsreportage Kassel Renthof"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01901_Hochzeit", "Hochzeitsgäste beim Feiern — Hochzeitsreportage Kassel Renthof", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01907_Hochzeit.webp"
-             alt="Hochzeitsfeier Stimmung — historisches Gewölbe des Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01907_Hochzeit", "Hochzeitsfeier Stimmung — historisches Gewölbe des Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="quote-block mb-3 fade-up">
@@ -1056,23 +721,14 @@
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01982_Hochzeit.webp"
-             alt="Hochzeitsfeier im Renthof Kassel — lebendiges Treiben im ehemaligen Kirchengewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01982_Hochzeit", "Hochzeitsfeier im Renthof Kassel — lebendiges Treiben im ehemaligen Kirchengewölbe", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_01995_Hochzeit.webp"
-             alt="Detail der Hochzeitsfeier — Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_01995_Hochzeit", "Detail der Hochzeitsfeier — Renthof Kassel, Hochzeitsreportage", "2025", "1350") }}
       </div>
     </div>
     <div class="fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/8_Hochzeitsfeier_02025_Hochzeit.webp"
-             alt="Glückliche Hochzeitsfeier im Renthof Kassel — kurz vor dem Eröffnungstanz"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("8_Hochzeitsfeier_02025_Hochzeit", "Glückliche Hochzeitsfeier im Renthof Kassel — kurz vor dem Eröffnungstanz", "2022", "1350") }}
       </div></div>
 
   </div>
@@ -1092,23 +748,14 @@
       </p>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02029_Hochzeit.webp"
-             alt="Eröffnungstanz im Renthof Kassel — Brautpaar beim ersten Tanz im historischen Gewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02029_Hochzeit", "Eröffnungstanz im Renthof Kassel — Brautpaar beim ersten Tanz im historischen Gewölbe", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02033_Hochzeit.webp"
-             alt="Hochzeitstanz Renthof Kassel — emotionaler erster Tanz des Brautpaares"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02033_Hochzeit", "Hochzeitstanz Renthof Kassel — emotionaler erster Tanz des Brautpaares", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02035_Hochzeit.webp"
-             alt="Brautpaar tanzt im Renthof — Hochzeitstanz im historischen Kirchengewölbe Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02035_Hochzeit", "Brautpaar tanzt im Renthof — Hochzeitstanz im historischen Kirchengewölbe Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
@@ -1116,36 +763,21 @@
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02037_Hochzeit.webp"
-             alt="Hochzeitstanz Detail — Brautpaar im Takt, Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02037_Hochzeit", "Hochzeitstanz Detail — Brautpaar im Takt, Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02039_Hochzeit.webp"
-             alt="Erster Tanz Hochzeit — stimmungsvolle Aufnahme im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02039_Hochzeit", "Erster Tanz Hochzeit — stimmungsvolle Aufnahme im Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02042_Hochzeit.webp"
-             alt="Hochzeitstanz Renthof — Licht und Bewegung im Kirchengewölbe Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="1967" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02042_Hochzeit", "Hochzeitstanz Renthof — Licht und Bewegung im Kirchengewölbe Kassel", "1967", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02043_Hochzeit.webp"
-             alt="Letzter Moment des Eröffnungstanzes — Brautpaar Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="1967" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02043_Hochzeit", "Letzter Moment des Eröffnungstanzes — Brautpaar Renthof Kassel", "1967", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/9-Hochzeitstanz_02047_Hochzeit.webp"
-             alt="Hochzeitstanz Ende — Gäste jubeln im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("9-Hochzeitstanz_02047_Hochzeit", "Hochzeitstanz Ende — Gäste jubeln im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
 
@@ -1166,43 +798,25 @@
       </p>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02057_Hochzeit.webp"
-             alt="Party im Renthof Kassel — Tanzfläche im historischen Kirchengewölbe, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02057_Hochzeit", "Party im Renthof Kassel — Tanzfläche im historischen Kirchengewölbe, Hochzeitsreportage", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02067_Hochzeit.webp"
-             alt="Hochzeitsparty Renthof Kassel — tanzende Gäste im Gewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02067_Hochzeit", "Hochzeitsparty Renthof Kassel — tanzende Gäste im Gewölbe", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02071_Hochzeit.webp"
-             alt="Party im Renthof — Energie und Lebendigkeit, Hochzeitsfeier Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02071_Hochzeit", "Party im Renthof — Energie und Lebendigkeit, Hochzeitsfeier Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02075_Hochzeit.webp"
-             alt="Feiernde Hochzeitsgäste im Renthof — Hochzeitsreportage Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02075_Hochzeit", "Feiernde Hochzeitsgäste im Renthof — Hochzeitsreportage Natalia Tschischik", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02085_Hochzeit.webp"
-             alt="Hochzeitsparty Kassel — Brautpaar und Gäste auf der Tanzfläche"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02085_Hochzeit", "Hochzeitsparty Kassel — Brautpaar und Gäste auf der Tanzfläche", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02109_Hochzeit.webp"
-             alt="Stimmungsvolle Party im Renthof — Hochzeitsfotografin Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02109_Hochzeit", "Stimmungsvolle Party im Renthof — Hochzeitsfotografin Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
@@ -1210,50 +824,29 @@
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02155_Hochzeit.webp"
-             alt="Party Hochzeitsfeier im Renthof Kassel — ausgelassene Stimmung"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02155_Hochzeit", "Party Hochzeitsfeier im Renthof Kassel — ausgelassene Stimmung", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02205_Hochzeit.webp"
-             alt="Hochzeitsgäste tanzen — Party im historischen Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02205_Hochzeit", "Hochzeitsgäste tanzen — Party im historischen Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02248_Hochzeit.webp"
-             alt="Freude und Ausgelassenheit bei der Hochzeitsparty — Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("10_Party_02248_Hochzeit", "Freude und Ausgelassenheit bei der Hochzeitsparty — Renthof Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/10_Party_02260_Hochzeit.webp"
-             alt="Party im Renthof Kassel — Detail, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02260_Hochzeit", "Party im Renthof Kassel — Detail, Hochzeitsreportage", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/10_Party_02265_Hochzeit.webp"
-             alt="Hochzeitsparty Renthof — Feier im historischen Kirchengewölbe Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02265_Hochzeit", "Hochzeitsparty Renthof — Feier im historischen Kirchengewölbe Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02273_Hochzeit.webp"
-             alt="Letzte Partymomente im Renthof Kassel — Hochzeitsfeier Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("10_Party_02273_Hochzeit", "Letzte Partymomente im Renthof Kassel — Hochzeitsfeier Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/10_Party_02277_Hochzeit.webp"
-             alt="Party im Renthof — Nacht und Licht, Hochzeitsfotografie Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("10_Party_02277_Hochzeit", "Party im Renthof — Nacht und Licht, Hochzeitsfotografie Kassel", "2025", "1350") }}
       </div>
     </div>
 
@@ -1275,56 +868,32 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02282_Hochzeit.webp"
-             alt="Hochzeitstorte im Renthof Kassel — Anschneiden der Hochzeitstorte"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02282_Hochzeit", "Hochzeitstorte im Renthof Kassel — Anschneiden der Hochzeitstorte", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02288_Hochzeit.webp"
-             alt="Detail Hochzeitstorte — elegante Hochzeitstorte Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02288_Hochzeit", "Detail Hochzeitstorte — elegante Hochzeitstorte Renthof Kassel", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02305_Hochzeit.webp"
-             alt="Hochzeitstorte Anschneiden — gemeinsamer Moment des Brautpaares"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02305_Hochzeit", "Hochzeitstorte Anschneiden — gemeinsamer Moment des Brautpaares", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02329_Hochzeit.webp"
-             alt="Brautpaar schneidet Hochzeitstorte an — Hochzeitsfeier Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02329_Hochzeit", "Brautpaar schneidet Hochzeitstorte an — Hochzeitsfeier Renthof Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02337_Hochzeit.webp"
-             alt="Lachen beim Anschneiden der Torte — Hochzeitsreportage Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02337_Hochzeit", "Lachen beim Anschneiden der Torte — Hochzeitsreportage Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02341_Hochzeit.webp"
-             alt="Hochzeitstorte im Renthof Kassel — Detail der Dekoration und des Anschneidens"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02341_Hochzeit", "Hochzeitstorte im Renthof Kassel — Detail der Dekoration und des Anschneidens", "2025", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02346_Hochzeit.webp"
-             alt="Torte wird serviert — Hochzeitsfeier Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02346_Hochzeit", "Torte wird serviert — Hochzeitsfeier Renthof Kassel, Hochzeitsreportage", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/11_Hochzeitstorte_02360_Hochzeit.webp"
-             alt="Glückliches Brautpaar nach dem Anschneiden der Hochzeitstorte — Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("11_Hochzeitstorte_02360_Hochzeit", "Glückliches Brautpaar nach dem Anschneiden der Hochzeitstorte — Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
 
@@ -1346,30 +915,18 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/12_Brautpaar-Shooting_02361_Hochzeit.webp"
-             alt="Brautpaar-Shooting im Renthof Kassel — romantische Aufnahme im historischen Gewölbe"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("12_Brautpaar-Shooting_02361_Hochzeit", "Brautpaar-Shooting im Renthof Kassel — romantische Aufnahme im historischen Gewölbe", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/12_Brautpaar-Shooting_02364_Hochzeit.webp"
-             alt="Brautpaar Portrait im Renthof — Hochzeitsfotografin Kassel Natalia Tschischik"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("12_Brautpaar-Shooting_02364_Hochzeit", "Brautpaar Portrait im Renthof — Hochzeitsfotografin Kassel Natalia Tschischik", "2025", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/12_Brautpaar-Shooting_02367_Hochzeit.webp"
-             alt="Brautpaar Renthof Shooting — Kirchengewölbe als Kulisse, Hochzeitsreportage Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("12_Brautpaar-Shooting_02367_Hochzeit", "Brautpaar Renthof Shooting — Kirchengewölbe als Kulisse, Hochzeitsreportage Kassel", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/12_Brautpaar-Shooting_02368_Hochzeit.webp"
-             alt="Letztes Brautpaar-Foto im Renthof Kassel — romantischer Abschluss des Shootings"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("12_Brautpaar-Shooting_02368_Hochzeit", "Letztes Brautpaar-Foto im Renthof Kassel — romantischer Abschluss des Shootings", "2022", "1350") }}
       </div>
     </div>
 
@@ -1390,43 +947,25 @@
       </p>
     </div>
     <div class="mb-3 fade-up">      <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02375_Hochzeit.webp"
-             alt="Der späte Abend im Renthof Kassel — Stimmung zum Ausklang der Hochzeitsfeier"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02375_Hochzeit", "Der späte Abend im Renthof Kassel — Stimmung zum Ausklang der Hochzeitsfeier", "2022", "1350") }}
       </div></div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02382_Hochzeit.webp"
-             alt="Späte Nacht bei der Hochzeitsfeier — Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02382_Hochzeit", "Späte Nacht bei der Hochzeitsfeier — Renthof Kassel, Hochzeitsreportage", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02399_Hochzeit.webp"
-             alt="Ausgelassene Stimmung am späten Abend — Hochzeitsparty Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02399_Hochzeit", "Ausgelassene Stimmung am späten Abend — Hochzeitsparty Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-3 gap-3 mb-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02411_Hochzeit.webp"
-             alt="Später Abend Hochzeit Renthof — Momente des Ausklang"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02411_Hochzeit", "Später Abend Hochzeit Renthof — Momente des Ausklang", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02423_Hochzeit.webp"
-             alt="Hochzeitsparty Ausklang — Renthof Kassel, späte Stunden"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2025" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02423_Hochzeit", "Hochzeitsparty Ausklang — Renthof Kassel, späte Stunden", "2025", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02431_Hochzeit.webp"
-             alt="Gäste am späten Abend — Hochzeitsfeier Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02431_Hochzeit", "Gäste am späten Abend — Hochzeitsfeier Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="quote-block quote-block-dark mb-3 fade-up">
@@ -1434,30 +973,18 @@
     </div>
     <div class="bento-grid mb-3 fade-up" style="grid-template-columns:repeat(12,1fr);gap:0.75rem;">
             <div class="photo-frame" style="grid-column:span 8;">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02441_Hochzeit.webp"
-             alt="Stille Momente am späten Abend — Renthof Kassel, Hochzeitsreportage"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02441_Hochzeit", "Stille Momente am späten Abend — Renthof Kassel, Hochzeitsreportage", "2022", "1350") }}
       </div>
             <div class="photo-frame" style="grid-column:span 4;">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02474_Hochzeit.webp"
-             alt="Detail späte Stunde — Hochzeitsfeier im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02474_Hochzeit", "Detail späte Stunde — Hochzeitsfeier im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 fade-up">
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02479_Hochzeit.webp"
-             alt="Ausklang im Renthof Kassel — letzte Momente der Hochzeitsfeier"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02479_Hochzeit", "Ausklang im Renthof Kassel — letzte Momente der Hochzeitsfeier", "2022", "1350") }}
       </div>
       <div class="photo-frame">
-        <img src="img/ra-renthof/13_Der_sp_te_Abend_02530_Hochzeit.webp"
-             alt="Letztes Bild des Abends — Hochzeit R &amp; A im Renthof Kassel"
-             class="img-cover" loading="lazy" decoding="async"
-             width="2022" height="1350">
+        {{ renthofImage("13_Der_sp_te_Abend_02530_Hochzeit", "Letztes Bild des Abends — Hochzeit R &amp; A im Renthof Kassel", "2022", "1350") }}
       </div>
     </div>
 

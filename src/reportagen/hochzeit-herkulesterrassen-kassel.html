@@ -1,3 +1,10 @@
+{% macro galleryImage(file, alt, width='', height='') %}
+<picture>
+  <source media="(max-width: 768px)" srcset="img/ee-herkulesterrassen/{{ file }}-400w.webp 400w, img/ee-herkulesterrassen/{{ file }}-800w.webp 800w" sizes="100vw">
+  <img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="{{ alt }}" class="img-cover" loading="lazy" decoding="async"{% if width %} width="{{ width }}"{% endif %}{% if height %} height="{{ height }}"{% endif %}>
+</picture>
+{% endmacro %}
+
 {% set kap1_row1 = ['1-02','1-03'] %}
 {% set kap1_row2 = ['1-04','1-05','1-06'] %}
 {% set kap1_row3 = ['1-07','1-08','1-09'] %}
@@ -166,11 +173,11 @@
     E &amp; E @ Herkulesterrassen Kassel
   </div>
 
-  <section class="relative w-full h-screen overflow-hidden" style="background:linear-gradient(180deg, #5d6a56 0%, #384238 55%, #22231f 100%);">
+  <section class="relative w-full h-screen overflow-hidden" style="position:relative;width:100%;height:100vh;min-height:100svh;overflow:hidden;background:linear-gradient(180deg, #5d6a56 0%, #384238 55%, #22231f 100%);">
     <div class="hero-shell">
       <picture>
         <source media="(max-width: 768px)" srcset="img/ee-herkulesterrassen/slider-400w.webp 400w, img/ee-herkulesterrassen/slider-800w.webp 800w" sizes="100vw">
-        <img src="img/ee-herkulesterrassen/hero.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" loading="eager" fetchpriority="high" width="1980" height="1322">
+        <img src="img/ee-herkulesterrassen/hero.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" loading="eager" decoding="async" fetchpriority="high" width="1980" height="1322">
       </picture>
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35"></div>
@@ -217,29 +224,29 @@
           </p>
         </div>
         <div class="md:col-span-7 photo-frame">
-          <img src="img/ee-herkulesterrassen/1-01.webp" alt="Zeremoniebereich für die Hochzeit von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="eager" width="1600" height="1067">
+          {{ galleryImage("1-01", "Zeremoniebereich für die Hochzeit von E und E bei den Herkulesterrassen in Kassel", "1600", "1067") }}
         </div>
       </div>
 
       <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
-        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap1_row1[0] }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 1" class="img-cover" loading="lazy" decoding="async"></div>
-        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap1_row1[1] }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 2" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 8;">{{ galleryImage(kap1_row1[0], "Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 1") }}</div>
+        <div class="photo-frame" style="grid-column:span 4;">{{ galleryImage(kap1_row1[1], "Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment 2") }}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap1_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 2 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 2)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap1_row3 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 5 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Ankunft der Gäste bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 5)) }}</div>
         {% endfor %}
       </div>
 
       <div class="fade-up single-photo">
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap1_last }}.webp" alt="Ankunftsmoment vor der freien Trauung von E und E in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(kap1_last, "Ankunftsmoment vor der freien Trauung von E und E in Kassel") }}</div>
       </div>
     </div>
   </section>
@@ -248,7 +255,7 @@
     <div class="max-w-5xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16 fade-up">
         <div class="md:col-span-7 photo-frame">
-          <img src="img/ee-herkulesterrassen/2-01.webp" alt="Freie Trauung von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+          {{ galleryImage("2-01", "Freie Trauung von E und E bei den Herkulesterrassen in Kassel") }}
         </div>
         <div class="md:col-span-5 sticky-text">
           <span class="chapter-label block mb-4">Kapitel Zwei</span>
@@ -267,58 +274,58 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row1 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 1)) }}</div>
         {% endfor %}
       </div>
 
       <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
-        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap2_bento1[0] }}.webp" alt="Freie Trauung von E und E in Kassel — emotionaler Augenblick" class="img-cover" loading="lazy" decoding="async"></div>
-        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap2_bento1[1] }}.webp" alt="Detail während der freien Trauung bei den Herkulesterrassen" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 8;">{{ galleryImage(kap2_bento1[0], "Freie Trauung von E und E in Kassel — emotionaler Augenblick") }}</div>
+        <div class="photo-frame" style="grid-column:span 4;">{{ galleryImage(kap2_bento1[1], "Detail während der freien Trauung bei den Herkulesterrassen") }}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 4)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row3 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 7 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 7)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row4 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 10 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 10)) }}</div>
         {% endfor %}
       </div>
 
       <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
-        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap2_bento2[0] }}.webp" alt="Zeremonie unter freiem Himmel bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
-        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap2_bento2[1] }}.webp" alt="Emotionale Details der freien Trauung von E und E" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 8;">{{ galleryImage(kap2_bento2[0], "Zeremonie unter freiem Himmel bei den Herkulesterrassen in Kassel") }}</div>
+        <div class="photo-frame" style="grid-column:span 4;">{{ galleryImage(kap2_bento2[1], "Emotionale Details der freien Trauung von E und E") }}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row5 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 13 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 13)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row6 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 16 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 16)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap2_row7 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Freie Trauung bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 19 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Freie Trauung bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 19)) }}</div>
         {% endfor %}
       </div>
 
       <div class="fade-up single-photo">
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap2_last }}.webp" alt="Finaler Augenblick der freien Trauung von E und E bei den Herkulesterrassen" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(kap2_last, "Finaler Augenblick der freien Trauung von E und E bei den Herkulesterrassen") }}</div>
       </div>
     </div>
   </section>
@@ -334,30 +341,30 @@
           </p>
         </div>
         <div class="md:col-span-7 photo-frame">
-          <img src="img/ee-herkulesterrassen/3-01.webp" alt="Sektempfang nach der Trauung von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+          {{ galleryImage("3-01", "Sektempfang nach der Trauung von E und E bei den Herkulesterrassen in Kassel") }}
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap3_row1 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Sektempfang bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 1)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap3_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Sektempfang bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 4)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap3_row3 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Sektempfang bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 7 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Sektempfang bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 7)) }}</div>
         {% endfor %}
       </div>
 
       <div class="fade-up single-photo">
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap3_last }}.webp" alt="Sektempfang von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(kap3_last, "Sektempfang von E und E bei den Herkulesterrassen in Kassel") }}</div>
       </div>
     </div>
   </section>
@@ -373,23 +380,23 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
-        <div class="photo-frame md:col-span-3"><img src="img/ee-herkulesterrassen/4-01.webp" alt="Gruppenfoto von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame md:col-span-3">{{ galleryImage("4-01", "Gruppenfoto von E und E bei den Herkulesterrassen in Kassel") }}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap4_row1 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Gästefotos bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Gästefotos bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 1)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap4_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Gästefotos bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Gästefotos bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 4)) }}</div>
         {% endfor %}
       </div>
 
       <div class="fade-up single-photo">
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap4_last }}.webp" alt="Gäste von E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(kap4_last, "Gäste von E und E bei den Herkulesterrassen in Kassel") }}</div>
       </div>
     </div>
   </section>
@@ -398,7 +405,7 @@
     <div class="max-w-5xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16 fade-up">
         <div class="md:col-span-7 photo-frame">
-          <img src="img/ee-herkulesterrassen/5-03.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+          {{ galleryImage("5-03", "Brautpaar E und E bei den Herkulesterrassen in Kassel") }}
         </div>
         <div class="md:col-span-5 sticky-text">
           <span class="chapter-label block mb-4">Kapitel Fünf</span>
@@ -416,24 +423,24 @@
       </div>
 
       <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
-        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap5_bento[0] }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 1" class="img-cover" loading="lazy" decoding="async"></div>
-        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap5_bento[1] }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 2" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 8;">{{ galleryImage(kap5_bento[0], "Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 1") }}</div>
+        <div class="photo-frame" style="grid-column:span 4;">{{ galleryImage(kap5_bento[1], "Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment 2") }}</div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap5_row1 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 2 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 2)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap5_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 5 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Brautpaar-Shooting bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 5)) }}</div>
         {% endfor %}
       </div>
 
       <div class="fade-up single-photo">
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ kap5_last }}.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel im Abendlicht" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(kap5_last, "Brautpaar E und E bei den Herkulesterrassen in Kassel im Abendlicht") }}</div>
       </div>
     </div>
   </section>
@@ -449,25 +456,25 @@
           </p>
         </div>
         <div class="md:col-span-7 photo-frame">
-          <img src="img/ee-herkulesterrassen/6-01.webp" alt="Festtafel und Dekoration bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async">
+          {{ galleryImage("6-01", "Festtafel und Dekoration bei den Herkulesterrassen in Kassel") }}
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap6_row1 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Location und Brauch bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 1 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Location und Brauch bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 1)) }}</div>
         {% endfor %}
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 fade-up">
         {% for file in kap6_row2 %}
-        <div class="photo-frame"><img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="Location und Brauch bei den Herkulesterrassen in Kassel — Moment {{ loop.index + 4 }}" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame">{{ galleryImage(file, "Location und Brauch bei den Herkulesterrassen in Kassel — Moment " ~ (loop.index + 4)) }}</div>
         {% endfor %}
       </div>
 
       <div class="bento-grid fade-up mb-4" style="grid-template-columns:repeat(12,1fr);">
-        <div class="photo-frame" style="grid-column:span 8;"><img src="img/ee-herkulesterrassen/{{ kap6_bento[0] }}.webp" alt="Abendliche Details bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
-        <div class="photo-frame" style="grid-column:span 4;"><img src="img/ee-herkulesterrassen/{{ kap6_bento[1] }}.webp" alt="Hochzeitsbrauch und Stimmungsbild bei den Herkulesterrassen in Kassel" class="img-cover" loading="lazy" decoding="async"></div>
+        <div class="photo-frame" style="grid-column:span 8;">{{ galleryImage(kap6_bento[0], "Abendliche Details bei den Herkulesterrassen in Kassel") }}</div>
+        <div class="photo-frame" style="grid-column:span 4;">{{ galleryImage(kap6_bento[1], "Hochzeitsbrauch und Stimmungsbild bei den Herkulesterrassen in Kassel") }}</div>
       </div>
     </div>
   </section>

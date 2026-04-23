@@ -103,6 +103,7 @@ async function checkHtmlFiles(files) {
     }
 
     checkDesktopFullResolutionImages(rel, html);
+    checkPriorityPicturePreloads(rel, html);
   }
 }
 
@@ -146,6 +147,69 @@ function checkDesktopFullResolutionImages(rel, html) {
       failures.push(`${rel} has responsive image preload without mobile-only media: ${tag.slice(0, 160)}`);
     }
   }
+}
+
+function checkPriorityPicturePreloads(rel, html) {
+  const imagePreloads = html.match(/<link\b[^>]*rel=["']preload["'][^>]*as=["']image["'][^>]*>|<link\b[^>]*as=["']image["'][^>]*rel=["']preload["'][^>]*>/gi) || [];
+
+  for (const picture of html.match(/<picture\b[\s\S]*?<\/picture>/gi) || []) {
+    const imgTag = (picture.match(/<img\b[^>]*>/i) || [])[0] || '';
+    if (!imgTag) continue;
+
+    const loading = capture(imgTag, /\sloading=["']([^"']+)["']/i).toLowerCase();
+    const fetchpriority = capture(imgTag, /\sfetchpriority=["']([^"']+)["']/i).toLowerCase();
+    if (loading !== 'eager' && fetchpriority !== 'high') continue;
+
+    for (const sourceTag of picture.match(/<source\b[^>]*>/gi) || []) {
+      const media = capture(sourceTag, /\smedia=["']([^"']+)["']/i);
+      const srcset = capture(sourceTag, /\ssrcset=["']([^"']+)["']/i);
+      if (!/\bmax-width\b/i.test(media) || !srcset || !/-(?:400w|800w)\.webp/i.test(srcset)) continue;
+
+      const largestCandidate = getLargestSrcsetCandidate(srcset);
+      const hasMatchingPreload = imagePreloads.some((tag) => {
+        const preloadMedia = capture(tag, /\smedia=["']([^"']+)["']/i);
+        const preloadHref = capture(tag, /\shref=["']([^"']+)["']/i);
+        const preloadSrcset = capture(tag, /\simagesrcset=["']([^"']+)["']/i);
+
+        return /\bmax-width\b/i.test(preloadMedia)
+          && (srcsetUrlsMatch(preloadSrcset, srcset) || localUrlKey(preloadHref) === localUrlKey(largestCandidate));
+      });
+
+      if (!hasMatchingPreload) {
+        failures.push(`${rel} has priority mobile picture source without matching mobile preload: ${largestCandidate || srcset}`);
+      }
+    }
+  }
+}
+
+function getLargestSrcsetCandidate(srcset) {
+  return srcset
+    .split(',')
+    .map((candidate) => {
+      const [url, descriptor = ''] = candidate.trim().split(/\s+/);
+      const width = Number((descriptor.match(/^(\d+)w$/) || [])[1] || 0);
+      return { url, width };
+    })
+    .filter((candidate) => candidate.url)
+    .sort((a, b) => b.width - a.width)[0]?.url || '';
+}
+
+function srcsetUrlsMatch(left, right) {
+  if (!left || !right) return false;
+  const leftUrls = srcsetUrlKeys(left);
+  const rightUrls = srcsetUrlKeys(right);
+  return leftUrls.length === rightUrls.length && leftUrls.every((url, index) => url === rightUrls[index]);
+}
+
+function srcsetUrlKeys(srcset) {
+  return srcset
+    .split(',')
+    .map((candidate) => localUrlKey(candidate.trim().split(/\s+/)[0]))
+    .filter(Boolean);
+}
+
+function localUrlKey(url) {
+  return normalizeLocalUrl(url).replace(/^\/+/, '');
 }
 
 async function checkLocalReferences(files) {
