@@ -9,6 +9,11 @@ const heroExtra = `
 .portfolio {
   background: var(--cream-light);
 }
+.hero-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 .hero-image img,
 .hero-image:hover img {
   transform: none !important;

@@ -37,9 +37,9 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 
-<link rel="preload" as="style" href="/css/extracted/ba39900b094e244c.css">
-<link rel="stylesheet" href="/css/extracted/ba39900b094e244c.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/css/extracted/ba39900b094e244c.css"></noscript>
+<link rel="preload" as="style" href="/css/extracted/6e3ea2f5bd6de0c9.css">
+<link rel="stylesheet" href="/css/extracted/6e3ea2f5bd6de0c9.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/extracted/6e3ea2f5bd6de0c9.css"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -231,7 +231,8 @@
 
 
 <!-- 🎯 LCP-critical preloads (first for preload scanner) -->
-<link rel="preload" as="image" type="image/webp" href="reportagen/img/sababurg/2-14-800w.webp" imagesrcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 40vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(max-width: 768px)" href="reportagen/img/sababurg/2-14-800w.webp" imagesrcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width: 769px)" href="reportagen/img/sababurg/2-14.webp" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Self-hosted fonts (inline @font-face for critical fonts) -->
 <style>
@@ -651,7 +652,10 @@ p { max-width: 60ch; }
     <p class="hero-travel-note">Anreise in Hessen und Niedersachsen inklusive</p>
   </div>
   <div class="hero-image">
-    <img src="reportagen/img/sababurg/2-14-800w.webp" srcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w" sizes="(max-width: 768px) 100vw, 40vw" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1080">
+    <picture>
+      <source media="(max-width: 768px)" srcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w" sizes="100vw">
+      <img src="reportagen/img/sababurg/2-14.webp" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1282">
+    </picture>
   </div>
 </section>
 
