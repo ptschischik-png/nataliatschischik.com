@@ -102,10 +102,21 @@
       setCookie('_gclid', gclid, 90);
     }
 
-    if (params.get('utm_source') || gclid || fbclid) {
+    var gbraid = params.get('gbraid');
+    if (gbraid) {
+      setCookie('_gbraid', gbraid, 90);
+    }
+
+    var wbraid = params.get('wbraid');
+    if (wbraid) {
+      setCookie('_wbraid', wbraid, 90);
+    }
+
+    var hasGoogleClickId = gclid || gbraid || wbraid;
+    if (params.get('utm_source') || hasGoogleClickId || fbclid) {
       var attribution = JSON.stringify({
-        source: params.get('utm_source') || (gclid ? 'google' : fbclid ? 'meta' : ''),
-        medium: params.get('utm_medium') || (gclid ? 'cpc' : fbclid ? 'cpc' : ''),
+        source: params.get('utm_source') || (hasGoogleClickId ? 'google' : fbclid ? 'meta' : ''),
+        medium: params.get('utm_medium') || (hasGoogleClickId ? 'cpc' : fbclid ? 'cpc' : ''),
         campaign: params.get('utm_campaign') || '',
         landing: window.location.pathname,
         ts: Date.now()

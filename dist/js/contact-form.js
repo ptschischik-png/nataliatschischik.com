@@ -180,10 +180,14 @@
       var fbpMatch = document.cookie.match(/(?:^|;\s*)_fbp=([^;]*)/);
       var fbcMatch = document.cookie.match(/(?:^|;\s*)_fbc=([^;]*)/);
       var gclidMatch = document.cookie.match(/(?:^|;\s*)_gclid=([^;]*)/);
+      var gbraidMatch = document.cookie.match(/(?:^|;\s*)_gbraid=([^;]*)/);
+      var wbraidMatch = document.cookie.match(/(?:^|;\s*)_wbraid=([^;]*)/);
       var attrMatch = document.cookie.match(/(?:^|;\s*)_attribution=([^;]*)/);
       var fbp = fbpMatch ? fbpMatch[1] : '';
       var fbc = fbcMatch ? fbcMatch[1] : '';
       var gclid = gclidMatch ? gclidMatch[1] : '';
+      var gbraid = gbraidMatch ? gbraidMatch[1] : '';
+      var wbraid = wbraidMatch ? wbraidMatch[1] : '';
       var attribution = attrMatch ? decodeURIComponent(attrMatch[1]) : '';
       var eventID = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 
@@ -212,6 +216,8 @@
           fbp: fbp,
           fbc: fbc,
           gclid: gclid,
+          gbraid: gbraid,
+          wbraid: wbraid,
           attribution: attribution,
           event_id: eventID,
           source_url: window.location.href

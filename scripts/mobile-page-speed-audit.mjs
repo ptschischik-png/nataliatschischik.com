@@ -9,6 +9,7 @@ const reportDir = path.join(repoRoot, 'reports');
 const chromePath = process.env.CHROME_PATH || '/tmp/pwaudit-browsers/chromium_headless_shell-1217/chrome-headless-shell-mac-arm64/chrome-headless-shell';
 const baseUrl = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4173';
 const debugPort = Number(process.env.CHROME_DEBUG_PORT || 9223);
+const auditPageFilter = process.env.AUDIT_PAGE || '';
 
 async function main() {
   await fs.mkdir(reportDir, { recursive: true });
@@ -20,7 +21,12 @@ async function main() {
       return { rel, urlPath: `/${rel}` };
     })
     .filter((page) => page.rel !== '404.html')
+    .filter((page) => !auditPageFilter || page.rel === auditPageFilter || page.urlPath === auditPageFilter)
     .sort((a, b) => a.urlPath.localeCompare(b.urlPath));
+
+  if (auditPageFilter && pages.length === 0) {
+    throw new Error(`No page matched AUDIT_PAGE=${auditPageFilter}`);
+  }
 
   const useExistingChrome = process.env.AUDIT_EXISTING_CHROME === '1';
   let chrome = null;

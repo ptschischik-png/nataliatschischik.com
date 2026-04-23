@@ -37,9 +37,9 @@
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 
-<link rel="preload" as="style" href="/css/extracted/afe12311ec4aa267.css">
-<link rel="stylesheet" href="/css/extracted/afe12311ec4aa267.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="/css/extracted/afe12311ec4aa267.css"></noscript>
+<link rel="preload" as="style" href="/css/extracted/c7fa874e566f9b0c.css">
+<link rel="stylesheet" href="/css/extracted/c7fa874e566f9b0c.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/css/extracted/c7fa874e566f9b0c.css"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -262,7 +262,7 @@
 <link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>
 <!-- Preload LCP images -->
-<link rel="preload" as="image" href="reportagen/img/ra-renthof/main-card-800w.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" href="reportagen/img/ra-renthof/main-card-800w.webp" imagesrcset="reportagen/img/ra-renthof/main-card-400w.webp 400w, reportagen/img/ra-renthof/main-card-800w.webp 800w" imagesizes="100vw" media="(max-width: 767px)" fetchpriority="high">
 <link rel="preload" as="image" href="reportagen/img/ra-renthof/hero-800w.webp" imagesrcset="reportagen/img/ra-renthof/hero-400w.webp 400w, reportagen/img/ra-renthof/hero-800w.webp 800w" imagesizes="(max-width: 640px) 100vw, (max-width: 1024px) 66vw, 66vw" media="(min-width: 768px)">
 
 <!-- Tailwind utilities inlined for performance -->
@@ -410,91 +410,301 @@
 </script>
 
 
+
+
 <!-- ═══ MOBILE HORIZONTAL FULLSCREEN SWIPER (hidden on desktop) ═══ -->
 <div id="mobile-portfolio-slider">
   <div class="hslider-track" id="sliderTrack">
-    <div class="hslider-slide" style="background-image:url('reportagen/img/ra-renthof/main-card.webp')" data-href="/reportagen/hochzeit-renthof-kassel-ra">
+    
+    <div class="hslider-slide active" data-href="/reportagen/hochzeit-renthof-kassel-ra">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          srcset="reportagen/img/ra-renthof/main-card-400w.webp 400w, reportagen/img/ra-renthof/main-card-800w.webp 800w"
+          sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="R &amp; A Hochzeit im Renthof Kassel"
+          width="800"
+          height="1066"
+          
+          src="reportagen/img/ra-renthof/main-card-800w.webp"
+          srcset="reportagen/img/ra-renthof/main-card-400w.webp 400w, reportagen/img/ra-renthof/main-card-800w.webp 800w"
+          sizes="100vw"
+          loading="eager"
+          fetchpriority="high"
+          decoding="sync"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>R & A</h2>
+        <h2>R &amp; A</h2>
         <p class="hslide-location">Renthof Kassel</p>
-        <p class="hslide-quote">"Eleganz trifft auf tiefe Emotionen."</p>
-        <a href="reportagen/hochzeit-renthof-kassel-ra" class="hslide-btn">Reportage R & A ansehen</a>
+        <p class="hslide-quote">&quot;Eleganz trifft auf tiefe Emotionen.&quot;</p>
+        <a href="reportagen/hochzeit-renthof-kassel-ra" class="hslide-btn">Reportage R &amp; A ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/sg-goettingen/main-card.webp')" data-href="/reportagen/hochzeit-goettingen">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-goettingen">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/sg-goettingen/main-card-400w.webp 400w, reportagen/img/sg-goettingen/main-card-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="S &amp; G Hochzeit in Göttingen"
+          width="800"
+          height="1065"
+          
+          data-src="reportagen/img/sg-goettingen/main-card-800w.webp"
+          data-srcset="reportagen/img/sg-goettingen/main-card-400w.webp 400w, reportagen/img/sg-goettingen/main-card-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>S & G</h2>
+        <h2>S &amp; G</h2>
         <p class="hslide-location">Hochzeit in Göttingen</p>
-        <p class="hslide-quote">"Ein Tag voller Liebe und Freude."</p>
-        <a href="reportagen/hochzeit-goettingen" class="hslide-btn">Reportage S & G ansehen</a>
+        <p class="hslide-quote">&quot;Ein Tag voller Liebe und Freude.&quot;</p>
+        <a href="reportagen/hochzeit-goettingen" class="hslide-btn">Reportage S &amp; G ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/renthof/5-03.webp')" data-href="/reportagen/hochzeit-renthof-kassel">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-renthof-kassel">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/renthof/5-03-400w.webp 400w, reportagen/img/renthof/5-03-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="A &amp; W Hochzeit im Renthof Kassel"
+          width="800"
+          height="534"
+          
+          data-src="reportagen/img/renthof/5-03-800w.webp"
+          data-srcset="reportagen/img/renthof/5-03-400w.webp 400w, reportagen/img/renthof/5-03-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>A & W</h2>
+        <h2>A &amp; W</h2>
         <p class="hslide-location">Renthof Kassel</p>
-        <p class="hslide-quote">"Unser perfekter Herbsttag."</p>
-        <a href="reportagen/hochzeit-renthof-kassel" class="hslide-btn">Reportage A & W, Renthof ansehen</a>
+        <p class="hslide-quote">&quot;Unser perfekter Herbsttag.&quot;</p>
+        <a href="reportagen/hochzeit-renthof-kassel" class="hslide-btn">Reportage A &amp; W, Renthof ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/ee-herkulesterrassen/slider.webp')" data-href="/reportagen/hochzeit-herkulesterrassen-kassel">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-herkulesterrassen-kassel">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/ee-herkulesterrassen/slider-400w.webp 400w, reportagen/img/ee-herkulesterrassen/slider-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="E &amp; E Hochzeit an den Herkulesterrassen Kassel"
+          width="800"
+          height="1067"
+          
+          data-src="reportagen/img/ee-herkulesterrassen/slider-800w.webp"
+          data-srcset="reportagen/img/ee-herkulesterrassen/slider-400w.webp 400w, reportagen/img/ee-herkulesterrassen/slider-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>E & E</h2>
+        <h2>E &amp; E</h2>
         <p class="hslide-location">Herkulesterrassen Kassel</p>
-        <p class="hslide-quote">"Zwischen Terrassen, Bäumen und Sommerlicht."</p>
-        <a href="reportagen/hochzeit-herkulesterrassen-kassel" class="hslide-btn">Reportage E & E ansehen</a>
+        <p class="hslide-quote">&quot;Zwischen Terrassen, Bäumen und Sommerlicht.&quot;</p>
+        <a href="reportagen/hochzeit-herkulesterrassen-kassel" class="hslide-btn">Reportage E &amp; E ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/berlepsch/slider-card.webp')" data-href="/reportagen/hochzeit-schloss-berlepsch">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-schloss-berlepsch">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/berlepsch/slider-card-400w.webp 400w, reportagen/img/berlepsch/slider-card-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="A &amp; W Hochzeit auf Schloss Berlepsch"
+          width="800"
+          height="1199"
+          
+          data-src="reportagen/img/berlepsch/slider-card-800w.webp"
+          data-srcset="reportagen/img/berlepsch/slider-card-400w.webp 400w, reportagen/img/berlepsch/slider-card-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>A & W</h2>
+        <h2>A &amp; W</h2>
         <p class="hslide-location">Schloss Berlepsch</p>
-        <p class="hslide-quote">"Ein Schloss wie aus einem Traum."</p>
-        <a href="reportagen/hochzeit-schloss-berlepsch" class="hslide-btn">Reportage A & W, Berlepsch ansehen</a>
+        <p class="hslide-quote">&quot;Ein Schloss wie aus einem Traum.&quot;</p>
+        <a href="reportagen/hochzeit-schloss-berlepsch" class="hslide-btn">Reportage A &amp; W, Berlepsch ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/sababurg/hero-kiss.webp')" data-href="/reportagen/hochzeit-sababurg-dornroeschenschloss">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-sababurg-dornroeschenschloss">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/sababurg/hero-kiss-400w.webp 400w, reportagen/img/sababurg/hero-kiss-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="J &amp; J Hochzeit auf der Sababurg"
+          width="800"
+          height="635"
+          
+          data-src="reportagen/img/sababurg/hero-kiss-800w.webp"
+          data-srcset="reportagen/img/sababurg/hero-kiss-400w.webp 400w, reportagen/img/sababurg/hero-kiss-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>J & J</h2>
+        <h2>J &amp; J</h2>
         <p class="hslide-location">Dornröschenschloss Sababurg</p>
-        <p class="hslide-quote">"Ein Märchen wurde wahr."</p>
-        <a href="reportagen/hochzeit-sababurg-dornroeschenschloss" class="hslide-btn">Reportage J & J ansehen</a>
+        <p class="hslide-quote">&quot;Ein Märchen wurde wahr.&quot;</p>
+        <a href="reportagen/hochzeit-sababurg-dornroeschenschloss" class="hslide-btn">Reportage J &amp; J ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/vm-kassel/hero.webp')" data-href="/reportagen/hochzeit-rathaus-kassel">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-rathaus-kassel">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/vm-kassel/hero-400w.webp 400w, reportagen/img/vm-kassel/hero-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="V &amp; M Hochzeit in Kassel"
+          width="800"
+          height="533"
+          
+          data-src="reportagen/img/vm-kassel/hero-800w.webp"
+          data-srcset="reportagen/img/vm-kassel/hero-400w.webp 400w, reportagen/img/vm-kassel/hero-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>V & M</h2>
+        <h2>V &amp; M</h2>
         <p class="hslide-location">Hochzeit in Kassel</p>
-        <p class="hslide-quote">"Ein Sommertag voller Leichtigkeit."</p>
-        <a href="reportagen/hochzeit-rathaus-kassel" class="hslide-btn">Reportage V & M ansehen</a>
+        <p class="hslide-quote">&quot;Ein Sommertag voller Leichtigkeit.&quot;</p>
+        <a href="reportagen/hochzeit-rathaus-kassel" class="hslide-btn">Reportage V &amp; M ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('reportagen/img/bergpark/2-21.webp')" data-href="/reportagen/hochzeit-bergpark-wilhelmshoehe">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-bergpark-wilhelmshoehe">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="reportagen/img/bergpark/2-21-400w.webp 400w, reportagen/img/bergpark/2-21-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="T &amp; V Hochzeit im Bergpark Wilhelmshöhe"
+          width="800"
+          height="1200"
+          
+          data-src="reportagen/img/bergpark/2-21-800w.webp"
+          data-srcset="reportagen/img/bergpark/2-21-400w.webp 400w, reportagen/img/bergpark/2-21-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>T & V</h2>
+        <h2>T &amp; V</h2>
         <p class="hslide-location">Bergpark Wilhelmshöhe</p>
-        <p class="hslide-quote">"UNESCO-Kulisse für unsere Liebe."</p>
-        <a href="reportagen/hochzeit-bergpark-wilhelmshoehe" class="hslide-btn">Reportage T & V ansehen</a>
+        <p class="hslide-quote">&quot;UNESCO-Kulisse für unsere Liebe.&quot;</p>
+        <a href="reportagen/hochzeit-bergpark-wilhelmshoehe" class="hslide-btn">Reportage T &amp; V ansehen</a>
       </div>
     </div>
-    <div class="hslider-slide" style="background-image:url('img/ext/vs-schloss-portrait.webp')" data-href="/reportagen/hochzeit-schloss-bad-arolsen">
+    
+    <div class="hslider-slide" data-href="/reportagen/hochzeit-schloss-bad-arolsen">
+      <picture class="hslide-media">
+        <source
+          media="(max-width: 767px)"
+          
+          data-srcset="img/ext/vs-schloss-portrait-400w.webp 400w, img/ext/vs-schloss-portrait-800w.webp 800w"
+          data-sizes="100vw"
+          
+        >
+        <img
+          class="hslide-image"
+          alt="V &amp; S Hochzeit auf Schloss Bad Arolsen"
+          width="800"
+          height="1260"
+          
+          data-src="img/ext/vs-schloss-portrait-800w.webp"
+          data-srcset="img/ext/vs-schloss-portrait-400w.webp 400w, img/ext/vs-schloss-portrait-800w.webp 800w"
+          data-sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          
+        >
+      </picture>
       <div class="hslide-overlay"></div>
       <div class="hslide-content">
-        <h2>V & S</h2>
+        <h2>V &amp; S</h2>
         <p class="hslide-location">Schloss Bad Arolsen</p>
-        <p class="hslide-quote">"Wie ein barockes Gemälde."</p>
-        <a href="reportagen/hochzeit-schloss-bad-arolsen" class="hslide-btn">Reportage V & S ansehen</a>
+        <p class="hslide-quote">&quot;Wie ein barockes Gemälde.&quot;</p>
+        <a href="reportagen/hochzeit-schloss-bad-arolsen" class="hslide-btn">Reportage V &amp; S ansehen</a>
       </div>
     </div>
-
+    
   </div>
   <!-- Vertical dots right -->
   <div class="hslider-dots" id="sliderDots"></div>
@@ -522,6 +732,31 @@
   const total = slides.length;
   let cur = 0, startX = 0, dx = 0, dragging = false, locked = false;
 
+  function hydrateSlide(index) {
+    const slide = slides[index];
+    if (!slide) return;
+    const img = slide.querySelector('.hslide-image[data-src]');
+    if (!img) return;
+    const source = slide.querySelector('source[data-srcset]');
+    if (source) {
+      source.srcset = source.dataset.srcset;
+      if (source.dataset.sizes) source.sizes = source.dataset.sizes;
+      source.removeAttribute('data-srcset');
+      source.removeAttribute('data-sizes');
+    }
+    img.src = img.dataset.src;
+    if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+    if (img.dataset.sizes) img.sizes = img.dataset.sizes;
+    img.removeAttribute('data-src');
+    img.removeAttribute('data-srcset');
+    img.removeAttribute('data-sizes');
+  }
+
+  const firstImage = slides[0]?.querySelector('.hslide-image');
+  const hydrateNext = () => setTimeout(() => hydrateSlide(1), 500);
+  if (firstImage?.complete) hydrateNext();
+  else firstImage?.addEventListener('load', hydrateNext, { once: true });
+
   // Create dots
   for (let i = 0; i < total; i++) {
     const d = document.createElement('button');
@@ -531,13 +766,13 @@
     dotsC.appendChild(d);
   }
 
-  // Set first slide active
-  slides[0].classList.add('active');
-
   function go(i) {
     if (locked || i === cur) return;
     locked = true;
     const next = Math.max(0, Math.min(i, total - 1));
+    hydrateSlide(next);
+    hydrateSlide(next + 1);
+    hydrateSlide(next - 1);
     slides[cur].classList.remove('active');
     slides[next].classList.add('active');
     cur = next;
