@@ -333,7 +333,8 @@
 </script>
 
 <!-- Preload hero image -->
-<link rel="preload" as="image" href="img/ee-herkulesterrassen/hero.webp">
+<link rel="preload" as="image" href="img/ee-herkulesterrassen/slider-800w.webp" imagesrcset="img/ee-herkulesterrassen/slider-400w.webp 400w, img/ee-herkulesterrassen/slider-800w.webp 800w" imagesizes="100vw" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/ee-herkulesterrassen/hero.webp" media="(min-width: 769px)" fetchpriority="high">
 
 <!-- Fonts -->
 <link rel="preload" href="/fonts/cg-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
