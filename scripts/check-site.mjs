@@ -28,6 +28,7 @@ for (const file of allFiles) {
 await checkIcons();
 await checkTextFiles(allFiles);
 await checkHtmlFiles(allFiles.filter((file) => file.endsWith('.html')));
+await checkLocalReferences(allFiles.filter((file) => file.endsWith('.html')));
 await checkSitemapAndRedirects();
 
 if (failures.length) {
@@ -103,6 +104,31 @@ async function checkHtmlFiles(files) {
   }
 }
 
+async function checkLocalReferences(files) {
+  for (const file of files) {
+    const rel = path.relative(distDir, file).replace(/\\/g, '/');
+    const pageDir = path.dirname(rel) === '.' ? '' : `${path.dirname(rel)}/`;
+    const html = await fs.readFile(file, 'utf8');
+    const urls = [
+      ...extractAttributeUrls(html, /\b(?:href|src|poster)=["']([^"']+)["']/gi),
+      ...extractSrcsetUrls(html)
+    ];
+
+    for (const rawUrl of urls) {
+      const url = normalizeLocalUrl(rawUrl);
+      if (!url) continue;
+
+      const target = url.startsWith('/')
+        ? url.slice(1)
+        : path.posix.normalize(pageDir + url);
+
+      if (!await localTargetExists(target)) {
+        failures.push(`${rel} references missing local asset/page: ${rawUrl}`);
+      }
+    }
+  }
+}
+
 async function checkSitemapAndRedirects() {
   const sitemap = await fs.readFile(path.join(distDir, 'sitemap.xml'), 'utf8');
   const redirectRules = await fs.readFile(path.join(distDir, '_redirects'), 'utf8');
@@ -132,6 +158,42 @@ async function checkSitemapAndRedirects() {
 function capture(input, regex) {
   const match = input.match(regex);
   return match ? match[1].trim() : '';
+}
+
+function extractAttributeUrls(input, regex) {
+  return Array.from(input.matchAll(regex), (match) => match[1]);
+}
+
+function extractSrcsetUrls(input) {
+  const urls = [];
+  for (const match of input.matchAll(/\bsrcset=["']([^"']+)["']/gi)) {
+    for (const candidate of match[1].split(',')) {
+      const url = candidate.trim().split(/\s+/)[0];
+      if (url) urls.push(url);
+    }
+  }
+  return urls;
+}
+
+function normalizeLocalUrl(rawUrl) {
+  if (!rawUrl) return '';
+  const url = rawUrl.trim().split(/[?#]/)[0];
+  if (!url || url.startsWith('#')) return '';
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/)/i.test(url)) return '';
+  return url;
+}
+
+async function localTargetExists(target) {
+  if (target === '..' || target.startsWith('../')) return false;
+  if (await existsInDist(target)) return true;
+  if (!path.posix.extname(target)) {
+    return await existsInDist(`${target}.html`) || await existsInDist(`${target}/index.html`);
+  }
+  return false;
+}
+
+async function existsInDist(relPath) {
+  return fs.access(path.join(distDir, relPath)).then(() => true, () => false);
 }
 
 async function collectFiles(dir, predicate) {

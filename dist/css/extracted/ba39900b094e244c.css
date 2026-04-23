@@ -347,11 +347,7 @@
   }
 }
 
-#city-rotate {
-  display: inline-block;
-  transition: opacity 0.4s ease;
-}
-
+/* ═══ SEO FOOTER TEXT ═══ */
 .seo-footer-text {
   background: var(--cream-light, #FAF8F4);
   border-top: 1px solid var(--cream-dark, #EDE7DB);
