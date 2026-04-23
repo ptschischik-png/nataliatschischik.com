@@ -553,6 +553,14 @@ p { max-width: 60ch; }
   line-height: 1;
 }
 
+.p2-price-meta {
+  margin: -0.15rem 0 1rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
 .p2-plan-copy {
   margin-bottom: 1.25rem;
   color: var(--brown-600);
