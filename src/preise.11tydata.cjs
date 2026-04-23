@@ -1,5 +1,5 @@
 const headExtra = `<!-- LCP-critical preloads -->
-<link rel="preload" as="image" type="image/webp" href="/reportagen/img/ra-renthof/preise-party-800w.webp" imagesrcset="/reportagen/img/ra-renthof/preise-party-400w.webp 400w, /reportagen/img/ra-renthof/preise-party-800w.webp 800w, /reportagen/img/ra-renthof/preise-party.webp 2022w" imagesizes="(max-width: 900px) 100vw, 50vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="/reportagen/img/ra-renthof/preise-party-800w.webp" imagesrcset="/reportagen/img/ra-renthof/preise-party-400w.webp 400w, /reportagen/img/ra-renthof/preise-party-800w.webp 800w" imagesizes="(max-width: 900px) 100vw, 50vw" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}

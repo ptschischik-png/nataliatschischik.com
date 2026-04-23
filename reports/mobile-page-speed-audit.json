@@ -1,0 +1,3821 @@
+{
+  "generatedAt": "2026-04-23T19:09:28.474Z",
+  "profile": {
+    "device": "mobile",
+    "viewport": "390x844 @ DPR 3",
+    "userAgent": "Moto G Power / Chrome mobile emulation",
+    "network": "CDP Fast 4G-ish throttling",
+    "cpuThrottlingRate": 4,
+    "baseUrl": "http://127.0.0.1:4173"
+  },
+  "summary": {
+    "pageCount": 45,
+    "medianLcp": 2804,
+    "p75Lcp": 2816,
+    "medianTransferBytes": 888012,
+    "p75TransferBytes": 888613,
+    "worstLcp": [
+      {
+        "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+        "lcp": 5152,
+        "fcp": 428,
+        "cls": 0.007,
+        "transferBytes": 1912579,
+        "requestCount": 21
+      },
+      {
+        "rel": "journal/orangerie-kassel.html",
+        "lcp": 3768,
+        "fcp": 412,
+        "cls": 0,
+        "transferBytes": 310950,
+        "requestCount": 9
+      },
+      {
+        "rel": "reportagen/hochzeit-goettingen.html",
+        "lcp": 3224,
+        "fcp": 412,
+        "cls": 0.004,
+        "transferBytes": 1019711,
+        "requestCount": 17
+      },
+      {
+        "rel": "ueber-mich.html",
+        "lcp": 3168,
+        "fcp": 436,
+        "cls": 0,
+        "transferBytes": 527946,
+        "requestCount": 14
+      },
+      {
+        "rel": "reportagen/hochzeit-rathaus-kassel.html",
+        "lcp": 3152,
+        "fcp": 428,
+        "cls": 0.005,
+        "transferBytes": 923054,
+        "requestCount": 18
+      },
+      {
+        "rel": "reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+        "lcp": 3088,
+        "fcp": 424,
+        "cls": 0.001,
+        "transferBytes": 786703,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-baunatal.html",
+        "lcp": 2836,
+        "fcp": 412,
+        "cls": 0,
+        "transferBytes": 888929,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-giessen.html",
+        "lcp": 2832,
+        "fcp": 408,
+        "cls": 0,
+        "transferBytes": 888414,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-borken.html",
+        "lcp": 2828,
+        "fcp": 412,
+        "cls": 0,
+        "transferBytes": 888324,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-marburg.html",
+        "lcp": 2828,
+        "fcp": 408,
+        "cls": 0,
+        "transferBytes": 888012,
+        "requestCount": 15
+      }
+    ],
+    "heaviestPages": [
+      {
+        "rel": "portfolio.html",
+        "lcp": 608,
+        "fcp": 364,
+        "cls": 0.012,
+        "transferBytes": 2191864,
+        "requestCount": 21
+      },
+      {
+        "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+        "lcp": 5152,
+        "fcp": 428,
+        "cls": 0.007,
+        "transferBytes": 1912579,
+        "requestCount": 21
+      },
+      {
+        "rel": "reportagen/hochzeit-goettingen.html",
+        "lcp": 3224,
+        "fcp": 412,
+        "cls": 0.004,
+        "transferBytes": 1019711,
+        "requestCount": 17
+      },
+      {
+        "rel": "reportagen/hochzeit-rathaus-kassel.html",
+        "lcp": 3152,
+        "fcp": 428,
+        "cls": 0.005,
+        "transferBytes": 923054,
+        "requestCount": 18
+      },
+      {
+        "rel": "hochzeitsfotograf-schwalmstadt.html",
+        "lcp": 2816,
+        "fcp": 400,
+        "cls": 0,
+        "transferBytes": 888947,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-baunatal.html",
+        "lcp": 2836,
+        "fcp": 412,
+        "cls": 0,
+        "transferBytes": 888929,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-nordhessen.html",
+        "lcp": 2800,
+        "fcp": 400,
+        "cls": 0,
+        "transferBytes": 888807,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-hildesheim.html",
+        "lcp": 2808,
+        "fcp": 396,
+        "cls": 0,
+        "transferBytes": 888790,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-northeim.html",
+        "lcp": 2812,
+        "fcp": 404,
+        "cls": 0,
+        "transferBytes": 888758,
+        "requestCount": 15
+      },
+      {
+        "rel": "hochzeitsfotograf-frankenberg.html",
+        "lcp": 2808,
+        "fcp": 400,
+        "cls": 0,
+        "transferBytes": 888754,
+        "requestCount": 15
+      }
+    ],
+    "worstCls": [
+      {
+        "rel": "journal/golden-hour.html",
+        "lcp": 408,
+        "fcp": 408,
+        "cls": 0.026,
+        "transferBytes": 267063,
+        "requestCount": 13
+      },
+      {
+        "rel": "reportagen/hochzeit-renthof-kassel-ra.html",
+        "lcp": 1632,
+        "fcp": 428,
+        "cls": 0.018,
+        "transferBytes": 710098,
+        "requestCount": 18
+      },
+      {
+        "rel": "journal/brautpaar-shooting-tipps.html",
+        "lcp": 1260,
+        "fcp": 440,
+        "cls": 0.016,
+        "transferBytes": 460000,
+        "requestCount": 14
+      },
+      {
+        "rel": "journal/hochzeit-timeline-kassel.html",
+        "lcp": 1004,
+        "fcp": 416,
+        "cls": 0.014,
+        "transferBytes": 312928,
+        "requestCount": 13
+      },
+      {
+        "rel": "portfolio.html",
+        "lcp": 608,
+        "fcp": 364,
+        "cls": 0.012,
+        "transferBytes": 2191864,
+        "requestCount": 21
+      },
+      {
+        "rel": "faq.html",
+        "lcp": 432,
+        "fcp": 432,
+        "cls": 0.01,
+        "transferBytes": 237448,
+        "requestCount": 10
+      },
+      {
+        "rel": "journal/hochzeitsalbum.html",
+        "lcp": 1588,
+        "fcp": 420,
+        "cls": 0.007,
+        "transferBytes": 416349,
+        "requestCount": 13
+      },
+      {
+        "rel": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+        "lcp": 1700,
+        "fcp": 428,
+        "cls": 0.007,
+        "transferBytes": 702858,
+        "requestCount": 15
+      },
+      {
+        "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+        "lcp": 5152,
+        "fcp": 428,
+        "cls": 0.007,
+        "transferBytes": 1912579,
+        "requestCount": 21
+      },
+      {
+        "rel": "reportagen/hochzeit-renthof-kassel.html",
+        "lcp": 1216,
+        "fcp": 428,
+        "cls": 0.005,
+        "transferBytes": 729140,
+        "requestCount": 18
+      }
+    ]
+  },
+  "results": [
+    {
+      "rel": "index.html",
+      "url": "http://127.0.0.1:4173/",
+      "title": "Hochzeitsfotograf Kassel — Natalia Tschischik",
+      "metrics": {
+        "fcp": 392,
+        "lcp": 2756,
+        "cls": 0.0002211470002236052,
+        "domContentLoaded": 850.4000000059605,
+        "load": 4303.199999988079,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 177
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 880350,
+        "imageBytes": 649774,
+        "cssBytes": 25113,
+        "jsBytes": 31078,
+        "htmlBytes": 60102,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 59989
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13363,
+        "bodyTextLength": 1254
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "datenschutz.html",
+      "url": "http://127.0.0.1:4173/datenschutz.html",
+      "title": "Datenschutzerklärung — Hochzeitsfotograf Natalia Tschischik",
+      "metrics": {
+        "fcp": 356,
+        "lcp": 356,
+        "cls": 0,
+        "domContentLoaded": 650,
+        "load": 993.3999999761581,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 125
+      },
+      "page": {
+        "requestCount": 8,
+        "totalTransferBytes": 178501,
+        "imageBytes": 0,
+        "cssBytes": 10043,
+        "jsBytes": 21167,
+        "htmlBytes": 33008,
+        "largestResources": [
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/datenschutz.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 32895
+          },
+          {
+            "url": "/js/tracking.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 11330
+          },
+          {
+            "url": "/js/tracking-bootstrap.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 9837
+          },
+          {
+            "url": "/css/extracted/b83e5831a3631c5e.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 9052
+          },
+          {
+            "url": "/fonts/fonts-secondary.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 991
+          }
+        ],
+        "scrollHeight": 10029,
+        "bodyTextLength": 10501
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "faq.html",
+      "url": "http://127.0.0.1:4173/faq.html",
+      "title": "FAQ | Hochzeitsfotograf Kassel — Natalia Tschischik",
+      "metrics": {
+        "fcp": 432,
+        "lcp": 432,
+        "cls": 0.010036561631963942,
+        "domContentLoaded": 685.5,
+        "load": 1265.1000000238419,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 10,
+        "totalTransferBytes": 237448,
+        "imageBytes": 41529,
+        "cssBytes": 10518,
+        "jsBytes": 21167,
+        "htmlBytes": 49951,
+        "largestResources": [
+          {
+            "url": "/faq.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 49838
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/img/ext/gd-15zAiT52byizm3F-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 37960
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/js/tracking.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 11330
+          },
+          {
+            "url": "/js/tracking-bootstrap.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 9837
+          },
+          {
+            "url": "/css/extracted/b1a4672adb536f9f.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 9527
+          }
+        ],
+        "scrollHeight": 5535,
+        "bodyTextLength": 1959
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-arolsen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-bad-arolsen.html",
+      "title": "Hochzeitsfotograf Bad Arolsen – Natalia Tschischik",
+      "metrics": {
+        "fcp": 404,
+        "lcp": 2796,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 998.3999999761581,
+        "load": 4339.799999982119,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 122
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888613,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66907,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-bad-arolsen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66794
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1414
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-hersfeld.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-bad-hersfeld.html",
+      "title": "Hochzeitsfotograf Bad Hersfeld – Natalia Tschischik",
+      "metrics": {
+        "fcp": 404,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1013.7000000178814,
+        "load": 4341,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 177
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888610,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66904,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-bad-hersfeld.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66791
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13658,
+        "bodyTextLength": 1363
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-baunatal.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-baunatal.html",
+      "title": "Hochzeitsfotograf Baunatal – Natalia Tschischik",
+      "metrics": {
+        "fcp": 412,
+        "lcp": 2836,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1021.9000000059605,
+        "load": 4347,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 181
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888929,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67223,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-baunatal.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 67110
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13740,
+        "bodyTextLength": 1482
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-borken.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-borken.html",
+      "title": "Hochzeitsfotograf Borken – Natalia Tschischik",
+      "metrics": {
+        "fcp": 412,
+        "lcp": 2828,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1021.9000000059605,
+        "load": 4347.4000000059605,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 175
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888324,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66618,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-borken.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66505
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13658,
+        "bodyTextLength": 1368
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-duderstadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-duderstadt.html",
+      "title": "Hochzeitsfotograf Duderstadt – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1028.7000000178814,
+        "load": 4348.600000023842,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 127
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888558,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66852,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-duderstadt.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66739
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1439
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-eschwege.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-eschwege.html",
+      "title": "Hochzeitsfotograf Eschwege – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2808,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1013.8000000119209,
+        "load": 4339.699999988079,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 176
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888478,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66772,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-eschwege.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66659
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1376
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-frankenberg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-frankenberg.html",
+      "title": "Hochzeitsfotograf Frankenberg – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2808,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1015.3000000119209,
+        "load": 4340.5999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 119
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888754,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67048,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-frankenberg.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66935
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1434
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-fritzlar.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-fritzlar.html",
+      "title": "Hochzeitsfotograf Fritzlar – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 830.3999999761581,
+        "load": 4303.399999976158,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 120
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 881478,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 59772,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-fritzlar.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 59659
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1389
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-fulda.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-fulda.html",
+      "title": "Hochzeitsfotograf Fulda – Natalia Tschischik",
+      "metrics": {
+        "fcp": 404,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1014.6999999880791,
+        "load": 4339.199999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 123
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888402,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66696,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-fulda.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66583
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1417
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-giessen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-giessen.html",
+      "title": "Hochzeitsfotograf Gießen – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2832,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1021.4000000059605,
+        "load": 4346.200000017881,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 121
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888414,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66708,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-giessen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66595
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1390
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-goettingen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-goettingen.html",
+      "title": "Hochzeitsfotograf Göttingen – Natalia Tschischik",
+      "metrics": {
+        "fcp": 396,
+        "lcp": 2804,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 941.5999999940395,
+        "load": 4325.0999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 123
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 886236,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 64530,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-goettingen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 64417
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1385
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-hildesheim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-hildesheim.html",
+      "title": "Hochzeitsfotograf Hildesheim – Natalia Tschischik",
+      "metrics": {
+        "fcp": 396,
+        "lcp": 2808,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1014.2999999821186,
+        "load": 4340.0999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 122
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888790,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67084,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-hildesheim.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66971
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13740,
+        "bodyTextLength": 1434
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-hofgeismar.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-hofgeismar.html",
+      "title": "Hochzeitsfotograf Hofgeismar – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2804,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1014.9000000059605,
+        "load": 4339.199999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 121
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888502,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66796,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-hofgeismar.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66683
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1372
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-kirchheim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-kirchheim.html",
+      "title": "Hochzeitsfotograf Kirchheim – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1022.5,
+        "load": 4347.199999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 121
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888432,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66726,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-kirchheim.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66613
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13695,
+        "bodyTextLength": 1413
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-marburg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-marburg.html",
+      "title": "Hochzeitsfotograf Marburg – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2828,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1021.3000000119209,
+        "load": 4347.199999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 123
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888012,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66306,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-marburg.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66193
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1367
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-neustadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-neustadt.html",
+      "title": "Hochzeitsfotograf Neustadt – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2804,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1015.2000000178814,
+        "load": 4340.300000011921,
+        "longTaskCount": 3,
+        "totalLongTaskMs": 174
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888543,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66837,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-neustadt.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66724
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1432
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-nordhessen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-nordhessen.html",
+      "title": "Hochzeitsfotograf Nordhessen – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2800,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1014.5,
+        "load": 4340,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888807,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67101,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-nordhessen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66988
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13722,
+        "bodyTextLength": 1441
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-northeim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-northeim.html",
+      "title": "Hochzeitsfotograf Northeim – Natalia Tschischik",
+      "metrics": {
+        "fcp": 404,
+        "lcp": 2812,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1022.2000000178814,
+        "load": 4346.5999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 125
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888758,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67052,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-northeim.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66939
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1442
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-paderborn.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-paderborn.html",
+      "title": "Hochzeitsfotograf Paderborn – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2800,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 999.6999999880791,
+        "load": 4339.9000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888668,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66962,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-paderborn.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66849
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1390
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-schwalmstadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-schwalmstadt.html",
+      "title": "Hochzeitsfotograf Schwalmstadt – Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 2816,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1014.1000000238419,
+        "load": 4341,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888947,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 67241,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-schwalmstadt.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 67128
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13713,
+        "bodyTextLength": 1464
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-warburg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-warburg.html",
+      "title": "Hochzeitsfotograf Warburg – Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 2828,
+        "cls": 0.0000019235196700606284,
+        "domContentLoaded": 1021.0999999940395,
+        "load": 4347.0999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 888585,
+        "imageBytes": 649774,
+        "cssBytes": 26571,
+        "jsBytes": 31078,
+        "htmlBytes": 66879,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sababurg/2-14-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 100657
+          },
+          {
+            "url": "/img/ext/aw-portfolio-teaser-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 87364
+          },
+          {
+            "url": "/hochzeitsfotograf-warburg.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 66766
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 13686,
+        "bodyTextLength": 1386
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "impressum.html",
+      "url": "http://127.0.0.1:4173/impressum.html",
+      "title": "Impressum — Hochzeitsfotograf Natalia Tschischik",
+      "metrics": {
+        "fcp": 356,
+        "lcp": 356,
+        "cls": 0.00093783125033476,
+        "domContentLoaded": 635.8000000119209,
+        "load": 986.7000000178814,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 126
+      },
+      "page": {
+        "requestCount": 8,
+        "totalTransferBytes": 169957,
+        "imageBytes": 0,
+        "cssBytes": 10043,
+        "jsBytes": 21167,
+        "htmlBytes": 24464,
+        "largestResources": [
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/impressum.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 24351
+          },
+          {
+            "url": "/js/tracking.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 11330
+          },
+          {
+            "url": "/js/tracking-bootstrap.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 9837
+          },
+          {
+            "url": "/css/extracted/b83e5831a3631c5e.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 9052
+          },
+          {
+            "url": "/fonts/fonts-secondary.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 991
+          }
+        ],
+        "scrollHeight": 4366,
+        "bodyTextLength": 3790
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal.html",
+      "url": "http://127.0.0.1:4173/journal.html",
+      "title": "Journal — Natalia Tschischik | Hochzeitsfotograf Kassel",
+      "metrics": {
+        "fcp": 388,
+        "lcp": 1604,
+        "cls": 0.0032484977243884914,
+        "domContentLoaded": 653.3999999761581,
+        "load": 2938,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 120
+      },
+      "page": {
+        "requestCount": 14,
+        "totalTransferBytes": 582130,
+        "imageBytes": 395994,
+        "cssBytes": 17140,
+        "jsBytes": 21167,
+        "htmlBytes": 33546,
+        "largestResources": [
+          {
+            "url": "/images/journal-orangerie-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 99234
+          },
+          {
+            "url": "/images/camera-watercolor-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 81740
+          },
+          {
+            "url": "/images/journal-shooting-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 70842
+          },
+          {
+            "url": "/images/journal-locations-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 55644
+          },
+          {
+            "url": "/images/album-watercolor-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 50950
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/images/journal-golden-hour-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 37584
+          }
+        ],
+        "scrollHeight": 5246,
+        "bodyTextLength": 2480
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/brautpaar-shooting-tipps.html",
+      "url": "http://127.0.0.1:4173/journal/brautpaar-shooting-tipps.html",
+      "title": "Brautpaar-Shooting Tipps | Natalia Tschischik",
+      "metrics": {
+        "fcp": 440,
+        "lcp": 1260,
+        "cls": 0.015617013456340686,
+        "domContentLoaded": 706.0999999940395,
+        "load": 2344,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 126
+      },
+      "page": {
+        "requestCount": 14,
+        "totalTransferBytes": 460000,
+        "imageBytes": 264154,
+        "cssBytes": 8854,
+        "jsBytes": 21167,
+        "htmlBytes": 51542,
+        "largestResources": [
+          {
+            "url": "/images/natalia-author-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 127205
+          },
+          {
+            "url": "/img/ext/ai-e5b11376a187.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 67998
+          },
+          {
+            "url": "/journal/brautpaar-shooting-tipps.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 51429
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/img/ext/ai-1dcf4eae984a.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 24400
+          },
+          {
+            "url": "/img/ext/ai-b9590ea0615e.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 23424
+          }
+        ],
+        "scrollHeight": 10589,
+        "bodyTextLength": 7007
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/golden-hour.html",
+      "url": "http://127.0.0.1:4173/journal/golden-hour.html",
+      "title": "Golden Hour Hochzeitsfotos | Natalia Tschischik",
+      "metrics": {
+        "fcp": 408,
+        "lcp": 408,
+        "cls": 0.02607031889823385,
+        "domContentLoaded": 663.5,
+        "load": 1406.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 122
+      },
+      "page": {
+        "requestCount": 13,
+        "totalTransferBytes": 267063,
+        "imageBytes": 61158,
+        "cssBytes": 14555,
+        "jsBytes": 21167,
+        "htmlBytes": 40572,
+        "largestResources": [
+          {
+            "url": "/journal/golden-hour.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 40459
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/images/journal-golden-hour-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 37584
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/img/ext/ai-a0b958e2f967.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 15896
+          },
+          {
+            "url": "/fonts/dm-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 15328
+          },
+          {
+            "url": "/css/extracted/c834dad69f00903d.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 13564
+          }
+        ],
+        "scrollHeight": 7413,
+        "bodyTextLength": 6082
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeit-timeline-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeit-timeline-kassel.html",
+      "title": "Hochzeit Timeline Kassel | Natalia Tschischik",
+      "metrics": {
+        "fcp": 416,
+        "lcp": 1004,
+        "cls": 0.013675955561377259,
+        "domContentLoaded": 677.3000000119209,
+        "load": 1634.7000000178814,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 121
+      },
+      "page": {
+        "requestCount": 13,
+        "totalTransferBytes": 312928,
+        "imageBytes": 107095,
+        "cssBytes": 12458,
+        "jsBytes": 21167,
+        "htmlBytes": 42597,
+        "largestResources": [
+          {
+            "url": "/img/ext/ai-18c55bef1edc.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 69678
+          },
+          {
+            "url": "/journal/hochzeit-timeline-kassel.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 42484
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/img/ext/ai-963e40596bf2.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 17412
+          },
+          {
+            "url": "/img/ext/ai-a0b958e2f967.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 15896
+          },
+          {
+            "url": "/fonts/dm-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 15328
+          }
+        ],
+        "scrollHeight": 9141,
+        "bodyTextLength": 6009
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeitsalbum.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeitsalbum.html",
+      "title": "Warum ein Hochzeitsalbum? | Journal — Natalia Tschischik",
+      "metrics": {
+        "fcp": 420,
+        "lcp": 1588,
+        "cls": 0.007436942570748809,
+        "domContentLoaded": 657,
+        "load": 2121.9000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 121
+      },
+      "page": {
+        "requestCount": 13,
+        "totalTransferBytes": 416349,
+        "imageBytes": 226674,
+        "cssBytes": 10532,
+        "jsBytes": 21167,
+        "htmlBytes": 43693,
+        "largestResources": [
+          {
+            "url": "/images/natalia-author-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 127205
+          },
+          {
+            "url": "/img/ext/album-watercolor-hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 50870
+          },
+          {
+            "url": "/journal/hochzeitsalbum.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 43580
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/img/ext/ai-cf664f5a9dbc.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 27464
+          },
+          {
+            "url": "/img/ext/ai-b92dc8188bc8.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 17566
+          }
+        ],
+        "scrollHeight": 8163,
+        "bodyTextLength": 4327
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeitslocations-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeitslocations-kassel.html",
+      "title": "5 Hochzeitslocations Kassel | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 1168,
+        "cls": 0.00004397627160533289,
+        "domContentLoaded": 692.4000000059605,
+        "load": 3188.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 133
+      },
+      "page": {
+        "requestCount": 16,
+        "totalTransferBytes": 636661,
+        "imageBytes": 426899,
+        "cssBytes": 8892,
+        "jsBytes": 21167,
+        "htmlBytes": 50092,
+        "largestResources": [
+          {
+            "url": "/images/natalia-author-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 127205
+          },
+          {
+            "url": "/reportagen/img/sababurg/hero-kiss-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 102893
+          },
+          {
+            "url": "/img/ext/ai-4ee9d0cc1571.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 78146
+          },
+          {
+            "url": "/journal/hochzeitslocations-kassel.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 49979
+          },
+          {
+            "url": "/img/ext/ai-ec000cc54b46.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 46068
+          },
+          {
+            "url": "/img/ext/ai-f40e86f66497.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 41786
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 12375,
+        "bodyTextLength": 7166
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/orangerie-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/orangerie-kassel.html",
+      "title": "Orangerie Kassel — Hochzeit & Fotospots | Natalia Tschischik",
+      "metrics": {
+        "fcp": 412,
+        "lcp": 3768,
+        "cls": 0.00022255010096071054,
+        "domContentLoaded": 1271.800000011921,
+        "load": 0,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 9,
+        "totalTransferBytes": 310950,
+        "imageBytes": 98276,
+        "cssBytes": 12045,
+        "jsBytes": 9837,
+        "htmlBytes": 61181,
+        "largestResources": [
+          {
+            "url": "/images/journal-orangerie-hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 98276
+          },
+          {
+            "url": "/journal/orangerie-kassel.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 61068
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/fonts/dm-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 15328
+          },
+          {
+            "url": "/css/extracted/90a0cd6c632a7543.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 11054
+          },
+          {
+            "url": "/js/tracking-bootstrap.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 9837
+          }
+        ],
+        "scrollHeight": 13760,
+        "bodyTextLength": 8804
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "portfolio.html",
+      "url": "http://127.0.0.1:4173/portfolio.html",
+      "title": "Portfolio | Hochzeitsreportagen Kassel — Natalia Tschischik",
+      "metrics": {
+        "fcp": 364,
+        "lcp": 608,
+        "cls": 0.011658415824655492,
+        "domContentLoaded": 8229.299999982119,
+        "load": 10633.5,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 127
+      },
+      "page": {
+        "requestCount": 21,
+        "totalTransferBytes": 2191864,
+        "imageBytes": 1988681,
+        "cssBytes": 12699,
+        "jsBytes": 21167,
+        "htmlBytes": 55034,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/vm-kassel/hero.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 282989
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/slider.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 263221
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 256909
+          },
+          {
+            "url": "/reportagen/img/berlepsch/slider-card.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 185321
+          },
+          {
+            "url": "/reportagen/img/renthof/5-03.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 167329
+          },
+          {
+            "url": "/reportagen/img/sababurg/hero-kiss.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 159553
+          },
+          {
+            "url": "/reportagen/img/bergpark/2-21.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 154629
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          }
+        ],
+        "scrollHeight": 1605,
+        "bodyTextLength": 1266
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "poor"
+      }
+    },
+    {
+      "rel": "preise.html",
+      "url": "http://127.0.0.1:4173/preise.html",
+      "title": "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
+      "metrics": {
+        "fcp": 484,
+        "lcp": 484,
+        "cls": 0,
+        "domContentLoaded": 1245.5,
+        "load": 3838.9000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 13,
+        "totalTransferBytes": 775494,
+        "imageBytes": 540945,
+        "cssBytes": 18177,
+        "jsBytes": 21167,
+        "htmlBytes": 80922,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/slider-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 215785
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 141283
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/preise.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 80809
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/preise-party-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 79192
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          }
+        ],
+        "scrollHeight": 14957,
+        "bodyTextLength": 2835
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "title": "Hochzeit im Bergpark Wilhelmshöhe | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 1700,
+        "cls": 0.00734918012977454,
+        "domContentLoaded": 956.0999999940395,
+        "load": 3495.5999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 122
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 702858,
+        "imageBytes": 497229,
+        "cssBytes": 12115,
+        "jsBytes": 21167,
+        "htmlBytes": 58064,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/bergpark/1-01-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 116441
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-04-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 86336
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-02-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 65050
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-03-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 64414
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-07-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 58442
+          },
+          {
+            "url": "/reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 57951
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-06-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 55560
+          },
+          {
+            "url": "/reportagen/img/bergpark/1-05-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 50986
+          }
+        ],
+        "scrollHeight": 15281,
+        "bodyTextLength": 2624
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-goettingen.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-goettingen.html",
+      "title": "Hochzeit in Göttingen — S & G | Natalia Tschischik",
+      "metrics": {
+        "fcp": 412,
+        "lcp": 3224,
+        "cls": 0.003811886736934573,
+        "domContentLoaded": 2917.5999999940395,
+        "load": 5004.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 122
+      },
+      "page": {
+        "requestCount": 17,
+        "totalTransferBytes": 1019711,
+        "imageBytes": 735934,
+        "cssBytes": 10551,
+        "jsBytes": 21167,
+        "htmlBytes": 137775,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00007_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 143895
+          },
+          {
+            "url": "/reportagen/hochzeit-goettingen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 137663
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00010_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 135789
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00002_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 129623
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/main-card-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104685
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00016_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 67312
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00017_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 52422
+          },
+          {
+            "url": "/reportagen/img/sg-goettingen/1_Brautvorbereitung_00019_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 39528
+          }
+        ],
+        "scrollHeight": 51633,
+        "bodyTextLength": 3736
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "needs-improvement"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "title": "Herkulesterrassen Hochzeit Kassel — E & E | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 5152,
+        "cls": 0.007127266983792293,
+        "domContentLoaded": 1478.0999999940395,
+        "load": 9295.399999976158,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 21,
+        "totalTransferBytes": 1912579,
+        "imageBytes": 1694201,
+        "cssBytes": 15946,
+        "jsBytes": 21167,
+        "htmlBytes": 66982,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/1-01-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 219645
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/1-03-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 211859
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/1-02-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 183459
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/slider-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 161039
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/1-04-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 135857
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/2-01-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 125231
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/1-10-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 112023
+          },
+          {
+            "url": "/reportagen/img/ee-herkulesterrassen/hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 110763
+          }
+        ],
+        "scrollHeight": 11174,
+        "bodyTextLength": 3989
+      },
+      "grades": {
+        "lcp": "poor",
+        "cls": "good",
+        "transfer": "needs-improvement"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-rathaus-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-rathaus-kassel.html",
+      "title": "Hochzeit im Rathaus Kassel — V & M | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 3152,
+        "cls": 0.004688555573601394,
+        "domContentLoaded": 1765.699999988079,
+        "load": 4568.9000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 125
+      },
+      "page": {
+        "requestCount": 18,
+        "totalTransferBytes": 923054,
+        "imageBytes": 677716,
+        "cssBytes": 13614,
+        "jsBytes": 21167,
+        "htmlBytes": 96274,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/vm-kassel/hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 105049
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00037_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 104751
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00038_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 96554
+          },
+          {
+            "url": "/reportagen/hochzeit-rathaus-kassel.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 96161
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00042_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 70164
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00052_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 66544
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00021_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 62772
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00088_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 45416
+          }
+        ],
+        "scrollHeight": 17666,
+        "bodyTextLength": 3637
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel-ra.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-renthof-kassel-ra.html",
+      "title": "Hochzeit im Renthof Kassel — R & A | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 1632,
+        "cls": 0.01810623008133514,
+        "domContentLoaded": 3161.7999999821186,
+        "load": 3545.9000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 120
+      },
+      "page": {
+        "requestCount": 18,
+        "totalTransferBytes": 710098,
+        "imageBytes": 409466,
+        "cssBytes": 13827,
+        "jsBytes": 21167,
+        "htmlBytes": 151354,
+        "largestResources": [
+          {
+            "url": "/reportagen/hochzeit-renthof-kassel-ra.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 151242
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/1_Br_utigamvorbereitung_00043_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 52574
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 50502
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/1_Br_utigamvorbereitung_00064_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 47576
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/1_Br_utigamvorbereitung_00041_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 45528
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/1_Br_utigamvorbereitung_00046_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 45142
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/1_Br_utigamvorbereitung_00026_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 38876
+          }
+        ],
+        "scrollHeight": 35306,
+        "bodyTextLength": 6327
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-renthof-kassel.html",
+      "title": "Hochzeit im Renthof Kassel | Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 1216,
+        "cls": 0.0049786310013093795,
+        "domContentLoaded": 1394.7999999821186,
+        "load": 3638.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 18,
+        "totalTransferBytes": 729140,
+        "imageBytes": 497491,
+        "cssBytes": 13614,
+        "jsBytes": 21167,
+        "htmlBytes": 82585,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/renthof/2-01-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 107571
+          },
+          {
+            "url": "/reportagen/hochzeit-renthof-kassel.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 82472
+          },
+          {
+            "url": "/reportagen/img/renthof/1-09-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 77566
+          },
+          {
+            "url": "/reportagen/img/renthof/1-06-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 69614
+          },
+          {
+            "url": "/reportagen/img/renthof/1-03-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 41506
+          },
+          {
+            "url": "/reportagen/img/renthof/1-05-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 40838
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 20754,
+        "bodyTextLength": 3026
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "title": "Hochzeit im Dornröschenschloss Sababurg | Natalia Tschischik",
+      "metrics": {
+        "fcp": 424,
+        "lcp": 3088,
+        "cls": 0.000768880643656206,
+        "domContentLoaded": 1122.699999988079,
+        "load": 3904.5999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 120
+      },
+      "page": {
+        "requestCount": 15,
+        "totalTransferBytes": 786703,
+        "imageBytes": 567468,
+        "cssBytes": 13258,
+        "jsBytes": 21167,
+        "htmlBytes": 70527,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/sababurg/1-01-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 166789
+          },
+          {
+            "url": "/reportagen/img/sababurg/hero-kiss-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 102893
+          },
+          {
+            "url": "/reportagen/img/sababurg/1-02-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 86508
+          },
+          {
+            "url": "/reportagen/img/sababurg/1-03-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 73614
+          },
+          {
+            "url": "/reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 70414
+          },
+          {
+            "url": "/reportagen/img/sababurg/1-06-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 67946
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          }
+        ],
+        "scrollHeight": 20003,
+        "bodyTextLength": 3241
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-bad-arolsen.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-schloss-bad-arolsen.html",
+      "title": "Hochzeit Schloss Bad Arolsen | Natalia Tschischik",
+      "metrics": {
+        "fcp": 448,
+        "lcp": 1780,
+        "cls": 0.0030475205152034274,
+        "domContentLoaded": 1451,
+        "load": 4117.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 123
+      },
+      "page": {
+        "requestCount": 20,
+        "totalTransferBytes": 829562,
+        "imageBytes": 584557,
+        "cssBytes": 11268,
+        "jsBytes": 21167,
+        "htmlBytes": 82959,
+        "largestResources": [
+          {
+            "url": "/reportagen/hochzeit-schloss-bad-arolsen.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 82846
+          },
+          {
+            "url": "/img/ext/gd-1hiN4d50_-00_zDM-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 75140
+          },
+          {
+            "url": "/img/ext/gd-17_SFozJMQ4SWrrW-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 71700
+          },
+          {
+            "url": "/img/ext/gd-1iEcdLJSabL5aizr-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 62984
+          },
+          {
+            "url": "/img/ext/gd-1IY_pvpleFbZ2hXk-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 60588
+          },
+          {
+            "url": "/img/ext/gd-1pGQK3vfGcUOcQqX-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 59496
+          },
+          {
+            "url": "/img/ext/gd-1q9G59s4gA2qELkg-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 57112
+          },
+          {
+            "url": "/img/ext/gd-1TB6Ck6UTbdprKrd-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 54580
+          }
+        ],
+        "scrollHeight": 20327,
+        "bodyTextLength": 2984
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-berlepsch.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-schloss-berlepsch.html",
+      "title": "Hochzeit im Schloss Berlepsch | A & W — Natalia Tschischik",
+      "metrics": {
+        "fcp": 428,
+        "lcp": 2772,
+        "cls": 0.002341315004076152,
+        "domContentLoaded": 1574.9000000059605,
+        "load": 3925.699999988079,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 126
+      },
+      "page": {
+        "requestCount": 18,
+        "totalTransferBytes": 789824,
+        "imageBytes": 550679,
+        "cssBytes": 13614,
+        "jsBytes": 21167,
+        "htmlBytes": 90081,
+        "largestResources": [
+          {
+            "url": "/reportagen/img/berlepsch/1-Br_utigamvorbereitung_00022_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 121475
+          },
+          {
+            "url": "/reportagen/img/berlepsch/hero-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 95844
+          },
+          {
+            "url": "/reportagen/hochzeit-schloss-berlepsch.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 89968
+          },
+          {
+            "url": "/reportagen/img/berlepsch/2-Brautvorbereitung_00025_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 81006
+          },
+          {
+            "url": "/reportagen/img/berlepsch/2-Brautvorbereitung_00030_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 47774
+          },
+          {
+            "url": "/reportagen/img/berlepsch/1-Br_utigamvorbereitung_00013_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 42668
+          },
+          {
+            "url": "/reportagen/img/berlepsch/1-Br_utigamvorbereitung_00003_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 42424
+          },
+          {
+            "url": "/reportagen/img/berlepsch/1-Br_utigamvorbereitung_00007_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 42226
+          }
+        ],
+        "scrollHeight": 15067,
+        "bodyTextLength": 3794
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "standorte.html",
+      "url": "http://127.0.0.1:4173/standorte.html",
+      "title": "Standorte — Hochzeitsfotograf Natalia Tschischik",
+      "metrics": {
+        "fcp": 400,
+        "lcp": 432,
+        "cls": 0,
+        "domContentLoaded": 628.2000000178814,
+        "load": 1078.5999999940395,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 124
+      },
+      "page": {
+        "requestCount": 9,
+        "totalTransferBytes": 198593,
+        "imageBytes": 0,
+        "cssBytes": 24139,
+        "jsBytes": 21167,
+        "htmlBytes": 39004,
+        "largestResources": [
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/standorte.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 38891
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          },
+          {
+            "url": "/css/below-fold.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 16537
+          },
+          {
+            "url": "/js/tracking.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 11330
+          },
+          {
+            "url": "/js/tracking-bootstrap.js",
+            "type": "Script",
+            "mimeType": "text/javascript",
+            "bytes": 9837
+          },
+          {
+            "url": "/css/extracted/cf70aeb6091f9f0f.css",
+            "type": "Stylesheet",
+            "mimeType": "text/css",
+            "bytes": 6611
+          }
+        ],
+        "scrollHeight": 8442,
+        "bodyTextLength": 4570
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "ueber-mich.html",
+      "url": "http://127.0.0.1:4173/ueber-mich.html",
+      "title": "Über mich | Hochzeitsfotografin Kassel — Natalia Tschischik",
+      "metrics": {
+        "fcp": 436,
+        "lcp": 3168,
+        "cls": 0,
+        "domContentLoaded": 663,
+        "load": 3159.4000000059605,
+        "longTaskCount": 2,
+        "totalLongTaskMs": 117
+      },
+      "page": {
+        "requestCount": 14,
+        "totalTransferBytes": 527946,
+        "imageBytes": 339930,
+        "cssBytes": 8583,
+        "jsBytes": 21167,
+        "htmlBytes": 43983,
+        "largestResources": [
+          {
+            "url": "/images/natalia-illustration-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 135893
+          },
+          {
+            "url": "/img/ext/gd-1TyJ_xV_myyaLyhx-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 82334
+          },
+          {
+            "url": "/reportagen/img/ra-renthof/2_Brautvorbereitung_00306_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 55922
+          },
+          {
+            "url": "/reportagen/img/vm-kassel/1_Brautvorbereitung_00157_Hochzeit-800w.webp",
+            "type": "Image",
+            "mimeType": "image/webp",
+            "bytes": 48076
+          },
+          {
+            "url": "/ueber-mich.html",
+            "type": "Document",
+            "mimeType": "text/html",
+            "bytes": 43870
+          },
+          {
+            "url": "/fonts/cg-italic-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 39448
+          },
+          {
+            "url": "/fonts/cg-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37828
+          },
+          {
+            "url": "/fonts/dm-normal-latin.woff2",
+            "type": "Font",
+            "mimeType": "font/woff2",
+            "bytes": 37120
+          }
+        ],
+        "scrollHeight": 6318,
+        "bodyTextLength": 2775
+      },
+      "grades": {
+        "lcp": "needs-improvement",
+        "cls": "good",
+        "transfer": "good"
+      }
+    }
+  ]
+}

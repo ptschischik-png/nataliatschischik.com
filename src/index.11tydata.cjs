@@ -1,4 +1,5 @@
 const base = require("./index-pre-index3.11tydata.cjs");
+const { locationHeroHeadExtra } = require("./_data/sharedHeadExtras.cjs");
 
 const heroExtra = `
 <style>
@@ -101,10 +102,5 @@ const heroExtra = `
 module.exports = {
   ...base,
   permalink: "index.html",
-  headExtra:
-    base.headExtra
-      .replace(/img\/ext\/gd-15zAiT52byizm3F-800w\.webp/g, "reportagen/img/sababurg/2-14-800w.webp")
-      .replace(/img\/ext\/gd-15zAiT52byizm3F-400w\.webp/g, "reportagen/img/sababurg/2-14-400w.webp")
-      .replace(/img\/ext\/gd-15zAiT52byizm3F\.webp/g, "reportagen/img/sababurg/2-14.webp") +
-    heroExtra
+  headExtra: locationHeroHeadExtra + heroExtra
 };

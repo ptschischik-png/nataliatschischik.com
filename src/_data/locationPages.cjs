@@ -70,7 +70,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Bad Arolsen?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Bad Arolsen und das Waldecker Land kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Bad Arolsen und das Waldecker Land kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -169,7 +169,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Bad Hersfeld?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Bad Hersfeld und Waldhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Bad Hersfeld und Waldhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -268,7 +268,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Baunatal?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Baunatal und den Raum s&uuml;dlich von Kassel kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Baunatal und den Raum s&uuml;dlich von Kassel kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir f&uuml;r Baunatal anfragen?",
@@ -367,7 +367,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Borken?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Borken und den Schwalm-Eder-Kreis kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Borken und den Schwalm-Eder-Kreis kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -466,7 +466,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Duderstadt?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Duderstadt und das Eichsfeld kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Duderstadt und das Eichsfeld kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -565,7 +565,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Eschwege?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Eschwege und den Werra-Mei&szlig;ner-Kreis kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Eschwege und den Werra-Mei&szlig;ner-Kreis kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -664,7 +664,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Frankenberg?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Frankenberg und Waldeck-Frankenberg kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Frankenberg und Waldeck-Frankenberg kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -763,7 +763,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Fritzlar?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Fritzlar und die Region kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Fritzlar und die Region kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -862,7 +862,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Fulda?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Fulda und die Rh&ouml;nregion kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Fulda und die Rh&ouml;nregion kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -961,7 +961,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Gie&szlig;en?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Gie&szlig;en und die Lahnregion kalkuliere ich transparent und klar, ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Gie&szlig;en und die Lahnregion kalkuliere ich transparent und klar, ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1151,7 +1151,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Hildesheim?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Hildesheim und S&uuml;dniedersachsen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Hildesheim und S&uuml;dniedersachsen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1250,7 +1250,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Hofgeismar?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Hofgeismar und die Region rund um den Reinhardswald kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Hofgeismar und die Region rund um den Reinhardswald kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1349,7 +1349,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Kirchheim?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Kirchheim und Waldhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Kirchheim und Waldhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1547,7 +1547,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Neustadt?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Neustadt und das Marburger Land kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Neustadt und das Marburger Land kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1646,7 +1646,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Nordhessen?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Nordhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Nordhessen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1745,7 +1745,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Northeim?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Northeim und S&uuml;dniedersachsen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Northeim und S&uuml;dniedersachsen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1844,7 +1844,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Paderborn?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Paderborn und Ostwestfalen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Paderborn und Ostwestfalen kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -1943,7 +1943,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Schwalmstadt?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Schwalmstadt und das Rotk&auml;ppchenland kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Schwalmstadt und das Rotk&auml;ppchenland kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",
@@ -2042,7 +2042,7 @@ module.exports = {
       "items": [
         {
           "question": "Was kostet ein Hochzeitsfotograf in Warburg?",
-          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 500&nbsp;€, ganzt&auml;gige Reportagen beginnen ab 1.400&nbsp;€. F&uuml;r Warburg und die Region kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
+          "answer": "Das h&auml;ngt vor allem davon ab, wie lange ich euch begleite und wie euer Tag aufgebaut ist. Eine kurze standesamtliche Begleitung startet ab 590&nbsp;€, l&auml;ngere Reportagen beginnen ab 1.790&nbsp;€, ganzt&auml;gige Reportagen ab 2.490&nbsp;€. F&uuml;r Warburg und die Region kalkuliere ich transparent, klar und ohne komplizierte Paketlogik."
         },
         {
           "question": "Wie weit im Voraus sollten wir buchen?",

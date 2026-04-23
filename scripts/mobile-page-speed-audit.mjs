@@ -153,10 +153,10 @@ async function auditPage(url, rel) {
       request.encodedDataLength = event.encodedDataLength || 0;
     });
 
-    const loadPromise = waitForEvent(client, 'Page.loadEventFired', 30000);
+    const domReadyPromise = waitForEvent(client, 'Page.domContentEventFired', 45000);
     await client.send('Page.navigate', { url });
-    await loadPromise;
-    await delay(4500);
+    await domReadyPromise;
+    await delay(9000);
 
     const evaluated = await client.send('Runtime.evaluate', {
       returnByValue: true,

@@ -24,7 +24,7 @@
 {% if seo.twitterImage or seo.ogImage %}<meta name="twitter:image" content="{{ seo.twitterImage or seo.ogImage }}">{% endif %}
 {% if seo.canonical %}<link rel="canonical" href="{{ seo.canonical }}">{% endif %}
 {% if seo.canonical %}<link rel="alternate" hreflang="de" href="{{ seo.canonical }}">{% endif %}
-<link rel="alternate" hreflang="x-default" href="{{ site.url }}">
+{% if seo.canonical %}<link rel="alternate" hreflang="x-default" href="{{ seo.canonical }}">{% else %}<link rel="alternate" hreflang="x-default" href="{{ site.url }}">{% endif %}
 <meta name="robots" content="{{ seo.robots or 'index, follow' }}">
 {% if seo.geoRegion %}<meta name="geo.region" content="{{ seo.geoRegion }}">{% endif %}
 {% if seo.geoPlacename %}<meta name="geo.placename" content="{{ seo.geoPlacename }}">{% endif %}
