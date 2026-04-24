@@ -246,7 +246,8 @@
     if (lateTrackingBooted) return;
     lateTrackingBooted = true;
     var matchData = getPixelUserData();
-    initMetaPixel();
+    if (measurementId) initGoogle();
+    if (pixelId) initMetaPixel();
     if (typeof window.fbq !== 'undefined' && pageViewEventId) {
       window.fbq('trackSingle', pixelId, 'PageView', matchData, { eventID: pageViewEventId });
       log('meta:pageview', { eventId: pageViewEventId });
@@ -271,16 +272,12 @@
     window.addEventListener('touchstart', trigger, { once: true, passive: true, capture: true });
     window.addEventListener('scroll', trigger, { once: true, passive: true, capture: true });
 
-    if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(trigger, { timeout: 6000 });
-    }
-    setTimeout(trigger, 4000);
+    setTimeout(trigger, 12000);
   }
 
   function bootTracking() {
     if (trackingBooted) return;
     trackingBooted = true;
-    initGoogle();
     pageViewEventId = generateEventId();
     sendCapiNow('PageView', pageViewEventId);
     log('pageview', { eventId: pageViewEventId, destination: capiWorkerUrl + '/event' });

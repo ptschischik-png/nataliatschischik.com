@@ -367,7 +367,7 @@
 
 <script>
 (function() {
-  if (window.innerWidth >= 768) return;
+  if (window.matchMedia('(min-width: 768px)').matches) return;
   const slider = document.getElementById('mobile-portfolio-slider');
   const track = document.getElementById('sliderTrack');
   const dotsC = document.getElementById('sliderDots');
