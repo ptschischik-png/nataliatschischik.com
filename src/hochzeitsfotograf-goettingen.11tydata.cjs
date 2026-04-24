@@ -11,7 +11,7 @@ module.exports = {
     "ogDescription": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Gänseliesel und Südniedersachsen.",
     "ogType": "website",
     "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/images/og-default.jpg",
+    "ogImage": "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp",
     "ogImageWidth": "1200",
     "ogImageHeight": "630",
     "robots": "index, follow",
@@ -21,7 +21,7 @@ module.exports = {
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Göttingen — Natalia Tschischik",
     "twitterDescription": "Hochzeitsfotograf Göttingen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Gänseliesel und Südniedersachsen.",
-    "twitterImage": "https://nataliatschischik.com/images/og-default.jpg"
+    "twitterImage": "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp"
   },
   "bodyAttributes": "",
   "hasInlineContactSection": true,

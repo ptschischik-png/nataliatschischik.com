@@ -1,7 +1,7 @@
 {% macro galleryImage(file, alt, width='', height='') %}
 <picture>
-  <source media="(max-width: 768px)" srcset="img/ee-herkulesterrassen/{{ file }}-400w.webp 400w, img/ee-herkulesterrassen/{{ file }}-800w.webp 800w" sizes="100vw">
-  <img src="img/ee-herkulesterrassen/{{ file }}.webp" alt="{{ alt }}" class="img-cover" loading="lazy" decoding="async"{% if width %} width="{{ width }}"{% endif %}{% if height %} height="{{ height }}"{% endif %}>
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/{{ file }}-400w.webp 400w, /assets/images/reportagen/herkulesterrassen-kassel-ee/{{ file }}-800w.webp 800w" sizes="100vw">
+  <img src="/assets/images/reportagen/herkulesterrassen-kassel-ee/{{ file }}.webp" alt="{{ alt }}" class="img-cover" loading="lazy" decoding="async"{% if width %} width="{{ width }}"{% endif %}{% if height %} height="{{ height }}"{% endif %}>
 </picture>
 {% endmacro %}
 
@@ -176,8 +176,11 @@
   <section class="relative w-full h-screen overflow-hidden" style="position:relative;width:100%;height:100vh;min-height:100svh;overflow:hidden;background:linear-gradient(180deg, #5d6a56 0%, #384238 55%, #22231f 100%);">
     <div class="hero-shell">
       <picture>
-        <source media="(max-width: 768px)" srcset="img/ee-herkulesterrassen/slider-400w.webp 400w, img/ee-herkulesterrassen/slider-800w.webp 800w" sizes="100vw">
-        <img src="img/ee-herkulesterrassen/hero.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" loading="eager" decoding="async" fetchpriority="high" width="1980" height="1322">
+        <source type="image/avif" media="(max-width: 768px)" srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider.avif">
+        <source type="image/webp" media="(max-width: 768px)" srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider.webp">
+        <source type="image/avif" media="(min-width: 769px)" srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/hero.avif">
+        <source type="image/webp" media="(min-width: 769px)" srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/hero.webp">
+        <img src="/assets/images/reportagen/herkulesterrassen-kassel-ee/hero.webp" alt="Brautpaar E und E bei den Herkulesterrassen in Kassel" loading="eager" decoding="async" fetchpriority="high" width="1980" height="1318">
       </picture>
     </div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35"></div>

@@ -33,3 +33,16 @@
 /journal/golden-hour.html /journal/golden-hour 301
 /journal/hochzeitsalbum.html /journal/hochzeitsalbum 301
 /journal/orangerie-kassel.html /journal/orangerie-kassel 301
+
+# Alte Asset-Pfade → neue Asset-Struktur
+/reportagen/img/renthof/* /assets/images/reportagen/renthof-kassel-aw/:splat 301
+/reportagen/img/ra-renthof/* /assets/images/reportagen/renthof-kassel-ra/:splat 301
+/reportagen/img/ee-herkulesterrassen/* /assets/images/reportagen/herkulesterrassen-kassel-ee/:splat 301
+/reportagen/img/sg-goettingen/* /assets/images/reportagen/goettingen-sg/:splat 301
+/reportagen/img/vm-kassel/* /assets/images/reportagen/rathaus-kassel-vm/:splat 301
+/reportagen/img/sababurg/* /assets/images/reportagen/sababurg-jj/:splat 301
+/reportagen/img/bergpark/* /assets/images/reportagen/bergpark-wilhelmshoehe-tv/:splat 301
+/reportagen/img/berlepsch/* /assets/images/reportagen/schloss-berlepsch-aw/:splat 301
+/reportagen/img/bad-arolsen/* /assets/images/pages/preise/bad-arolsen/:splat 301
+/images/branding/* /assets/images/brand/google-ads/:splat 301
+/images/material-symbols-sprite.svg /assets/images/icons/material-symbols-sprite.svg 301

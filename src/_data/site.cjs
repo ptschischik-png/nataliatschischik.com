@@ -76,8 +76,8 @@ site.schema = {
   businessId: site.url + '/#business',
   personId: site.url + '/#person',
   serviceId: site.url + '/#service',
-  defaultImage: site.url + '/images/og-default.jpg',
-  profileImage: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+  defaultImage: site.url + '/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp',
+  profileImage: site.url + '/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp',
   sameAs: [site.social.instagram, site.social.googleMaps],
   areaServed: [
     { '@type': 'City', name: 'Kassel' },
@@ -123,7 +123,7 @@ site.schema = {
         alternateName: site.contact.displayName,
         description: 'Hochzeitsfotografie in Kassel, Baunatal, Nordhessen, Göttingen, Duderstadt, Eschwege, Marburg, Gießen, Fulda, Neustadt, Fritzlar, Frankenberg, Schwalmstadt, Kirchheim, Paderborn, Hildesheim, Northeim, Warburg, Bad Hersfeld, Bad Arolsen, Borken, Hofgeismar und darüber hinaus mit dokumentarischen, zeitlosen Reportagen.',
         url: site.url,
-        image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+        image: site.url + '/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp',
         logo: site.url + '/apple-touch-icon.png',
         telephone: site.contact.phoneDisplay,
         email: site.contact.email,
@@ -194,7 +194,7 @@ site.schema = {
         jobTitle: 'Hochzeitsfotografin',
         description: 'Hochzeitsfotografin aus Kassel mit dokumentarischem, editorial geprägtem Blick.',
         url: site.url + '/ueber-mich',
-        image: site.url + '/img/ext/gd-15zAiT52byizm3F.webp',
+        image: site.url + '/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp',
         sameAs: [site.social.instagram],
         worksFor: { '@id': site.url + '/#business' }
       }

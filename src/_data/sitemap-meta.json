@@ -34,7 +34,7 @@
     "priority": "0.9",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/sg-goettingen/3-Ceremony_00445_Hochzeit.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/goettingen-sg/3-Ceremony_00445_Hochzeit.webp",
         "caption": "Hochzeit S & G Göttingen — S & G standesamtliche Trauung"
       }
     ]
@@ -44,7 +44,7 @@
     "priority": "0.8",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/renthof/5-03.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/renthof-kassel-aw/5-03.webp",
         "caption": "Hochzeit im Renthof Kassel — A & W Hochzeitsreportage"
       }
     ]
@@ -54,7 +54,7 @@
     "priority": "0.8",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/sababurg/hero-kiss.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/hero-kiss.webp",
         "caption": "Hochzeit im Dornröschenschloss Sababurg — J & J"
       }
     ]
@@ -64,7 +64,7 @@
     "priority": "0.8",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/bergpark/tv-portrait.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/bergpark-wilhelmshoehe-tv/tv-portrait.webp",
         "caption": "Hochzeit im Bergpark Wilhelmshöhe — T & V"
       }
     ]
@@ -74,7 +74,7 @@
     "priority": "0.8",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait.webp",
         "caption": "Hochzeit im Schloss Bad Arolsen — V & S"
       }
     ]
@@ -114,7 +114,7 @@
     "priority": "0.9",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/berlepsch/hero.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/schloss-berlepsch-aw/hero.webp",
         "caption": "Hochzeit im Schloss Berlepsch — A & W Trauung in Witzenhausen"
       }
     ]
@@ -124,7 +124,7 @@
     "priority": "0.9",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/vm-kassel/hero.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/rathaus-kassel-vm/hero.webp",
         "caption": "Hochzeit im Rathaus Kassel — V & M Standesamtliche Trauung"
       }
     ]
@@ -134,7 +134,7 @@
     "priority": "1.0",
     "images": [
       {
-        "loc": "https://nataliatschischik.com/reportagen/img/ra-renthof/hero.webp",
+        "loc": "https://nataliatschischik.com/assets/images/reportagen/renthof-kassel-ra/hero.webp",
         "caption": "Hochzeit im Renthof Kassel — R & A Hochzeitsreportage"
       }
     ]

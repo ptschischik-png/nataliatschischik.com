@@ -11,7 +11,7 @@ module.exports = {
     "ogDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und Arolsen.",
     "ogType": "website",
     "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp",
+    "ogImage": "https://nataliatschischik.com/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait.webp",
     "robots": "index, follow",
     "geoRegion": "DE-HE",
     "geoPlacename": "Bad Arolsen",
@@ -19,7 +19,7 @@ module.exports = {
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Bad Arolsen — Natalia Tschischik",
     "twitterDescription": "Hochzeitsfotograf Bad Arolsen mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Zeitlose Reportagen rund um Residenzschloss, Große Allee und Arolsen.",
-    "twitterImage": "https://nataliatschischik.com/img/ext/vs-schloss-portrait.webp"
+    "twitterImage": "https://nataliatschischik.com/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait.webp"
   },
   "bodyAttributes": "",
   "hasInlineContactSection": true,

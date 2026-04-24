@@ -270,7 +270,7 @@ function updateHero(html, fileName) {
     <p class="hero-travel-note">Anreise in Hessen und Niedersachsen inklusive</p>
   </div>
   <div class="hero-image">
-    <img src="reportagen/img/sababurg/2-14.webp" srcset="reportagen/img/sababurg/2-14-400w.webp 400w, reportagen/img/sababurg/2-14-800w.webp 800w, reportagen/img/sababurg/2-14.webp 1920w" sizes="(max-width: 768px) 100vw, 40vw" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1080">
+    <img src="/assets/images/reportagen/sababurg-jj/2-14.webp" srcset="/assets/images/reportagen/sababurg-jj/2-14-400w.webp 400w, /assets/images/reportagen/sababurg-jj/2-14-800w.webp 800w, /assets/images/reportagen/sababurg-jj/2-14-1200w.webp 1200w, /assets/images/reportagen/sababurg-jj/2-14.webp 1920w" sizes="(max-width: 768px) 100vw, 40vw" alt="Brautpaar bei einem innigen Kuss während einer freien Trauung auf der Sababurg" fetchpriority="high" width="1920" height="1080">
   </div>
 </section>`;
 
@@ -422,9 +422,9 @@ function updateOfferCatalog(html) {
 
 function updateHeadExtra(data) {
   return data
-    .replace(/img\/ext\/gd-15zAiT52byizm3F-800w\.webp/g, "reportagen/img/sababurg/2-14-800w.webp")
-    .replace(/img\/ext\/gd-15zAiT52byizm3F-400w\.webp/g, "reportagen/img/sababurg/2-14-400w.webp")
-    .replace(/img\/ext\/gd-15zAiT52byizm3F\.webp/g, "reportagen/img/sababurg/2-14.webp");
+    .replace(/\/assets\/images\/shared\/natalia\/gd-15zAiT52byizm3F-800w\.webp/g, "/assets/images/reportagen/sababurg-jj/2-14-800w.webp")
+    .replace(/\/assets\/images\/shared\/natalia\/gd-15zAiT52byizm3F-400w\.webp/g, "/assets/images/reportagen/sababurg-jj/2-14-400w.webp")
+    .replace(/\/assets\/images\/shared\/natalia\/gd-15zAiT52byizm3F\.webp/g, "/assets/images/reportagen/sababurg-jj/2-14.webp");
 }
 
 const files = await fs.readdir(srcDir);

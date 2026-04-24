@@ -11,7 +11,7 @@ module.exports = {
     "ogDescription": "Hochzeitsfotograf Eschwege mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Leuchtberg und Werratal.",
     "ogType": "website",
     "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp",
+    "ogImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp",
     "robots": "index, follow",
     "geoRegion": "DE-HE",
     "geoPlacename": "Eschwege",
@@ -19,7 +19,7 @@ module.exports = {
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Eschwege — Natalia Tschischik",
     "twitterDescription": "Hochzeitsfotograf Eschwege mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Natürliche Reportagen zwischen Altstadt, Leuchtberg und Werratal.",
-    "twitterImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp"
+    "twitterImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp"
   },
   "bodyAttributes": "",
   "hasInlineContactSection": true,

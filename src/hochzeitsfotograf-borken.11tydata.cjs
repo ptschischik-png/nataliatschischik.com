@@ -11,7 +11,7 @@ module.exports = {
     "ogDescription": "Hochzeitsfotograf Borken mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Borken und im Schwalm-Eder-Kreis.",
     "ogType": "website",
     "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp",
+    "ogImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp",
     "robots": "index, follow",
     "geoRegion": "DE-HE",
     "geoPlacename": "Borken (Hessen)",
@@ -19,7 +19,7 @@ module.exports = {
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Borken — Natalia Tschischik",
     "twitterDescription": "Hochzeitsfotograf Borken mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Warme Reportagen in Borken und im Schwalm-Eder-Kreis.",
-    "twitterImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp"
+    "twitterImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp"
   },
   "bodyAttributes": "",
   "hasInlineContactSection": true,

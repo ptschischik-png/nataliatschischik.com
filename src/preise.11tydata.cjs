@@ -1,6 +1,6 @@
 const headExtra = `<!-- LCP-critical preloads -->
-<link rel="preload" as="image" type="image/webp" media="(max-width: 900px)" href="/reportagen/img/ra-renthof/preise-party-800w.webp" imagesrcset="/reportagen/img/ra-renthof/preise-party-400w.webp 400w, /reportagen/img/ra-renthof/preise-party-800w.webp 800w" imagesizes="100vw" fetchpriority="high">
-<link rel="preload" as="image" type="image/webp" media="(min-width: 901px)" href="/reportagen/img/ra-renthof/preise-party.webp" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(max-width: 900px)" href="/assets/images/reportagen/renthof-kassel-ra/preise-party-800w.webp" imagesrcset="/assets/images/reportagen/renthof-kassel-ra/preise-party-400w.webp 400w, /assets/images/reportagen/renthof-kassel-ra/preise-party-800w.webp 800w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" media="(min-width: 901px)" href="/assets/images/reportagen/renthof-kassel-ra/preise-party.webp" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:300 500;font-display:swap;src:url('/fonts/cg-italic-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
@@ -1111,7 +1111,7 @@ module.exports = {
     ogDescription: "Klare Preise für Hochzeitsfotografie in Kassel: Standesamt, 8 Stunden Reportage, 10 Stunden Reportage und individuelle Begleitungen.",
     ogType: "website",
     ogLocale: "de_DE",
-    ogImage: "https://nataliatschischik.com/images/og-default.jpg",
+    ogImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp",
     ogImageWidth: "1200",
     ogImageHeight: "630",
     robots: "index, follow",
@@ -1121,7 +1121,7 @@ module.exports = {
     twitterSite: "@natalia_photography",
     twitterTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
     twitterDescription: "Transparente Preise für Hochzeitsfotografie in Kassel von Standesamt bis 10 Stunden Reportage.",
-    twitterImage: "https://nataliatschischik.com/images/og-default.jpg"
+    twitterImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp"
   },
   bodyAttributes: "",
   headExtra,

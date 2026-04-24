@@ -48,7 +48,7 @@ const heroExtra = `
   .hero-image {
     order: -1;
     height: auto;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 3 / 2;
     overflow: hidden;
   }
   .hero-image img {

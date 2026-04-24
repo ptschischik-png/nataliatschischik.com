@@ -10,7 +10,7 @@ const chromePath = process.env.CHROME_PATH || '/tmp/pwaudit-browsers/chromium_he
 const baseUrl = process.env.AUDIT_BASE_URL || 'http://127.0.0.1:4183';
 const debugPort = Number(process.env.CHROME_DEBUG_PORT || 9233);
 const port = Number(new URL(baseUrl).port || 4183);
-const responsiveVariantPattern = /-(?:400w|800w)\.webp(?:$|[?#])/i;
+const responsiveVariantPattern = /-(?:400w|800w|1200w)\.(?:webp|avif)(?:$|[?#])/i;
 
 async function main() {
   await fs.mkdir(reportDir, { recursive: true });
@@ -230,6 +230,7 @@ function mimeType(filePath) {
   if (ext === '.css') return 'text/css; charset=utf-8';
   if (ext === '.js') return 'text/javascript; charset=utf-8';
   if (ext === '.webp') return 'image/webp';
+  if (ext === '.avif') return 'image/avif';
   if (ext === '.png') return 'image/png';
   if (ext === '.jpg' || ext === '.jpeg') return 'image/jpeg';
   if (ext === '.svg') return 'image/svg+xml';

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-23T19:55:10.050Z",
+  "generatedAt": "2026-04-24T11:36:26.280Z",
   "profile": {
     "device": "desktop",
     "viewport": "1440x1000 @ DPR 1",
@@ -258,7 +258,7 @@
     {
       "rel": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
       "url": "http://127.0.0.1:4183/reportagen/hochzeit-bergpark-wilhelmshoehe.html",
-      "imageRequestCount": 14,
+      "imageRequestCount": 12,
       "responsiveImageRequests": [],
       "failures": []
     },
@@ -286,14 +286,14 @@
     {
       "rel": "reportagen/hochzeit-renthof-kassel-ra.html",
       "url": "http://127.0.0.1:4183/reportagen/hochzeit-renthof-kassel-ra.html",
-      "imageRequestCount": 46,
+      "imageRequestCount": 54,
       "responsiveImageRequests": [],
       "failures": []
     },
     {
       "rel": "reportagen/hochzeit-renthof-kassel.html",
       "url": "http://127.0.0.1:4183/reportagen/hochzeit-renthof-kassel.html",
-      "imageRequestCount": 21,
+      "imageRequestCount": 19,
       "responsiveImageRequests": [],
       "failures": []
     },
@@ -307,7 +307,7 @@
     {
       "rel": "reportagen/hochzeit-schloss-bad-arolsen.html",
       "url": "http://127.0.0.1:4183/reportagen/hochzeit-schloss-bad-arolsen.html",
-      "imageRequestCount": 34,
+      "imageRequestCount": 33,
       "responsiveImageRequests": [],
       "failures": []
     },

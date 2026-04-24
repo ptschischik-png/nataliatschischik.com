@@ -16,6 +16,7 @@ const forbiddenTextPatterns = [
   /workers\.dev/i,
   /icy-sunset-af0f/i
 ];
+const responsiveVariantPattern = /-(?:400w|800w|1200w)\.(?:webp|avif)(?:$|[?#])/i;
 
 const allFiles = await collectFiles(distDir, (filePath, stats) => stats.isFile());
 for (const file of allFiles) {
@@ -103,6 +104,7 @@ async function checkHtmlFiles(files) {
     }
 
     checkDesktopFullResolutionImages(rel, html);
+    checkAvifPictureFallbacks(rel, html);
     checkPriorityPicturePreloads(rel, html);
   }
 }
@@ -110,7 +112,7 @@ async function checkHtmlFiles(files) {
 function checkDesktopFullResolutionImages(rel, html) {
   for (const tag of html.match(/<img\b[^>]*>/gi) || []) {
     const src = capture(tag, /\ssrc=["']([^"']+)["']/i);
-    if (src && /-(?:400w|800w)\.webp(?:$|[?#])/i.test(src)) {
+    if (src && responsiveVariantPattern.test(src)) {
       failures.push(`${rel} has desktop image src limited to responsive candidate: ${src}`);
     }
 
@@ -119,11 +121,11 @@ function checkDesktopFullResolutionImages(rel, html) {
     }
 
     const dataSrc = capture(tag, /\sdata-src=["']([^"']+)["']/i);
-    if (dataSrc && /-(?:400w|800w)\.webp(?:$|[?#])/i.test(dataSrc)) {
+    if (dataSrc && responsiveVariantPattern.test(dataSrc)) {
       failures.push(`${rel} has lazy desktop image data-src limited to responsive candidate: ${dataSrc}`);
     }
 
-    if (/\sdata-srcset=["'][^"']+-(?:400w|800w)\.webp[^"']*["']/i.test(tag)) {
+    if (/\sdata-srcset=["'][^"']+-(?:400w|800w|1200w)\.(?:webp|avif)[^"']*["']/i.test(tag)) {
       failures.push(`${rel} has img data-srcset; lazy desktop images must keep the full-resolution data-src.`);
     }
   }
@@ -133,7 +135,7 @@ function checkDesktopFullResolutionImages(rel, html) {
   }
 
   for (const tag of html.match(/<source\b[^>]*>/gi) || []) {
-    if (!/-(?:400w|800w)\.webp/i.test(tag)) continue;
+    if (!/-(?:400w|800w|1200w)\.(?:webp|avif)/i.test(tag)) continue;
     const media = capture(tag, /\smedia=["']([^"']+)["']/i);
     if (!/\bmax-width\b/i.test(media) || /\bmin-width\b/i.test(media)) {
       failures.push(`${rel} has responsive image source without mobile-only media: ${tag.slice(0, 160)}`);
@@ -141,10 +143,35 @@ function checkDesktopFullResolutionImages(rel, html) {
   }
 
   for (const tag of html.match(/<link\b[^>]*rel=["']preload["'][^>]*as=["']image["'][^>]*>|<link\b[^>]*as=["']image["'][^>]*rel=["']preload["'][^>]*>/gi) || []) {
-    if (!/-(?:400w|800w)\.webp/i.test(tag)) continue;
+    if (!/-(?:400w|800w|1200w)\.(?:webp|avif)/i.test(tag)) continue;
     const media = capture(tag, /\smedia=["']([^"']+)["']/i);
     if (!/\bmax-width\b/i.test(media) || /\bmin-width\b/i.test(media)) {
       failures.push(`${rel} has responsive image preload without mobile-only media: ${tag.slice(0, 160)}`);
+    }
+  }
+}
+
+function checkAvifPictureFallbacks(rel, html) {
+  const withoutPictures = html.replace(/<picture\b[\s\S]*?<\/picture>/gi, '');
+  for (const tag of withoutPictures.match(/<img\b[^>]*>/gi) || []) {
+    const src = capture(tag, /\ssrc=["']([^"']+)["']/i);
+    if (src && /\.webp(?:$|[?#])/i.test(src)) {
+      failures.push(`${rel} has standalone WebP img without AVIF picture fallback: ${src}`);
+    }
+  }
+
+  for (const picture of html.match(/<picture\b[\s\S]*?<\/picture>/gi) || []) {
+    if (!/\.webp(?:$|[\s,)'"]|[?#])/i.test(picture)) continue;
+    if (!/\.avif(?:$|[\s,)'"]|[?#])/i.test(picture)) {
+      failures.push(`${rel} has WebP picture without AVIF source: ${picture.slice(0, 160)}`);
+      continue;
+    }
+
+    const sources = picture.match(/<source\b[^>]*>/gi) || [];
+    const firstAvif = sources.findIndex((source) => /\.avif(?:$|[\s,)'"]|[?#])/i.test(source) || /type=["']image\/avif["']/i.test(source));
+    const firstWebp = sources.findIndex((source) => /\.webp(?:$|[\s,)'"]|[?#])/i.test(source) || /type=["']image\/webp["']/i.test(source));
+    if (firstWebp >= 0 && (firstAvif < 0 || firstWebp < firstAvif)) {
+      failures.push(`${rel} has WebP source before AVIF source: ${picture.slice(0, 160)}`);
     }
   }
 }
@@ -161,9 +188,13 @@ function checkPriorityPicturePreloads(rel, html) {
     if (loading !== 'eager' && fetchpriority !== 'high') continue;
 
     for (const sourceTag of picture.match(/<source\b[^>]*>/gi) || []) {
+      if (responsiveVariantPattern.test(sourceTag)) {
+        failures.push(`${rel} has priority picture source limited to responsive candidate: ${sourceTag.slice(0, 160)}`);
+      }
+
       const media = capture(sourceTag, /\smedia=["']([^"']+)["']/i);
       const srcset = capture(sourceTag, /\ssrcset=["']([^"']+)["']/i);
-      if (!/\bmax-width\b/i.test(media) || !srcset || !/-(?:400w|800w)\.webp/i.test(srcset)) continue;
+      if (!/\bmax-width\b/i.test(media) || !srcset || !/-(?:400w|800w|1200w)\.(?:webp|avif)/i.test(srcset)) continue;
 
       const largestCandidate = getLargestSrcsetCandidate(srcset);
       const hasMatchingPreload = imagePreloads.some((tag) => {
@@ -218,7 +249,7 @@ async function checkLocalReferences(files) {
     const pageDir = path.dirname(rel) === '.' ? '' : `${path.dirname(rel)}/`;
     const html = await fs.readFile(file, 'utf8');
     const urls = [
-      ...extractAttributeUrls(html, /\b(?:href|src|poster)=["']([^"']+)["']/gi),
+      ...extractAttributeUrls(html, /\b(?:href|src|poster|data-src)=["']([^"']+)["']/gi),
       ...extractSrcsetUrls(html)
     ];
 
@@ -256,6 +287,7 @@ async function checkSitemapAndRedirects() {
 
   for (const target of redirectTargets) {
     if (target === '/datenschutz' || target === '/impressum') continue;
+    if (target.startsWith('/assets/')) continue;
     const absolute = `https://nataliatschischik.com${target === '/' ? '/' : target}`;
     if (!sitemapLocs.has(absolute) && !target.includes('#')) {
       failures.push(`Redirect target missing from sitemap: ${target}`);
@@ -274,7 +306,7 @@ function extractAttributeUrls(input, regex) {
 
 function extractSrcsetUrls(input) {
   const urls = [];
-  for (const match of input.matchAll(/\bsrcset=["']([^"']+)["']/gi)) {
+  for (const match of input.matchAll(/\b(?:srcset|imagesrcset|data-srcset)=["']([^"']+)["']/gi)) {
     for (const candidate of match[1].split(',')) {
       const url = candidate.trim().split(/\s+/)[0];
       if (url) urls.push(url);

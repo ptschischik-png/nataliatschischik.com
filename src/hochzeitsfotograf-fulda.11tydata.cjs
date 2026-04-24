@@ -11,7 +11,7 @@ module.exports = {
     "ogDescription": "Hochzeitsfotograf Fulda mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen zwischen Stadtschloss, Schlossgarten und Rhönregion.",
     "ogType": "website",
     "ogLocale": "de_DE",
-    "ogImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp",
+    "ogImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp",
     "robots": "index, follow",
     "geoRegion": "DE-HE",
     "geoPlacename": "Fulda",
@@ -19,7 +19,7 @@ module.exports = {
     "twitterSite": "@natalia_photography",
     "twitterTitle": "Hochzeitsfotograf Fulda — Natalia Tschischik",
     "twitterDescription": "Hochzeitsfotograf Fulda mit 10+ Jahren Erfahrung und 200+ Hochzeiten. Elegante Reportagen zwischen Stadtschloss, Schlossgarten und Rhönregion.",
-    "twitterImage": "https://nataliatschischik.com/reportagen/img/sababurg/2-14.webp"
+    "twitterImage": "https://nataliatschischik.com/assets/images/reportagen/sababurg-jj/2-14.webp"
   },
   "bodyAttributes": "",
   "hasInlineContactSection": true,

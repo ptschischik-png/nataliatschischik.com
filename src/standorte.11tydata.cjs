@@ -9,7 +9,7 @@ module.exports = {
     ogDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und viele weitere Regionen.",
     ogType: "website",
     ogLocale: "de_DE",
-    ogImage: "https://nataliatschischik.com/images/og-default.jpg",
+    ogImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp",
     ogImageWidth: "1200",
     ogImageHeight: "630",
     robots: "index, follow",
@@ -17,7 +17,7 @@ module.exports = {
     twitterSite: "@natalia_photography",
     twitterTitle: "Standorte — Hochzeitsfotograf Natalia Tschischik",
     twitterDescription: "Alle Standorte im Überblick: Hochzeitsfotograf für Göttingen, Marburg, Gießen, Fulda, Baunatal, Nordhessen und viele weitere Regionen.",
-    twitterImage: "https://nataliatschischik.com/images/og-default.jpg"
+    twitterImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp"
   },
   bodyAttributes: "",
   headExtra: `<script type="application/ld+json">
