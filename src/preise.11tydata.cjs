@@ -329,6 +329,24 @@ p { max-width: 60ch; }
   color: var(--brown-400);
 }
 
+.p2-hero-proof-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: none;
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(122,98,88,0.18);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown-400);
+}
+
+.p2-hero-proof-inline span[aria-hidden="true"] {
+  color: var(--brown-300);
+}
+
 .p2-hero-actions {
   display: flex;
   gap: 1rem;
@@ -491,25 +509,6 @@ p { max-width: 60ch; }
   max-width: 700px;
   margin: 0 auto 3rem;
   text-align: center;
-}
-
-.p2-trust-line {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.45rem 0.7rem;
-  max-width: 760px;
-  margin: 1.25rem auto 0;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  line-height: 1.6;
-  text-transform: uppercase;
-  color: var(--brown-500);
-}
-
-.p2-trust-line span[aria-hidden="true"] {
-  color: var(--brown-300);
 }
 
 .p2-price-grid {
@@ -956,17 +955,16 @@ p { max-width: 60ch; }
     letter-spacing: 0.08em;
     line-height: 1.5;
   }
+  .p2-hero-proof-inline {
+    gap: 0.35rem 0.45rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+  }
   .p2-budget-line { gap: 0.5rem; }
   .p2-budget-chip { width: fit-content; }
   .p2-pricing-intro { margin-bottom: 2rem; }
   .p2-pricing-intro p { max-width: 30ch; }
-  .p2-trust-line {
-    max-width: 30ch;
-    margin-top: 1rem;
-    gap: 0.35rem 0.55rem;
-    letter-spacing: 0.08em;
-  }
-  .p2-trust-line span[aria-hidden="true"] { display: none; }
   .p2-plan-featured { order: 1; }
   .p2-plan-standesamt { order: 2; }
   .p2-plan-half { order: 3; }
