@@ -53,7 +53,7 @@ const heroExtra = `
     min-width: 0;
     max-width: 100vw;
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 962 / 1282;
     overflow: hidden;
   }
   .hero-image picture {
@@ -67,7 +67,7 @@ const heroExtra = `
     max-width: none;
     height: 100%;
     object-fit: cover;
-    object-position: 52% 42%;
+    object-position: 50% 50%;
   }
   .hero-content {
     position: relative;
