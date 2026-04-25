@@ -284,7 +284,7 @@ p { max-width: 60ch; }
 .p2-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  min-height: calc(100vh - 4.5rem);
+  min-height: 100vh;
   background: var(--cream);
 }
 
