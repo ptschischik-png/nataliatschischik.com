@@ -229,6 +229,10 @@ p { max-width: 60ch; }
   color: var(--accent);
 }
 
+.p2-main {
+  padding-top: 0;
+}
+
 .section-title {
   margin-bottom: 1.5rem;
   font-size: var(--text-2xl);
@@ -496,7 +500,7 @@ p { max-width: 60ch; }
 
 .p2-trust-badges {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -539,6 +543,7 @@ p { max-width: 60ch; }
 
 .p2-trust-mark,
 .p2-trust-ring,
+.p2-trust-mywed,
 .p2-trust-score {
   display: grid;
   width: 44px;
@@ -552,6 +557,7 @@ p { max-width: 60ch; }
 }
 
 .p2-trust-mark,
+.p2-trust-mywed,
 .p2-trust-score {
   font-size: 0.72rem;
   font-weight: 800;
@@ -570,6 +576,12 @@ p { max-width: 60ch; }
   height: 17px;
   border: 5px solid var(--accent);
   border-radius: 50%;
+}
+
+.p2-trust-mywed {
+  color: var(--cream-light);
+  background: linear-gradient(145deg, var(--brown-900), var(--accent));
+  box-shadow: inset 0 0 0 3px rgba(208,177,109,0.28);
 }
 
 .p2-trust-badge-score {
@@ -1014,7 +1026,12 @@ p { max-width: 60ch; }
     min-height: auto;
   }
 
+  .p2-hero-copy {
+    order: 1;
+  }
+
   .p2-hero-media {
+    order: 2;
     aspect-ratio: 1 / 1;
     min-height: auto;
     border-top: 1px solid rgba(0,0,0,0.04);
@@ -1033,8 +1050,23 @@ p { max-width: 60ch; }
 }
 
 @media (max-width: 640px) {
-  .p2-hero-copy { padding: 2rem 1.5rem 2.5rem; }
-  .p2-hero-card { left: 1rem; right: 1rem; max-width: none; }
+  .p2-hero-copy { padding: 1.5rem 1.5rem 2rem; }
+  .p2-hero-card {
+    left: 1rem;
+    right: auto;
+    bottom: 1rem;
+    width: min(calc(100% - 2rem), 18rem);
+    max-width: none;
+    padding: 0.72rem 0.82rem;
+  }
+  .p2-hero-card strong {
+    margin-bottom: 0.2rem;
+    font-size: clamp(1rem, 5vw, 1.25rem);
+  }
+  .p2-hero-card span {
+    font-size: 0.66rem;
+    line-height: 1.45;
+  }
   .p2-hero h1 {
     max-width: 8.5ch;
     margin-bottom: 1rem;
@@ -1065,6 +1097,27 @@ p { max-width: 60ch; }
 <noscript><link rel="stylesheet" href="/css/below-fold.css"></noscript>
 <link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nataliatschischik.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Preise",
+      "item": "https://nataliatschischik.com/preise"
+    }
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
