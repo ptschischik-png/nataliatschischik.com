@@ -8,8 +8,7 @@ function heroImagePreloads(imageBase, { include1200 = false } = {}) {
   const mobileSrcset = [
     `${imageBase}-400w.webp 400w`,
     `${imageBase}-800w.webp 800w`,
-    include1200 ? `${imageBase}-1200w.webp 1200w` : null,
-    include1200 ? `${imageBase}.webp 1920w` : null
+    include1200 ? `${imageBase}-1200w.webp 1200w` : null
   ].filter(Boolean).join(", ");
 
   return [

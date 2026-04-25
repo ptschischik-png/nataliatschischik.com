@@ -338,7 +338,7 @@
 </script>
 
 <!-- Preload hero image -->
-<link rel="preload" as="image" href="/assets/images/reportagen/renthof-kassel-ra/hero.avif" media="(max-width: 768px)" fetchpriority="high" type="image/avif">
+<link rel="preload" as="image" href="/assets/images/reportagen/renthof-kassel-ra/hero-800w.avif" imagesrcset="/assets/images/reportagen/renthof-kassel-ra/hero-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/hero-800w.avif 800w" imagesizes="100vw" media="(max-width: 768px)" fetchpriority="high" type="image/avif">
 <link rel="preload" as="image" href="/assets/images/reportagen/renthof-kassel-ra/hero.avif" media="(min-width: 769px)" fetchpriority="high" type="image/avif">
 
 <!-- Fonts -->
@@ -520,7 +520,9 @@
 <section class="relative w-full h-screen overflow-hidden">
   <div style="position:absolute;inset:0;overflow:hidden;">
     <picture>
-  <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/hero.avif">
+      <source media="(max-width: 768px)" srcset="/assets/images/reportagen/renthof-kassel-ra/hero-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/hero-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/renthof-kassel-ra/hero-400w.webp 400w, /assets/images/reportagen/renthof-kassel-ra/hero-800w.webp 800w" sizes="100vw" type="image/webp">
+        <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/hero.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/renthof-kassel-ra/hero.webp">
   <img src="/assets/images/reportagen/renthof-kassel-ra/hero.webp"
            alt="Brautpaar R &amp; A im Renthof Kassel — Hochzeitsreportage von Natalia Tschischik, Hochzeitsfotografin Kassel"
@@ -2746,6 +2748,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-up">
       <a href="hochzeit-schloss-berlepsch" class="block group" style="text-decoration:none;">
         <div style="overflow:hidden;"><picture style="display:contents">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/schloss-berlepsch-aw/hero-400w.avif 400w, /assets/images/reportagen/schloss-berlepsch-aw/hero-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/schloss-berlepsch-aw/hero-400w.webp 400w, /assets/images/reportagen/schloss-berlepsch-aw/hero-800w.webp 800w" sizes="100vw" type="image/webp">
   <source type="image/avif" srcset="/assets/images/reportagen/schloss-berlepsch-aw/hero.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/schloss-berlepsch-aw/hero.webp">
   <img src="/assets/images/reportagen/schloss-berlepsch-aw/hero.webp" alt="Hochzeit im Schloss Berlepsch" class="w-full" loading="lazy" style="transition:transform 0.5s;" decoding="async">

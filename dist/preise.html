@@ -230,7 +230,7 @@
 
 
 <!-- LCP-critical preloads -->
-<link rel="preload" as="image" type="image/avif" media="(max-width: 900px)" href="/assets/images/reportagen/renthof-kassel-ra/preise-party.avif" fetchpriority="high">
+<link rel="preload" as="image" type="image/avif" media="(max-width: 900px)" href="/assets/images/reportagen/renthof-kassel-ra/preise-party-800w.avif" imagesrcset="/assets/images/reportagen/renthof-kassel-ra/preise-party-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/preise-party-800w.avif 800w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" type="image/avif" media="(min-width: 901px)" href="/assets/images/reportagen/renthof-kassel-ra/preise-party.avif" fetchpriority="high">
 <link rel="preload" href="/fonts/cg-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -1434,7 +1434,17 @@ p { max-width: 60ch; }
     </div>
     <div class="p2-hero-media">
       <picture>
-  <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/preise-party.avif">
+        <source
+          media="(max-width: 900px)"
+          srcset="/assets/images/reportagen/renthof-kassel-ra/preise-party-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/preise-party-800w.avif 800w"
+          sizes="100vw"
+         type="image/avif">
+  <source
+          media="(max-width: 900px)"
+          srcset="/assets/images/reportagen/renthof-kassel-ra/preise-party-400w.webp 400w, /assets/images/reportagen/renthof-kassel-ra/preise-party-800w.webp 800w"
+          sizes="100vw"
+         type="image/webp">
+          <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/preise-party.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/renthof-kassel-ra/preise-party.webp">
   <img
           src="/assets/images/reportagen/renthof-kassel-ra/preise-party.webp"
@@ -1463,6 +1473,8 @@ p { max-width: 60ch; }
       <div class="p2-proof-grid">
         <a href="reportagen/hochzeit-goettingen" class="p2-proof-card reveal reveal-delay-1">
           <picture style="display:contents">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/goettingen-sg/main-card-400w.avif 400w, /assets/images/reportagen/goettingen-sg/main-card-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/goettingen-sg/main-card-400w.webp 400w, /assets/images/reportagen/goettingen-sg/main-card-800w.webp 800w" sizes="100vw" type="image/webp">
   <source type="image/avif" srcset="/assets/images/reportagen/goettingen-sg/main-card.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/goettingen-sg/main-card.webp">
   <img
@@ -1480,6 +1492,8 @@ p { max-width: 60ch; }
         </a>
         <a href="reportagen/hochzeit-renthof-kassel-ra" class="p2-proof-card reveal reveal-delay-2">
           <picture style="display:contents">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/main-card-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card-400w.webp 400w, /assets/images/reportagen/renthof-kassel-ra/main-card-800w.webp 800w" sizes="100vw" type="image/webp">
   <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.webp">
   <img
@@ -1497,6 +1511,8 @@ p { max-width: 60ch; }
         </a>
         <a href="reportagen/hochzeit-schloss-berlepsch" class="p2-proof-card reveal reveal-delay-3">
           <picture style="display:contents">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card-400w.avif 400w, /assets/images/reportagen/schloss-berlepsch-aw/slider-card-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card-400w.webp 400w, /assets/images/reportagen/schloss-berlepsch-aw/slider-card-800w.webp 800w" sizes="100vw" type="image/webp">
   <source type="image/avif" srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card.avif">
   <source type="image/webp" srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card.webp">
   <img
@@ -1699,6 +1715,8 @@ p { max-width: 60ch; }
       <div class="about-grid">
         <div class="about-image reveal">
           <picture style="display:contents">
+  <source media="(max-width: 768px)" srcset="/assets/images/shared/natalia/natalia-at-work-400w.avif 400w, /assets/images/shared/natalia/natalia-at-work-800w.avif 800w" sizes="100vw" type="image/avif">
+  <source media="(max-width: 768px)" srcset="/assets/images/shared/natalia/natalia-at-work-400w.webp 400w, /assets/images/shared/natalia/natalia-at-work-800w.webp 800w" sizes="100vw" type="image/webp">
   <source type="image/avif" srcset="/assets/images/shared/natalia/natalia-at-work.avif">
   <source type="image/webp" srcset="/assets/images/shared/natalia/natalia-at-work.webp">
   <img

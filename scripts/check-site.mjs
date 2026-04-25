@@ -203,7 +203,7 @@ function checkPriorityPicturePreloads(rel, html) {
         const preloadSrcset = capture(tag, /\simagesrcset=["']([^"']+)["']/i);
 
         return /\bmax-width\b/i.test(preloadMedia)
-          && (srcsetUrlsMatch(preloadSrcset, srcset) || localUrlKey(preloadHref) === localUrlKey(largestCandidate));
+          && (srcsetImageUrlsMatch(preloadSrcset, srcset) || imageUrlKey(preloadHref) === imageUrlKey(largestCandidate));
       });
 
       if (!hasMatchingPreload) {
@@ -232,11 +232,22 @@ function srcsetUrlsMatch(left, right) {
   return leftUrls.length === rightUrls.length && leftUrls.every((url, index) => url === rightUrls[index]);
 }
 
+function srcsetImageUrlsMatch(left, right) {
+  if (!left || !right) return false;
+  const leftUrls = srcsetUrlKeys(left).map(imageUrlKey);
+  const rightUrls = srcsetUrlKeys(right).map(imageUrlKey);
+  return leftUrls.length === rightUrls.length && leftUrls.every((url, index) => url === rightUrls[index]);
+}
+
 function srcsetUrlKeys(srcset) {
   return srcset
     .split(',')
     .map((candidate) => localUrlKey(candidate.trim().split(/\s+/)[0]))
     .filter(Boolean);
+}
+
+function imageUrlKey(url) {
+  return localUrlKey(url).replace(/\.(?:avif|webp)(?=($|[?#]))/i, '');
 }
 
 function localUrlKey(url) {
