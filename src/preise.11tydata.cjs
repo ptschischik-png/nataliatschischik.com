@@ -537,6 +537,7 @@ p { max-width: 60ch; }
 .p2-trust-badge small {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
+  line-height: 1.25;
   text-transform: uppercase;
   color: var(--brown-500);
 }
@@ -591,10 +592,16 @@ p { max-width: 60ch; }
 
 .p2-trust-score {
   color: var(--white);
+  font-size: 0.86rem;
+  letter-spacing: 0;
   background: linear-gradient(145deg, var(--accent), var(--accent-dark));
   border: 1px solid rgba(255,255,255,0.34);
   border-radius: 50%;
   box-shadow: inset 0 0 0 4px rgba(208,177,109,0.22);
+}
+
+.p2-trust-badge-google {
+  background: rgba(208,177,109,0.08);
 }
 
 .p2-trust-stars {
