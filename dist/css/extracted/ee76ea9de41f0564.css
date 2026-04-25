@@ -678,6 +678,36 @@ p { max-width: 60ch; }
   transform: scale(1.03);
 }
 
+@media (min-width: 768px) {
+  #desktop-portfolio {
+    padding-top: 6.25rem !important;
+    padding-bottom: 4rem;
+  }
+
+  .portfolio-hero {
+    margin-bottom: clamp(4.5rem, 7vw, 6rem);
+  }
+
+  .portfolio-feature-section,
+  .portfolio-grid-section {
+    margin-bottom: clamp(6.5rem, 9vw, 8rem);
+  }
+
+  .portfolio-feature-section {
+    padding-top: clamp(4.5rem, 7vw, 6rem);
+    padding-bottom: clamp(4.5rem, 7vw, 6rem);
+  }
+
+  .portfolio-grid-section .portfolio-section-head {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .portfolio-cta-section {
+    padding-top: clamp(5rem, 8vw, 6rem);
+    padding-bottom: clamp(5rem, 8vw, 6rem);
+  }
+}
+
 .wa-sticky{position:fixed;bottom:1.25rem;right:1.25rem;z-index:90;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .3s,opacity .3s;opacity:0;transform:scale(.8);pointer-events:none}
 .wa-sticky.visible{opacity:1;transform:scale(1);pointer-events:auto}
 .wa-sticky:hover{transform:scale(1.08)}

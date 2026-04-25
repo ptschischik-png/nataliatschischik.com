@@ -409,6 +409,36 @@
 .portfolio-img-link:hover img {
   transform: scale(1.03);
 }
+
+@media (min-width: 768px) {
+  #desktop-portfolio {
+    padding-top: 6.25rem !important;
+    padding-bottom: 4rem;
+  }
+
+  .portfolio-hero {
+    margin-bottom: clamp(4.5rem, 7vw, 6rem);
+  }
+
+  .portfolio-feature-section,
+  .portfolio-grid-section {
+    margin-bottom: clamp(6.5rem, 9vw, 8rem);
+  }
+
+  .portfolio-feature-section {
+    padding-top: clamp(4.5rem, 7vw, 6rem);
+    padding-bottom: clamp(4.5rem, 7vw, 6rem);
+  }
+
+  .portfolio-grid-section .portfolio-section-head {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .portfolio-cta-section {
+    padding-top: clamp(5rem, 8vw, 6rem);
+    padding-bottom: clamp(5rem, 8vw, 6rem);
+  }
+}
 </style>
 
 <script>
@@ -493,7 +523,7 @@
 
 <main id="desktop-portfolio" class="max-w-screen-2xl mx-auto px-8 py-20" style="padding-top: 7rem;">
 <!-- Hero Section -->
-<div class="mb-32">
+<div class="portfolio-hero mb-32">
 <span class="nav-link text-brown-400 block mb-4">Portfolio</span>
 <h1 class="text-6xl md:text-8xl font-normal leading-tight text-brown-900 max-w-4xl">
                 Hochzeitsreportagen aus Hessen
@@ -504,7 +534,7 @@
 </div>
 </div>
 <!-- Section: R&A @ Renthof Kassel -->
-<section class="mb-48 bg-[#F5F0E8] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#F5F0E8] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-8 order-1">
@@ -527,7 +557,7 @@
 </div>
 </section>
 <!-- Section 0: S&G @ Göttingen -->
-<section class="mb-48 bg-[#F5F0E8] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#F5F0E8] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-8 order-1">
@@ -546,8 +576,8 @@
 </div>
 </section>
 <!-- Section 1: A&W @ Renthof Kassel -->
-<section class="mb-48">
-<div class="grid grid-cols-12 gap-6 items-end mb-12">
+<section class="portfolio-grid-section mb-48">
+<div class="portfolio-section-head grid grid-cols-12 gap-6 items-end mb-12">
 <div class="col-span-12 md:col-span-7">
 <h2 class="text-4xl font-normal text-brown-900 mb-2" style="font-family: 'Cormorant Garamond', serif; color: #2C1810;">A &amp; W @ Renthof Kassel</h2>
 <p class="font-light max-w-md" style="color: #7A6258;">Ein goldener Herbsttag voller Emotionen — Standesamtliche Trauung im Waldhotel Schäferberg, kirchliche Zeremonie in der Ev. Kirche Obervellmar und eine rauschende Feier im historischen Renthof.</p>
@@ -571,7 +601,7 @@
 </div>
 </section>
 <!-- Section: E&E @ Herkulesterrassen Kassel -->
-<section class="mb-48 bg-[#ECE5D9] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#ECE5D9] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-8 order-1">
@@ -590,7 +620,7 @@
 </div>
 </section>
 <!-- Section: A&W @ Schloss Berlepsch -->
-<section class="mb-48 bg-[#1E1B18] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#1E1B18] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-4 order-2 md:order-1">
@@ -611,7 +641,7 @@
 </div>
 </section>
 <!-- Section 2: J&J @ Sababurg -->
-<section class="mb-48 bg-[#FAF8F4] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#FAF8F4] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-4 order-2 md:order-1">
@@ -637,7 +667,7 @@
 </div>
 </section>
 <!-- Section: V&M @ Rathaus Kassel -->
-<section class="mb-48 bg-[#1E1B18] -mx-8 px-8 py-32">
+<section class="portfolio-feature-section mb-48 bg-[#1E1B18] -mx-8 px-8 py-32">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-12 gap-12 items-center">
 <div class="col-span-12 md:col-span-4 order-2 md:order-1">
@@ -658,8 +688,8 @@
 </div>
 </section>
 <!-- Section 4: T & V @ Bergpark Wilhelmshöhe -->
-<section class="mb-48">
-<div class="grid grid-cols-12 gap-6 items-end mb-12">
+<section class="portfolio-grid-section mb-48">
+<div class="portfolio-section-head grid grid-cols-12 gap-6 items-end mb-12">
 <div class="col-span-12 md:col-span-7">
 <h2 class="text-4xl font-normal text-brown-900 mb-2">T &amp; V @ Bergpark Wilhelmshöhe</h2>
 <p class="text-brown-500 font-light max-w-md">Hochzeit im UNESCO Weltkulturerbe — Trauung, Brautpaar-Shooting und Feier im größten Bergpark Europas.</p>
@@ -683,8 +713,8 @@
 </div>
 </section>
 <!-- Section 3: V&S @ Schloss Bad Arolsen -->
-<section class="mb-48">
-<div class="flex flex-col items-center text-center mb-16">
+<section class="portfolio-grid-section mb-48">
+<div class="portfolio-section-head flex flex-col items-center text-center mb-16">
 <h2 class="text-4xl font-normal text-brown-900 mb-4">V &amp; S @ Schloss Bad Arolsen</h2>
 <div class="h-px w-24 bg-[#5A2628] mb-6"></div>
 <p class="text-brown-500 max-w-xl italic">Eine Hochzeit wie ein Gemälde — kirchliche Trauung und rauschende Feier im barocken Residenzschloss Bad Arolsen.</p>
@@ -706,7 +736,7 @@
 </div>
 </section>
 <!-- Call to Action -->
-<section class="py-32 border-t border-[rgba(0,0,0,0.04)] text-center">
+<section class="portfolio-cta-section py-32 border-t border-[rgba(0,0,0,0.04)] text-center">
 <h3 class="text-3xl md:text-5xl font-normal text-brown-900 mb-8 italic">Soll ich eure Geschichte erzählen?</h3>
 <p class="text-brown-500 mb-12 max-w-lg mx-auto">Ich fange die leisen Momente ein, die euren Tag erst zu eurer Geschichte machen. Deutschlandweit, nah dran, ungestellt.</p>
 <a class="inline-block border border-brown-900 px-12 py-4 text-xs uppercase tracking-[0.3em] hover:bg-[#2C1810] hover:text-[#FDFCFA] transition-all duration-500" href="/#contact" style="font-family: var(--font-body); font-weight: 500;">
