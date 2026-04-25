@@ -44,16 +44,29 @@ const heroExtra = `
   .hero {
     min-height: 100svh;
     grid-template-columns: 1fr;
+    overflow-x: clip;
   }
   .hero-image {
     order: -1;
+    justify-self: stretch;
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
     height: auto;
     aspect-ratio: 3 / 2;
     overflow: hidden;
   }
+  .hero-image picture {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
   .hero-image img {
     width: 100%;
+    min-width: 0;
+    max-width: none;
     height: 100%;
+    object-fit: cover;
     object-position: 52% 42%;
   }
   .hero-content {
