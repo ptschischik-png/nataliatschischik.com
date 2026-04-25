@@ -39,7 +39,6 @@ ul { list-style: none; }
   --accent: #5A2628;
   --accent-dark: #481E20;
   --accent-light: #835C5D;
-  --gold: #D0B16D;
   --dark-bg: #1E1B18;
   --dark-card: #2A2622;
   --font-display: 'Cormorant Garamond', 'Georgia', serif;
@@ -227,10 +226,6 @@ p { max-width: 60ch; }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-}
-
-.p2-main {
-  padding-top: 0;
 }
 
 .section-title {
@@ -480,136 +475,6 @@ p { max-width: 60ch; }
 .p2-proof-info p {
   max-width: none;
   color: var(--brown-500);
-}
-
-.p2-trust-strip {
-  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.5rem, 5vw, 6rem);
-  background: linear-gradient(180deg, var(--cream-light), var(--cream));
-  border-top: 1px solid rgba(90,38,40,0.06);
-  border-bottom: 1px solid rgba(90,38,40,0.08);
-}
-
-.p2-trust-kicker {
-  margin: 0 0 0.85rem;
-  font-size: var(--text-xs);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brown-400);
-}
-
-.p2-trust-badges {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.p2-trust-badge {
-  display: flex;
-  min-height: 84px;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.9rem 1rem;
-  color: var(--brown-900);
-  background: rgba(255,252,247,0.82);
-  border: 1px solid rgba(90,38,40,0.1);
-  border-radius: var(--radius);
-  transition: transform var(--transition), border-color var(--transition), background var(--transition);
-}
-
-.p2-trust-badge:hover {
-  transform: translateY(-2px);
-  border-color: rgba(90,38,40,0.2);
-  background: var(--white);
-}
-
-.p2-trust-badge strong,
-.p2-trust-badge small {
-  display: block;
-}
-
-.p2-trust-badge strong {
-  margin-bottom: 0.16rem;
-  font-size: clamp(0.92rem, 1.7vw, 1rem);
-  line-height: 1.2;
-}
-
-.p2-trust-badge small {
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  line-height: 1.25;
-  text-transform: uppercase;
-  color: var(--brown-500);
-}
-
-.p2-trust-mark,
-.p2-trust-ring,
-.p2-trust-mywed,
-.p2-trust-score {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  place-items: center;
-  color: var(--brown-900);
-  background: linear-gradient(145deg, #D7BE7A, var(--gold));
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 3px rgba(255,255,255,0.58);
-}
-
-.p2-trust-mark,
-.p2-trust-mywed,
-.p2-trust-score {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-}
-
-.p2-trust-ring {
-  position: relative;
-  background: var(--cream-light);
-  border: 3px solid var(--gold);
-}
-
-.p2-trust-ring::before {
-  content: "";
-  width: 17px;
-  height: 17px;
-  border: 5px solid var(--accent);
-  border-radius: 50%;
-}
-
-.p2-trust-mywed {
-  color: var(--cream-light);
-  background: linear-gradient(145deg, var(--brown-900), var(--accent));
-  box-shadow: inset 0 0 0 3px rgba(208,177,109,0.28);
-}
-
-.p2-trust-badge-score {
-  background: rgba(90,38,40,0.055);
-  border-color: rgba(90,38,40,0.16);
-}
-
-.p2-trust-score {
-  color: var(--white);
-  font-size: 0.86rem;
-  letter-spacing: 0;
-  background: linear-gradient(145deg, var(--accent), var(--accent-dark));
-  border: 1px solid rgba(255,255,255,0.34);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 4px rgba(208,177,109,0.22);
-}
-
-.p2-trust-badge-google {
-  background: rgba(208,177,109,0.08);
-}
-
-.p2-trust-stars {
-  display: block;
-  min-width: 62px;
-  color: var(--accent);
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
 }
 
 .p2-pricing {
@@ -1023,7 +888,6 @@ p { max-width: 60ch; }
   .p2-includes-grid,
   .p2-factors-grid,
   .p2-addon-grid,
-  .p2-trust-badges,
   .p2-proof-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -1033,13 +897,7 @@ p { max-width: 60ch; }
     min-height: auto;
   }
 
-  .p2-hero-copy {
-    order: 1;
-    justify-content: flex-start;
-  }
-
   .p2-hero-media {
-    order: 2;
     aspect-ratio: 1 / 1;
     min-height: auto;
     border-top: 1px solid rgba(0,0,0,0.04);
@@ -1047,7 +905,6 @@ p { max-width: 60ch; }
 
   .p2-price-grid,
   .p2-proof-grid,
-  .p2-trust-badges,
   .p2-includes-grid,
   .p2-factors-grid,
   .p2-addon-grid,
@@ -1058,23 +915,8 @@ p { max-width: 60ch; }
 }
 
 @media (max-width: 640px) {
-  .p2-hero-copy { padding: 1rem 1.5rem 2rem; }
-  .p2-hero-card {
-    left: 1rem;
-    right: auto;
-    bottom: 1rem;
-    width: min(calc(100% - 2rem), 18rem);
-    max-width: none;
-    padding: 0.72rem 0.82rem;
-  }
-  .p2-hero-card strong {
-    margin-bottom: 0.2rem;
-    font-size: clamp(1rem, 5vw, 1.25rem);
-  }
-  .p2-hero-card span {
-    font-size: 0.66rem;
-    line-height: 1.45;
-  }
+  .p2-hero-copy { padding: 2rem 1.5rem 2.5rem; }
+  .p2-hero-card { left: 1rem; right: 1rem; max-width: none; }
   .p2-hero h1 {
     max-width: 8.5ch;
     margin-bottom: 1rem;
@@ -1105,27 +947,6 @@ p { max-width: 60ch; }
 <noscript><link rel="stylesheet" href="/css/below-fold.css"></noscript>
 <link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://nataliatschischik.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Preise",
-      "item": "https://nataliatschischik.com/preise"
-    }
-  ]
-}
-</script>
 
 <script type="application/ld+json">
 {
