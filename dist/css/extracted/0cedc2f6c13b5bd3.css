@@ -1,30 +1,3 @@
-{% set hasContactSection = hasInlineContactSection or isHome %}
-{% set contactHref = '#contact' if hasContactSection else '/#contact' %}
-<nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
-  <a href="/" class="nav-logo">Natalia Tschischik</a>
-  <div class="nav-links">
-    <a href="/portfolio">Portfolio</a>
-    <a href="/preise">Preise</a>
-    <a href="/ueber-mich">Über mich</a>
-    <a href="/faq">FAQ</a>
-    <a href="{{ contactHref }}">Kontakt</a>
-    <a href="/journal">Journal</a>
-    <a href="/standorte">Standorte</a>
-  </div>
-  <a href="{{ contactHref }}" class="nav-cta">Anfrage</a>
-  <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
-</nav>
-<div class="nav-mobile" id="mobileNav">
-  <a href="/portfolio" onclick="closeMobile()">Portfolio</a>
-  <a href="/preise" onclick="closeMobile()">Preise</a>
-  <a href="/ueber-mich" onclick="closeMobile()">Über mich</a>
-  <a href="/faq" onclick="closeMobile()">FAQ</a>
-  <a href="{{ contactHref }}" onclick="closeMobile()">Kontakt</a>
-  <a href="/journal" onclick="closeMobile()">Journal</a>
-  <a href="/standorte" onclick="closeMobile()">Standorte</a>
-  <a href="{{ contactHref }}" class="mobile-cta" onclick="closeMobile()">Anfrage senden</a>
-</div>
-<style>
 @media (max-width: 900px) {
   .nav {
     padding: 1rem clamp(1.25rem, 6vw, 1.75rem);
@@ -172,50 +145,8 @@
     transform: translateY(-1px);
   }
 }
-</style>
-<script>
-(() => {
-  let lockedScrollY = 0;
 
-  window.setMobileMenuLock = function setMobileMenuLock(isLocked) {
-    const docEl = document.documentElement;
-    const body = document.body;
-
-    if (!docEl || !body) return;
-
-    if (isLocked) {
-      if (body.dataset.menuLocked === 'true') return;
-
-      lockedScrollY = window.scrollY || window.pageYOffset || 0;
-      body.dataset.menuLocked = 'true';
-      body.style.position = 'fixed';
-      body.style.top = `-${lockedScrollY}px`;
-      body.style.left = '0';
-      body.style.right = '0';
-      body.style.width = '100%';
-      body.style.overflow = 'hidden';
-      docEl.style.overflow = 'hidden';
-      return;
-    }
-
-    if (body.dataset.menuLocked !== 'true') return;
-
-    const restoreScrollY = Math.abs(parseInt(body.style.top || '0', 10)) || lockedScrollY;
-    delete body.dataset.menuLocked;
-    body.style.position = '';
-    body.style.top = '';
-    body.style.left = '';
-    body.style.right = '';
-    body.style.width = '';
-    body.style.overflow = '';
-    docEl.style.overflow = '';
-    window.scrollTo(0, restoreScrollY);
-  };
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 900) {
-      window.setMobileMenuLock(false);
-    }
-  });
-})();
-</script>
+.wa-sticky{position:fixed;bottom:1.25rem;right:1.25rem;z-index:90;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:transform .3s,opacity .3s;opacity:0;transform:scale(.8);pointer-events:none}
+.wa-sticky.visible{opacity:1;transform:scale(1);pointer-events:auto}
+.wa-sticky:hover{transform:scale(1.08)}
+.wa-sticky svg{width:26px;height:26px;fill:#fff}
