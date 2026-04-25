@@ -393,19 +393,25 @@ p { max-width: 60ch; }
   bottom: clamp(1rem, 3vw, 2rem);
   max-width: 260px;
   padding: 1rem 1.1rem;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: var(--radius);
-  background: rgba(30,27,24,0.72);
+  background: rgba(30,27,24,0.84);
   backdrop-filter: blur(12px);
   color: var(--cream-light);
+  box-shadow: 0 18px 44px -24px rgba(0,0,0,0.65);
 }
 
 .p2-hero-card strong {
   display: block;
-  margin-bottom: 0.35rem;
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.55);
 }
 
 .p2-hero-card span {
