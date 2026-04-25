@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-25T21:49:49.243Z",
+  "generatedAt": "2026-04-25T22:05:35.496Z",
   "profile": {
     "device": "mobile",
     "viewport": "390x844 @ DPR 3",
@@ -9,14 +9,86 @@
     "baseUrl": "http://127.0.0.1:4173"
   },
   "summary": {
-    "pageCount": 1,
+    "pageCount": 45,
     "medianLcp": 0,
     "p75Lcp": 0,
     "medianTransferBytes": 0,
     "p75TransferBytes": 0,
     "worstLcp": [
       {
-        "rel": "portfolio.html",
+        "rel": "index.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "datenschutz.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "faq.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-arolsen.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-hersfeld.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-baunatal.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-borken.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-duderstadt.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-eschwege.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-frankenberg.html",
         "lcp": 0,
         "fcp": 0,
         "cls": 0,
@@ -26,7 +98,79 @@
     ],
     "heaviestPages": [
       {
-        "rel": "portfolio.html",
+        "rel": "index.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "datenschutz.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "faq.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-arolsen.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-hersfeld.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-baunatal.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-borken.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-duderstadt.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-eschwege.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-frankenberg.html",
         "lcp": 0,
         "fcp": 0,
         "cls": 0,
@@ -36,7 +180,79 @@
     ],
     "worstCls": [
       {
-        "rel": "portfolio.html",
+        "rel": "index.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "datenschutz.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "faq.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-arolsen.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-bad-hersfeld.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-baunatal.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-borken.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-duderstadt.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-eschwege.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
+      },
+      {
+        "rel": "hochzeitsfotograf-frankenberg.html",
         "lcp": 0,
         "fcp": 0,
         "cls": 0,
@@ -47,6 +263,966 @@
   },
   "results": [
     {
+      "rel": "index.html",
+      "url": "http://127.0.0.1:4173/",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 45.60000002384186,
+        "load": 47.80000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "datenschutz.html",
+      "url": "http://127.0.0.1:4173/datenschutz.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.69999998807907,
+        "load": 37.19999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "faq.html",
+      "url": "http://127.0.0.1:4173/faq.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 30.100000023841858,
+        "load": 30.600000023841858,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-arolsen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-bad-arolsen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 36.69999998807907,
+        "load": 38.30000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-bad-hersfeld.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-bad-hersfeld.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 56,
+        "load": 59.10000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-baunatal.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-baunatal.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 32.30000001192093,
+        "load": 32.69999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-borken.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-borken.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33,
+        "load": 34.60000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-duderstadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-duderstadt.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.5,
+        "load": 35.5,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-eschwege.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-eschwege.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 35.5,
+        "load": 37.60000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-frankenberg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-frankenberg.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 37.69999998807907,
+        "load": 39.30000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-fritzlar.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-fritzlar.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 53.69999998807907,
+        "load": 56.39999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-fulda.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-fulda.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 35.59999996423721,
+        "load": 37.39999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-giessen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-giessen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 38,
+        "load": 40.40000003576279,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-goettingen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-goettingen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.89999997615814,
+        "load": 36.89999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-hildesheim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-hildesheim.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.39999997615814,
+        "load": 35.10000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-hofgeismar.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-hofgeismar.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 32.69999998807907,
+        "load": 34.80000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-kirchheim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-kirchheim.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 47.69999998807907,
+        "load": 50.19999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-marburg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-marburg.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 32.40000003576279,
+        "load": 32.90000003576279,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-neustadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-neustadt.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.69999998807907,
+        "load": 35.59999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-nordhessen.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-nordhessen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 42.5,
+        "load": 44.700000047683716,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-northeim.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-northeim.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 60.700000047683716,
+        "load": 64.30000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-paderborn.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-paderborn.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 36,
+        "load": 38.40000003576279,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-schwalmstadt.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-schwalmstadt.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.39999997615814,
+        "load": 35.09999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "hochzeitsfotograf-warburg.html",
+      "url": "http://127.0.0.1:4173/hochzeitsfotograf-warburg.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.89999997615814,
+        "load": 36.60000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "impressum.html",
+      "url": "http://127.0.0.1:4173/impressum.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.80000001192093,
+        "load": 36.39999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal.html",
+      "url": "http://127.0.0.1:4173/journal.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.5,
+        "load": 35.89999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/brautpaar-shooting-tipps.html",
+      "url": "http://127.0.0.1:4173/journal/brautpaar-shooting-tipps.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 40.59999996423721,
+        "load": 42.69999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/golden-hour.html",
+      "url": "http://127.0.0.1:4173/journal/golden-hour.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.19999998807907,
+        "load": 36.09999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeit-timeline-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeit-timeline-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 37,
+        "load": 39.59999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeitsalbum.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeitsalbum.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 36.30000001192093,
+        "load": 38.39999997615814,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/hochzeitslocations-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/hochzeitslocations-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 32.80000001192093,
+        "load": 34.40000003576279,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "journal/orangerie-kassel.html",
+      "url": "http://127.0.0.1:4173/journal/orangerie-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 36.5,
+        "load": 38.5,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
       "rel": "portfolio.html",
       "url": "http://127.0.0.1:4173/portfolio.html",
       "title": "",
@@ -54,8 +1230,368 @@
         "fcp": 0,
         "lcp": 0,
         "cls": 0,
-        "domContentLoaded": 38.299999952316284,
-        "load": 39.5,
+        "domContentLoaded": 35.89999997615814,
+        "load": 37.69999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "preise.html",
+      "url": "http://127.0.0.1:4173/preise.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.89999997615814,
+        "load": 36.59999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-bergpark-wilhelmshoehe.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 32.59999996423721,
+        "load": 34.09999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-goettingen.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-goettingen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 35.89999997615814,
+        "load": 37.80000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-herkulesterrassen-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 57.299999952316284,
+        "load": 60.59999996423721,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-rathaus-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-rathaus-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 39.90000003576279,
+        "load": 41.69999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel-ra.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-renthof-kassel-ra.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.60000002384186,
+        "load": 36.30000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-renthof-kassel.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-renthof-kassel.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 33.89999997615814,
+        "load": 35.19999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-sababurg-dornroeschenschloss.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 40.5,
+        "load": 42.80000001192093,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-bad-arolsen.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-schloss-bad-arolsen.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 35,
+        "load": 36.60000002384186,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "reportagen/hochzeit-schloss-berlepsch.html",
+      "url": "http://127.0.0.1:4173/reportagen/hochzeit-schloss-berlepsch.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 37.60000002384186,
+        "load": 39.19999998807907,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "standorte.html",
+      "url": "http://127.0.0.1:4173/standorte.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 34.299999952316284,
+        "load": 36.299999952316284,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
+      },
+      "page": {
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
+      },
+      "grades": {
+        "lcp": "good",
+        "cls": "good",
+        "transfer": "good"
+      }
+    },
+    {
+      "rel": "ueber-mich.html",
+      "url": "http://127.0.0.1:4173/ueber-mich.html",
+      "title": "",
+      "metrics": {
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 35.89999997615814,
+        "load": 38.30000001192093,
         "longTaskCount": 0,
         "totalLongTaskMs": 0
       },

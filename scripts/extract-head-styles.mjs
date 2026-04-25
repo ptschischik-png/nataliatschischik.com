@@ -1,11 +1,11 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { getCriticalCssForPage } from './critical-css-presets.mjs';
 
 const repoRoot = path.resolve(new URL('..', import.meta.url).pathname);
 const distDir = path.join(repoRoot, 'dist');
 const extractedDir = path.join(distDir, 'css', 'extracted');
-const MAX_INLINE_HEAD_STYLES = 2;
 
 await fs.mkdir(extractedDir, { recursive: true });
 
@@ -19,16 +19,19 @@ for (const file of htmlFiles) {
   if (!headMatch) continue;
 
   const headContent = headMatch[1];
-  const headStyleMatches = Array.from(headContent.matchAll(/<style(?:[^>]*)>([\s\S]*?)<\/style>/gi));
   const extractedCssChunks = [];
+  const fontCssChunks = [];
 
-  let headStyleIndex = 0;
   const nextHead = headContent.replace(/<style(?:[^>]*)>([\s\S]*?)<\/style>/gi, (_, css) => {
-    headStyleIndex += 1;
-    if (headStyleIndex <= MAX_INLINE_HEAD_STYLES) {
-      return `<style>${css}</style>`;
+    const { fontCss, restCss } = splitFontFaceCss(css);
+    if (fontCss) {
+      fontCssChunks.push(fontCss);
     }
-    extractedCssChunks.push(rewriteRelativeCssUrls(css.trim(), pageDir));
+
+    if (hasMeaningfulCss(restCss)) {
+      extractedCssChunks.push(rewriteRelativeCssUrls(restCss.trim(), pageDir));
+    }
+
     return '';
   });
 
@@ -48,9 +51,37 @@ for (const file of htmlFiles) {
     ].join('\n');
   }
 
-  const rebuiltHead = bundleMarkup ? insertBundleMarkup(nextHead, bundleMarkup) : nextHead;
+  const criticalMarkup = buildCriticalMarkup(rel, html, fontCssChunks);
+  const headWithCritical = insertCriticalMarkup(nextHead, criticalMarkup);
+  const rebuiltHead = bundleMarkup ? insertBundleMarkup(headWithCritical, bundleMarkup) : headWithCritical;
   const nextHtml = `${html.slice(0, headMatch.index)}<head>${rebuiltHead}</head>${nextBody}`;
   await fs.writeFile(file, nextHtml, 'utf8');
+}
+
+function buildCriticalMarkup(rel, html, fontCssChunks) {
+  const chunks = [];
+  const fontCss = normalizeCss(fontCssChunks.join('\n'));
+  const pageCss = normalizeCss(getCriticalCssForPage(rel, html));
+
+  if (fontCss) {
+    chunks.push(`<style data-critical="fonts">\n${fontCss}\n</style>`);
+  }
+
+  if (pageCss) {
+    chunks.push(`<style data-critical="page">\n${pageCss}\n</style>`);
+  }
+
+  return chunks.join('\n');
+}
+
+function insertCriticalMarkup(headContent, criticalMarkup) {
+  if (!criticalMarkup) return headContent;
+  const firstScriptIndex = headContent.search(/<script\b/i);
+  if (firstScriptIndex !== -1) {
+    return `${headContent.slice(0, firstScriptIndex)}${criticalMarkup}\n${headContent.slice(firstScriptIndex)}`;
+  }
+
+  return `${headContent}\n${criticalMarkup}`;
 }
 
 function getPageDir(relPath) {
@@ -87,6 +118,62 @@ async function emitCssBundle(chunks) {
   }
 
   return `/css/extracted/${cssFilename}`;
+}
+
+function splitFontFaceCss(css) {
+  const fontRanges = [];
+  const fontRulePattern = /@font-face\s*{/gi;
+  let match;
+
+  while ((match = fontRulePattern.exec(css))) {
+    const start = match.index;
+    const openBraceIndex = css.indexOf('{', start);
+    const end = findMatchingBrace(css, openBraceIndex);
+    if (end === -1) continue;
+    fontRanges.push([start, end + 1]);
+    fontRulePattern.lastIndex = end + 1;
+  }
+
+  if (!fontRanges.length) {
+    return { fontCss: '', restCss: css };
+  }
+
+  const fontCss = fontRanges.map(([start, end]) => css.slice(start, end)).join('\n');
+  let restCss = '';
+  let cursor = 0;
+  for (const [start, end] of fontRanges) {
+    restCss += css.slice(cursor, start);
+    cursor = end;
+  }
+  restCss += css.slice(cursor);
+
+  return { fontCss, restCss };
+}
+
+function findMatchingBrace(input, openBraceIndex) {
+  if (openBraceIndex === -1) return -1;
+  let depth = 0;
+  for (let index = openBraceIndex; index < input.length; index += 1) {
+    const char = input[index];
+    if (char === '{') depth += 1;
+    if (char === '}') {
+      depth -= 1;
+      if (depth === 0) return index;
+    }
+  }
+  return -1;
+}
+
+function hasMeaningfulCss(css) {
+  return stripCssComments(css).trim().length > 0;
+}
+
+function normalizeCss(css) {
+  return stripCssComments(css).trim();
+}
+
+function stripCssComments(css) {
+  return String(css || '').replace(/\/\*[\s\S]*?\*\//g, '');
 }
 
 function isAbsoluteUrl(value) {

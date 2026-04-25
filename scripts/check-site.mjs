@@ -75,7 +75,8 @@ async function checkHtmlFiles(files) {
     const robots = capture(html, /<meta[^>]+name=["']robots["'][^>]+content=["']([^"']+)["'][^>]*>/i).toLowerCase();
     const canonical = capture(html, /<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["'][^>]*>/i);
     const ogUrl = capture(html, /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["'][^>]*>/i);
-    const headStyleCount = (head.match(/<style(?:\s|>)/gi) || []).length;
+    const headStyleTags = head.match(/<style(?:[^>]*)>/gi) || [];
+    const headStyleCount = headStyleTags.length;
 
     if (rel !== '404.html' && rel !== 'datenschutzerklaerung.html') {
       if (!html.includes('/js/tracking-bootstrap.js')) {
@@ -97,6 +98,12 @@ async function checkHtmlFiles(files) {
 
     if (headStyleCount > 2) {
       failures.push(`${rel} has ${headStyleCount} inline head style blocks; expected at most 2 critical-inline blocks.`);
+    }
+
+    for (const styleTag of headStyleTags) {
+      if (!/\sdata-critical=["'](?:fonts|page)["']/i.test(styleTag)) {
+        failures.push(`${rel} has an inline head style without an explicit data-critical marker.`);
+      }
     }
 
     if (/<style(?:\s|>)/i.test(body)) {
