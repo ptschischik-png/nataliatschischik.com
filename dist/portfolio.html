@@ -257,6 +257,19 @@
 @font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:300 500;font-display:swap;src:url('/fonts/cg-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:400 500;font-display:swap;src:url('/fonts/dm-normal-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+@media (max-width: 767px) {
+  #mobile-portfolio-slider { position: relative; width: 100vw; height: 100svh; overflow: hidden; }
+  .hslider-track { position: relative; width: 100%; height: 100%; }
+  .hslider-slide { position: absolute; inset: 0; width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; opacity: 0; pointer-events: none; }
+  .hslider-slide.active { opacity: 1; pointer-events: auto; z-index: 2; }
+  .hslide-media, .hslide-image { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+  .hslide-media { z-index: 0; }
+  .hslide-image { object-fit: cover; object-position: center; }
+  .hslide-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.12) 50%, rgba(0,0,0,0) 100%); pointer-events: none; }
+  .hslide-content { position: relative; z-index: 2; text-align: center; padding: 0 2.5rem 5.5rem; color: #FDFCFA; }
+  .hslide-content h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.8rem, 12vw, 4.5rem); font-weight: 300; letter-spacing: 0; line-height: 1.05; margin-bottom: 0.3rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+}
 </style>
 <link rel="stylesheet" href="/fonts/fonts-secondary.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="/fonts/fonts-secondary.css"></noscript>
@@ -419,25 +432,31 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide active" data-href="/reportagen/hochzeit-renthof-kassel-ra">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.avif 1013w"
-          sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.webp 1013w"
-          sizes="100vw"
-          
-         type="image/webp">
-          <source type="image/avif" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.avif">
-  <source type="image/webp" srcset="/assets/images/reportagen/renthof-kassel-ra/main-card.webp">
-  <img
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            srcset="/assets/images/reportagen/renthof-kassel-ra/main-card-400w.avif 400w, /assets/images/reportagen/renthof-kassel-ra/main-card-800w.avif 800w"
+            sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            srcset="/assets/images/reportagen/renthof-kassel-ra/main-card-400w.webp 400w, /assets/images/reportagen/renthof-kassel-ra/main-card-800w.webp 800w"
+            sizes="100vw"
+            
+          >
+        
+        <img
           class="hslide-image"
           alt="R &amp; A Hochzeit im Renthof Kassel"
           width="1013"
@@ -462,22 +481,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-goettingen">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/goettingen-sg/main-card.avif 1012w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/goettingen-sg/main-card.webp 1012w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/goettingen-sg/main-card-400w.avif 400w, /assets/images/reportagen/goettingen-sg/main-card-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/goettingen-sg/main-card-400w.webp 400w, /assets/images/reportagen/goettingen-sg/main-card-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="S &amp; G Hochzeit in Göttingen"
@@ -502,22 +529,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-renthof-kassel">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/renthof-kassel-aw/5-03.avif 1980w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/renthof-kassel-aw/5-03.webp 1980w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/renthof-kassel-aw/5-03-400w.avif 400w, /assets/images/reportagen/renthof-kassel-aw/5-03-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/renthof-kassel-aw/5-03-400w.webp 400w, /assets/images/reportagen/renthof-kassel-aw/5-03-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="A &amp; W Hochzeit im Renthof Kassel"
@@ -542,22 +577,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-herkulesterrassen-kassel">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider.avif 1080w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider.webp 1080w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider-400w.avif 400w, /assets/images/reportagen/herkulesterrassen-kassel-ee/slider-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/herkulesterrassen-kassel-ee/slider-400w.webp 400w, /assets/images/reportagen/herkulesterrassen-kassel-ee/slider-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="E &amp; E Hochzeit an den Herkulesterrassen Kassel"
@@ -582,22 +625,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-schloss-berlepsch">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card.avif 901w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card.webp 901w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card-400w.avif 400w, /assets/images/reportagen/schloss-berlepsch-aw/slider-card-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/schloss-berlepsch-aw/slider-card-400w.webp 400w, /assets/images/reportagen/schloss-berlepsch-aw/slider-card-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="A &amp; W Hochzeit auf Schloss Berlepsch"
@@ -622,22 +673,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-sababurg-dornroeschenschloss">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/sababurg-jj/main-card.avif 962w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/sababurg-jj/main-card.webp 962w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/sababurg-jj/main-card-400w.avif 400w, /assets/images/reportagen/sababurg-jj/main-card-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/sababurg-jj/main-card-400w.webp 400w, /assets/images/reportagen/sababurg-jj/main-card-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="J &amp; J Hochzeit auf der Sababurg"
@@ -662,22 +721,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-rathaus-kassel">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/rathaus-kassel-vm/main-card.avif 1013w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/rathaus-kassel-vm/main-card.webp 1013w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/rathaus-kassel-vm/main-card-400w.avif 400w, /assets/images/reportagen/rathaus-kassel-vm/main-card-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/rathaus-kassel-vm/main-card-400w.webp 400w, /assets/images/reportagen/rathaus-kassel-vm/main-card-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="V &amp; M Hochzeit in Kassel"
@@ -702,22 +769,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-bergpark-wilhelmshoehe">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card.avif 1318w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card.webp 1318w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card-400w.avif 400w, /assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card-800w.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card-400w.webp 400w, /assets/images/reportagen/bergpark-wilhelmshoehe-tv/main-card-800w.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="T &amp; V Hochzeit im Bergpark Wilhelmshöhe"
@@ -742,22 +817,30 @@
     
     
     
+    
+    
+    
+    
     <div class="hslider-slide" data-href="/reportagen/hochzeit-schloss-bad-arolsen">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait-mobile.avif 800w"
-          data-sizes="100vw"
-          
-         type="image/avif">
-  <source
-          media="(max-width: 767px)"
-          
-          data-srcset="/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait-mobile.webp 800w"
-          data-sizes="100vw"
-          
-         type="image/webp">
+        
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait-mobile.avif 800w"
+            data-sizes="100vw"
+            
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            
+            data-srcset="/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait-mobile.webp 800w"
+            data-sizes="100vw"
+            
+          >
+        
         <img
           class="hslide-image"
           alt="V &amp; S Hochzeit auf Schloss Bad Arolsen"

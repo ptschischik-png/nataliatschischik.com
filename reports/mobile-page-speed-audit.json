@@ -1,128 +1,79 @@
 {
-  "generatedAt": "2026-04-25T00:35:44.044Z",
+  "generatedAt": "2026-04-25T21:49:49.243Z",
   "profile": {
     "device": "mobile",
     "viewport": "390x844 @ DPR 3",
     "userAgent": "Moto G Power / Chrome mobile emulation",
     "network": "CDP Fast 4G-ish throttling",
     "cpuThrottlingRate": 4,
-    "baseUrl": "http://127.0.0.1:8081"
+    "baseUrl": "http://127.0.0.1:4173"
   },
   "summary": {
     "pageCount": 1,
-    "medianLcp": 720,
-    "p75Lcp": 720,
-    "medianTransferBytes": 1407723,
-    "p75TransferBytes": 1407723,
+    "medianLcp": 0,
+    "p75Lcp": 0,
+    "medianTransferBytes": 0,
+    "p75TransferBytes": 0,
     "worstLcp": [
       {
-        "rel": "reportagen/hochzeit-goettingen.html",
-        "lcp": 720,
-        "fcp": 548,
-        "cls": 0.004,
-        "transferBytes": 1407723,
-        "requestCount": 17
+        "rel": "portfolio.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
       }
     ],
     "heaviestPages": [
       {
-        "rel": "reportagen/hochzeit-goettingen.html",
-        "lcp": 720,
-        "fcp": 548,
-        "cls": 0.004,
-        "transferBytes": 1407723,
-        "requestCount": 17
+        "rel": "portfolio.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
       }
     ],
     "worstCls": [
       {
-        "rel": "reportagen/hochzeit-goettingen.html",
-        "lcp": 720,
-        "fcp": 548,
-        "cls": 0.004,
-        "transferBytes": 1407723,
-        "requestCount": 17
+        "rel": "portfolio.html",
+        "lcp": 0,
+        "fcp": 0,
+        "cls": 0,
+        "transferBytes": 0,
+        "requestCount": 1
       }
     ]
   },
   "results": [
     {
-      "rel": "reportagen/hochzeit-goettingen.html",
-      "url": "http://127.0.0.1:8081/reportagen/hochzeit-goettingen.html",
-      "title": "Hochzeit in Göttingen — S & G | Natalia Tschischik",
+      "rel": "portfolio.html",
+      "url": "http://127.0.0.1:4173/portfolio.html",
+      "title": "",
       "metrics": {
-        "fcp": 548,
-        "lcp": 720,
-        "cls": 0.0036860458056310512,
-        "domContentLoaded": 5139.0999999940395,
-        "load": 6936.199999988079,
-        "longTaskCount": 5,
-        "totalLongTaskMs": 577
+        "fcp": 0,
+        "lcp": 0,
+        "cls": 0,
+        "domContentLoaded": 38.299999952316284,
+        "load": 39.5,
+        "longTaskCount": 0,
+        "totalLongTaskMs": 0
       },
       "page": {
-        "requestCount": 17,
-        "totalTransferBytes": 1407723,
-        "imageBytes": 1024325,
-        "cssBytes": 10597,
-        "jsBytes": 10077,
-        "htmlBytes": 248397,
-        "largestResources": [
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/1_Brautvorbereitung_00002_Hochzeit.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 541272
-          },
-          {
-            "url": "/reportagen/hochzeit-goettingen.html",
-            "type": "Document",
-            "mimeType": "text/html",
-            "bytes": 248307
-          },
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/hero.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 112999
-          },
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/1_Brautvorbereitung_00007_Hochzeit-800w.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 104831
-          },
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/1_Brautvorbereitung_00010_Hochzeit-800w.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 95079
-          },
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/1_Brautvorbereitung_00016_Hochzeit-800w.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 44515
-          },
-          {
-            "url": "/fonts/cg-italic-latin.woff2",
-            "type": "Font",
-            "mimeType": "font/woff2",
-            "bytes": 39455
-          },
-          {
-            "url": "/assets/images/reportagen/goettingen-sg/hero-800w.avif",
-            "type": "Image",
-            "mimeType": "image/avif",
-            "bytes": 38924
-          }
-        ],
-        "scrollHeight": 51633,
-        "bodyTextLength": 3736
+        "requestCount": 1,
+        "totalTransferBytes": 0,
+        "imageBytes": 0,
+        "cssBytes": 0,
+        "jsBytes": 0,
+        "htmlBytes": 0,
+        "largestResources": [],
+        "scrollHeight": 2120,
+        "bodyTextLength": 0
       },
       "grades": {
         "lcp": "good",
         "cls": "good",
-        "transfer": "needs-improvement"
+        "transfer": "good"
       }
     }
   ]

@@ -188,11 +188,11 @@ function checkPriorityPicturePreloads(rel, html) {
     if (loading !== 'eager' && fetchpriority !== 'high') continue;
 
     for (const sourceTag of picture.match(/<source\b[^>]*>/gi) || []) {
-      if (responsiveVariantPattern.test(sourceTag)) {
+      const media = capture(sourceTag, /\smedia=["']([^"']+)["']/i);
+      if (responsiveVariantPattern.test(sourceTag) && !/\bmax-width\b/i.test(media)) {
         failures.push(`${rel} has priority picture source limited to responsive candidate: ${sourceTag.slice(0, 160)}`);
       }
 
-      const media = capture(sourceTag, /\smedia=["']([^"']+)["']/i);
       const srcset = capture(sourceTag, /\ssrcset=["']([^"']+)["']/i);
       if (!/\bmax-width\b/i.test(media) || !srcset || !/-(?:400w|800w|1200w)\.(?:webp|avif)/i.test(srcset)) continue;
 

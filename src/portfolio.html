@@ -108,7 +108,8 @@
     image: "/assets/images/reportagen/schloss-bad-arolsen-vs/teasers/vs-schloss-portrait-mobile",
     alt: "V & S Hochzeit auf Schloss Bad Arolsen",
     width: 800,
-    height: 1260
+    height: 1260,
+    responsiveMobile: false
   }
 ] %}
 
@@ -119,30 +120,71 @@
     {% set mobileImage = slide.mobileImage or slide.image %}
     {% set mobileWidth = slide.mobileWidth or slide.width %}
     {% set mobileHeight = slide.mobileHeight or slide.height %}
+    {% set hasResponsiveMobile = slide.responsiveMobile !== false %}
+    {% set mobileAvifSrcset = mobileImage ~ "-400w.avif 400w, " ~ mobileImage ~ "-800w.avif 800w" %}
+    {% set mobileWebpSrcset = mobileImage ~ "-400w.webp 400w, " ~ mobileImage ~ "-800w.webp 800w" %}
+    {% set fallbackWebp = mobileImage ~ ".webp" %}
     <div class="hslider-slide{% if loop.first %} active{% endif %}" data-href="{{ slide.dataHref }}">
       <picture class="hslide-media">
-        <source
-          media="(max-width: 767px)"
-          {% if loop.first %}
-          srcset="{{ mobileImage }}.webp {{ mobileWidth }}w"
-          sizes="100vw"
-          {% else %}
-          data-srcset="{{ mobileImage }}.webp {{ mobileWidth }}w"
-          data-sizes="100vw"
-          {% endif %}
-        >
+        {% if hasResponsiveMobile %}
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            {% if loop.first %}
+            srcset="{{ mobileAvifSrcset }}"
+            sizes="100vw"
+            {% else %}
+            data-srcset="{{ mobileAvifSrcset }}"
+            data-sizes="100vw"
+            {% endif %}
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            {% if loop.first %}
+            srcset="{{ mobileWebpSrcset }}"
+            sizes="100vw"
+            {% else %}
+            data-srcset="{{ mobileWebpSrcset }}"
+            data-sizes="100vw"
+            {% endif %}
+          >
+        {% else %}
+          <source
+            type="image/avif"
+            media="(max-width: 767px)"
+            {% if loop.first %}
+            srcset="{{ mobileImage }}.avif {{ mobileWidth }}w"
+            sizes="100vw"
+            {% else %}
+            data-srcset="{{ mobileImage }}.avif {{ mobileWidth }}w"
+            data-sizes="100vw"
+            {% endif %}
+          >
+          <source
+            type="image/webp"
+            media="(max-width: 767px)"
+            {% if loop.first %}
+            srcset="{{ mobileImage }}.webp {{ mobileWidth }}w"
+            sizes="100vw"
+            {% else %}
+            data-srcset="{{ mobileImage }}.webp {{ mobileWidth }}w"
+            data-sizes="100vw"
+            {% endif %}
+          >
+        {% endif %}
         <img
           class="hslide-image"
           alt="{{ slide.alt }}"
           width="{{ mobileWidth }}"
           height="{{ mobileHeight }}"
           {% if loop.first %}
-          src="{{ mobileImage }}.webp"
+          src="{{ fallbackWebp }}"
           loading="eager"
           fetchpriority="high"
           decoding="sync"
           {% else %}
-          data-src="{{ mobileImage }}.webp"
+          data-src="{{ fallbackWebp }}"
           loading="lazy"
           decoding="async"
           {% endif %}
