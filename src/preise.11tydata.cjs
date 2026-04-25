@@ -500,7 +500,7 @@ p { max-width: 60ch; }
 
 .p2-trust-badges {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -1035,6 +1035,7 @@ p { max-width: 60ch; }
 
   .p2-hero-copy {
     order: 1;
+    justify-content: flex-start;
   }
 
   .p2-hero-media {
@@ -1057,7 +1058,7 @@ p { max-width: 60ch; }
 }
 
 @media (max-width: 640px) {
-  .p2-hero-copy { padding: 1.5rem 1.5rem 2rem; }
+  .p2-hero-copy { padding: 1rem 1.5rem 2rem; }
   .p2-hero-card {
     left: 1rem;
     right: auto;
