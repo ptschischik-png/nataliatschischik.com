@@ -960,6 +960,7 @@ p { max-width: 60ch; }
     gap: 0.35rem 0.55rem;
     letter-spacing: 0.08em;
   }
+  .p2-trust-line span[aria-hidden="true"] { display: none; }
   .p2-plan-featured { order: 1; }
   .p2-plan-standesamt { order: 2; }
   .p2-plan-half { order: 3; }
