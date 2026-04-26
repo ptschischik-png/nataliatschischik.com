@@ -196,6 +196,13 @@
 
     window.gtag('js', new Date());
     window.gtag('config', measurementId, { allow_enhanced_conversions: true });
+    if (trackingConfig.googleAdsConversion && trackingConfig.googleAdsConversion.id && !window.__googleAdsConfigured) {
+      window.gtag('config', trackingConfig.googleAdsConversion.id, {
+        allow_enhanced_conversions: true,
+        send_page_view: false
+      });
+      window.__googleAdsConfigured = true;
+    }
     loadScript('https://www.googletagmanager.com/gtag/js?id=' + measurementId);
     log('google:init', { measurementId: measurementId });
   }

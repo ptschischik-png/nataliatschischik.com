@@ -16,6 +16,11 @@ const forbiddenTextPatterns = [
   /workers\.dev/i,
   /icy-sunset-af0f/i
 ];
+const trackingBootstrapExemptions = new Set([
+  '404.html',
+  'datenschutzerklaerung.html',
+  'google71311938103d98f5.html'
+]);
 const responsiveVariantPattern = /-(?:400w|800w|1200w)\.(?:webp|avif)(?:$|[?#])/i;
 
 const allFiles = await collectFiles(distDir, (filePath, stats) => stats.isFile());
@@ -78,7 +83,7 @@ async function checkHtmlFiles(files) {
     const headStyleTags = head.match(/<style(?:[^>]*)>/gi) || [];
     const headStyleCount = headStyleTags.length;
 
-    if (rel !== '404.html' && rel !== 'datenschutzerklaerung.html') {
+    if (!trackingBootstrapExemptions.has(rel)) {
       if (!html.includes('/js/tracking-bootstrap.js')) {
         failures.push(`${rel} is missing the centralized tracking bootstrap.`);
       }

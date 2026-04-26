@@ -32,7 +32,10 @@ const site = {
     "debugQueryParam": "debug_tracking"
   },
   "verifications": {
-    "google": "VdwJ2n6jCGWsFH_AE7-wwXYc8crrWTDp-kNba3mWOP4",
+    "google": "LKGCPfOHBYOiwIVUvelU8-fd0zMkOFtu0Na_eXZCQ_A",
+    "googleAdditional": [
+      "VdwJ2n6jCGWsFH_AE7-wwXYc8crrWTDp-kNba3mWOP4"
+    ],
     "facebook": "5e2jspggv55xycs247egl8diamhup4",
     "appleDomain": "A4Lq3sdot5vt-8ubmaLnH3czieipD2VbFth9KijInbI"
   },
