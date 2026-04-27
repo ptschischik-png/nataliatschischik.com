@@ -983,7 +983,7 @@ p { max-width: 60ch; }
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Preise & Leistungen für Hochzeitsfotografie — Natalia Tschischik",
-  "description": "Hochzeitsfotograf Kassel Preise: transparente Begleitungen für Standesamt, 8 Stunden Reportage und 10 Stunden Reportage in Kassel und Nordhessen.",
+  "description": "Hochzeitsfotograf Kassel Preise: transparente Begleitungen für Standesamt, 8 Stunden Reportage und 10 Stunden Reportage in Kassel und Nordhessen. Die genannten Einstiegspreise berücksichtigen bereits einen Preisvorteil bei freiwilliger Freigabe ausgewählter Bilder.",
   "provider": {
     "@type": ["LocalBusiness", "Photographer"],
     "name": "Natalia Tschischik — Hochzeitsfotograf Kassel",
@@ -1001,7 +1001,7 @@ p { max-width: 60ch; }
       {
         "@type": "Offer",
         "name": "Standesamtbegleitung (ab 3 Stunden)",
-        "description": "Ab 3 Stunden Begleitung, mindestens 150 bearbeitete Bilder, Online-Galerie, 50 km inklusive.",
+        "description": "Ab 3 Stunden Begleitung, mindestens 150 bearbeitete Bilder, Online-Galerie, 50 km inklusive. Preis inklusive Preisvorteil bei freiwilliger Freigabe ausgewählter Bilder für Website und Social Media.",
         "price": "590",
         "priceCurrency": "EUR",
         "priceSpecification": {
@@ -1013,7 +1013,7 @@ p { max-width: 60ch; }
       {
         "@type": "Offer",
         "name": "8 Stunden Reportage",
-        "description": "8 Stunden Begleitung, mindestens 400 bearbeitete Bilder, Galerie und Download, Anreise in Hessen und Niedersachsen inklusive.",
+        "description": "8 Stunden Begleitung, mindestens 400 bearbeitete Bilder, Galerie und Download, Anreise in Hessen und Niedersachsen inklusive. Preis inklusive Preisvorteil bei freiwilliger Freigabe ausgewählter Bilder für Website und Social Media.",
         "price": "1790",
         "priceCurrency": "EUR",
         "priceSpecification": {
@@ -1025,7 +1025,7 @@ p { max-width: 60ch; }
       {
         "@type": "Offer",
         "name": "10 Stunden Reportage",
-        "description": "10 Stunden Begleitung, mindestens 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, Anreise in Hessen und Niedersachsen inklusive.",
+        "description": "10 Stunden Begleitung, mindestens 600 bearbeitete Bilder, Highlight-Diashow, Fine-Art-Album 20x20, Anreise in Hessen und Niedersachsen inklusive. Preis inklusive Preisvorteil bei freiwilliger Freigabe ausgewählter Bilder für Website und Social Media.",
         "price": "2490",
         "priceCurrency": "EUR",
         "priceSpecification": {
@@ -1046,10 +1046,34 @@ p { max-width: 60ch; }
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "Gibt es Möglichkeiten für einen Preisvorteil oder Rabatt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Wenn ich ausgewählte Bilder eurer Hochzeit auf meiner Website und in Social Media zeigen darf, ist bereits ein Preisvorteil berücksichtigt: 100 Euro bei Standesamtbegleitungen und 250 Euro bei Reportagen ab 6 Stunden. Das besprechen wir transparent vorab und natürlich nur mit eurem Einverständnis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet die Freigabe für Website und Social Media genau?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wenn ihr zustimmt, verwende ich ausschließlich ausgewählte Bilder eurer Hochzeit für meine Website und für Social Media. Es geht nicht um eure komplette Galerie oder um alle Bilder eures Tages, sondern nur um einzelne Motive, die wir transparent abstimmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Können wir die Veröffentlichungsrechte auch ablehnen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, selbstverständlich. Die Freigabe ist freiwillig und keine Voraussetzung für eure Buchung. Wenn ihr das nicht möchtet, bleiben eure Bilder privat und werden nicht veröffentlicht."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Was kostet ein Hochzeitsfotograf in Kassel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 590 Euro, für eine 8 Stunden Reportage bei 1.790 Euro und für eine 10 Stunden Reportage bei 2.490 Euro. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
+        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 590 Euro, für eine 8 Stunden Reportage bei 1.790 Euro und für eine 10 Stunden Reportage bei 2.490 Euro. Die genannten Einstiegspreise berücksichtigen bereits den Preisvorteil bei freiwilliger Freigabe ausgewählter Bilder für Website und Social Media. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
       }
     },
     {
