@@ -983,7 +983,7 @@ p { max-width: 60ch; }
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Preise & Leistungen für Hochzeitsfotografie — Natalia Tschischik",
-  "description": "Hochzeitsfotograf Kassel Preise: transparente Begleitungen für Standesamt, 8 Stunden Reportage und 10 Stunden Reportage in Kassel und Nordhessen.",
+  "description": "Hochzeitsfotograf Kassel Preise: klare Orientierung für Standesamt, 8 Stunden Reportage und 10 Stunden Reportage in Kassel und Nordhessen.",
   "provider": {
     "@type": ["LocalBusiness", "Photographer"],
     "name": "Natalia Tschischik — Hochzeitsfotograf Kassel",
@@ -1049,7 +1049,7 @@ p { max-width: 60ch; }
       "name": "Was kostet ein Hochzeitsfotograf in Kassel?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Für eine Standesamtbegleitung startet die fotografische Begleitung bei 590 Euro, für eine 8 Stunden Reportage bei 1.790 Euro und für eine 10 Stunden Reportage bei 2.490 Euro. Der finale Preis hängt vor allem von Dauer, Fahrstrecke und möglichen Erweiterungen ab."
+        "text": "Auf dieser Seite findet ihr die drei wichtigsten Begleitungen als Orientierung. Der finale Preis entsteht danach aus eurem Ablauf, euren Orten und den Erweiterungen, die für euren Tag wirklich Sinn ergeben."
       }
     },
     {
@@ -1073,7 +1073,7 @@ p { max-width: 60ch; }
       "name": "Was ist im Inklusivradius enthalten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Bei der Standesamtbegleitung sind 50 km inklusive. Bei den 8 und 10 Stunden Reportagen ist die Anreise in Hessen und Niedersachsen bereits enthalten. Wenn euer Ort darüber hinaus liegt, sage ich euch die zusätzlichen Reisekosten transparent vorab."
+        "text": "Je nach Begleitung und Ort ist die Anreise bereits mitgedacht oder wird im Angebot ergänzt. Wenn eure Location weiter entfernt liegt, bespreche ich das direkt mit euch, bevor ihr euch entscheidet."
       }
     },
     {
@@ -1089,7 +1089,7 @@ p { max-width: 60ch; }
       "name": "Wie viele Bilder bekommen wir ungefähr?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Als Orientierung könnt ihr meist mit etwa 60 bis 100 sorgfältig kuratierten Bildern pro Stunde rechnen. Die Mindestmengen in den Begleitungen geben euch zusätzlich Sicherheit."
+        "text": "Ihr bekommt eine sorgfältig kuratierte Galerie, die zu eurem Tag und der gebuchten Begleitung passt. Mir ist wichtiger, dass die Geschichte vollständig erzählt wird, als euch eine starre Bilder-pro-Stunde-Rechnung zu geben."
       }
     },
     {
@@ -1097,7 +1097,7 @@ p { max-width: 60ch; }
       "name": "Können wir Stunden oder einen Second Shooter ergänzen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Zusätzliche Stunden starten bei 250 Euro pro Stunde, ein Second Shooter ab 450 Euro. Auch Album-Upgrades oder eine Expressbearbeitung lassen sich ergänzen, wenn sie für euren Tag sinnvoll sind."
+        "text": "Ja. Zusätzliche Stunden, ein Second Shooter, Album-Upgrades oder eine Expressbearbeitung lassen sich ergänzen, wenn sie für euren Tag sinnvoll sind. Den passenden Umfang klären wir im Gespräch."
       }
     }
   ]
@@ -1110,11 +1110,11 @@ module.exports = {
   hasInlineContactSection: false,
   seo: {
     title: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
-    description: "Hochzeitsfotograf Kassel Preise: Standesamt ab 590 €, 8 Stunden Reportage ab 1.790 € und 10 Stunden Reportage ab 2.490 €. Transparente Leistungen und Preislogik für Kassel und Nordhessen.",
+    description: "Hochzeitsfotograf Kassel Preise: Orientierung für Standesamt, 8 Stunden Reportage und 10 Stunden Reportage. Individuelle Angebote für Kassel und Nordhessen.",
     keywords: "Hochzeitsfotograf Kassel Preise, Hochzeitsfotografie Kosten, Standesamtbegleitung Preis, Ganztagsreportage Preis",
     canonical: "https://nataliatschischik.com/preise",
     ogTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
-    ogDescription: "Klare Preise für Hochzeitsfotografie in Kassel: Standesamt, 8 Stunden Reportage, 10 Stunden Reportage und individuelle Begleitungen.",
+    ogDescription: "Klare Orientierung für Hochzeitsfotografie in Kassel: Standesamt, 8 Stunden Reportage, 10 Stunden Reportage und individuelle Begleitungen.",
     ogType: "website",
     ogLocale: "de_DE",
     ogImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp",
@@ -1126,7 +1126,7 @@ module.exports = {
     twitterCard: "summary_large_image",
     twitterSite: "@natalia_photography",
     twitterTitle: "Hochzeitsfotograf Kassel Preise & Leistungen | Natalia Tschischik",
-    twitterDescription: "Transparente Preise für Hochzeitsfotografie in Kassel von Standesamt bis 10 Stunden Reportage.",
+    twitterDescription: "Orientierung für Hochzeitsfotografie in Kassel von Standesamt bis 10 Stunden Reportage.",
     twitterImage: "https://nataliatschischik.com/assets/images/shared/natalia/gd-15zAiT52byizm3F.webp"
   },
   bodyAttributes: "",
