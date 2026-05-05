@@ -11,6 +11,7 @@
   var debugEnabled = new URLSearchParams(window.location.search).get(debugParam) === '1';
   var trackingBooted = false;
   var lateTrackingBooted = false;
+  var googleBooted = false;
   var capiQueue = [];
   var bootFbp = null;
   var bootExternalId = null;
@@ -184,6 +185,9 @@
   };
 
   function initGoogle() {
+    if (googleBooted) return;
+    googleBooted = true;
+
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function() { window.dataLayer.push(arguments); };
 
@@ -305,4 +309,6 @@
   } else {
     window.addEventListener('load', scheduleTrackingBoot, { once: true });
   }
+
+  if (measurementId) initGoogle();
 })();
